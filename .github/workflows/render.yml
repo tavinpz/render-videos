@@ -90,7 +90,7 @@ jobs:
         with: { pattern: 'parte-*', merge-multiple: true, path: partes }
       - name: ffmpeg (com limite de tempo e nova tentativa, o apt às vezes trava)
         run: |
-          for i in 1 2 3; do command -v ffmpeg && break; (timeout 150 sudo apt-get update -qq && timeout 240 sudo apt-get install -y -qq ffmpeg > /dev/null) || sleep 5; done; ffmpeg -version | head -1
+          for i in 1 2 3; do command -v ffmpeg && break; (timeout 60 sudo apt-get update -qq && timeout 150 sudo apt-get install -y -qq ffmpeg > /dev/null) || sleep 5; done; ffmpeg -version | head -1
       - name: juntar (cópia direta, sem recomprimir) e conferir
         run: |
           ID=${{ needs.plano.outputs.id }}
