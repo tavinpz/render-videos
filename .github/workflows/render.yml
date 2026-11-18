@@ -1,0 +1,74 @@
+# Renderiza um vídeo da composição Arte em paralelo: divide em N pedaços, cada máquina faz um, e a última junta com o áudio.
+# Disparo: Actions > render > Run workflow (id do vídeo, ex.: lss002a), ou um push que mude fila/<id>.txt.
+name: render
+on:
+  workflow_dispatch:
+    inputs:
+      id: { description: 'id do vídeo (pasta em public/l)', required: true }
+      partes: { description: 'quantas máquinas em paralelo', default: '20' }
+  push:
+    paths: ['fila/*.txt']
+
+jobs:
+  plano:
+    runs-on: ubuntu-latest
+    outputs:
+      id: ${{ steps.p.outputs.id }}
+      matriz: ${{ steps.p.outputs.matriz }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - id: p
+        run: |
+          ID="${{ github.event.inputs.id }}"; N="${{ github.event.inputs.partes }}"
+          if [ -z "$ID" ]; then F=$(git diff --name-only HEAD~1 HEAD -- fila | head -1); ID=$(basename "$F" .txt); N=$(cat "$F" 2>/dev/null | tr -dc 0-9); fi
+          [ -z "$N" ] && N=20
+          Q=$(python3 -c "import json;print(json.load(open('public/l/$ID/data.json'))['quadros'])")
+          M=$(python3 -c "
+          import json;Q=$Q;N=$N;p=-(-Q//N)
+          print(json.dumps([{'k':i,'ini':i*p,'fim':min(Q,(i+1)*p)-1} for i in range(N) if i*p<Q]))")
+          echo "id=$ID" >> $GITHUB_OUTPUT; echo "matriz=$M" >> $GITHUB_OUTPUT
+          echo "$ID: $Q quadros em $N partes"
+
+  render:
+    needs: plano
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        parte: ${{ fromJson(needs.plano.outputs.matriz) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: npm ci --no-audit --no-fund
+      - run: npx remotion browser ensure
+      - name: render ${{ matrix.parte.ini }}-${{ matrix.parte.fim }}
+        run: |
+          npx remotion render src/index.ts Arte saida.mp4 --props='{"id":"${{ needs.plano.outputs.id }}","semAudio":true}' \
+            --frames=${{ matrix.parte.ini }}-${{ matrix.parte.fim }} --muted --concurrency=4 --crf=19 --log=info
+          mv saida.mp4 parte_$(printf %03d ${{ matrix.parte.k }}).mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: parte-${{ matrix.parte.k }}
+          path: parte_*.mp4
+          retention-days: 3
+
+  juntar:
+    needs: [plano, render]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { pattern: 'parte-*', merge-multiple: true, path: partes }
+      - run: |
+          ID=${{ needs.plano.outputs.id }}
+          ls partes/*.mp4 | sort | sed "s/^/file '/;s/$/'/" > lista.txt
+          ffmpeg -y -loglevel error -f concat -safe 0 -i lista.txt -i public/l/$ID/mix.m4a -map 0:v -map 1:a -c:v copy -c:a copy -shortest -movflags +faststart $ID.mp4
+          ls -la $ID.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ needs.plano.outputs.id }}
+          path: '*.mp4'
+          retention-days: 7
