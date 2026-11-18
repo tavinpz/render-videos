@@ -6,6 +6,8 @@ import { ArteCapa } from './arte/Capa';
 import { SNBVideo } from './snb/Video';
 import { SNBThumb } from './snb/Thumbs';
 import { TCVideo } from './tc/Video';
+import { HTCQuadro } from './htc/Quadros';
+import { HTCVideo } from './htc/Video';
 
 export const Root: React.FC = () => (
   <>
@@ -26,6 +28,10 @@ export const Root: React.FC = () => (
     <Composition id="SNBVideo" component={SNBVideo as any} width={1920} height={1080} fps={30} durationInFrames={300} defaultProps={{ pasta: 'snb/v01' }}
       calculateMetadata={async ({ props }: any) => { const tempos = await fetch(staticFile(`${props.pasta}/tempos.json`)).then((x) => x.json()); return { durationInFrames: props.n || Math.ceil(tempos.total * 30), props: { ...props, tempos } }; }} />
     <Composition id="SNBThumb" component={SNBThumb as any} width={1280} height={720} fps={30} durationInFrames={1} defaultProps={{ v: 'a' }} />
+    {/* Hard to Copy: quadros parados do padrão visual (props.q = 1 a 6) */}
+    <Composition id="HTCVideo" component={HTCVideo as any} width={1920} height={1080} fps={30} durationInFrames={300} defaultProps={{ pasta: 'htc/v01' }}
+      calculateMetadata={async ({ props }: any) => { const tempos = await fetch(staticFile(`${props.pasta}/tempos.json`)).then((x) => x.json()); return { durationInFrames: props.n || Math.ceil(tempos.total * 30), props: { ...props, tempos } }; }} />
+    <Composition id="HTCQuadro" component={HTCQuadro as any} width={1920} height={1080} fps={30} durationInFrames={1} defaultProps={{ q: 1 }} />
     <Composition id="ArteCapa" component={ArteCapa as any} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{ canal: 'last-state-standing', v: { tipo: 'numero', txt: '$10' }, titulo: ['TESTE'] }} />
     {/* Two Childhoods: vídeo guiado por public/<pasta>/tempos.json */}
     <Composition id="TCVideo" component={TCVideo as any} width={1920} height={1080} fps={30} durationInFrames={300} defaultProps={{ pasta: 'tc/v01' }}

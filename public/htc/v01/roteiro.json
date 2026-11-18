@@ -1,0 +1,2315 @@
+[
+ {
+  "cena": "gancho",
+  "trava": null,
+  "nome": null,
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "You have unlimited money.",
+    "p": 0,
+    "v": {
+     "d": "check",
+     "n": 1,
+     "k": null,
+     "tit": null,
+     "it": [
+      [
+       "UNLIMITED MONEY",
+       1
+      ],
+      [
+       "EX-ASML ENGINEERS",
+       1
+      ],
+      [
+       "THE MACHINE, REVERSE-ENGINEERED",
+       1
+      ],
+      [
+       "WORKING CHIPS",
+       0
+      ]
+     ],
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "You have engineers who used to work at A-S-M-L.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "You've reverse engineered the most complicated machine ever sold.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "And it still doesn't make chips.",
+    "p": 0.5,
+    "v": {
+     "n": 4
+    }
+   }
+  ]
+ },
+ {
+  "cena": "shenzhen",
+  "trava": null,
+  "nome": null,
+  "fonte": "REUTERS, DECEMBER 2025",
+  "falas": [
+   {
+    "txt": "That's not a thought experiment.",
+    "p": 0,
+    "v": {
+     "d": "check",
+     "n": 0,
+     "k": "Not a thought experiment.",
+     "tit": null,
+     "it": [
+      [
+       "EUV PROTOTYPE: BUILT",
+       1
+      ],
+      [
+       "MAKES THE LIGHT",
+       1
+      ],
+      [
+       "A WORKING CHIP",
+       0
+      ],
+      [
+       "HELD BACK BY: THE OPTICS",
+       0
+      ]
+     ],
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": "SHENZHEN, CHINA · HIGH-SECURITY LAB",
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "In December twenty twenty five, Reuters reported that China had built a prototype of an E-U-V machine, in a high security lab in Shenzhen.",
+    "p": 0,
+    "v": {
+     "n": 1,
+     "k": null
+    }
+   },
+   {
+    "txt": "It makes the light.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "It has not made a working chip.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "And according to Reuters' sources, one of the main things holding it back, is a part that A-S-M-L doesn't even make.",
+    "p": 0,
+    "v": {
+     "n": 4,
+     "k": "A part ASML *doesn't even make*."
+    }
+   },
+   {
+    "txt": "A mirror.",
+    "p": 0.6,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "A MIRROR.",
+     "rot": null,
+     "sub": null,
+     "cor": "menta",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   }
+  ]
+ },
+ {
+  "cena": "espelho",
+  "trava": null,
+  "nome": null,
+  "fonte": "ZEISS SMT (EUV OPTICS)",
+  "falas": [
+   {
+    "txt": "Zeiss, the company that makes it, calls it the most precise mirror in the world.",
+    "p": 0,
+    "v": {
+     "d": "alemanha",
+     "n": 1,
+     "k": "\"The most precise mirror in the world\"",
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Scale it up to the size of Germany,",
+    "p": 0,
+    "v": {
+     "n": 2,
+     "k": null
+    }
+   },
+   {
+    "txt": "and its tallest bump would be a tenth of a millimeter.",
+    "p": 0.6,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "One company on Earth can make it.",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "1",
+     "rot": null,
+     "sub": "company on Earth can make it",
+     "cor": "menta",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   }
+  ]
+ },
+ {
+  "cena": "mapa",
+  "trava": null,
+  "nome": null,
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "There are five locks between everyone else, and this mirror.",
+    "p": 0,
+    "v": {
+     "d": "travas",
+     "n": 1,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": 0,
+     "at": 0,
+     "tl": [
+      "Five locks."
+     ],
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Four are physics and engineering.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "The fifth has nothing to do with technology.",
+    "p": 0,
+    "v": {
+     "n": 3,
+     "tl": [
+      "Five locks.",
+      "The last one",
+      "*isn't technology*."
+     ]
+    }
+   },
+   {
+    "txt": "And it's the one that makes the other four permanent.",
+    "p": 0.4,
+    "v": {
+     "k": "It makes the other four *permanent*."
+    }
+   }
+  ]
+ },
+ {
+  "cena": "luz0",
+  "trava": 1,
+  "nome": "THE LIGHT",
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "Lock one. The light.",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "THE LIGHT",
+     "rot": "LOCK 1 OF 5",
+     "sub": null,
+     "cor": "ambar",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   }
+  ]
+ },
+ {
+  "cena": "luz1",
+  "trava": 1,
+  "nome": "THE LIGHT",
+  "fonte": "ZEISS SMT",
+  "falas": [
+   {
+    "txt": "Chips are printed with light.",
+    "p": 0,
+    "v": {
+     "d": "espectro",
+     "n": 0,
+     "k": null,
+     "tit": [
+      "Smaller light, *smaller transistors*."
+     ],
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "The smaller the wavelength, the smaller the transistor you can draw.",
+    "p": 0,
+    "v": {
+     "n": 1
+    }
+   },
+   {
+    "txt": "For decades, the industry used deep ultraviolet light, at one hundred ninety three nanometers.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "To keep shrinking, it needed something far smaller. Thirteen point five nanometers.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "Extreme ultraviolet. E-U-V.",
+    "p": 0,
+    "v": {
+     "n": 4
+    }
+   }
+  ]
+ },
+ {
+  "cena": "luz2",
+  "trava": 1,
+  "nome": "THE LIGHT",
+  "fonte": "ZEISS SMT",
+  "falas": [
+   {
+    "txt": "And here's the first problem.",
+    "p": 0,
+    "v": {
+     "d": "absorve",
+     "n": 0,
+     "k": null,
+     "tit": [
+      "EUV light is absorbed by *almost everything*."
+     ],
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "E-U-V light is absorbed by almost everything.",
+    "p": 0,
+    "v": {
+     "n": 0
+    }
+   },
+   {
+    "txt": "Glass absorbs it.",
+    "p": 0,
+    "v": {
+     "n": 1
+    }
+   },
+   {
+    "txt": "Air absorbs it.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "A lens, the thing every camera and every older chip machine relies on, would just swallow the beam.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "So the whole optical system has to be made of mirrors, sitting in a vacuum.",
+    "p": 0,
+    "v": {
+     "n": 4
+    }
+   }
+  ]
+ },
+ {
+  "cena": "luz3",
+  "trava": 1,
+  "nome": "THE LIGHT",
+  "fonte": "ZEISS SMT",
+  "falas": [
+   {
+    "txt": "And this light is not cheap to make.",
+    "p": 0,
+    "v": {
+     "d": "gota",
+     "n": 0,
+     "k": "This light is *not cheap* to make.",
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Inside the machine, a laser hits tiny droplets of molten tin.",
+    "p": 0,
+    "v": {
+     "n": 1,
+     "k": null
+    }
+   },
+   {
+    "txt": "Around sixty thousand of them, every second.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "It turns each one into a plasma, at roughly two hundred and twenty thousand degrees Celsius.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "Nearly forty times hotter than the surface of the Sun.",
+    "p": 0,
+    "v": {
+     "n": 4
+    }
+   },
+   {
+    "txt": "All of that, for a faint glow of the right wavelength.",
+    "p": 0,
+    "v": {
+     "k": "All of that, for *a faint glow*."
+    }
+   }
+  ]
+ },
+ {
+  "cena": "luz4",
+  "trava": 1,
+  "nome": "THE LIGHT",
+  "fonte": "ZEISS SMT · UP TO 70% REFLECTED PER MIRROR. 10 MIRRORS SHOWN FOR THE MATH.",
+  "falas": [
+   {
+    "txt": "But even the best mirror for this light, according to Zeiss, reflects only up to seventy percent of it.",
+    "p": 0,
+    "v": {
+     "d": "feixe",
+     "n": 1,
+     "k": null,
+     "tit": [
+      "Every mirror eats *30%* of the light."
+     ],
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": "ambar",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Every bounce throws away almost a third.",
+    "p": 0,
+    "v": {
+     "n": 1
+    }
+   },
+   {
+    "txt": "Now do the math. Ten mirrors in a row.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "Seventy percent. Then forty nine. Then thirty four.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "By the tenth bounce, less than three percent of the light you started with is left.",
+    "p": 0,
+    "v": {
+     "n": 4
+    }
+   },
+   {
+    "txt": "That changes everything about the job.",
+    "p": 0,
+    "v": {
+     "k": "That changes *everything* about the job."
+    }
+   },
+   {
+    "txt": "You can't afford a mirror that's merely excellent.",
+    "p": 0,
+    "v": {
+     "k": "\"Excellent\" is *not good enough*."
+    }
+   },
+   {
+    "txt": "Every flaw costs light you don't have, and blurs a pattern whose features are a few dozen atoms wide.",
+    "p": 0,
+    "v": {
+     "k": "Features *a few dozen atoms* wide."
+    }
+   },
+   {
+    "txt": "So what kind of mirror reflects a light that nothing reflects?",
+    "p": 0.5,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "?",
+     "rot": null,
+     "sub": "What reflects a light that nothing reflects?",
+     "cor": "luz",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   }
+  ]
+ },
+ {
+  "cena": "camadas0",
+  "trava": 2,
+  "nome": "THE COATING",
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "Lock two. The coating.",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "THE COATING",
+     "rot": "LOCK 2 OF 5",
+     "sub": null,
+     "cor": "ambar",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   }
+  ]
+ },
+ {
+  "cena": "camadas1",
+  "trava": 2,
+  "nome": "THE COATING",
+  "fonte": "ZEISS SMT · FRAUNHOFER IOF",
+  "falas": [
+   {
+    "txt": "The answer is that it isn't really one mirror.",
+    "p": 0,
+    "v": {
+     "d": "camadas",
+     "n": 0,
+     "k": null,
+     "tit": [
+      "It's not one mirror. It's *a hundred*."
+     ],
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Zoom into the surface, and you find a stack.",
+    "p": 0,
+    "v": {
+     "n": 1
+    }
+   },
+   {
+    "txt": "Up to a hundred alternating layers of two materials. Molybdenum, and silicon.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "Each layer is only a few nanometers thick.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "One layer on its own reflects almost nothing.",
+    "p": 0,
+    "v": {
+     "n": 4
+    }
+   },
+   {
+    "txt": "But if every layer has exactly the right thickness, each tiny reflection lines up with the one before it.",
+    "p": 0,
+    "v": {
+     "n": 5
+    }
+   },
+   {
+    "txt": "The waves add together.",
+    "p": 0,
+    "v": {
+     "n": 5,
+     "k": "The waves *add together*."
+    }
+   },
+   {
+    "txt": "A hundred nearly useless reflections become one usable one.",
+    "p": 0,
+    "v": {
+     "n": 6,
+     "k": null
+    }
+   },
+   {
+    "txt": "Get the thickness wrong, by a fraction of a nanometer, across a surface the size of a dinner plate,",
+    "p": 0,
+    "v": {
+     "n": 7
+    }
+   },
+   {
+    "txt": "and the waves stop lining up. The reflection collapses.",
+    "p": 0,
+    "v": {
+     "n": 8
+    }
+   }
+  ]
+ },
+ {
+  "cena": "camadas2",
+  "trava": 2,
+  "nome": "THE COATING",
+  "fonte": "ZEISS SMT · GERMAN FUTURE PRIZE 2020",
+  "falas": [
+   {
+    "txt": "Zeiss developed these coatings together with a German research institute, Frownhofer I-O-F.",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "FRAUNHOFER IOF",
+     "rot": "DEVELOPED WITH",
+     "sub": "a German research institute",
+     "cor": "osso",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "In twenty twenty, that work won Germany's top innovation prize.",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "2020",
+     "rot": "GERMANY'S TOP INNOVATION PRIZE",
+     "sub": "ZEISS · TRUMPF · Fraunhofer IOF",
+     "cor": "ambar",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "And the coating is the easy part.",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "THE EASY PART",
+     "rot": "THE COATING IS",
+     "sub": null,
+     "cor": "menta",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Because a perfect coating only works if the surface underneath is already perfect.",
+    "p": 0.3,
+    "v": {
+     "sub": "It only works on a surface that is already perfect."
+    }
+   }
+  ]
+ },
+ {
+  "cena": "forma0",
+  "trava": 3,
+  "nome": "THE SHAPE",
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "Lock three. The shape.",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "THE SHAPE",
+     "rot": "LOCK 3 OF 5",
+     "sub": null,
+     "cor": "ambar",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   }
+  ]
+ },
+ {
+  "cena": "forma1",
+  "trava": 3,
+  "nome": "THE SHAPE",
+  "fonte": "ZEISS SMT (EUV OPTICS)",
+  "falas": [
+   {
+    "txt": "Back to Germany.",
+    "p": 0,
+    "v": {
+     "d": "alemanha",
+     "n": 3,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Zeiss uses this comparison itself.",
+    "p": 0,
+    "v": {
+     "k": "ZEISS's own comparison."
+    }
+   },
+   {
+    "txt": "Take a normal household mirror, and stretch it to the size of Germany. Its bumps would be five meters tall.",
+    "p": 0,
+    "v": {
+     "n": 4,
+     "k": null
+    }
+   },
+   {
+    "txt": "Do the same with a mirror from a space telescope. Two centimeters.",
+    "p": 0,
+    "v": {
+     "n": 5
+    }
+   },
+   {
+    "txt": "Do it with an E-U-V mirror. A tenth of a millimeter.",
+    "p": 0,
+    "v": {
+     "n": 6
+    }
+   },
+   {
+    "txt": "About the thickness of a sheet of paper. Across an entire country.",
+    "p": 0.3,
+    "v": {
+     "k": "A sheet of paper, *across an entire country*."
+    }
+   }
+  ]
+ },
+ {
+  "cena": "forma2",
+  "trava": 3,
+  "nome": "THE SHAPE",
+  "fonte": "ZEISS SMT",
+  "falas": [
+   {
+    "txt": "No grinding wheel gets you there.",
+    "p": 0,
+    "v": {
+     "d": "copia",
+     "n": 1,
+     "k": "No grinding wheel gets you there.",
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "According to Zeiss, each mirror is machined for months, before it reaches that precision.",
+    "p": 0,
+    "v": {
+     "n": 2,
+     "k": "Machined for *months*. Each one."
+    }
+   },
+   {
+    "txt": "And then, it has to hold still.",
+    "p": 0,
+    "v": {
+     "d": "lua",
+     "n": 0,
+     "k": "And then it has to *hold still*.",
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "The mirrors are steered so precisely that, in Zeiss's words, you could bounce a laser off one,",
+    "p": 0,
+    "v": {
+     "n": 1,
+     "k": null
+    }
+   },
+   {
+    "txt": "and hit a golf ball, on the surface of the Moon.",
+    "p": 0.4,
+    "v": {
+     "n": 2
+    }
+   }
+  ]
+ },
+ {
+  "cena": "cta1",
+  "trava": 3,
+  "nome": "THE SHAPE",
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "Quick question before the next lock, because it's my favorite one.",
+    "p": 0,
+    "v": {
+     "d": "cta",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": [
+      "QUICK QUESTION"
+     ],
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": "com",
+     "s": null
+    }
+   },
+   {
+    "txt": "If you had to copy just one thing, which would be harder? Making this mirror? Or proving that you made it?",
+    "p": 0,
+    "v": {
+     "n": 1,
+     "t": [
+      "MAKE IT",
+      "or PROVE IT?"
+     ]
+    }
+   },
+   {
+    "txt": "Put your guess in the comments. I read them. And the answer is coming up right now.",
+    "p": 0,
+    "v": {
+     "n": 2,
+     "s": "Comment your guess"
+    }
+   }
+  ]
+ },
+ {
+  "cena": "medir0",
+  "trava": 4,
+  "nome": "THE MEASUREMENT",
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "Lock four. The measurement.",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "THE MEASUREMENT",
+     "rot": "LOCK 4 OF 5",
+     "sub": null,
+     "cor": "ambar",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   }
+  ]
+ },
+ {
+  "cena": "medir1",
+  "trava": 4,
+  "nome": "THE MEASUREMENT",
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "Think about what polishing actually is.",
+    "p": 0,
+    "v": {
+     "d": "polir",
+     "n": 0,
+     "k": null,
+     "tit": [
+      "You can't polish what you *can't measure*."
+     ],
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "You remove material where the surface is too high.",
+    "p": 0,
+    "v": {
+     "n": 1
+    }
+   },
+   {
+    "txt": "Which means you have to know where it's too high.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "So before you can make a mirror with errors smaller than an atom, you need a ruler with errors smaller than that.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "And nobody sells one.",
+    "p": 0.4,
+    "v": {
+     "n": 4
+    }
+   }
+  ]
+ },
+ {
+  "cena": "medir2",
+  "trava": 4,
+  "nome": "THE MEASUREMENT",
+  "fonte": "ZEISS SMT (HIGH-NA EUV METROLOGY) · ASML",
+  "falas": [
+   {
+    "txt": "Zeiss had to build it.",
+    "p": 0,
+    "v": {
+     "d": "camara",
+     "n": 0,
+     "k": null,
+     "tit": [
+      "ZEISS had to *build the ruler*."
+     ],
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "For its newest generation of mirrors, the ones for A-S-M-L's high N-A machines,",
+    "p": 0,
+    "v": {
+     "n": 1
+    }
+   },
+   {
+    "txt": "which are about a meter across, and weigh several hundred kilograms each,",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "the measuring system sits in a vacuum chamber five meters wide, and ten meters long.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "It weighs around one hundred and fifty tons.",
+    "p": 0,
+    "v": {
+     "n": 4
+    }
+   },
+   {
+    "txt": "It has more than a hundred thousand parts.",
+    "p": 0,
+    "v": {
+     "n": 5
+    }
+   },
+   {
+    "txt": "Zeiss calls it the most complex machine the company has ever built.",
+    "p": 0,
+    "v": {
+     "k": "The most complex machine ZEISS *has ever built*."
+    }
+   },
+   {
+    "txt": "It doesn't make chips. It doesn't even make mirrors.",
+    "p": 0,
+    "v": {
+     "k": "It doesn't make chips. It doesn't make mirrors."
+    }
+   },
+   {
+    "txt": "It exists to check one.",
+    "p": 0.5,
+    "v": {
+     "n": 6,
+     "k": "It exists to *check one*."
+    }
+   }
+  ]
+ },
+ {
+  "cena": "medir3",
+  "trava": 4,
+  "nome": "THE MEASUREMENT",
+  "fonte": "ZEISS SMT (HIGH-NA EUV)",
+  "falas": [
+   {
+    "txt": "And once the mirrors pass, they go into an optical system with more than forty thousand parts, that weighs about twelve tons.",
+    "p": 0,
+    "v": {
+     "d": "nums",
+     "n": 2,
+     "k": null,
+     "tit": null,
+     "it": [
+      [
+       "40,000+",
+       "PARTS"
+      ],
+      [
+       "12 t",
+       "PROJECTION OPTICS · HIGH-NA"
+      ]
+     ],
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "That's just the projection optics. The part that carries the pattern down to the chip.",
+    "p": 0,
+    "v": {
+     "k": "Just the projection optics."
+    }
+   },
+   {
+    "txt": "So a copycat doesn't have one impossible machine to build.",
+    "p": 0,
+    "v": {
+     "d": "tres",
+     "n": 0,
+     "k": "Not one impossible machine.",
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "They have at least three. The chip machine. The mirror. And the machine that tells you whether the mirror is any good.",
+    "p": 0,
+    "v": {
+     "n": 3,
+     "k": null
+    }
+   },
+   {
+    "txt": "Each one needs the others to exist first.",
+    "p": 0.3,
+    "v": {
+     "n": 4
+    }
+   }
+  ]
+ },
+ {
+  "cena": "recap",
+  "trava": 4,
+  "nome": "THE MEASUREMENT",
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "That's four locks.",
+    "p": 0,
+    "v": {
+     "d": "travas",
+     "n": 3,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": 0,
+     "at": 0,
+     "tl": [
+      "Four locks."
+     ],
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Light that hates everything.",
+    "p": 0,
+    "v": {
+     "ab": 1
+    }
+   },
+   {
+    "txt": "A coating a hundred layers deep.",
+    "p": 0,
+    "v": {
+     "ab": 2
+    }
+   },
+   {
+    "txt": "A shape that's flat across a country.",
+    "p": 0,
+    "v": {
+     "ab": 3
+    }
+   },
+   {
+    "txt": "And a ruler that had to be invented.",
+    "p": 0,
+    "v": {
+     "ab": 4
+    }
+   },
+   {
+    "txt": "All four are, in theory, solvable. With enough money, enough physicists, enough years.",
+    "p": 0,
+    "v": {
+     "tl": [
+      "Four locks.",
+      "*Solvable*, in theory."
+     ],
+     "k": "Money. Physicists. Years."
+    }
+   },
+   {
+    "txt": "China is working on exactly that.",
+    "p": 0,
+    "v": {
+     "k": "China is working on exactly that."
+    }
+   }
+  ]
+ },
+ {
+  "cena": "anos",
+  "trava": 4,
+  "nome": "THE MEASUREMENT",
+  "fonte": "REUTERS, DECEMBER 2025",
+  "falas": [
+   {
+    "txt": "How many years?",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "HOW MANY YEARS?",
+     "rot": null,
+     "sub": null,
+     "cor": "osso",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "In April twenty twenty five, before the Shenzhen prototype became public, A-S-M-L's chief executive said China would need many, many years to get there.",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "\"MANY, MANY YEARS\"",
+     "rot": "ASML CEO · APRIL 2025",
+     "sub": null,
+     "cor": "ambar",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "The prototype suggests it's moving faster than he expected.",
+    "p": 0,
+    "v": {
+     "sub": "The prototype suggests: faster than expected."
+    }
+   },
+   {
+    "txt": "On the light. Not on the mirrors.",
+    "p": 0.3,
+    "v": {
+     "sub": "On the light. Not on the mirrors."
+    }
+   },
+   {
+    "txt": "The fifth lock is different.",
+    "p": 0,
+    "v": {
+     "d": "travas",
+     "n": 3,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": 4,
+     "at": 5,
+     "tl": [
+      "The fifth lock",
+      "is *different*."
+     ],
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Money doesn't open it.",
+    "p": 0.7,
+    "v": {
+     "k": "Money *doesn't* open it."
+    }
+   }
+  ]
+ },
+ {
+  "cena": "casam0",
+  "trava": 5,
+  "nome": "? ? ?",
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "Lock five.",
+    "p": 0.3,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "? ? ?",
+     "rot": "LOCK 5 OF 5",
+     "sub": null,
+     "cor": "ambar",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   }
+  ]
+ },
+ {
+  "cena": "casam1",
+  "trava": 5,
+  "nome": "? ? ?",
+  "fonte": "ZEISS SMT",
+  "falas": [
+   {
+    "txt": "In nineteen ninety five, Zeiss hosted a workshop with chipmakers, researchers, and a Dutch company called A-S-M-L.",
+    "p": 0,
+    "v": {
+     "d": "linha",
+     "n": 1,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "They met to talk about a strange idea. Printing chips with extreme ultraviolet light.",
+    "p": 0,
+    "v": {
+     "k": "A strange idea: printing chips with EUV."
+    }
+   },
+   {
+    "txt": "The first production optics shipped in twenty twelve.",
+    "p": 0,
+    "v": {
+     "n": 2,
+     "k": null
+    }
+   },
+   {
+    "txt": "The first phones with E-U-V chips reached stores in twenty eighteen.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "That's twenty three years between the first meeting, and the first product in your pocket.",
+    "p": 0,
+    "v": {
+     "n": 4
+    }
+   },
+   {
+    "txt": "Twenty three years of spending, on a technology many in the industry doubted would ever work.",
+    "p": 0,
+    "v": {
+     "k": "A technology many doubted *would ever work*."
+    }
+   },
+   {
+    "txt": "The Japanese giants that once led lithography, Nikon and Canon, never brought an E-U-V machine to market.",
+    "p": 0,
+    "v": {
+     "n": 5,
+     "k": null
+    }
+   }
+  ]
+ },
+ {
+  "cena": "casam1b",
+  "trava": 5,
+  "nome": "? ? ?",
+  "fonte": "ZEISS SMT (EUV OPTICS)",
+  "falas": [
+   {
+    "txt": "In all that time, Zeiss says it has delivered a bit more than three hundred of these E-U-V optical systems, for chip production.",
+    "p": 0,
+    "v": {
+     "d": "nums",
+     "n": 1,
+     "k": null,
+     "tit": null,
+     "it": [
+      [
+       "300+",
+       "EUV OPTICAL SYSTEMS DELIVERED"
+      ]
+     ],
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Three hundred. That's the entire world supply. Ever.",
+    "p": 0,
+    "v": {
+     "k": "The entire world's supply. *Ever*."
+    }
+   },
+   {
+    "txt": "So how does a company survive two decades of that?",
+    "p": 0.4,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "HOW?",
+     "rot": null,
+     "sub": "How does a company survive two decades of that?",
+     "cor": "osso",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   }
+  ]
+ },
+ {
+  "cena": "casam2",
+  "trava": 5,
+  "nome": "THE MARRIAGE",
+  "fonte": "ASML ANNUAL REPORT 2025 · ASML/ZEISS ANNOUNCEMENT, NOV 2016",
+  "falas": [
+   {
+    "txt": "It doesn't do it alone.",
+    "p": 0,
+    "v": {
+     "d": "casamento",
+     "n": 0,
+     "k": "It doesn't do it *alone*.",
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "A-S-M-L has used Zeiss optics in its machines since the nineteen eighties.",
+    "p": 0,
+    "v": {
+     "n": 1,
+     "k": null
+    }
+   },
+   {
+    "txt": "In twenty sixteen, A-S-M-L went further. It bought twenty four point nine percent of Zeiss's chip optics business, for one billion euros in cash.",
+    "p": 0,
+    "v": {
+     "n": 2,
+     "tit": [
+      "The customer owns *a quarter*",
+      "of its only supplier."
+     ]
+    }
+   },
+   {
+    "txt": "And it promised hundreds of millions more, to fund the next generation of mirrors.",
+    "p": 0,
+    "v": {
+     "k": "+ about €760 million for R&D and factories"
+    }
+   },
+   {
+    "txt": "Today, the numbers are bigger.",
+    "p": 0,
+    "v": {
+     "k": null
+    }
+   },
+   {
+    "txt": "In twenty twenty five, A-S-M-L bought four point four billion euros of optics from Zeiss.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "It had lent Zeiss another one point nine billion.",
+    "p": 0,
+    "v": {
+     "n": 4
+    }
+   },
+   {
+    "txt": "And in its own annual report, A-S-M-L says that if Zeiss couldn't deliver, A-S-M-L would effectively cease to be able to conduct its business.",
+    "p": 0,
+    "v": {
+     "n": 5
+    }
+   }
+  ]
+ },
+ {
+  "cena": "casam2b",
+  "trava": 5,
+  "nome": "THE MARRIAGE",
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "Read that again.",
+    "p": 0,
+    "v": {
+     "d": "duas",
+     "n": 1,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": "READ THAT AGAIN",
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": "The company everyone calls impossible to copy",
+     "l2": "",
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "The company everyone calls impossible to copy, is telling investors it cannot replace its own supplier.",
+    "p": 0.4,
+    "v": {
+     "n": 2,
+     "l2": "cannot replace its own supplier."
+    }
+   }
+  ]
+ },
+ {
+  "cena": "casam3",
+  "trava": 5,
+  "nome": "THE MARRIAGE",
+  "fonte": "ZEISS",
+  "falas": [
+   {
+    "txt": "And you can't buy your way in from the other side, either.",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "NOT FOR SALE",
+     "rot": "ZEISS",
+     "sub": null,
+     "cor": "verm",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Zeiss isn't on the stock market. The group is owned by a foundation, set up in eighteen eighty nine.",
+    "p": 0,
+    "v": {
+     "sub": "Owned by a foundation since 1889."
+    }
+   },
+   {
+    "txt": "There's nothing to acquire.",
+    "p": 0,
+    "v": {
+     "sub": "There is nothing to acquire."
+    }
+   },
+   {
+    "txt": "And it isn't a small team you could quietly hire away.",
+    "p": 0,
+    "v": {
+     "d": "pontos",
+     "n": 0,
+     "k": "Not a team you can quietly hire away.",
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Zeiss's chip division has more than nine thousand employees.",
+    "p": 0,
+    "v": {
+     "n": 1,
+     "k": null
+    }
+   },
+   {
+    "txt": "Around two thousand of them work on the newest generation of mirrors alone.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   }
+  ]
+ },
+ {
+  "cena": "casam4",
+  "trava": 5,
+  "nome": "THE MARRIAGE",
+  "fonte": "ZEISS SMT",
+  "falas": [
+   {
+    "txt": "So here's what a real copy would need.",
+    "p": 0,
+    "v": {
+     "d": "check",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": [
+      [
+       "A CUSTOMER WHO PAYS FOR 20 YEARS",
+       0
+      ],
+      [
+       "ENGINEERS WITH A CAREER ON ONE SURFACE",
+       0
+      ],
+      [
+       "ABOUT 1,200 SPECIALIST SUPPLIERS",
+       0
+      ]
+     ],
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": "WHAT A REAL COPY WOULD NEED",
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Not a mirror.",
+    "p": 0,
+    "v": {
+     "k": "Not a mirror."
+    }
+   },
+   {
+    "txt": "A customer willing to pay you for twenty years, before the first one works.",
+    "p": 0,
+    "v": {
+     "n": 1,
+     "k": null
+    }
+   },
+   {
+    "txt": "Engineers who've spent a career on one surface.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "And a network of about twelve hundred specialist suppliers behind them.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "You can steal a blueprint.",
+    "p": 0,
+    "v": {
+     "d": "duas",
+     "n": 1,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": "You can steal a blueprint.",
+     "l2": "",
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "You can't steal thirty years.",
+    "p": 0.7,
+    "v": {
+     "n": 2,
+     "l2": "You can't steal thirty years."
+    }
+   }
+  ]
+ },
+ {
+  "cena": "cta2",
+  "trava": 5,
+  "nome": "THE MARRIAGE",
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "If you know someone who thinks the chip race is one stolen blueprint away from being over, send them this video.",
+    "p": 0,
+    "v": {
+     "d": "cta",
+     "n": 1,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": [
+      "SEND THIS",
+      "to that friend"
+     ],
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": "env",
+     "s": null
+    }
+   },
+   {
+    "txt": "This is the part nobody shows them.",
+    "p": 0,
+    "v": {
+     "n": 2,
+     "s": "The part nobody shows them"
+    }
+   }
+  ]
+ },
+ {
+  "cena": "fecho1",
+  "trava": null,
+  "nome": null,
+  "fonte": "ASML ANNUAL REPORT 2025",
+  "falas": [
+   {
+    "txt": "One last thing, because it's the detail that convinced me.",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "ONE LAST THING",
+     "rot": null,
+     "sub": null,
+     "cor": "osso",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "A-S-M-L wants to build more machines. The AI boom is begging for them.",
+    "p": 0,
+    "v": {
+     "d": "gargalo",
+     "n": 1,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "And A-S-M-L's annual report says the number it can build, is limited by how many optics Zeiss can produce.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "So Zeiss is expanding its site in Oberkoken, a town in southern Germany.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   }
+  ]
+ },
+ {
+  "cena": "fecho2",
+  "trava": null,
+  "nome": null,
+  "fonte": "ZEISS SMT · JULY 2026",
+  "falas": [
+   {
+    "txt": "About twenty five thousand square meters of new space.",
+    "p": 0,
+    "v": {
+     "d": "nums",
+     "n": 1,
+     "k": null,
+     "tit": null,
+     "it": [
+      [
+       "25,000 m²",
+       "NEW SPACE · OBERKOCHEN"
+      ],
+      [
+       "2022",
+       "GROUND BROKEN"
+      ],
+      [
+       "2026",
+       "FIRST BUILDING OPENS"
+      ]
+     ],
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "They broke ground in twenty twenty two.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "The first building opened in the summer of twenty twenty six.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   },
+   {
+    "txt": "Four years to add capacity, for the only company that already knows how.",
+    "p": 0.4,
+    "v": {
+     "k": "*Four years*, for the only company that knows how."
+    }
+   }
+  ]
+ },
+ {
+  "cena": "fecho3",
+  "trava": null,
+  "nome": null,
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "That's the real reason nobody can copy this mirror.",
+    "p": 0,
+    "v": {
+     "d": "copia",
+     "n": 1,
+     "k": "The real reason nobody can copy this mirror:",
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Even the original can barely copy itself.",
+    "p": 0.9,
+    "v": {
+     "n": 1,
+     "k": "Even the original can barely *copy itself*."
+    }
+   }
+  ]
+ },
+ {
+  "cena": "fim",
+  "trava": null,
+  "nome": null,
+  "fonte": null,
+  "falas": [
+   {
+    "txt": "The mirror is one link in a chain. And almost every link has a company like this hiding in it.",
+    "p": 0,
+    "v": {
+     "d": "fim",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": null,
+     "rot": null,
+     "sub": null,
+     "cor": null,
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
+   {
+    "txt": "Next, we open another one.",
+    "p": 0,
+    "v": {
+     "n": 1
+    }
+   },
+   {
+    "txt": "Subscribe, so it finds you.",
+    "p": 0,
+    "v": {
+     "n": 2
+    }
+   },
+   {
+    "txt": "And tell me in the comments which company you want taken apart next.",
+    "p": 0,
+    "v": {
+     "n": 3
+    }
+   }
+  ]
+ }
+]
