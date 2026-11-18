@@ -10,29 +10,27 @@ R = []
 def B(cena, falas, trava=None, nome=None, fonte=None): R.append({'cena': cena, 'trava': trava, 'nome': nome, 'fonte': fonte, 'falas': falas})
 def TRAVA(n, nome): return N(d='big', rot=f'LOCK {n} OF 5', t=nome, cor='ambar')
 
-GANCHO = [['UNLIMITED MONEY', 1], ['EX-ASML ENGINEERS', 1], ['THE MACHINE, REVERSE-ENGINEERED', 1], ['WORKING CHIPS', 0]]
-B('gancho', [
- F("You have unlimited money.", **N(d='check', it=GANCHO, n=1)),
- F("You have engineers who used to work at A-S-M-L.", n=2),
- F("You've reverse engineered the most complicated machine ever sold.", n=3),
- F("And it still doesn't make chips.", p=0.5, n=4),
+# Início v2 (pedido do Tavin em 18/11: o começo tem que prender): abre com a imagem estranha já acontecendo, depois a China.
+B('gancho', fonte='ZEISS SMT (EUV OPTICS)', falas=[
+ F("This is the most precise mirror in the world.", **N(d='alemanha', n=1, k='The most precise mirror *in the world*.')),
+ F("Blow it up to the size of Germany,", n=2, k=None),
+ F("and its tallest bump would be a tenth of a millimeter.", p=0.3, n=3),
 ])
-CASO = [['EUV PROTOTYPE: BUILT', 1], ['MAKES THE LIGHT', 1], ['A WORKING CHIP', 0], ['HELD BACK BY: THE OPTICS', 0]]
+B('chips', fonte='ZEISS SMT (EUV OPTICS)', falas=[
+ F("Every cutting edge AI chip on Earth is printed with light that bounced off mirrors like this.", **N(d='big', rot='PRINTED WITH LIGHT FROM THESE MIRRORS', t='EVERY AI CHIP', cor='luz')),
+ F("And only one company can make them.", p=0.3, **N(d='big', t='1', sub='company on Earth can make them', cor='menta')),
+])
+CASO = [['THE MONEY', 1], ['EX-ASML ENGINEERS', 1], ['A PROTOTYPE OF THE MACHINE', 1], ['A WORKING CHIP', 0]]
 B('shenzhen', fonte='REUTERS, DECEMBER 2025', falas=[
- F("That's not a thought experiment.", **N(d='check', it=CASO, n=0, cab='SHENZHEN, CHINA · HIGH-SECURITY LAB', k='Not a thought experiment.')),
- F("In December twenty twenty five, Reuters reported that China had built a prototype of an E-U-V machine, in a high security lab in Shenzhen.", n=1, k=None),
- F("It makes the light.", n=2),
- F("It has not made a working chip.", n=3),
- F("And according to Reuters' sources, one of the main things holding it back, is a part that A-S-M-L doesn't even make.", n=4, k="A part ASML *doesn't even make*."),
- F("A mirror.", p=0.6, **N(d='big', t='A MIRROR.', cor='menta')),
-])
-B('espelho', fonte='ZEISS SMT (EUV OPTICS)', falas=[
- F("Zeiss, the company that makes it, calls it the most precise mirror in the world.", **N(d='alemanha', n=1, k='"The most precise mirror in the world"')),
- F("Scale it up to the size of Germany,", n=2, k=None),
- F("and its tallest bump would be a tenth of a millimeter.", p=0.6, n=3),
- F("One company on Earth can make it.", **N(d='big', t='1', sub='company on Earth can make it', cor='menta')),
+ F("China has the money.", **N(d='check', it=CASO, n=1, cab='CHINA · THE SHENZHEN PROJECT')),
+ F("It has former A-S-M-L engineers.", n=2),
+ F("And according to Reuters, it has a prototype of the machine itself.", n=3),
+ F("It makes the light. It has not made a single working chip.", n=4),
+ F("And one of the main things holding it back, is a part that A-S-M-L doesn't even make.", k="A part ASML *doesn't even make*."),
+ F("This mirror.", p=0.5, **N(d='big', t='THIS MIRROR.', cor='menta')),
 ])
 B('mapa', [
+ F("So why can't anyone copy a mirror?", **N(d='big', t='WHY?', sub="Why can't anyone copy a mirror?", cor='ambar')),
  F("There are five locks between everyone else, and this mirror.", **N(d='travas', ab=0, at=0, n=1, tl=['Five locks.'])),
  F("Four are physics and engineering.", n=2),
  F("The fifth has nothing to do with technology.", n=3, tl=['Five locks.', 'The last one', "*isn't technology*."]),

@@ -1,41 +1,24 @@
 {
- "total": 637.839,
+ "total": 627.301,
  "blocos": [
   {
    "cena": "gancho",
    "trava": null,
    "nome": null,
-   "fonte": null,
+   "fonte": "ZEISS SMT (EUV OPTICS)",
    "ini": 0.6,
-   "fim": 12.594,
+   "fim": 9.094,
    "falas": [
     {
      "t": 0.6,
-     "d": 1.388,
-     "txt": "You have unlimited money.",
+     "d": 2.193,
+     "txt": "This is the most precise mirror in the world.",
      "v": {
-      "d": "check",
+      "d": "alemanha",
       "n": 1,
-      "k": null,
+      "k": "The most precise mirror *in the world*.",
       "tit": null,
-      "it": [
-       [
-        "UNLIMITED MONEY",
-        1
-       ],
-       [
-        "EX-ASML ENGINEERS",
-        1
-       ],
-       [
-        "THE MACHINE, REVERSE-ENGINEERED",
-        1
-       ],
-       [
-        "WORKING CHIPS",
-        0
-       ]
-      ],
+      "it": null,
       "t": null,
       "rot": null,
       "sub": null,
@@ -52,74 +35,50 @@
      }
     },
     {
-     "t": 2.408,
-     "d": 2.541,
-     "txt": "You have engineers who used to work at A-S-M-L.",
+     "t": 3.213,
+     "d": 1.726,
+     "txt": "Blow it up to the size of Germany,",
      "v": {
-      "n": 2
+      "n": 2,
+      "k": null
      }
     },
     {
-     "t": 5.369,
-     "d": 3.883,
-     "txt": "You've reverse engineered the most complicated machine ever sold.",
+     "t": 5.189,
+     "d": 2.686,
+     "txt": "and its tallest bump would be a tenth of a millimeter.",
      "v": {
       "n": 3
-     }
-    },
-    {
-     "t": 9.672,
-     "d": 1.501,
-     "txt": "And it still doesn't make chips.",
-     "v": {
-      "n": 4
      }
     }
    ]
   },
   {
-   "cena": "shenzhen",
+   "cena": "chips",
    "trava": null,
    "nome": null,
-   "fonte": "REUTERS, DECEMBER 2025",
-   "ini": 12.594,
-   "fim": 37.301,
+   "fonte": "ZEISS SMT (EUV OPTICS)",
+   "ini": 9.094,
+   "fim": 18.291,
    "falas": [
     {
-     "t": 12.594,
-     "d": 1.445,
-     "txt": "That's not a thought experiment.",
+     "t": 9.094,
+     "d": 5.73,
+     "txt": "Every cutting edge AI chip on Earth is printed with light that bounced off mirrors like this.",
      "v": {
-      "d": "check",
+      "d": "big",
       "n": 0,
-      "k": "Not a thought experiment.",
+      "k": null,
       "tit": null,
-      "it": [
-       [
-        "EUV PROTOTYPE: BUILT",
-        1
-       ],
-       [
-        "MAKES THE LIGHT",
-        1
-       ],
-       [
-        "A WORKING CHIP",
-        0
-       ],
-       [
-        "HELD BACK BY: THE OPTICS",
-        0
-       ]
-      ],
-      "t": null,
-      "rot": null,
+      "it": null,
+      "t": "EVERY AI CHIP",
+      "rot": "PRINTED WITH LIGHT FROM THESE MIRRORS",
       "sub": null,
-      "cor": null,
+      "cor": "luz",
       "ab": null,
       "at": null,
       "tl": null,
-      "cab": "SHENZHEN, CHINA \u00b7 HIGH-SECURITY LAB",
+      "cab": null,
       "rev": null,
       "l1": null,
       "l2": null,
@@ -128,52 +87,18 @@
      }
     },
     {
-     "t": 14.459,
-     "d": 9.503,
-     "txt": "In December twenty twenty five, Reuters reported that China had built a prototype of an E-U-V machine, in a high security lab in Shenzhen.",
-     "v": {
-      "n": 1,
-      "k": null
-     }
-    },
-    {
-     "t": 24.381,
-     "d": 0.936,
-     "txt": "It makes the light.",
-     "v": {
-      "n": 2
-     }
-    },
-    {
-     "t": 25.737,
-     "d": 1.519,
-     "txt": "It has not made a working chip.",
-     "v": {
-      "n": 3
-     }
-    },
-    {
-     "t": 27.676,
-     "d": 7.096,
-     "txt": "And according to Reuters' sources, one of the main things holding it back, is a part that A-S-M-L doesn't even make.",
-     "v": {
-      "n": 4,
-      "k": "A part ASML *doesn't even make*."
-     }
-    },
-    {
-     "t": 35.193,
-     "d": 0.589,
-     "txt": "A mirror.",
+     "t": 15.244,
+     "d": 1.827,
+     "txt": "And only one company can make them.",
      "v": {
       "d": "big",
       "n": 0,
       "k": null,
       "tit": null,
       "it": null,
-      "t": "A MIRROR.",
+      "t": "1",
       "rot": null,
-      "sub": null,
+      "sub": "company on Earth can make them",
       "cor": "menta",
       "ab": null,
       "at": null,
@@ -189,23 +114,40 @@
    ]
   },
   {
-   "cena": "espelho",
+   "cena": "shenzhen",
    "trava": null,
    "nome": null,
-   "fonte": "ZEISS SMT (EUV OPTICS)",
-   "ini": 37.301,
-   "fim": 50.672,
+   "fonte": "REUTERS, DECEMBER 2025",
+   "ini": 18.291,
+   "fim": 37.833,
    "falas": [
     {
-     "t": 37.301,
-     "d": 4.548,
-     "txt": "Zeiss, the company that makes it, calls it the most precise mirror in the world.",
+     "t": 18.291,
+     "d": 1.077,
+     "txt": "China has the money.",
      "v": {
-      "d": "alemanha",
+      "d": "check",
       "n": 1,
-      "k": "\"The most precise mirror in the world\"",
+      "k": null,
       "tit": null,
-      "it": null,
+      "it": [
+       [
+        "THE MONEY",
+        1
+       ],
+       [
+        "EX-ASML ENGINEERS",
+        1
+       ],
+       [
+        "A PROTOTYPE OF THE MACHINE",
+        1
+       ],
+       [
+        "A WORKING CHIP",
+        0
+       ]
+      ],
       "t": null,
       "rot": null,
       "sub": null,
@@ -213,7 +155,7 @@
       "ab": null,
       "at": null,
       "tl": null,
-      "cab": null,
+      "cab": "CHINA \u00b7 THE SHENZHEN PROJECT",
       "rev": null,
       "l1": null,
       "l2": null,
@@ -222,35 +164,50 @@
      }
     },
     {
-     "t": 42.269,
-     "d": 1.879,
-     "txt": "Scale it up to the size of Germany,",
+     "t": 19.789,
+     "d": 2.151,
+     "txt": "It has former A-S-M-L engineers.",
      "v": {
-      "n": 2,
-      "k": null
+      "n": 2
      }
     },
     {
-     "t": 44.398,
-     "d": 2.686,
-     "txt": "and its tallest bump would be a tenth of a millimeter.",
+     "t": 22.359,
+     "d": 3.869,
+     "txt": "And according to Reuters, it has a prototype of the machine itself.",
      "v": {
       "n": 3
      }
     },
     {
-     "t": 48.104,
-     "d": 1.649,
-     "txt": "One company on Earth can make it.",
+     "t": 26.648,
+     "d": 3.164,
+     "txt": "It makes the light. It has not made a single working chip.",
+     "v": {
+      "n": 4
+     }
+    },
+    {
+     "t": 30.232,
+     "d": 5.059,
+     "txt": "And one of the main things holding it back, is a part that A-S-M-L doesn't even make.",
+     "v": {
+      "k": "A part ASML *doesn't even make*."
+     }
+    },
+    {
+     "t": 35.711,
+     "d": 0.702,
+     "txt": "This mirror.",
      "v": {
       "d": "big",
       "n": 0,
       "k": null,
       "tit": null,
       "it": null,
-      "t": "1",
+      "t": "THIS MIRROR.",
       "rot": null,
-      "sub": "company on Earth can make it",
+      "sub": null,
       "cor": "menta",
       "ab": null,
       "at": null,
@@ -270,11 +227,36 @@
    "trava": null,
    "nome": null,
    "fonte": null,
-   "ini": 50.672,
-   "fim": 62.809,
+   "ini": 37.833,
+   "fim": 52.271,
    "falas": [
     {
-     "t": 50.672,
+     "t": 37.833,
+     "d": 1.88,
+     "txt": "So why can't anyone copy a mirror?",
+     "v": {
+      "d": "big",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "WHY?",
+      "rot": null,
+      "sub": "Why can't anyone copy a mirror?",
+      "cor": "ambar",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null
+     }
+    },
+    {
+     "t": 40.134,
      "d": 3.019,
      "txt": "There are five locks between everyone else, and this mirror.",
      "v": {
@@ -301,7 +283,7 @@
      }
     },
     {
-     "t": 54.111,
+     "t": 43.573,
      "d": 1.712,
      "txt": "Four are physics and engineering.",
      "v": {
@@ -309,7 +291,7 @@
      }
     },
     {
-     "t": 56.243,
+     "t": 45.705,
      "d": 2.403,
      "txt": "The fifth has nothing to do with technology.",
      "v": {
@@ -322,7 +304,7 @@
      }
     },
     {
-     "t": 59.066,
+     "t": 48.527,
      "d": 2.423,
      "txt": "And it's the one that makes the other four permanent.",
      "v": {
@@ -336,11 +318,11 @@
    "trava": 1,
    "nome": "THE LIGHT",
    "fonte": null,
-   "ini": 62.809,
-   "fim": 64.859,
+   "ini": 52.271,
+   "fim": 54.32,
    "falas": [
     {
-     "t": 62.809,
+     "t": 52.271,
      "d": 1.129,
      "txt": "Lock one. The light.",
      "v": {
@@ -371,11 +353,11 @@
    "trava": 1,
    "nome": "THE LIGHT",
    "fonte": "ZEISS SMT",
-   "ini": 64.859,
-   "fim": 86.054,
+   "ini": 54.32,
+   "fim": 75.515,
    "falas": [
     {
-     "t": 64.859,
+     "t": 54.32,
      "d": 1.354,
      "txt": "Chips are printed with light.",
      "v": {
@@ -402,7 +384,7 @@
      }
     },
     {
-     "t": 66.632,
+     "t": 56.094,
      "d": 3.697,
      "txt": "The smaller the wavelength, the smaller the transistor you can draw.",
      "v": {
@@ -410,7 +392,7 @@
      }
     },
     {
-     "t": 70.749,
+     "t": 60.211,
      "d": 6.162,
      "txt": "For decades, the industry used deep ultraviolet light, at one hundred ninety three nanometers.",
      "v": {
@@ -418,7 +400,7 @@
      }
     },
     {
-     "t": 77.331,
+     "t": 66.792,
      "d": 5.193,
      "txt": "To keep shrinking, it needed something far smaller. Thirteen point five nanometers.",
      "v": {
@@ -426,7 +408,7 @@
      }
     },
     {
-     "t": 82.944,
+     "t": 72.405,
      "d": 2.19,
      "txt": "Extreme ultraviolet. E-U-V.",
      "v": {
@@ -440,11 +422,11 @@
    "trava": 1,
    "nome": "THE LIGHT",
    "fonte": "ZEISS SMT",
-   "ini": 86.054,
-   "fim": 105.753,
+   "ini": 75.515,
+   "fim": 95.215,
    "falas": [
     {
-     "t": 86.054,
+     "t": 75.515,
      "d": 1.407,
      "txt": "And here's the first problem.",
      "v": {
@@ -471,7 +453,7 @@
      }
     },
     {
-     "t": 87.881,
+     "t": 77.342,
      "d": 2.944,
      "txt": "E-U-V light is absorbed by almost everything.",
      "v": {
@@ -479,7 +461,7 @@
      }
     },
     {
-     "t": 91.245,
+     "t": 80.706,
      "d": 1.011,
      "txt": "Glass absorbs it.",
      "v": {
@@ -487,7 +469,7 @@
      }
     },
     {
-     "t": 92.676,
+     "t": 82.138,
      "d": 0.872,
      "txt": "Air absorbs it.",
      "v": {
@@ -495,7 +477,7 @@
      }
     },
     {
-     "t": 93.968,
+     "t": 83.43,
      "d": 6.003,
      "txt": "A lens, the thing every camera and every older chip machine relies on, would just swallow the beam.",
      "v": {
@@ -503,7 +485,7 @@
      }
     },
     {
-     "t": 100.392,
+     "t": 89.853,
      "d": 4.442,
      "txt": "So the whole optical system has to be made of mirrors, sitting in a vacuum.",
      "v": {
@@ -517,11 +499,11 @@
    "trava": 1,
    "nome": "THE LIGHT",
    "fonte": "ZEISS SMT",
-   "ini": 105.753,
-   "fim": 128.269,
+   "ini": 95.215,
+   "fim": 117.731,
    "falas": [
     {
-     "t": 105.753,
+     "t": 95.215,
      "d": 1.804,
      "txt": "And this light is not cheap to make.",
      "v": {
@@ -546,7 +528,7 @@
      }
     },
     {
-     "t": 107.978,
+     "t": 97.439,
      "d": 4.075,
      "txt": "Inside the machine, a laser hits tiny droplets of molten tin.",
      "v": {
@@ -555,7 +537,7 @@
      }
     },
     {
-     "t": 112.473,
+     "t": 101.934,
      "d": 2.445,
      "txt": "Around sixty thousand of them, every second.",
      "v": {
@@ -563,7 +545,7 @@
      }
     },
     {
-     "t": 115.338,
+     "t": 104.799,
      "d": 5.59,
      "txt": "It turns each one into a plasma, at roughly two hundred and twenty thousand degrees Celsius.",
      "v": {
@@ -571,7 +553,7 @@
      }
     },
     {
-     "t": 121.348,
+     "t": 110.81,
      "d": 2.759,
      "txt": "Nearly forty times hotter than the surface of the Sun.",
      "v": {
@@ -579,7 +561,7 @@
      }
     },
     {
-     "t": 124.527,
+     "t": 113.988,
      "d": 2.822,
      "txt": "All of that, for a faint glow of the right wavelength.",
      "v": {
@@ -593,11 +575,11 @@
    "trava": 1,
    "nome": "THE LIGHT",
    "fonte": "ZEISS SMT \u00b7 UP TO 70% REFLECTED PER MIRROR. 10 MIRRORS SHOWN FOR THE MATH.",
-   "ini": 128.269,
-   "fim": 164.852,
+   "ini": 117.731,
+   "fim": 154.313,
    "falas": [
     {
-     "t": 128.269,
+     "t": 117.731,
      "d": 5.846,
      "txt": "But even the best mirror for this light, according to Zeiss, reflects only up to seventy percent of it.",
      "v": {
@@ -624,7 +606,7 @@
      }
     },
     {
-     "t": 134.535,
+     "t": 123.996,
      "d": 2.322,
      "txt": "Every bounce throws away almost a third.",
      "v": {
@@ -632,7 +614,7 @@
      }
     },
     {
-     "t": 137.277,
+     "t": 126.738,
      "d": 2.161,
      "txt": "Now do the math. Ten mirrors in a row.",
      "v": {
@@ -640,7 +622,7 @@
      }
     },
     {
-     "t": 139.858,
+     "t": 129.319,
      "d": 2.877,
      "txt": "Seventy percent. Then forty nine. Then thirty four.",
      "v": {
@@ -648,7 +630,7 @@
      }
     },
     {
-     "t": 143.154,
+     "t": 132.616,
      "d": 4.474,
      "txt": "By the tenth bounce, less than three percent of the light you started with is left.",
      "v": {
@@ -656,7 +638,7 @@
      }
     },
     {
-     "t": 148.048,
+     "t": 137.51,
      "d": 2.205,
      "txt": "That changes everything about the job.",
      "v": {
@@ -664,7 +646,7 @@
      }
     },
     {
-     "t": 150.673,
+     "t": 140.134,
      "d": 2.516,
      "txt": "You can't afford a mirror that's merely excellent.",
      "v": {
@@ -672,7 +654,7 @@
      }
     },
     {
-     "t": 153.609,
+     "t": 143.07,
      "d": 6.164,
      "txt": "Every flaw costs light you don't have, and blurs a pattern whose features are a few dozen atoms wide.",
      "v": {
@@ -680,7 +662,7 @@
      }
     },
     {
-     "t": 160.193,
+     "t": 149.654,
      "d": 3.239,
      "txt": "So what kind of mirror reflects a light that nothing reflects?",
      "v": {
@@ -711,11 +693,11 @@
    "trava": 2,
    "nome": "THE COATING",
    "fonte": null,
-   "ini": 164.852,
-   "fim": 166.919,
+   "ini": 154.313,
+   "fim": 156.38,
    "falas": [
     {
-     "t": 164.852,
+     "t": 154.313,
      "d": 1.147,
      "txt": "Lock two. The coating.",
      "v": {
@@ -746,11 +728,11 @@
    "trava": 2,
    "nome": "THE COATING",
    "fonte": "ZEISS SMT \u00b7 FRAUNHOFER IOF",
-   "ini": 166.919,
-   "fim": 206.532,
+   "ini": 156.38,
+   "fim": 195.994,
    "falas": [
     {
-     "t": 166.919,
+     "t": 156.38,
      "d": 2.356,
      "txt": "The answer is that it isn't really one mirror.",
      "v": {
@@ -777,7 +759,7 @@
      }
     },
     {
-     "t": 169.696,
+     "t": 159.157,
      "d": 2.335,
      "txt": "Zoom into the surface, and you find a stack.",
      "v": {
@@ -785,7 +767,7 @@
      }
     },
     {
-     "t": 172.451,
+     "t": 161.912,
      "d": 5.013,
      "txt": "Up to a hundred alternating layers of two materials. Molybdenum, and silicon.",
      "v": {
@@ -793,7 +775,7 @@
      }
     },
     {
-     "t": 177.884,
+     "t": 167.345,
      "d": 2.389,
      "txt": "Each layer is only a few nanometers thick.",
      "v": {
@@ -801,7 +783,7 @@
      }
     },
     {
-     "t": 180.693,
+     "t": 170.154,
      "d": 2.715,
      "txt": "One layer on its own reflects almost nothing.",
      "v": {
@@ -809,7 +791,7 @@
      }
     },
     {
-     "t": 183.828,
+     "t": 173.289,
      "d": 6.141,
      "txt": "But if every layer has exactly the right thickness, each tiny reflection lines up with the one before it.",
      "v": {
@@ -817,7 +799,7 @@
      }
     },
     {
-     "t": 190.389,
+     "t": 179.85,
      "d": 1.213,
      "txt": "The waves add together.",
      "v": {
@@ -826,7 +808,7 @@
      }
     },
     {
-     "t": 192.022,
+     "t": 181.484,
      "d": 3.814,
      "txt": "A hundred nearly useless reflections become one usable one.",
      "v": {
@@ -835,7 +817,7 @@
      }
     },
     {
-     "t": 196.256,
+     "t": 185.718,
      "d": 5.908,
      "txt": "Get the thickness wrong, by a fraction of a nanometer, across a surface the size of a dinner plate,",
      "v": {
@@ -843,7 +825,7 @@
      }
     },
     {
-     "t": 202.414,
+     "t": 191.875,
      "d": 3.198,
      "txt": "and the waves stop lining up. The reflection collapses.",
      "v": {
@@ -857,11 +839,11 @@
    "trava": 2,
    "nome": "THE COATING",
    "fonte": "ZEISS SMT \u00b7 GERMAN FUTURE PRIZE 2020",
-   "ini": 206.532,
-   "fim": 225.331,
+   "ini": 195.994,
+   "fim": 214.792,
    "falas": [
     {
-     "t": 206.532,
+     "t": 195.994,
      "d": 5.738,
      "txt": "Zeiss developed these coatings together with a German research institute, Frownhofer I-O-F.",
      "v": {
@@ -886,7 +868,7 @@
      }
     },
     {
-     "t": 212.691,
+     "t": 202.152,
      "d": 4.117,
      "txt": "In twenty twenty, that work won Germany's top innovation prize.",
      "v": {
@@ -911,7 +893,7 @@
      }
     },
     {
-     "t": 217.228,
+     "t": 206.689,
      "d": 1.711,
      "txt": "And the coating is the easy part.",
      "v": {
@@ -936,7 +918,7 @@
      }
     },
     {
-     "t": 219.358,
+     "t": 208.819,
      "d": 4.753,
      "txt": "Because a perfect coating only works if the surface underneath is already perfect.",
      "v": {
@@ -950,11 +932,11 @@
    "trava": 3,
    "nome": "THE SHAPE",
    "fonte": null,
-   "ini": 225.331,
-   "fim": 227.397,
+   "ini": 214.792,
+   "fim": 216.858,
    "falas": [
     {
-     "t": 225.331,
+     "t": 214.792,
      "d": 1.146,
      "txt": "Lock three. The shape.",
      "v": {
@@ -985,11 +967,11 @@
    "trava": 3,
    "nome": "THE SHAPE",
    "fonte": "ZEISS SMT (EUV OPTICS)",
-   "ini": 227.397,
-   "fim": 251.379,
+   "ini": 216.858,
+   "fim": 240.841,
    "falas": [
     {
-     "t": 227.397,
+     "t": 216.858,
      "d": 0.944,
      "txt": "Back to Germany.",
      "v": {
@@ -1014,7 +996,7 @@
      }
     },
     {
-     "t": 228.761,
+     "t": 218.223,
      "d": 2.151,
      "txt": "Zeiss uses this comparison itself.",
      "v": {
@@ -1022,7 +1004,7 @@
      }
     },
     {
-     "t": 231.333,
+     "t": 220.794,
      "d": 6.583,
      "txt": "Take a normal household mirror, and stretch it to the size of Germany. Its bumps would be five meters tall.",
      "v": {
@@ -1031,7 +1013,7 @@
      }
     },
     {
-     "t": 238.335,
+     "t": 227.796,
      "d": 3.995,
      "txt": "Do the same with a mirror from a space telescope. Two centimeters.",
      "v": {
@@ -1039,7 +1021,7 @@
      }
     },
     {
-     "t": 242.75,
+     "t": 232.211,
      "d": 3.215,
      "txt": "Do it with an E-U-V mirror. A tenth of a millimeter.",
      "v": {
@@ -1047,7 +1029,7 @@
      }
     },
     {
-     "t": 246.385,
+     "t": 235.846,
      "d": 3.774,
      "txt": "About the thickness of a sheet of paper. Across an entire country.",
      "v": {
@@ -1061,11 +1043,11 @@
    "trava": 3,
    "nome": "THE SHAPE",
    "fonte": "ZEISS SMT",
-   "ini": 251.379,
-   "fim": 270.961,
+   "ini": 240.841,
+   "fim": 260.422,
    "falas": [
     {
-     "t": 251.379,
+     "t": 240.841,
      "d": 1.712,
      "txt": "No grinding wheel gets you there.",
      "v": {
@@ -1090,7 +1072,7 @@
      }
     },
     {
-     "t": 253.512,
+     "t": 242.973,
      "d": 5.186,
      "txt": "According to Zeiss, each mirror is machined for months, before it reaches that precision.",
      "v": {
@@ -1099,7 +1081,7 @@
      }
     },
     {
-     "t": 259.118,
+     "t": 248.58,
      "d": 1.622,
      "txt": "And then, it has to hold still.",
      "v": {
@@ -1124,7 +1106,7 @@
      }
     },
     {
-     "t": 261.16,
+     "t": 250.621,
      "d": 5.779,
      "txt": "The mirrors are steered so precisely that, in Zeiss's words, you could bounce a laser off one,",
      "v": {
@@ -1133,7 +1115,7 @@
      }
     },
     {
-     "t": 267.189,
+     "t": 256.651,
      "d": 2.452,
      "txt": "and hit a golf ball, on the surface of the Moon.",
      "v": {
@@ -1147,11 +1129,11 @@
    "trava": 3,
    "nome": "THE SHAPE",
    "fonte": null,
-   "ini": 270.961,
-   "fim": 287.035,
+   "ini": 260.422,
+   "fim": 276.496,
    "falas": [
     {
-     "t": 270.961,
+     "t": 260.422,
      "d": 3.674,
      "txt": "Quick question before the next lock, because it's my favorite one.",
      "v": {
@@ -1178,7 +1160,7 @@
      }
     },
     {
-     "t": 275.055,
+     "t": 264.516,
      "d": 6.014,
      "txt": "If you had to copy just one thing, which would be harder? Making this mirror? Or proving that you made it?",
      "v": {
@@ -1190,7 +1172,7 @@
      }
     },
     {
-     "t": 281.49,
+     "t": 270.951,
      "d": 4.625,
      "txt": "Put your guess in the comments. I read them. And the answer is coming up right now.",
      "v": {
@@ -1205,11 +1187,11 @@
    "trava": 4,
    "nome": "THE MEASUREMENT",
    "fonte": null,
-   "ini": 287.035,
-   "fim": 289.324,
+   "ini": 276.496,
+   "fim": 278.785,
    "falas": [
     {
-     "t": 287.035,
+     "t": 276.496,
      "d": 1.369,
      "txt": "Lock four. The measurement.",
      "v": {
@@ -1240,11 +1222,11 @@
    "trava": 4,
    "nome": "THE MEASUREMENT",
    "fonte": null,
-   "ini": 289.324,
-   "fim": 306.688,
+   "ini": 278.785,
+   "fim": 296.15,
    "falas": [
     {
-     "t": 289.324,
+     "t": 278.785,
      "d": 1.994,
      "txt": "Think about what polishing actually is.",
      "v": {
@@ -1271,7 +1253,7 @@
      }
     },
     {
-     "t": 291.737,
+     "t": 281.199,
      "d": 2.722,
      "txt": "You remove material where the surface is too high.",
      "v": {
@@ -1279,7 +1261,7 @@
      }
     },
     {
-     "t": 294.879,
+     "t": 284.34,
      "d": 2.164,
      "txt": "Which means you have to know where it's too high.",
      "v": {
@@ -1287,7 +1269,7 @@
      }
     },
     {
-     "t": 297.463,
+     "t": 286.924,
      "d": 6.289,
      "txt": "So before you can make a mirror with errors smaller than an atom, you need a ruler with errors smaller than that.",
      "v": {
@@ -1295,7 +1277,7 @@
      }
     },
     {
-     "t": 304.172,
+     "t": 293.633,
      "d": 1.197,
      "txt": "And nobody sells one.",
      "v": {
@@ -1309,11 +1291,11 @@
    "trava": 4,
    "nome": "THE MEASUREMENT",
    "fonte": "ZEISS SMT (HIGH-NA EUV METROLOGY) \u00b7 ASML",
-   "ini": 306.688,
-   "fim": 339.017,
+   "ini": 296.15,
+   "fim": 328.478,
    "falas": [
     {
-     "t": 306.688,
+     "t": 296.15,
      "d": 1.026,
      "txt": "Zeiss had to build it.",
      "v": {
@@ -1340,7 +1322,7 @@
      }
     },
     {
-     "t": 308.135,
+     "t": 297.596,
      "d": 4.845,
      "txt": "For its newest generation of mirrors, the ones for A-S-M-L's high N-A machines,",
      "v": {
@@ -1348,7 +1330,7 @@
      }
     },
     {
-     "t": 313.229,
+     "t": 302.691,
      "d": 4.102,
      "txt": "which are about a meter across, and weigh several hundred kilograms each,",
      "v": {
@@ -1356,7 +1338,7 @@
      }
     },
     {
-     "t": 317.581,
+     "t": 307.042,
      "d": 5.354,
      "txt": "the measuring system sits in a vacuum chamber five meters wide, and ten meters long.",
      "v": {
@@ -1364,7 +1346,7 @@
      }
     },
     {
-     "t": 323.355,
+     "t": 312.816,
      "d": 2.331,
      "txt": "It weighs around one hundred and fifty tons.",
      "v": {
@@ -1372,7 +1354,7 @@
      }
     },
     {
-     "t": 326.106,
+     "t": 315.567,
      "d": 2.151,
      "txt": "It has more than a hundred thousand parts.",
      "v": {
@@ -1380,7 +1362,7 @@
      }
     },
     {
-     "t": 328.677,
+     "t": 318.138,
      "d": 3.866,
      "txt": "Zeiss calls it the most complex machine the company has ever built.",
      "v": {
@@ -1388,7 +1370,7 @@
      }
     },
     {
-     "t": 332.963,
+     "t": 322.425,
      "d": 2.864,
      "txt": "It doesn't make chips. It doesn't even make mirrors.",
      "v": {
@@ -1396,7 +1378,7 @@
      }
     },
     {
-     "t": 336.247,
+     "t": 325.708,
      "d": 1.349,
      "txt": "It exists to check one.",
      "v": {
@@ -1411,11 +1393,11 @@
    "trava": 4,
    "nome": "THE MEASUREMENT",
    "fonte": "ZEISS SMT (HIGH-NA EUV)",
-   "ini": 339.017,
-   "fim": 366.755,
+   "ini": 328.478,
+   "fim": 356.217,
    "falas": [
     {
-     "t": 339.017,
+     "t": 328.478,
      "d": 7.764,
      "txt": "And once the mirrors pass, they go into an optical system with more than forty thousand parts, that weighs about twelve tons.",
      "v": {
@@ -1449,7 +1431,7 @@
      }
     },
     {
-     "t": 347.201,
+     "t": 336.662,
      "d": 4.616,
      "txt": "That's just the projection optics. The part that carries the pattern down to the chip.",
      "v": {
@@ -1457,7 +1439,7 @@
      }
     },
     {
-     "t": 352.237,
+     "t": 341.699,
      "d": 3.634,
      "txt": "So a copycat doesn't have one impossible machine to build.",
      "v": {
@@ -1482,7 +1464,7 @@
      }
     },
     {
-     "t": 356.291,
+     "t": 345.753,
      "d": 6.483,
      "txt": "They have at least three. The chip machine. The mirror. And the machine that tells you whether the mirror is any good.",
      "v": {
@@ -1491,7 +1473,7 @@
      }
     },
     {
-     "t": 363.195,
+     "t": 352.656,
      "d": 2.341,
      "txt": "Each one needs the others to exist first.",
      "v": {
@@ -1505,11 +1487,11 @@
    "trava": 4,
    "nome": "THE MEASUREMENT",
    "fonte": null,
-   "ini": 366.755,
-   "fim": 385.108,
+   "ini": 356.217,
+   "fim": 374.569,
    "falas": [
     {
-     "t": 366.755,
+     "t": 356.217,
      "d": 0.991,
      "txt": "That's four locks.",
      "v": {
@@ -1536,7 +1518,7 @@
      }
     },
     {
-     "t": 368.167,
+     "t": 357.628,
      "d": 1.388,
      "txt": "Light that hates everything.",
      "v": {
@@ -1544,7 +1526,7 @@
      }
     },
     {
-     "t": 369.974,
+     "t": 359.435,
      "d": 1.78,
      "txt": "A coating a hundred layers deep.",
      "v": {
@@ -1552,7 +1534,7 @@
      }
     },
     {
-     "t": 372.174,
+     "t": 361.636,
      "d": 1.869,
      "txt": "A shape that's flat across a country.",
      "v": {
@@ -1560,7 +1542,7 @@
      }
     },
     {
-     "t": 374.463,
+     "t": 363.924,
      "d": 1.771,
      "txt": "And a ruler that had to be invented.",
      "v": {
@@ -1568,7 +1550,7 @@
      }
     },
     {
-     "t": 376.654,
+     "t": 366.115,
      "d": 5.212,
      "txt": "All four are, in theory, solvable. With enough money, enough physicists, enough years.",
      "v": {
@@ -1580,7 +1562,7 @@
      }
     },
     {
-     "t": 382.286,
+     "t": 371.747,
      "d": 1.902,
      "txt": "China is working on exactly that.",
      "v": {
@@ -1594,11 +1576,11 @@
    "trava": 4,
    "nome": "THE MEASUREMENT",
    "fonte": "REUTERS, DECEMBER 2025",
-   "ini": 385.108,
-   "fim": 407.813,
+   "ini": 374.569,
+   "fim": 397.274,
    "falas": [
     {
-     "t": 385.108,
+     "t": 374.569,
      "d": 0.882,
      "txt": "How many years?",
      "v": {
@@ -1623,7 +1605,7 @@
      }
     },
     {
-     "t": 386.41,
+     "t": 375.871,
      "d": 10.145,
      "txt": "In April twenty twenty five, before the Shenzhen prototype became public, A-S-M-L's chief executive said China would need many, many years to get there.",
      "v": {
@@ -1648,7 +1630,7 @@
      }
     },
     {
-     "t": 396.975,
+     "t": 386.436,
      "d": 3.452,
      "txt": "The prototype suggests it's moving faster than he expected.",
      "v": {
@@ -1656,7 +1638,7 @@
      }
     },
     {
-     "t": 400.847,
+     "t": 390.308,
      "d": 1.519,
      "txt": "On the light. Not on the mirrors.",
      "v": {
@@ -1664,7 +1646,7 @@
      }
     },
     {
-     "t": 403.086,
+     "t": 392.548,
      "d": 1.464,
      "txt": "The fifth lock is different.",
      "v": {
@@ -1692,7 +1674,7 @@
      }
     },
     {
-     "t": 404.97,
+     "t": 394.431,
      "d": 1.223,
      "txt": "Money doesn't open it.",
      "v": {
@@ -1706,11 +1688,11 @@
    "trava": 5,
    "nome": "? ? ?",
    "fonte": null,
-   "ini": 407.813,
-   "fim": 409.817,
+   "ini": 397.274,
+   "fim": 399.278,
    "falas": [
     {
-     "t": 407.813,
+     "t": 397.274,
      "d": 0.784,
      "txt": "Lock five.",
      "v": {
@@ -1741,11 +1723,11 @@
    "trava": 5,
    "nome": "? ? ?",
    "fonte": "ZEISS SMT",
-   "ini": 409.817,
-   "fim": 450.188,
+   "ini": 399.278,
+   "fim": 439.649,
    "falas": [
     {
-     "t": 409.817,
+     "t": 399.278,
      "d": 7.469,
      "txt": "In nineteen ninety five, Zeiss hosted a workshop with chipmakers, researchers, and a Dutch company called A-S-M-L.",
      "v": {
@@ -1770,7 +1752,7 @@
      }
     },
     {
-     "t": 417.706,
+     "t": 407.167,
      "d": 5.574,
      "txt": "They met to talk about a strange idea. Printing chips with extreme ultraviolet light.",
      "v": {
@@ -1778,7 +1760,7 @@
      }
     },
     {
-     "t": 423.7,
+     "t": 413.162,
      "d": 2.604,
      "txt": "The first production optics shipped in twenty twelve.",
      "v": {
@@ -1787,7 +1769,7 @@
      }
     },
     {
-     "t": 426.725,
+     "t": 416.186,
      "d": 3.788,
      "txt": "The first phones with E-U-V chips reached stores in twenty eighteen.",
      "v": {
@@ -1795,7 +1777,7 @@
      }
     },
     {
-     "t": 430.932,
+     "t": 420.393,
      "d": 4.626,
      "txt": "That's twenty three years between the first meeting, and the first product in your pocket.",
      "v": {
@@ -1803,7 +1785,7 @@
      }
     },
     {
-     "t": 435.978,
+     "t": 425.439,
      "d": 5.674,
      "txt": "Twenty three years of spending, on a technology many in the industry doubted would ever work.",
      "v": {
@@ -1811,7 +1793,7 @@
      }
     },
     {
-     "t": 442.073,
+     "t": 431.534,
      "d": 7.195,
      "txt": "The Japanese giants that once led lithography, Nikon and Canon, never brought an E-U-V machine to market.",
      "v": {
@@ -1826,11 +1808,11 @@
    "trava": 5,
    "nome": "? ? ?",
    "fonte": "ZEISS SMT (EUV OPTICS)",
-   "ini": 450.188,
-   "fim": 465.845,
+   "ini": 439.649,
+   "fim": 455.307,
    "falas": [
     {
-     "t": 450.188,
+     "t": 439.649,
      "d": 8.079,
      "txt": "In all that time, Zeiss says it has delivered a bit more than three hundred of these E-U-V optical systems, for chip production.",
      "v": {
@@ -1860,7 +1842,7 @@
      }
     },
     {
-     "t": 458.687,
+     "t": 448.148,
      "d": 2.882,
      "txt": "Three hundred. That's the entire world supply. Ever.",
      "v": {
@@ -1868,7 +1850,7 @@
      }
     },
     {
-     "t": 461.989,
+     "t": 451.45,
      "d": 2.537,
      "txt": "So how does a company survive two decades of that?",
      "v": {
@@ -1899,11 +1881,11 @@
    "trava": 5,
    "nome": "THE MARRIAGE",
    "fonte": "ASML ANNUAL REPORT 2025 \u00b7 ASML/ZEISS ANNOUNCEMENT, NOV 2016",
-   "ini": 465.845,
-   "fim": 510.164,
+   "ini": 455.307,
+   "fim": 499.625,
    "falas": [
     {
-     "t": 465.845,
+     "t": 455.307,
      "d": 1.224,
      "txt": "It doesn't do it alone.",
      "v": {
@@ -1928,7 +1910,7 @@
      }
     },
     {
-     "t": 467.489,
+     "t": 456.951,
      "d": 4.77,
      "txt": "A-S-M-L has used Zeiss optics in its machines since the nineteen eighties.",
      "v": {
@@ -1937,7 +1919,7 @@
      }
     },
     {
-     "t": 472.679,
+     "t": 462.141,
      "d": 10.212,
      "txt": "In twenty sixteen, A-S-M-L went further. It bought twenty four point nine percent of Zeiss's chip optics business, for one billion euros in cash.",
      "v": {
@@ -1949,7 +1931,7 @@
      }
     },
     {
-     "t": 483.311,
+     "t": 472.772,
      "d": 4.831,
      "txt": "And it promised hundreds of millions more, to fund the next generation of mirrors.",
      "v": {
@@ -1957,7 +1939,7 @@
      }
     },
     {
-     "t": 488.562,
+     "t": 478.023,
      "d": 1.474,
      "txt": "Today, the numbers are bigger.",
      "v": {
@@ -1965,7 +1947,7 @@
      }
     },
     {
-     "t": 490.456,
+     "t": 479.918,
      "d": 6.184,
      "txt": "In twenty twenty five, A-S-M-L bought four point four billion euros of optics from Zeiss.",
      "v": {
@@ -1973,7 +1955,7 @@
      }
     },
     {
-     "t": 497.06,
+     "t": 486.522,
      "d": 2.492,
      "txt": "It had lent Zeiss another one point nine billion.",
      "v": {
@@ -1981,7 +1963,7 @@
      }
     },
     {
-     "t": 499.972,
+     "t": 489.433,
      "d": 9.272,
      "txt": "And in its own annual report, A-S-M-L says that if Zeiss couldn't deliver, A-S-M-L would effectively cease to be able to conduct its business.",
      "v": {
@@ -1995,11 +1977,11 @@
    "trava": 5,
    "nome": "THE MARRIAGE",
    "fonte": null,
-   "ini": 510.164,
-   "fim": 519.873,
+   "ini": 499.625,
+   "fim": 509.334,
    "falas": [
     {
-     "t": 510.164,
+     "t": 499.625,
      "d": 0.922,
      "txt": "Read that again.",
      "v": {
@@ -2024,7 +2006,7 @@
      }
     },
     {
-     "t": 511.506,
+     "t": 500.967,
      "d": 7.046,
      "txt": "The company everyone calls impossible to copy, is telling investors it cannot replace its own supplier.",
      "v": {
@@ -2039,11 +2021,11 @@
    "trava": 5,
    "nome": "THE MARRIAGE",
    "fonte": "ZEISS",
-   "ini": 519.873,
-   "fim": 544.041,
+   "ini": 509.334,
+   "fim": 533.502,
    "falas": [
     {
-     "t": 519.873,
+     "t": 509.334,
      "d": 2.625,
      "txt": "And you can't buy your way in from the other side, either.",
      "v": {
@@ -2068,7 +2050,7 @@
      }
     },
     {
-     "t": 522.918,
+     "t": 512.379,
      "d": 6.125,
      "txt": "Zeiss isn't on the stock market. The group is owned by a foundation, set up in eighteen eighty nine.",
      "v": {
@@ -2076,7 +2058,7 @@
      }
     },
     {
-     "t": 529.463,
+     "t": 518.924,
      "d": 1.342,
      "txt": "There's nothing to acquire.",
      "v": {
@@ -2084,7 +2066,7 @@
      }
     },
     {
-     "t": 531.224,
+     "t": 520.686,
      "d": 2.953,
      "txt": "And it isn't a small team you could quietly hire away.",
      "v": {
@@ -2109,7 +2091,7 @@
      }
     },
     {
-     "t": 534.597,
+     "t": 524.059,
      "d": 3.78,
      "txt": "Zeiss's chip division has more than nine thousand employees.",
      "v": {
@@ -2118,7 +2100,7 @@
      }
     },
     {
-     "t": 538.797,
+     "t": 528.258,
      "d": 4.324,
      "txt": "Around two thousand of them work on the newest generation of mirrors alone.",
      "v": {
@@ -2132,11 +2114,11 @@
    "trava": 5,
    "nome": "THE MARRIAGE",
    "fonte": "ZEISS SMT",
-   "ini": 544.041,
-   "fim": 564.502,
+   "ini": 533.502,
+   "fim": 553.963,
    "falas": [
     {
-     "t": 544.041,
+     "t": 533.502,
      "d": 2.083,
      "txt": "So here's what a real copy would need.",
      "v": {
@@ -2174,7 +2156,7 @@
      }
     },
     {
-     "t": 546.544,
+     "t": 536.005,
      "d": 0.78,
      "txt": "Not a mirror.",
      "v": {
@@ -2182,7 +2164,7 @@
      }
     },
     {
-     "t": 547.744,
+     "t": 537.205,
      "d": 4.274,
      "txt": "A customer willing to pay you for twenty years, before the first one works.",
      "v": {
@@ -2191,7 +2173,7 @@
      }
     },
     {
-     "t": 552.437,
+     "t": 541.899,
      "d": 2.589,
      "txt": "Engineers who've spent a career on one surface.",
      "v": {
@@ -2199,7 +2181,7 @@
      }
     },
     {
-     "t": 555.446,
+     "t": 544.907,
      "d": 3.816,
      "txt": "And a network of about twelve hundred specialist suppliers behind them.",
      "v": {
@@ -2207,7 +2189,7 @@
      }
     },
     {
-     "t": 559.682,
+     "t": 549.143,
      "d": 1.301,
      "txt": "You can steal a blueprint.",
      "v": {
@@ -2232,7 +2214,7 @@
      }
     },
     {
-     "t": 561.403,
+     "t": 550.864,
      "d": 1.479,
      "txt": "You can't steal thirty years.",
      "v": {
@@ -2247,11 +2229,11 @@
    "trava": 5,
    "nome": "THE MARRIAGE",
    "fonte": null,
-   "ini": 564.502,
-   "fim": 574.238,
+   "ini": 553.963,
+   "fim": 563.7,
    "falas": [
     {
-     "t": 564.502,
+     "t": 553.963,
      "d": 6.587,
      "txt": "If you know someone who thinks the chip race is one stolen blueprint away from being over, send them this video.",
      "v": {
@@ -2279,7 +2261,7 @@
      }
     },
     {
-     "t": 571.509,
+     "t": 560.97,
      "d": 1.809,
      "txt": "This is the part nobody shows them.",
      "v": {
@@ -2294,11 +2276,11 @@
    "trava": null,
    "nome": null,
    "fonte": "ASML ANNUAL REPORT 2025",
-   "ini": 574.238,
-   "fim": 596.414,
+   "ini": 563.7,
+   "fim": 585.875,
    "falas": [
     {
-     "t": 574.238,
+     "t": 563.7,
      "d": 3.23,
      "txt": "One last thing, because it's the detail that convinced me.",
      "v": {
@@ -2323,7 +2305,7 @@
      }
     },
     {
-     "t": 577.888,
+     "t": 567.349,
      "d": 4.571,
      "txt": "A-S-M-L wants to build more machines. The AI boom is begging for them.",
      "v": {
@@ -2348,7 +2330,7 @@
      }
     },
     {
-     "t": 582.879,
+     "t": 572.34,
      "d": 7.389,
      "txt": "And A-S-M-L's annual report says the number it can build, is limited by how many optics Zeiss can produce.",
      "v": {
@@ -2356,7 +2338,7 @@
      }
     },
     {
-     "t": 590.688,
+     "t": 580.15,
      "d": 4.806,
      "txt": "So Zeiss is expanding its site in Oberkoken, a town in southern Germany.",
      "v": {
@@ -2370,11 +2352,11 @@
    "trava": null,
    "nome": null,
    "fonte": "ZEISS SMT \u00b7 JULY 2026",
-   "ini": 596.414,
-   "fim": 611.604,
+   "ini": 585.875,
+   "fim": 601.065,
    "falas": [
     {
-     "t": 596.414,
+     "t": 585.875,
      "d": 2.929,
      "txt": "About twenty five thousand square meters of new space.",
      "v": {
@@ -2412,7 +2394,7 @@
      }
     },
     {
-     "t": 599.764,
+     "t": 589.225,
      "d": 1.98,
      "txt": "They broke ground in twenty twenty two.",
      "v": {
@@ -2420,7 +2402,7 @@
      }
     },
     {
-     "t": 602.164,
+     "t": 591.625,
      "d": 3.268,
      "txt": "The first building opened in the summer of twenty twenty six.",
      "v": {
@@ -2428,7 +2410,7 @@
      }
     },
     {
-     "t": 605.852,
+     "t": 595.313,
      "d": 4.433,
      "txt": "Four years to add capacity, for the only company that already knows how.",
      "v": {
@@ -2442,11 +2424,11 @@
    "trava": null,
    "nome": null,
    "fonte": null,
-   "ini": 611.604,
-   "fim": 619.268,
+   "ini": 601.065,
+   "fim": 608.73,
    "falas": [
     {
-     "t": 611.604,
+     "t": 601.065,
      "d": 2.969,
      "txt": "That's the real reason nobody can copy this mirror.",
      "v": {
@@ -2471,7 +2453,7 @@
      }
     },
     {
-     "t": 614.993,
+     "t": 604.454,
      "d": 2.456,
      "txt": "Even the original can barely copy itself.",
      "v": {
@@ -2486,11 +2468,11 @@
    "trava": null,
    "nome": null,
    "fonte": null,
-   "ini": 619.268,
-   "fim": 633.839,
+   "ini": 608.73,
+   "fim": 623.301,
    "falas": [
     {
-     "t": 619.268,
+     "t": 608.73,
      "d": 5.61,
      "txt": "The mirror is one link in a chain. And almost every link has a company like this hiding in it.",
      "v": {
@@ -2515,7 +2497,7 @@
      }
     },
     {
-     "t": 625.298,
+     "t": 614.76,
      "d": 1.372,
      "txt": "Next, we open another one.",
      "v": {
@@ -2523,7 +2505,7 @@
      }
     },
     {
-     "t": 627.091,
+     "t": 616.552,
      "d": 1.524,
      "txt": "Subscribe, so it finds you.",
      "v": {
@@ -2531,7 +2513,7 @@
      }
     },
     {
-     "t": 629.035,
+     "t": 618.496,
      "d": 3.884,
      "txt": "And tell me in the comments which company you want taken apart next.",
      "v": {

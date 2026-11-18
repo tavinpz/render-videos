@@ -62,11 +62,15 @@ const Alemanha: React.FC<Ctx> = ({ g, a }) => {
     <g>
       {/* passo 1: o espelho; passo 2: ele cresce até virar a Alemanha */}
       <g opacity={a(1, 12) * (1 - al)} transform={`translate(${cx},${ym}) scale(${1 + al * 2.2})`}>
-        <ellipse cx={0} cy={0} rx={190} ry={62} fill={P.menta} fillOpacity={0.08} stroke={P.menta} strokeWidth={4} />
-        <path d="M -120,-8 Q 0,26 120,-8" fill="none" stroke={P.osso} strokeWidth={2.5} opacity={0.6} />
-        <ellipse cx={-60 + 30 * Math.sin(g / 20)} cy={-14} rx={46} ry={10} fill={P.osso} opacity={0.14} />
+        <ellipse cx={0} cy={0} rx={290} ry={100} fill={P.menta} opacity={0.16 + 0.06 * Math.sin(g / 7)} filter="url(#halo)" />
+        <ellipse cx={0} cy={0} rx={270} ry={90} fill="#10231B" stroke={P.menta} strokeWidth={6} />
+        <path d="M -180,-12 Q 0,40 180,-12" fill="none" stroke={P.osso} strokeWidth={3} opacity={0.6} />
+        <ellipse cx={-110 + ((g * 7) % 260)} cy={-20} rx={60} ry={12} fill={P.osso} opacity={0.2} />
+        <line x1={-420} y1={-330} x2={-420 + 420 * L(g, [4, 16], [0, 1])} y2={-330 + 330 * L(g, [4, 16], [0, 1])} stroke={P.luz} strokeWidth={9} strokeLinecap="round" />
+        <line x1={0} y1={0} x2={420 * L(g, [16, 28], [0, 1])} y2={-330 * L(g, [16, 28], [0, 1])} stroke={P.luz} strokeWidth={7} strokeLinecap="round" opacity={0.85} />
+        <circle cx={0} cy={0} r={L(g, [14, 20, 34], [0, 34, 12])} fill={P.luz} opacity={L(g, [14, 20, 60], [0, 0.9, 0.35])} />
       </g>
-      <g opacity={a(1, 12) * (1 - al)}><Rot x={cx} y={ym + 130} t="ONE EUV MIRROR" anc="middle" cor={P.menta} peso={700} tam={24} /></g>
+      <g opacity={a(1, 12) * (1 - al)}><Rot x={cx} y={ym + 160} t="ONE EUV MIRROR · ZEISS" anc="middle" cor={P.menta} peso={700} tam={24} /></g>
       <g opacity={al} transform={`translate(${cx},${ym}) scale(${0.25 + 0.75 * al}) translate(${-cx},${-ym})`}>
         <g transform={`translate(${ox},${oy}) scale(${esc})`}><path d={DE.d} fill={P.menta} fillOpacity={0.07} stroke={P.menta} strokeWidth={3 / esc} strokeLinejoin="round" /></g>
         <line x1={x0 + 40} y1={ym} x2={x0 + 40 + (x1 - x0 - 80) * a(2, 30, 16)} y2={ym} stroke={P.osso} strokeWidth={2} strokeDasharray="2 9" strokeLinecap="round" />
@@ -550,8 +554,9 @@ const Fim: React.FC<Ctx> = ({ g, a, q }) => {
 
 const DIAG: Record<string, React.FC<any>> = { check: Check, alemanha: Alemanha, travas: Travas, espectro: Espectro, absorve: Absorve, gota: Gota, feixe: Feixe, camadas: Camadas, copia: Copia, lua: Lua, cta: Cta, polir: Polir, camara: Camara, nums: Nums, tres: Tres, linha: Linha, casamento: Casamento, pontos: Pontos, duas: Duas, gargalo: Gargalo, fim: Fim };
 
-const Cena: React.FC<{ g: number; D: number; b: Bloco; ini: number }> = ({ g, D, b, ini }) => {
-  const ts = b.falas.map((x) => Math.round(x.t * 30) - ini);
+const Cena: React.FC<{ g: number; D: number; b: Bloco; ini: number; zero?: boolean }> = ({ g, D, b, ini, zero }) => {
+  // zero: no 1º bloco do vídeo a imagem já entra no quadro 0, antes da voz (o começo não pode ficar parado no preto)
+  const ts = b.falas.map((x, k) => (zero && k === 0 ? 0 : Math.round(x.t * 30) - ini));
   const est = React.useMemo(() => { const arr: V[] = []; let s: V = {}; for (const f of b.falas) { s = { ...s, ...(f.v || {}) }; for (const k of Object.keys(s)) if (s[k] === null) delete s[k]; arr.push(s); } return arr; }, [b]);
   let i = 0; for (let k = 0; k < ts.length; k++) if (g >= ts[k]) i = k;
   const v = est[i];
@@ -607,15 +612,15 @@ export const HTCVideo: React.FC<{ tempos: TemposHTC }> = ({ tempos }) => {
     <AbsoluteFill style={{ background: P.fundo, overflow: 'hidden' }}>
       <svg viewBox={`0 0 ${W} ${H}`} width={W} height={H} style={{ position: 'absolute', left: 0, top: 0, transform: `translate(${-((f * 0.25) % 48)}px, 0)` }}><Defs /><rect width={W + 48} height={H} fill="url(#foco)" /><rect width={W + 48} height={H} fill="url(#pontos)" /></svg>
       {tempos.blocos.map((b, i) => {
-        const ini = Math.round(b.ini * 30), fim = i === n - 1 ? fimV + 30 : Math.round(b.fim * 30);
+        const ini = i === 0 ? 0 : Math.round(b.ini * 30), fim = i === n - 1 ? fimV + 30 : Math.round(b.fim * 30);
         if (f < ini - X || f > fim + X) return null;
         const op = L(f, [ini - X, ini + X], [0, 1]) * (i === n - 1 ? 1 : L(f, [fim - X, fim + X], [1, 0]));
-        return <AbsoluteFill key={i} style={{ opacity: i === 0 ? 1 : op }}><Cena g={Math.max(0, f - ini)} D={fim - ini} b={b} ini={ini} /></AbsoluteFill>;
+        return <AbsoluteFill key={i} style={{ opacity: i === 0 ? 1 : op }}><Cena g={Math.max(0, f - ini)} D={fim - ini} b={b} ini={ini} zero={i === 0} /></AbsoluteFill>;
       })}
       <Fixos f={f} tempos={tempos} />
       <AbsoluteFill style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 60%, rgba(0,0,0,.45) 100%)' }} />
       <AbsoluteFill style={{ opacity: 0.045, mixBlendMode: 'overlay' }}><Img src={staticFile(`fx/grain${f % 4}.png`)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></AbsoluteFill>
-      <AbsoluteFill style={{ background: '#000', opacity: Math.max(L(f, [0, 8], [1, 0]), L(f, [fimV - 20, fimV - 2], [0, 1])) }} />
+      <AbsoluteFill style={{ background: '#000', opacity: Math.max(L(f, [0, 4], [1, 0]), L(f, [fimV - 20, fimV - 2], [0, 1])) }} />
     </AbsoluteFill>
   );
 };

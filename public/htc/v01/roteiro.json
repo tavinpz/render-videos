@@ -3,34 +3,17 @@
   "cena": "gancho",
   "trava": null,
   "nome": null,
-  "fonte": null,
+  "fonte": "ZEISS SMT (EUV OPTICS)",
   "falas": [
    {
-    "txt": "You have unlimited money.",
+    "txt": "This is the most precise mirror in the world.",
     "p": 0,
     "v": {
-     "d": "check",
+     "d": "alemanha",
      "n": 1,
-     "k": null,
+     "k": "The most precise mirror *in the world*.",
      "tit": null,
-     "it": [
-      [
-       "UNLIMITED MONEY",
-       1
-      ],
-      [
-       "EX-ASML ENGINEERS",
-       1
-      ],
-      [
-       "THE MACHINE, REVERSE-ENGINEERED",
-       1
-      ],
-      [
-       "WORKING CHIPS",
-       0
-      ]
-     ],
+     "it": null,
      "t": null,
      "rot": null,
      "sub": null,
@@ -47,68 +30,45 @@
     }
    },
    {
-    "txt": "You have engineers who used to work at A-S-M-L.",
+    "txt": "Blow it up to the size of Germany,",
     "p": 0,
     "v": {
-     "n": 2
+     "n": 2,
+     "k": null
     }
    },
    {
-    "txt": "You've reverse engineered the most complicated machine ever sold.",
-    "p": 0,
+    "txt": "and its tallest bump would be a tenth of a millimeter.",
+    "p": 0.3,
     "v": {
      "n": 3
-    }
-   },
-   {
-    "txt": "And it still doesn't make chips.",
-    "p": 0.5,
-    "v": {
-     "n": 4
     }
    }
   ]
  },
  {
-  "cena": "shenzhen",
+  "cena": "chips",
   "trava": null,
   "nome": null,
-  "fonte": "REUTERS, DECEMBER 2025",
+  "fonte": "ZEISS SMT (EUV OPTICS)",
   "falas": [
    {
-    "txt": "That's not a thought experiment.",
+    "txt": "Every cutting edge AI chip on Earth is printed with light that bounced off mirrors like this.",
     "p": 0,
     "v": {
-     "d": "check",
+     "d": "big",
      "n": 0,
-     "k": "Not a thought experiment.",
+     "k": null,
      "tit": null,
-     "it": [
-      [
-       "EUV PROTOTYPE: BUILT",
-       1
-      ],
-      [
-       "MAKES THE LIGHT",
-       1
-      ],
-      [
-       "A WORKING CHIP",
-       0
-      ],
-      [
-       "HELD BACK BY: THE OPTICS",
-       0
-      ]
-     ],
-     "t": null,
-     "rot": null,
+     "it": null,
+     "t": "EVERY AI CHIP",
+     "rot": "PRINTED WITH LIGHT FROM THESE MIRRORS",
      "sub": null,
-     "cor": null,
+     "cor": "luz",
      "ab": null,
      "at": null,
      "tl": null,
-     "cab": "SHENZHEN, CHINA · HIGH-SECURITY LAB",
+     "cab": null,
      "rev": null,
      "l1": null,
      "l2": null,
@@ -117,47 +77,17 @@
     }
    },
    {
-    "txt": "In December twenty twenty five, Reuters reported that China had built a prototype of an E-U-V machine, in a high security lab in Shenzhen.",
-    "p": 0,
-    "v": {
-     "n": 1,
-     "k": null
-    }
-   },
-   {
-    "txt": "It makes the light.",
-    "p": 0,
-    "v": {
-     "n": 2
-    }
-   },
-   {
-    "txt": "It has not made a working chip.",
-    "p": 0,
-    "v": {
-     "n": 3
-    }
-   },
-   {
-    "txt": "And according to Reuters' sources, one of the main things holding it back, is a part that A-S-M-L doesn't even make.",
-    "p": 0,
-    "v": {
-     "n": 4,
-     "k": "A part ASML *doesn't even make*."
-    }
-   },
-   {
-    "txt": "A mirror.",
-    "p": 0.6,
+    "txt": "And only one company can make them.",
+    "p": 0.3,
     "v": {
      "d": "big",
      "n": 0,
      "k": null,
      "tit": null,
      "it": null,
-     "t": "A MIRROR.",
+     "t": "1",
      "rot": null,
-     "sub": null,
+     "sub": "company on Earth can make them",
      "cor": "menta",
      "ab": null,
      "at": null,
@@ -173,20 +103,37 @@
   ]
  },
  {
-  "cena": "espelho",
+  "cena": "shenzhen",
   "trava": null,
   "nome": null,
-  "fonte": "ZEISS SMT (EUV OPTICS)",
+  "fonte": "REUTERS, DECEMBER 2025",
   "falas": [
    {
-    "txt": "Zeiss, the company that makes it, calls it the most precise mirror in the world.",
+    "txt": "China has the money.",
     "p": 0,
     "v": {
-     "d": "alemanha",
+     "d": "check",
      "n": 1,
-     "k": "\"The most precise mirror in the world\"",
+     "k": null,
      "tit": null,
-     "it": null,
+     "it": [
+      [
+       "THE MONEY",
+       1
+      ],
+      [
+       "EX-ASML ENGINEERS",
+       1
+      ],
+      [
+       "A PROTOTYPE OF THE MACHINE",
+       1
+      ],
+      [
+       "A WORKING CHIP",
+       0
+      ]
+     ],
      "t": null,
      "rot": null,
      "sub": null,
@@ -194,7 +141,7 @@
      "ab": null,
      "at": null,
      "tl": null,
-     "cab": null,
+     "cab": "CHINA · THE SHENZHEN PROJECT",
      "rev": null,
      "l1": null,
      "l2": null,
@@ -203,32 +150,45 @@
     }
    },
    {
-    "txt": "Scale it up to the size of Germany,",
+    "txt": "It has former A-S-M-L engineers.",
     "p": 0,
     "v": {
-     "n": 2,
-     "k": null
+     "n": 2
     }
    },
    {
-    "txt": "and its tallest bump would be a tenth of a millimeter.",
-    "p": 0.6,
+    "txt": "And according to Reuters, it has a prototype of the machine itself.",
+    "p": 0,
     "v": {
      "n": 3
     }
    },
    {
-    "txt": "One company on Earth can make it.",
+    "txt": "It makes the light. It has not made a single working chip.",
     "p": 0,
+    "v": {
+     "n": 4
+    }
+   },
+   {
+    "txt": "And one of the main things holding it back, is a part that A-S-M-L doesn't even make.",
+    "p": 0,
+    "v": {
+     "k": "A part ASML *doesn't even make*."
+    }
+   },
+   {
+    "txt": "This mirror.",
+    "p": 0.5,
     "v": {
      "d": "big",
      "n": 0,
      "k": null,
      "tit": null,
      "it": null,
-     "t": "1",
+     "t": "THIS MIRROR.",
      "rot": null,
-     "sub": "company on Earth can make it",
+     "sub": null,
      "cor": "menta",
      "ab": null,
      "at": null,
@@ -249,6 +209,30 @@
   "nome": null,
   "fonte": null,
   "falas": [
+   {
+    "txt": "So why can't anyone copy a mirror?",
+    "p": 0,
+    "v": {
+     "d": "big",
+     "n": 0,
+     "k": null,
+     "tit": null,
+     "it": null,
+     "t": "WHY?",
+     "rot": null,
+     "sub": "Why can't anyone copy a mirror?",
+     "cor": "ambar",
+     "ab": null,
+     "at": null,
+     "tl": null,
+     "cab": null,
+     "rev": null,
+     "l1": null,
+     "l2": null,
+     "ic": null,
+     "s": null
+    }
+   },
    {
     "txt": "There are five locks between everyone else, and this mirror.",
     "p": 0,
