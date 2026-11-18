@@ -15,6 +15,7 @@ jobs:
     outputs:
       id: ${{ steps.p.outputs.id }}
       matriz: ${{ steps.p.outputs.matriz }}
+      vb: ${{ steps.p.outputs.vb }}
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 2 }
@@ -31,7 +32,9 @@ jobs:
           M=$(python3 -c "
           import json;Q=$Q;N=$N;p=-(-Q//N)
           print(json.dumps([{'k':i,'ini':i*p,'fim':min(Q,(i+1)*p)-1} for i in range(N) if i*p<Q]))")
-          echo "id=$ID" >> $GITHUB_OUTPUT; echo "matriz=$M" >> $GITHUB_OUTPUT
+          # painel aceita até 50 MB: 47 MB no total, 128 kbps de áudio, o resto para o vídeo
+          VB=$(python3 -c "print(int(47*8*1024*1024/($Q/30)/1000 - 128 - 6))")
+          echo "id=$ID" >> $GITHUB_OUTPUT; echo "matriz=$M" >> $GITHUB_OUTPUT; echo "vb=$VB" >> $GITHUB_OUTPUT
           echo "$ID: $Q quadros em $N partes"
 
   render:
@@ -51,7 +54,7 @@ jobs:
       - name: render ${{ matrix.parte.ini }}-${{ matrix.parte.fim }}
         run: |
           npx remotion render src/index.ts Arte saida.mp4 --props='{"id":"${{ needs.plano.outputs.id }}","semAudio":true}' \
-            --frames=${{ matrix.parte.ini }}-${{ matrix.parte.fim }} --muted --concurrency=4 --crf=19 --log=info
+            --frames=${{ matrix.parte.ini }}-${{ matrix.parte.fim }} --muted --concurrency=4 --video-bitrate=${{ needs.plano.outputs.vb }}K --x264-preset=slow --log=info
           mv saida.mp4 parte_$(printf %03d ${{ matrix.parte.k }}).mp4
       - uses: actions/upload-artifact@v4
         with:
@@ -68,19 +71,12 @@ jobs:
       - uses: actions/download-artifact@v4
         with: { pattern: 'parte-*', merge-multiple: true, path: partes }
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
-      - name: juntar, conferir e comprimir para o painel (até 48 MB)
+      - name: juntar (cópia direta, sem recomprimir) e conferir
         run: |
           ID=${{ needs.plano.outputs.id }}
           ls partes/*.mp4 | sort | sed "s/^/file '/;s/$/'/" > lista.txt
-          ffmpeg -y -loglevel error -f concat -safe 0 -i lista.txt -i public/l/$ID/mix.m4a -map 0:v -map 1:a -c:v copy -c:a copy -shortest -movflags +faststart cheio.mp4
-          D=$(ffprobe -v error -show_entries format=duration -of csv=p=0 cheio.mp4)
-          echo "duração $D s"; ls -la cheio.mp4
-          # 48 MB no total: 128 kbps de áudio, o resto para o vídeo (2 passes)
-          VB=$(python3 -c "print(int(48*8*1024*1024/$D/1000 - 128 - 8))")
-          echo "vídeo a ${VB}k"
-          ffmpeg -y -loglevel error -i cheio.mp4 -c:v libx264 -preset slow -b:v ${VB}k -pass 1 -an -f mp4 /dev/null
-          ffmpeg -y -loglevel error -i cheio.mp4 -c:v libx264 -preset slow -b:v ${VB}k -pass 2 -c:a aac -b:a 128k -movflags +faststart $ID.mp4
-          ls -la $ID.mp4
+          ffmpeg -y -loglevel error -f concat -safe 0 -i lista.txt -i public/l/$ID/mix.m4a -map 0:v -map 1:a -c:v copy -c:a aac -b:a 128k -shortest -movflags +faststart $ID.mp4
+          ffprobe -v error -show_entries format=duration -of csv=p=0 $ID.mp4; ls -la $ID.mp4
           mkdir -p conf && for t in 5 60 200 400 600; do ffmpeg -loglevel error -ss $t -i $ID.mp4 -frames:v 1 -vf scale=480:-1 conf/q_$t.jpg || true; done
       - name: publicar no ramo saida-<id>
         run: |
