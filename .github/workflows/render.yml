@@ -9,6 +9,8 @@ on:
     inputs:
       id: { description: 'id do vídeo (pasta em public/l)', required: true }
       partes: { description: 'quantas máquinas em paralelo', default: '20' }
+      comp: { description: 'composição (padrão Arte)', default: 'Arte' }
+      pasta: { description: 'pasta em public com tempos.json e mix.m4a (só para composição diferente de Arte)', default: '' }
   push:
     paths: ['fila/*.txt']
 
@@ -34,8 +36,9 @@ jobs:
             ID=$(basename "$F" .txt); N=$(head -1 "$F" 2>/dev/null | tr -dc 0-9)
           fi
           [ -z "$N" ] && N=20
-          L2=$(sed -n 2p "fila/$ID.txt" 2>/dev/null | tr -d '\r'); COMP=$(echo "$L2" | awk '{print $1}'); PASTA=$(echo "$L2" | awk '{print $2}'); LIM=$(echo "$L2" | awk '{print $3}' | tr -dc 0-9)
-          if [ -n "$COMP" ] && [ -n "$PASTA" ]; then
+          L2=$(sed -n 2p "fila/$ID.txt" 2>/dev/null | tr -d '\r' | grep -v '^ *#' || true); COMP=$(echo "$L2" | awk '{print $1}'); PASTA=$(echo "$L2" | awk '{print $2}'); LIM=$(echo "$L2" | awk '{print $3}' | tr -dc 0-9)
+          [ -n "${{ github.event.inputs.comp }}" ] && COMP="${{ github.event.inputs.comp }}" && PASTA="${{ github.event.inputs.pasta }}"
+          if [ -n "$COMP" ] && [ "$COMP" != "Arte" ] && [ -n "$PASTA" ]; then
             Q=$(python3 -c "import json,math;print(math.ceil(json.load(open('public/$PASTA/tempos.json'))['total']*30))")
             if [ -n "$LIM" ] && [ "$LIM" -lt "$Q" ]; then Q=$LIM; fi
             PROPS="{\"pasta\":\"$PASTA\",\"n\":$Q}"; MIX="public/$PASTA/mix.m4a"
@@ -85,7 +88,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with: { pattern: 'parte-*', merge-multiple: true, path: partes }
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+      - name: ffmpeg (com limite de tempo e nova tentativa, o apt às vezes trava)
+        run: |
+          for i in 1 2 3; do command -v ffmpeg && break; (timeout 150 sudo apt-get update -qq && timeout 240 sudo apt-get install -y -qq ffmpeg > /dev/null) || sleep 5; done; ffmpeg -version | head -1
       - name: juntar (cópia direta, sem recomprimir) e conferir
         run: |
           ID=${{ needs.plano.outputs.id }}
