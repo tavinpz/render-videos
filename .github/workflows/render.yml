@@ -62,17 +62,30 @@ jobs:
   juntar:
     needs: [plano, render]
     runs-on: ubuntu-latest
+    permissions: { contents: write }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with: { pattern: 'parte-*', merge-multiple: true, path: partes }
-      - run: |
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null
+      - name: juntar, conferir e comprimir para o painel (até 48 MB)
+        run: |
           ID=${{ needs.plano.outputs.id }}
           ls partes/*.mp4 | sort | sed "s/^/file '/;s/$/'/" > lista.txt
-          ffmpeg -y -loglevel error -f concat -safe 0 -i lista.txt -i public/l/$ID/mix.m4a -map 0:v -map 1:a -c:v copy -c:a copy -shortest -movflags +faststart $ID.mp4
+          ffmpeg -y -loglevel error -f concat -safe 0 -i lista.txt -i public/l/$ID/mix.m4a -map 0:v -map 1:a -c:v copy -c:a copy -shortest -movflags +faststart cheio.mp4
+          D=$(ffprobe -v error -show_entries format=duration -of csv=p=0 cheio.mp4)
+          echo "duração $D s"; ls -la cheio.mp4
+          # 48 MB no total: 128 kbps de áudio, o resto para o vídeo (2 passes)
+          VB=$(python3 -c "print(int(48*8*1024*1024/$D/1000 - 128 - 8))")
+          echo "vídeo a ${VB}k"
+          ffmpeg -y -loglevel error -i cheio.mp4 -c:v libx264 -preset slow -b:v ${VB}k -pass 1 -an -f mp4 /dev/null
+          ffmpeg -y -loglevel error -i cheio.mp4 -c:v libx264 -preset slow -b:v ${VB}k -pass 2 -c:a aac -b:a 128k -movflags +faststart $ID.mp4
           ls -la $ID.mp4
-      - uses: actions/upload-artifact@v4
-        with:
-          name: video-${{ needs.plano.outputs.id }}
-          path: '*.mp4'
-          retention-days: 7
+          mkdir -p conf && for t in 5 60 200 400 600; do ffmpeg -loglevel error -ss $t -i $ID.mp4 -frames:v 1 -vf scale=480:-1 conf/q_$t.jpg || true; done
+      - name: publicar no ramo saida-<id>
+        run: |
+          ID=${{ needs.plano.outputs.id }}
+          mkdir pub && mv $ID.mp4 conf pub/ && cd pub
+          git init -q -b saida-$ID && git config user.name render-bot && git config user.email render-bot@users.noreply.github.com
+          git add -A && git commit -qm "vídeo $ID ($(date -u +%FT%TZ))"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" saida-$ID
