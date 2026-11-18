@@ -1,5 +1,8 @@
-# Renderiza um vídeo da composição Arte em paralelo: divide em N pedaços, cada máquina faz um, e a última junta com o áudio.
+# Renderiza um vídeo em paralelo: divide em N pedaços, cada máquina faz um, e a última junta com o áudio.
 # Disparo: Actions > render > Run workflow (id do vídeo, ex.: lss002a), ou um push que mude fila/<id>.txt.
+# fila/<id>.txt: linha 1 = número de partes. Linha 2 (opcional, para outra composição): "<Composição> <pasta em public> [quadros]",
+# ex.: "SNBVideo snb/v01" (vídeo inteiro) ou "SNBVideo snb/v01 900" (teste com os 900 primeiros quadros).
+# Sem a linha 2 vale o padrão: composição Arte com public/l/<id>/data.json e mix.m4a.
 name: render
 on:
   workflow_dispatch:
@@ -16,6 +19,9 @@ jobs:
       id: ${{ steps.p.outputs.id }}
       matriz: ${{ steps.p.outputs.matriz }}
       vb: ${{ steps.p.outputs.vb }}
+      comp: ${{ steps.p.outputs.comp }}
+      props: ${{ steps.p.outputs.props }}
+      mix: ${{ steps.p.outputs.mix }}
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 2 }
@@ -28,13 +34,22 @@ jobs:
             ID=$(basename "$F" .txt); N=$(head -1 "$F" 2>/dev/null | tr -dc 0-9)
           fi
           [ -z "$N" ] && N=20
-          Q=$(python3 -c "import json;print(json.load(open('public/l/$ID/data.json'))['quadros'])")
+          L2=$(sed -n 2p "fila/$ID.txt" 2>/dev/null | tr -d '\r'); COMP=$(echo "$L2" | awk '{print $1}'); PASTA=$(echo "$L2" | awk '{print $2}'); LIM=$(echo "$L2" | awk '{print $3}' | tr -dc 0-9)
+          if [ -n "$COMP" ] && [ -n "$PASTA" ]; then
+            Q=$(python3 -c "import json,math;print(math.ceil(json.load(open('public/$PASTA/tempos.json'))['total']*30))")
+            if [ -n "$LIM" ] && [ "$LIM" -lt "$Q" ]; then Q=$LIM; fi
+            PROPS="{\"pasta\":\"$PASTA\",\"n\":$Q}"; MIX="public/$PASTA/mix.m4a"
+          else
+            COMP=Arte; PROPS="{\"id\":\"$ID\",\"semAudio\":true}"; MIX="public/l/$ID/mix.m4a"
+            Q=$(python3 -c "import json;print(json.load(open('public/l/$ID/data.json'))['quadros'])")
+          fi
           M=$(python3 -c "
           import json;Q=$Q;N=$N;p=-(-Q//N)
           print(json.dumps([{'k':i,'ini':i*p,'fim':min(Q,(i+1)*p)-1} for i in range(N) if i*p<Q]))")
           # painel aceita até 50 MB: 47 MB no total, 128 kbps de áudio, o resto para o vídeo
-          VB=$(python3 -c "print(int(47*8*1024*1024/($Q/30)/1000 - 128 - 6))")
+          VB=$(python3 -c "print(min(8000, int(47*8*1024*1024/($Q/30)/1000 - 128 - 6)))")
           echo "id=$ID" >> $GITHUB_OUTPUT; echo "matriz=$M" >> $GITHUB_OUTPUT; echo "vb=$VB" >> $GITHUB_OUTPUT
+          echo "comp=$COMP" >> $GITHUB_OUTPUT; echo "props=$PROPS" >> $GITHUB_OUTPUT; echo "mix=$MIX" >> $GITHUB_OUTPUT
           echo "$ID: $Q quadros em $N partes"
 
   render:
@@ -53,7 +68,7 @@ jobs:
       - run: npx remotion browser ensure
       - name: render ${{ matrix.parte.ini }}-${{ matrix.parte.fim }}
         run: |
-          npx remotion render src/index.ts Arte saida.mp4 --props='{"id":"${{ needs.plano.outputs.id }}","semAudio":true}' \
+          npx remotion render src/index.ts ${{ needs.plano.outputs.comp }} saida.mp4 --props='${{ needs.plano.outputs.props }}' \
             --frames=${{ matrix.parte.ini }}-${{ matrix.parte.fim }} --muted --concurrency=4 --video-bitrate=${{ needs.plano.outputs.vb }}K --x264-preset=slow --log=info
           mv saida.mp4 parte_$(printf %03d ${{ matrix.parte.k }}).mp4
       - uses: actions/upload-artifact@v4
@@ -75,9 +90,9 @@ jobs:
         run: |
           ID=${{ needs.plano.outputs.id }}
           ls partes/*.mp4 | sort | sed "s/^/file '/;s/$/'/" > lista.txt
-          ffmpeg -y -loglevel error -f concat -safe 0 -i lista.txt -i public/l/$ID/mix.m4a -map 0:v -map 1:a -c:v copy -c:a aac -b:a 128k -shortest -movflags +faststart $ID.mp4
+          ffmpeg -y -loglevel error -f concat -safe 0 -i lista.txt -i ${{ needs.plano.outputs.mix }} -map 0:v -map 1:a -c:v copy -c:a aac -b:a 128k -shortest -movflags +faststart $ID.mp4
           ffprobe -v error -show_entries format=duration -of csv=p=0 $ID.mp4; ls -la $ID.mp4
-          mkdir -p conf && for t in 5 60 200 400 600; do ffmpeg -loglevel error -ss $t -i $ID.mp4 -frames:v 1 -vf scale=480:-1 conf/q_$t.jpg || true; done
+          mkdir -p conf && for t in 2 5 12 20 60 200 400 480; do ffmpeg -loglevel error -ss $t -i $ID.mp4 -frames:v 1 -vf scale=480:-1 conf/q_$t.jpg || true; done
       - name: publicar no ramo saida-<id>
         run: |
           ID=${{ needs.plano.outputs.id }}
