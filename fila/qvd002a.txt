@@ -1,0 +1,2 @@
+20
+# 1ª linha = número de máquinas. Mude e dê push para renderizar de novo. (2026-11-18T18:16:06)
