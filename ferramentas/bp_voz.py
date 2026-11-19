@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np, torch, soundfile as sf
 pasta, K, NK, saida = sys.argv[1].rstrip('/'), int(sys.argv[2]), int(sys.argv[3]), Path(sys.argv[4]); saida.mkdir(parents=True, exist_ok=True)
 TOMADAS = int(os.environ.get('TOMADAS', '3')); torch.set_num_threads(os.cpu_count() or 4)
+if not any(i % NK == K for i in range(len(json.load(open(f'{pasta}/roteiro.json'))['falas']))): json.dump({'info': {}, 'sr': 0, 'falas': []}, open(saida / f'rel_{K}.json', 'w')); sys.exit(0)  # fatia sem falas
 from huggingface_hub import snapshot_download
 from chatterbox.mtl_tts import ChatterboxMultilingualTTS, REPO_ID
 info = {}

@@ -46,7 +46,7 @@ jobs:
       - name: publicar
         run: |
           F=$(git diff --name-only HEAD~1 HEAD -- fila-voz | grep '\.txt$' | head -1); [ -z "$F" ] && F=$(ls -t fila-voz/*.txt | head -1); ID=$(basename "$F" .txt)
-          cd pub && python3 -c "import json,glob;r=[json.load(open(f)) for f in sorted(glob.glob('rel_*.json'))];json.dump({'info':r[0]['info'] if r else {},'sr':r[0]['sr'] if r else 0,'falas':sorted(sum([x['falas'] for x in r],[]),key=lambda f:f['i'])},open('relatorio.json','w'),ensure_ascii=False,indent=1)"
+          cd pub && python3 -c "import json,glob;r=[x for x in (json.load(open(f)) for f in sorted(glob.glob('rel_*.json'))) if x['falas']];json.dump({'info':r[0]['info'] if r else {},'sr':r[0]['sr'] if r else 0,'falas':sorted(sum([x['falas'] for x in r],[]),key=lambda f:f['i'])},open('relatorio.json','w'),ensure_ascii=False,indent=1)"
           rm -f rel_*.json; ls -la . musica || true
           git init -q -b saida-voz-$ID && git config user.name render-bot && git config user.email render-bot@users.noreply.github.com
           git add -A && git commit -qm "voz $ID ($(date -u +%FT%TZ))"

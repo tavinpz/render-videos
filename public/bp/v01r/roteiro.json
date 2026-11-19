@@ -1,0 +1,22 @@
+{
+ "falas": [
+  {
+   "c": "r09",
+   "q": "v",
+   "txt": "Chegou hoje à tarde, dona Neide. Está aqui.",
+   "ex": 0.5
+  },
+  {
+   "c": "r26",
+   "q": "v",
+   "txt": "Pode pegar mais picanha, vizinha!",
+   "ex": 0.75
+  },
+  {
+   "c": "r62",
+   "q": "v",
+   "txt": "Dona, eu nunca perdi uma encomenda. Não vou perder cinquenta milhões dos outros.",
+   "ex": 0.55
+  }
+ ]
+}
