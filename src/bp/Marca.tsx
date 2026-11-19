@@ -18,8 +18,7 @@ export const BPMarca: React.FC<{ tipo: 'logo' | 'banner' }> = ({ tipo }) => (
       <svg viewBox="0 0 800 800" width={800} height={800}>
         <defs><filter id="tr" x="-4%" y="-4%" width="108%" height="108%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves={2} seed={7} result="n" /><feDisplacementMap in="SourceGraphic" in2="n" scale={5} /></filter></defs>
         <rect width={800} height={800} fill={C.verde} /><Raios cx={400} cy={430} />
-        <g filter="url(#tr)"><g transform="translate(400 1150) scale(1.72)"><Valdir x={0} y={0} s={1} expr="confiante" pose="neutro" f={30} /></g>
-          <g transform="translate(612 548) rotate(10)"><rect x={-20} y={-118} width={44} height={86} rx={22} fill={C.pele} {...T} strokeWidth={9} /><rect x={-58} y={-50} width={116} height={98} rx={34} fill={C.pele} {...T} strokeWidth={9} /><path d="M-58 -14 H34 M-58 16 H30" {...T} strokeWidth={7} /></g></g>
+        <g filter="url(#tr)"><g transform="translate(400 1075) scale(1.5)"><Valdir x={0} y={0} s={1} expr="confiante" pose="neutro" f={30} /></g></g>
       </svg>
     ) : (
       <svg viewBox="0 0 2560 1440" width={2560} height={1440}>
