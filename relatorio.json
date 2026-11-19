@@ -1,0 +1,47 @@
+{
+ "info": {
+  "pt_br_arquivos": [
+   ".gitattributes",
+   "README.md",
+   "grapheme_mtl_merged_expanded_v1.json",
+   "s3gen_v3.pt",
+   "s3gen_v3.safetensors",
+   "t3_pt_br.safetensors"
+  ],
+  "modelo": "pt-br:t3_pt_br.safetensors",
+  "s3gen": "pack v3 (faltando 2, sobrando 0)"
+ },
+ "sr": 24000,
+ "falas": [
+  {
+   "i": 0,
+   "c": "r09",
+   "q": "v",
+   "tomada": 0,
+   "sim": 0.938,
+   "dur": 3.88,
+   "nota": 0.938,
+   "ouvido": "Chegou hoje à tarde do na noite, está aqui!"
+  },
+  {
+   "i": 1,
+   "c": "r26",
+   "q": "v",
+   "tomada": 2,
+   "sim": 0.968,
+   "dur": 2.92,
+   "nota": 0.968,
+   "ouvido": "Pode pegar mais pecanha, vizinha!"
+  },
+  {
+   "i": 2,
+   "c": "r62",
+   "q": "v",
+   "tomada": 0,
+   "sim": 0.964,
+   "dur": 5.52,
+   "nota": 0.964,
+   "ouvido": "Dona, eu nunca perdi uma em comendo, não vou perder 50 milhões dos outros."
+  }
+ ]
+}
