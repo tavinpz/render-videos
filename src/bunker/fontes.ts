@@ -1,10 +1,10 @@
 import { continueRender, delayRender, staticFile } from 'remotion';
 
 // As fontes do teste aprovado, embutidas para o vídeo sair igual em qualquer máquina (fila do render-videos incluída).
-// Archivo Black e Comic Relief: licença OFL. Liberation Mono: licença OFL.
+// O teste aprovado saiu em Liberation Sans Bold (é o que o Chrome usa no lugar de Arial Black e Comic Sans nesta máquina). Licença OFL.
 const FONTES: [string, string][] = [
-  ['Arial Black', 'bunker/fontes/ArchivoBlack-Regular.ttf'],
-  ['Comic Sans MS', 'bunker/fontes/ComicRelief-Bold.ttf'],
+  ['Arial Black', 'bunker/fontes/LiberationSans-Bold.ttf'],
+  ['Comic Sans MS', 'bunker/fontes/LiberationSans-Bold.ttf'],
   ['Courier New', 'bunker/fontes/LiberationMono-Bold.ttf'],
 ];
 if (typeof document !== 'undefined') {
