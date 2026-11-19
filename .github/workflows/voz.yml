@@ -1,0 +1,52 @@
+# Voz (Chatterbox, local em CPU, grátis) + trilhas (FluidSynth) do Brasileiro Padrão.
+# Disparo: push que mude fila-voz/<id>.txt. Linha 1 = pasta em public com roteiro.json (ex.: bp/t2). Linha 2 (opcional) = tomadas por fala.
+# Resultado: ramo saida-voz-<id> com f00.wav, f01.wav..., relatorio.json e as trilhas.
+name: voz
+on:
+  push:
+    paths: ['fila-voz/*.txt']
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix: { k: [0, 1, 2, 3, 4] }
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: instalar
+        run: |
+          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q "chatterbox-tts @ git+https://github.com/resemble-ai/chatterbox@master" faster-whisper soundfile
+      - name: gerar e conferir
+        run: |
+          F=$(git diff --name-only HEAD~1 HEAD -- fila-voz | grep '\.txt$' | head -1); [ -z "$F" ] && F=$(ls -t fila-voz/*.txt | head -1)
+          PASTA=$(sed -n 1p "$F" | tr -d '\r '); T=$(sed -n 2p "$F" | tr -dc 0-9); export TOMADAS=${T:-3}
+          python3 ferramentas/bp_voz.py public/$PASTA ${{ matrix.k }} 5 out
+      - uses: actions/upload-artifact@v4
+        with: { name: 'voz-${{ matrix.k }}', path: out, retention-days: 3 }
+  juntar:
+    needs: voz
+    if: always()
+    runs-on: ubuntu-latest
+    permissions: { contents: write }
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - uses: actions/download-artifact@v4
+        with: { pattern: 'voz-*', merge-multiple: true, path: pub }
+      - name: trilhas
+        run: |
+          for i in 1 2 3; do command -v fluidsynth && break; (timeout 90 sudo apt-get update -qq && timeout 240 sudo apt-get install -y -qq fluidsynth fluid-soundfont-gm ffmpeg > /dev/null) || sleep 5; done
+          pip install -q mido && python3 ferramentas/bp_musica.py pub/musica || echo "trilha falhou"
+      - name: publicar
+        run: |
+          F=$(git diff --name-only HEAD~1 HEAD -- fila-voz | grep '\.txt$' | head -1); [ -z "$F" ] && F=$(ls -t fila-voz/*.txt | head -1); ID=$(basename "$F" .txt)
+          cd pub && python3 -c "import json,glob;r=[json.load(open(f)) for f in sorted(glob.glob('rel_*.json'))];json.dump({'info':r[0]['info'] if r else {},'sr':r[0]['sr'] if r else 0,'falas':sorted(sum([x['falas'] for x in r],[]),key=lambda f:f['i'])},open('relatorio.json','w'),ensure_ascii=False,indent=1)"
+          rm -f rel_*.json; ls -la . musica || true
+          git init -q -b saida-voz-$ID && git config user.name render-bot && git config user.email render-bot@users.noreply.github.com
+          git add -A && git commit -qm "voz $ID ($(date -u +%FT%TZ))"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" saida-voz-$ID

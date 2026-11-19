@@ -1,0 +1,12 @@
+{"falas":[
+ {"c":"chega","q":"n","txt":"Vinte e uma e doze, Guarulhos. O Valdir assume a portaria do Edifício Jatobá."},
+ {"c":"neide1","q":"d","txt":"Boa noite, Valdir! Chegou a minha encomenda?","ex":0.6},
+ {"c":"entrega","q":"v","txt":"Chegou às três e quarenta, Dona Neide. Tá aqui.","ex":0.5},
+ {"c":"mesa","q":"n","txt":"Dezenove anos de portaria. Nenhuma encomenda perdida."},
+ {"c":"saldo","q":"n","txt":"Saldo na conta: trinta e sete reais e doze centavos.","p":0.15},
+ {"c":"neide2","q":"d","txt":"Você devia ganhar mais, viu?","ex":0.6},
+ {"c":"deixa","q":"v","txt":"Deixa comigo.","ex":0.6,"p":0.5},
+ {"c":"vibra","q":"n","txt":"Seis horas depois, o celular dele vibra.","p":0.35},
+ {"c":"pix","q":"n","txt":"Pix recebido: cinquenta milhões de reais.","ex":0.65,"p":0.25},
+ {"c":"eita","q":"v","txt":"Eita, rapaz... cinquenta milhão?","ex":0.85,"cfg":0.3,"p":0.9}
+]}
