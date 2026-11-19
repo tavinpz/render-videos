@@ -1,0 +1,917 @@
+{
+ "info": {
+  "pt_br_arquivos": [
+   ".gitattributes",
+   "README.md",
+   "grapheme_mtl_merged_expanded_v1.json",
+   "s3gen_v3.pt",
+   "s3gen_v3.safetensors",
+   "t3_pt_br.safetensors"
+  ],
+  "modelo": "pt-br:t3_pt_br.safetensors",
+  "s3gen": "pack v3 (faltando 2, sobrando 0)"
+ },
+ "sr": 24000,
+ "falas": [
+  {
+   "i": 0,
+   "c": "f00",
+   "q": "n",
+   "tomada": 1,
+   "sim": 0.972,
+   "dur": 8.44,
+   "nota": 0.972,
+   "ouvido": "3 e 12 da manhã. Um porteiro de guarulhos recebe um PIX de 50 milhões de reais. Por  engano."
+  },
+  {
+   "i": 1,
+   "c": "f01",
+   "q": "v",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 2.72,
+   "nota": 1.0,
+   "ouvido": "Eita, rapaz, 50 milhões?"
+  },
+  {
+   "i": 2,
+   "c": "f02",
+   "q": "n",
+   "tomada": 1,
+   "sim": 0.812,
+   "dur": 6.04,
+   "nota": 0.812,
+   "ouvido": "Um minuto antes, o saldo dele era de R$ 37,12."
+  },
+  {
+   "i": 3,
+   "c": "f03",
+   "q": "n",
+   "tomada": 1,
+   "sim": 0.929,
+   "dur": 9.24,
+   "nota": 0.929,
+   "ouvido": "Nas próximas 72 horas, três pessoas vão atrás desse dinheiro, um golpista, uma gerente  de banco e um delegado."
+  },
+  {
+   "i": 4,
+   "c": "f04",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 7.68,
+   "nota": 1.0,
+   "ouvido": "E o Valdir só precisa apertar um botão.  O problema é que a maioria das pessoas aperta o errado."
+  },
+  {
+   "i": 5,
+   "c": "f05",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.984,
+   "dur": 6.6,
+   "nota": 0.984,
+   "ouvido": "Fica até o fim, porque um dos botões leva o Valdir para a delegacia e o outro muda a vida dele."
+  },
+  {
+   "i": 6,
+   "c": "f06",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 2.68,
+   "nota": 1.0,
+   "ouvido": "Tudo começou seis horas antes."
+  },
+  {
+   "i": 7,
+   "c": "f07",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.962,
+   "dur": 6.08,
+   "nota": 0.962,
+   "ouvido": "20, 1 e 12. O Valdir assume a portaria do edifício Jatoba."
+  },
+  {
+   "i": 8,
+   "c": "f08",
+   "q": "d",
+   "tomada": 2,
+   "sim": 0.923,
+   "dur": 3.36,
+   "nota": 0.923,
+   "ouvido": "Boa noite, Valdir. Chegou a mim comenda?"
+  },
+  {
+   "i": 9,
+   "c": "f09",
+   "q": "v",
+   "tomada": 1,
+   "sim": 0.865,
+   "dur": 3.52,
+   "nota": 0.865,
+   "ouvido": "Chegou hoje a tarde do Mamí de Taqui."
+  },
+  {
+   "i": 10,
+   "c": "f10",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 4.88,
+   "nota": 1.0,
+   "ouvido": "19 anos de portaria, nenhuma encomenda perdida."
+  },
+  {
+   "i": 11,
+   "c": "f11",
+   "q": "d",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 2.32,
+   "nota": 1.0,
+   "ouvido": "você devia ganhar mais, viu?"
+  },
+  {
+   "i": 12,
+   "c": "f12",
+   "q": "v",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 1.36,
+   "nota": 0.914,
+   "ouvido": "Deixa comigo."
+  },
+  {
+   "i": 13,
+   "c": "f13",
+   "q": "n",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 5.92,
+   "nota": 1.0,
+   "ouvido": "Era o que ele sempre dizia, pro síndico, pro entregador, pro boleto atrasado."
+  },
+  {
+   "i": 14,
+   "c": "f14",
+   "q": "n",
+   "tomada": 2,
+   "sim": 0.737,
+   "dur": 8.28,
+   "nota": 0.737,
+   "ouvido": "O salário R$1.830, o aluguel R$900, o que sobrava no fim do mês, cabia numa mão."
+  },
+  {
+   "i": 15,
+   "c": "f15",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 5.32,
+   "nota": 1.0,
+   "ouvido": "Se você já gostou do Valdir, se inscreve no canal, ele agradece."
+  },
+  {
+   "i": 16,
+   "c": "f16",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.909,
+   "dur": 3.32,
+   "nota": 0.854,
+   "ouvido": "As 3 e 12, o celular vibrou."
+  },
+  {
+   "i": 17,
+   "c": "f17",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 8.04,
+   "nota": 1.0,
+   "ouvido": "O remetente era uma empresa de gado do Mato Grosso.  Alguém digitou a chave errada, um número de diferença."
+  },
+  {
+   "i": 18,
+   "c": "f18",
+   "q": "n",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 1.48,
+   "nota": 0.843,
+   "ouvido": "Só um número."
+  },
+  {
+   "i": 19,
+   "c": "f19",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.951,
+   "dur": 8.12,
+   "nota": 0.951,
+   "ouvido": "Durante 10 minutos, o Valdir Sol olhou para a tela, conferiu o nome, conferiu os zeros, sete zeros."
+  },
+  {
+   "i": 20,
+   "c": "f20",
+   "q": "v",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 1.96,
+   "nota": 0.712,
+   "ouvido": "Deve ser vírus."
+  },
+  {
+   "i": 21,
+   "c": "f21",
+   "q": "v",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 4.68,
+   "nota": 1.0,
+   "ouvido": "50 milhões. Isso dá quantos anos de salário?"
+  },
+  {
+   "i": 22,
+   "c": "f22",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.531,
+   "dur": 2.8,
+   "nota": 0.531,
+   "ouvido": "mais de 2200 anos."
+  },
+  {
+   "i": 23,
+   "c": "f23",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.84,
+   "nota": 1.0,
+   "ouvido": "E foi aí que a cabeça do Valdir começou a gastar."
+  },
+  {
+   "i": 24,
+   "c": "f24",
+   "q": "n",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 2.36,
+   "nota": 0.963,
+   "ouvido": "Primeiro, um carro zero."
+  },
+  {
+   "i": 25,
+   "c": "f25",
+   "q": "n",
+   "tomada": 1,
+   "sim": 0.97,
+   "dur": 4.48,
+   "nota": 0.97,
+   "ouvido": "Depois, churrasco para o prédio inteiro todo domingo."
+  },
+  {
+   "i": 26,
+   "c": "f26",
+   "q": "v",
+   "tomada": 1,
+   "sim": 0.866,
+   "dur": 2.68,
+   "nota": 0.866,
+   "ouvido": "Pode pegar mais picanho do Maníde."
+  },
+  {
+   "i": 27,
+   "c": "f27",
+   "q": "n",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 1.96,
+   "nota": 0.881,
+   "ouvido": "Uma casa na praia."
+  },
+  {
+   "i": 28,
+   "c": "f28",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.12,
+   "nota": 1.0,
+   "ouvido": "e um barco que ele nem sabe pilotar."
+  },
+  {
+   "i": 29,
+   "c": "f29",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.964,
+   "dur": 3.6,
+   "nota": 0.964,
+   "ouvido": "e um áudio para o síndico pedindo as contas."
+  },
+  {
+   "i": 30,
+   "c": "f30",
+   "q": "v",
+   "tomada": 2,
+   "sim": 0.974,
+   "dur": 3.96,
+   "nota": 0.951,
+   "ouvido": "Deixa comigo, não! Agora deixa com o outro!"
+  },
+  {
+   "i": 31,
+   "c": "f31",
+   "q": "n",
+   "tomada": 2,
+   "sim": 0.942,
+   "dur": 5.48,
+   "nota": 0.942,
+   "ouvido": "Em um mês, o Valdir da imaginação já tinha torrado 4 milhões."
+  },
+  {
+   "i": 32,
+   "c": "f32",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.36,
+   "nota": 1.0,
+   "ouvido": "Só que esse Valdir esqueceu de um detalhe."
+  },
+  {
+   "i": 33,
+   "c": "f33",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.955,
+   "dur": 5.16,
+   "nota": 0.955,
+   "ouvido": "Lissão número 1, dinheiro que cai na sua conta por engano não é seu."
+  },
+  {
+   "i": 34,
+   "c": "f34",
+   "q": "n",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 2.2,
+   "nota": 0.95,
+   "ouvido": "Ficar com ele é crime."
+  },
+  {
+   "i": 35,
+   "c": "f35",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.825,
+   "dur": 7.28,
+   "nota": 0.825,
+   "ouvido": "Está no artigo 169 do Código Penal, detenção de um mês a um ano ou multa."
+  },
+  {
+   "i": 36,
+   "c": "f36",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 4.2,
+   "nota": 1.0,
+   "ouvido": "e a Justiça ainda manda devolver tudo com correção."
+  },
+  {
+   "i": 37,
+   "c": "f37",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.964,
+   "dur": 6.96,
+   "nota": 0.964,
+   "ouvido": "Ou seja, o valdir da imaginação e a terminar sem o barco, sem a casa e com o processo."
+  },
+  {
+   "i": 38,
+   "c": "f38",
+   "q": "v",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 1.92,
+   "nota": 0.795,
+   "ouvido": "Melhor devolver!"
+  },
+  {
+   "i": 39,
+   "c": "f39",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.44,
+   "nota": 1.0,
+   "ouvido": "Só que devolver também tem armadilha."
+  },
+  {
+   "i": 40,
+   "c": "f40",
+   "q": "n",
+   "tomada": 2,
+   "sim": 0.909,
+   "dur": 3.28,
+   "nota": 0.814,
+   "ouvido": "7 da manhã. O telefone toca."
+  },
+  {
+   "i": 41,
+   "c": "f41",
+   "q": "g",
+   "tomada": 0,
+   "sim": 0.994,
+   "dur": 6.52,
+   "nota": 0.994,
+   "ouvido": "Seu Valdir? Aqui é do financeiro da Boigordo. O senhor recebeu um pix nosso por engano."
+  },
+  {
+   "i": 42,
+   "c": "f42",
+   "q": "v",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 3.32,
+   "nota": 0.806,
+   "ouvido": "Recebi sim, já ia devolver."
+  },
+  {
+   "i": 43,
+   "c": "f43",
+   "q": "g",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 7.32,
+   "nota": 1.0,
+   "ouvido": "Ótimo! Só que aquela conta foi bloqueada. Faz um PIX novo pra esta outra chave que eu vou te passar."
+  },
+  {
+   "i": 44,
+   "c": "f44",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 2.56,
+   "nota": 0.823,
+   "ouvido": "Parece ajuda, é golpe."
+  },
+  {
+   "i": 45,
+   "c": "f45",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 7.44,
+   "nota": 1.0,
+   "ouvido": "Esse golpe tem nome, golpe do Pix errado, e ele funciona porque a vítima acha que está sendo honesta."
+  },
+  {
+   "i": 46,
+   "c": "f46",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.984,
+   "dur": 6.08,
+   "nota": 0.984,
+   "ouvido": "Esse homem não trabalha na empresa. Ele só quer que o Valdir mande o dinheiro para a conta dele."
+  },
+  {
+   "i": 47,
+   "c": "f47",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.981,
+   "dur": 6.36,
+   "nota": 0.981,
+   "ouvido": "e se o Valdir mandasse ia continuar devendo os 50 milhões para a dona de verdade."
+  },
+  {
+   "i": 48,
+   "c": "f48",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.92,
+   "dur": 4.88,
+   "nota": 0.92,
+   "ouvido": "Lissão número 2. Nunca devolva fazendo um PIX novo."
+  },
+  {
+   "i": 49,
+   "c": "f49",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 5.32,
+   "nota": 1.0,
+   "ouvido": "Use o botão Devolver, que fica dentro da própria transação."
+  },
+  {
+   "i": 50,
+   "c": "f50",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.972,
+   "dur": 3.72,
+   "nota": 0.972,
+   "ouvido": "Ele manda o dinheiro de volta para a conta de onde veio."
+  },
+  {
+   "i": 51,
+   "c": "f51",
+   "q": "v",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 4.36,
+   "nota": 1.0,
+   "ouvido": "O senhor me dá licença que eu vou apertar o botão certo."
+  },
+  {
+   "i": 52,
+   "c": "f52",
+   "q": "g",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 2.16,
+   "nota": 0.74,
+   "ouvido": "Não! Não! Espera!"
+  },
+  {
+   "i": 53,
+   "c": "f53",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 8.6,
+   "nota": 1.0,
+   "ouvido": "Meio dia, uma gerente de banco aparece na portaria, de Terninho, num prédio que nunca  recebeu gerente nenhum."
+  },
+  {
+   "i": 54,
+   "c": "f54",
+   "q": "e",
+   "tomada": 0,
+   "sim": 0.982,
+   "dur": 8.32,
+   "nota": 0.982,
+   "ouvido": "Se eu valdir, eu vim pessoalmente.  A empresa pediu dinheiro de volta pelo sistema do Banco Central e não funcionou."
+  },
+  {
+   "i": 55,
+   "c": "f55",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.982,
+   "dur": 4.96,
+   "nota": 0.982,
+   "ouvido": "Ela está falando do MED, o Mecanismo Especial de Devolução."
+  },
+  {
+   "i": 56,
+   "c": "f56",
+   "q": "n",
+   "tomada": 1,
+   "sim": 0.93,
+   "dur": 6.0,
+   "nota": 0.93,
+   "ouvido": "Lissão número 3, o MED serve para golpe, fraude e falha do sistema."
+  },
+  {
+   "i": 57,
+   "c": "f57",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.99,
+   "dur": 4.2,
+   "nota": 0.99,
+   "ouvido": "para erro de digitação de quem enviou, ele não vale."
+  },
+  {
+   "i": 58,
+   "c": "f58",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 5.64,
+   "nota": 1.0,
+   "ouvido": "Nesse caso, a devolução não é automática, ela depende do Valdir."
+  },
+  {
+   "i": 59,
+   "c": "f59",
+   "q": "e",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 4.36,
+   "nota": 1.0,
+   "ouvido": "Se o Senhor quisesse, podia dificultar muito a nossa vida."
+  },
+  {
+   "i": 60,
+   "c": "f60",
+   "q": "v",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 2.36,
+   "nota": 0.993,
+   "ouvido": "A senhora aceita um café?"
+  },
+  {
+   "i": 61,
+   "c": "f61",
+   "q": "e",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 2.28,
+   "nota": 0.922,
+   "ouvido": "Eu aceito a devolução."
+  },
+  {
+   "i": 62,
+   "c": "f62",
+   "q": "v",
+   "tomada": 0,
+   "sim": 0.896,
+   "dur": 7.48,
+   "nota": 0.896,
+   "ouvido": "Dona, eu, Munga, perdi meia incomenda de sabonete.  Não vou perder 50 milhões de zoutras."
+  },
+  {
+   "i": 63,
+   "c": "f63",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.99,
+   "dur": 8.2,
+   "nota": 0.99,
+   "ouvido": "Se você faria igual ao Valdir, deixe o like.  Se ia pensar duas vezes, pode confessar nos comentários."
+  },
+  {
+   "i": 64,
+   "c": "f64",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.96,
+   "nota": 1.0,
+   "ouvido": "O Valdir abriu o aplicativo e apertou Devolver."
+  },
+  {
+   "i": 65,
+   "c": "f65",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 1.88,
+   "nota": 0.868,
+   "ouvido": "E nada aconteceu."
+  },
+  {
+   "i": 66,
+   "c": "f66",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.704,
+   "dur": 5.92,
+   "nota": 0.704,
+   "ouvido": "O celular dele de 2016 travou.  Bateria em 1%."
+  },
+  {
+   "i": 67,
+   "c": "f67",
+   "q": "v",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 3.16,
+   "nota": 0.881,
+   "ouvido": "Agora não, pelo amor de Deus!"
+  },
+  {
+   "i": 68,
+   "c": "f68",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.919,
+   "dur": 4.92,
+   "nota": 0.919,
+   "ouvido": "18 horas. Um carro da polícia para na frente do prédio."
+  },
+  {
+   "i": 69,
+   "c": "f69",
+   "q": "l",
+   "tomada": 0,
+   "sim": 0.989,
+   "dur": 8.2,
+   "nota": 0.989,
+   "ouvido": "Valdir aparecido de Souza, a empresa registrou a ocorrência.  O senhor precisa me acompanhar."
+  },
+  {
+   "i": 70,
+   "c": "f70",
+   "q": "n",
+   "tomada": 1,
+   "sim": 0.94,
+   "dur": 6.2,
+   "nota": 0.94,
+   "ouvido": "Para quem olha de fora, 15 horas com 50 milhões na conta parece outra coisa."
+  },
+  {
+   "i": 71,
+   "c": "f71",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 4.84,
+   "nota": 1.0,
+   "ouvido": "Na delegacia, o Valdir fez a única coisa que sabia fazer."
+  },
+  {
+   "i": 72,
+   "c": "f72",
+   "q": "v",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.8,
+   "nota": 1.0,
+   "ouvido": "Doutor, o senhor me empresta um carregador."
+  },
+  {
+   "i": 73,
+   "c": "f73",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.99,
+   "dur": 7.72,
+   "nota": 0.99,
+   "ouvido": "Ele ligou o celular na tomada da delegacia, abriu o aplicativo na frente de todo o mundo e apertou Devolver."
+  },
+  {
+   "i": 74,
+   "c": "f74",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 7.52,
+   "nota": 1.0,
+   "ouvido": "O escrivão parou de digitar. O delegado tirou os óculos. Até o preso da cela ao lado esticou o pescoço."
+  },
+  {
+   "i": 75,
+   "c": "f75",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.975,
+   "dur": 6.4,
+   "nota": 0.975,
+   "ouvido": "50 milhões de reais saíram da conta.  O saldo voltou para 37,12."
+  },
+  {
+   "i": 76,
+   "c": "f76",
+   "q": "l",
+   "tomada": 0,
+   "sim": 0.944,
+   "dur": 5.44,
+   "nota": 0.944,
+   "ouvido": "Em 20 anos de polícia, eu nunca vi ninguém devolver tão rápido."
+  },
+  {
+   "i": 77,
+   "c": "f77",
+   "q": "v",
+   "tomada": 0,
+   "sim": 0.931,
+   "dur": 2.52,
+   "nota": 0.931,
+   "ouvido": "É que eu tô sem bateria, puto!"
+  },
+  {
+   "i": 78,
+   "c": "f78",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.961,
+   "dur": 7.28,
+   "nota": 0.961,
+   "ouvido": "O Valdir voltou para o turno da noite. Mesmo uniforme, mesmo aguarita, mesmo saldo."
+  },
+  {
+   "i": 79,
+   "c": "f79",
+   "q": "d",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 1.76,
+   "nota": 0.923,
+   "ouvido": "E aí, ficou rico?"
+  },
+  {
+   "i": 80,
+   "c": "f80",
+   "q": "v",
+   "tomada": 1,
+   "sim": 0.952,
+   "dur": 4.48,
+   "nota": 0.952,
+   "ouvido": "Fiquei não, dona Ned, mas estou com a consciência limpa."
+  },
+  {
+   "i": 81,
+   "c": "f81",
+   "q": "d",
+   "tomada": 0,
+   "sim": 0.985,
+   "dur": 6.96,
+   "nota": 0.985,
+   "ouvido": "50 milhões valdia, eu teria pelo menos comprado um pão de queijo antes."
+  },
+  {
+   "i": 82,
+   "c": "f82",
+   "q": "n",
+   "tomada": 2,
+   "sim": 0.959,
+   "dur": 5.44,
+   "nota": 0.959,
+   "ouvido": "Três dias depois, às 3 e 12 da manhã, o celular vibrou de novo."
+  },
+  {
+   "i": 83,
+   "c": "f83",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.976,
+   "dur": 3.92,
+   "nota": 0.976,
+   "ouvido": "Era boi gordo, e dessa vez não foi engano."
+  },
+  {
+   "i": 84,
+   "c": "f84",
+   "q": "v",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 1.44,
+   "nota": 0.696,
+   "ouvido": "Eita!"
+  },
+  {
+   "i": 85,
+   "c": "f85",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 5.8,
+   "nota": 1.0,
+   "ouvido": "50 mil reais. Com um recado, obrigado pela honestidade."
+  },
+  {
+   "i": 86,
+   "c": "f86",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.989,
+   "dur": 4.08,
+   "nota": 0.989,
+   "ouvido": "Não era o barco, mas dava para trocar o celular."
+  },
+  {
+   "i": 87,
+   "c": "f87",
+   "q": "n",
+   "tomada": 1,
+   "sim": 0.931,
+   "dur": 9.16,
+   "nota": 0.931,
+   "ouvido": "E você, se caíssem 50 milhões na sua conta por engano, o que você faria nas primeiras  72 horas?  Conta aqui embaixo."
+  },
+  {
+   "i": 88,
+   "c": "f88",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 7.12,
+   "nota": 1.0,
+   "ouvido": "e se inscreve no canal, porque semana que vem o Valdir encontra uma mala esquecida no elevador."
+  },
+  {
+   "i": 89,
+   "c": "f89",
+   "q": "v",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 1.84,
+   "nota": 0.628,
+   "ouvido": "Deixa comigo!"
+  }
+ ]
+}
