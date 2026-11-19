@@ -113,7 +113,7 @@ def trilha(nome, a, b, ganho, fade=0.5):
 m = trilha('cotidiano', 0, q['relogio'] + 6, 0.55, 0.35) + trilha('tensao', q['vibra'] - 2, tPix + 26, 0.6, 0.12)
 ev = np.sqrt(signal.sosfilt(signal.butter(1, 6, 'lowpass', fs=SR, output='sos'), voz ** 2).clip(0)); duck = 1 - 0.62 * np.clip(ev / 0.05, 0, 1)
 duck = signal.sosfilt(signal.butter(1, 4, 'lowpass', fs=SR, output='sos'), duck); m *= duck[:, None]
-mix = np.stack([voz, voz], 1) * 1.0 + m + fx * 0.62
+mix = np.stack([voz, voz], 1) * 1.0 + m + fx * 0.36
 mix *= np.minimum(1, (tot - np.arange(N) / SR) / 0.7)[:, None]; pico = np.abs(mix).max(); mix = mix / max(1.0, pico / 0.95)
 sf.write(f'{pasta}/fx.wav', fx, SR, subtype='PCM_16'); sf.write('/tmp/bp_mix.wav', mix, SR, subtype='PCM_16')
 subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', '/tmp/bp_mix.wav', '-af', 'loudnorm=I=-15:TP=-1.5:LRA=9', '-ar', '48000', '-c:a', 'aac', '-b:a', '256k', f'{pasta}/mix.m4a'], check=True)
