@@ -58,7 +58,7 @@ export const Valdir: React.FC<{ x: number; y: number; s?: number; expr?: Expr; p
       {pose === 'joia' && (() => { const kk = pula(k * 100, 0, 100); const hy = -40 - kk * 310, hx = 146 + kk * 86; return <>
         <Braco d={`M128 -240 Q${200 + kk * 50} ${-150 - kk * 70} ${hx} ${hy + 20}`} />
         <g transform={`translate(${hx} ${hy}) rotate(${(1 - kk) * 40})`}><rect x={-12} y={-72} width={26} height={52} rx={13} fill={C.pele} {...T} /><rect x={-34} y={-30} width={68} height={58} rx={20} fill={C.pele} {...T} /><path d="M-34 -8 H20 M-34 10 H18" {...T5} /></g></>; })()}
-      {pose === 'entrega' && (() => { const yy = -120 - k * 190; return <>
+      {pose === 'entrega' && (() => { const yy = -120 - k * 120; return <>
         <Braco d={`M-128 -240 Q-190 ${-150 - k * 40} -92 ${yy + 40}`} /><Braco d={`M128 -240 Q190 ${-150 - k * 40} 92 ${yy + 40}`} />
         <Caixa x={0} y={yy} s={1.1} rot={Math.sin(f / 9) * 1.5} /><circle cx={-98} cy={yy + 30} r={25} fill={C.pele} {...T} /><circle cx={98} cy={yy + 30} r={25} fill={C.pele} {...T} /></>; })()}
     </g>);

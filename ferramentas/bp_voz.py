@@ -19,10 +19,15 @@ def carrega():
             if p.is_file() or p.is_symlink():
                 (junto / p.name).unlink(missing_ok=True); os.symlink(p.resolve(), junto / p.name)
         print('LEIAME PT-BR\n' + (br / 'README.md').read_text()[:3500], flush=True)
-        if os.environ.get('S3GEN', 'pack') == 'pack' and (br / 's3gen_v3.pt').exists():  # vocoder que acompanha o finetune
-            (junto / 's3gen.pt').unlink(missing_ok=True); os.symlink((br / 's3gen_v3.pt').resolve(), junto / 's3gen.pt'); info['s3gen'] = 'pack v3'
         t3 = [a for a in arqs if a.endswith('.safetensors') and 't3' in a.lower()] or [a for a in arqs if a.endswith('.safetensors')]
-        m = ChatterboxMultilingualTTS.from_local(junto, 'cpu', t3_model=t3[0]); info['modelo'] = 'pt-br:' + t3[0]; return m
+        m = ChatterboxMultilingualTTS.from_local(junto, 'cpu', t3_model=t3[0]); info['modelo'] = 'pt-br:' + t3[0]
+        try:  # vocoder que acompanha o finetune (faltam só dois buffers do tokenizador, que ficam os do modelo geral)
+            sd = torch.load(br / 's3gen_v3.pt', map_location='cpu', weights_only=True); r = m.s3gen.load_state_dict(sd, strict=False)
+            info['s3gen'] = f'pack v3 (faltando {len(r.missing_keys)}, sobrando {len(r.unexpected_keys)})'
+            if len(r.unexpected_keys) > 4 or len(r.missing_keys) > 4: raise RuntimeError('vocoder do pack não bate: ' + info['s3gen'])
+        except Exception as e:
+            info['s3gen_erro'] = repr(e)[:200]; m = ChatterboxMultilingualTTS.from_local(junto, 'cpu', t3_model=t3[0]); info['s3gen'] = 'geral'
+        return m
     except Exception as e:
         info['pt_br_erro'] = repr(e)[:300]
         m = ChatterboxMultilingualTTS.from_local(geral, 'cpu', t3_model='t3_mtl23ls_v3.safetensors'); info['modelo'] = 'geral-v3'; return m

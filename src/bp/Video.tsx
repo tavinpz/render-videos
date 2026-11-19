@@ -107,10 +107,10 @@ export const BPVideo: React.FC<{ tempos: BPTempos; pasta?: string }> = ({ tempos
             <Cam f={f} z={p(0.9, 1.32)} cx={p(900, 1260)} cy={p(520, 640)} rot={p(-9, -2)}><RuaDeCima f={f} /><ValdirTopo x={vx} y={706} rot={90} s={0.72} f={f} modo="andando" /></Cam>); })()}
           {plano === 'lado' && (() => { const vx = p(900, 1840, Easing.linear); const cx = vx + 190; return (
             <Cam f={f} z={p(1.0, 1.1)} cx={cx} cy={600} mao={1.4}><RuaDeLado f={f} cx={cx} /><ValdirLado x={vx} y={884} s={0.88} f={f} />
-              <g filter="url(#fora)" transform={`translate(${(cx - 1400) * -0.7} 0)`}>{[1500, 2700, 3900].map((a) => <g key={a}><rect x={a} y={-300} width={46} height={1700} fill="#0B1020" /><path d={`M${a - 260} 1180 q120 -420 260 -160 q60 -330 250 160 Z`} fill="#0F2A20" /></g>)}</g></Cam>); })()}
+              <g filter="url(#fora)" transform={`translate(${(cx - 1400) * -0.7} 0)`}>{[1300, 2500, 3700, 4900].map((a) => <path key={a} d={`M${a - 300} 1200 q130 -330 280 -130 q70 -260 280 130 Z`} fill="#0F2A20" />)}</g></Cam>); })()}
           {plano === 'neide1' && (
             <Cam f={f} z={p(1.03, 1.12)} cx={p(930, 990)} cy={540}><rect {...SANGRA} fill="url(#ceuN)" /><Bokeh f={f} sem="n1" /><rect x={-900} y={700} width={3720} height={900} fill="#39405A" />
-              <Neide x={1130} y={1210} s={1.3} boca={boca('d')} f={f} olhar={[-0.5, 0]} />
+              <Neide x={1130} y={1075} s={1.3} boca={boca('d')} f={f} olhar={[-0.5, 0]} />
               <rect x={-900} y={880} width={3720} height={800} fill={C.madeira} {...T} /><rect x={-900} y={880} width={3720} height={34} fill="#D9A877" {...T} strokeWidth={5} />
               <path d="M-900 -700 H2820 V1780 H-900 Z M150 60 H1790 V1500 H150 Z" fill="#3A3F52" fillRule="evenodd" /><rect x={150} y={60} width={1640} height={1440} fill="none" {...T} strokeWidth={12} /><rect x={150} y={60} width={1640} height={1440} fill="#FFE9A8" opacity={0.05} />
               <g filter="url(#fora)"><ValdirCostas x={p(420, 380)} y={790} s={1.55} f={f} /></g></Cam>)}
@@ -142,12 +142,12 @@ export const BPVideo: React.FC<{ tempos: BPTempos; pasta?: string }> = ({ tempos
                 <path d="M196 120 Q330 150 320 330 L420 520 L150 520 Q230 380 196 260 Z" fill={C.pele} {...T} /></g></Cam></g>); })()}
           {plano === 'neide2' && (
             <Cam f={f} z={p(1.05, 1.16)} cx={960} cy={500} rot={p(4, 2.5)}><rect {...SANGRA} fill="url(#ceuN)" /><Bokeh f={f} sem="n2" n={20} />
-              <Neide x={900} y={1560} s={2.05} boca={boca('d')} f={f} expr="bronca" sacolas={false} olhar={[-0.4, 0.2]} />
-              <g transform={`translate(1420 ${700 + Math.sin(lf / 2.4) * 26}) rotate(${Math.sin(lf / 2.4) * 10})`}><rect x={-26} y={-190} width={56} height={170} rx={28} fill={C.peleN} {...T} /><rect x={-70} y={-50} width={150} height={150} rx={50} fill={C.peleN} {...T} /><rect x={-60} y={90} width={150} height={500} fill={C.lilas} {...T} /></g></Cam>)}
+              <g transform={`translate(${Math.sin(lf / 3) * 14} 0) rotate(${Math.sin(lf / 3) * 2.5} 960 900)`}><Neide x={960} y={1560} s={2.05} boca={boca('d')} f={f} expr="bronca" sacolas={false} olhar={[-0.4, 0.2]} /></g>
+</Cam>)}
           {plano === 'deixa' && (() => { const k = vai(lf, 3, 20, 0, 1, Easing.linear); return (
-            <Cam f={f} z={p(1.2, 1.3)} cx={p(900, 930)} cy={p(470, 440)} rot={p(-3, -1.5)}><g transform="translate(0 40)"><Dentro f={f} hora={21.3} /></g>
-              <g transform="translate(900 1420) scale(1 1.06)"><Valdir x={0} y={0} s={1.62} expr="confiante" pose="joia" k={k} boca={boca('v')} f={f} /></g>
-              {[0, 1, 2, 3, 4].map((i) => { const kk = entra(lf, 14 + i, 10); return <path key={i} d="M0 -34 L8 -8 L34 0 L8 8 L0 34 L-8 8 L-34 0 L-8 -8 Z" fill={C.amarelo} stroke={C.tinta} strokeWidth={4} opacity={kk * (1 - entra(lf, 30 + i, 12))} transform={`translate(${1272 + Math.cos(i * 1.3) * 120 * kk} ${640 + Math.sin(i * 1.3) * 110 * kk - 40}) scale(${0.6 + (i % 2) * 0.5})`} />; })}</Cam>); })()}
+            <Cam f={f} z={p(1.12, 1.2)} cx={p(940, 980)} cy={p(540, 510)} rot={p(-3, -1.5)}><g transform="translate(0 40)"><Dentro f={f} hora={21.3} /></g>
+              <g transform="translate(900 1330) scale(1 1.05)"><Valdir x={0} y={0} s={1.45} expr="confiante" pose="joia" k={k} boca={boca('v')} f={f} /></g>
+              {[0, 1, 2, 3, 4].map((i) => { const kk = entra(lf, 14 + i, 10); return <path key={i} d="M0 -34 L8 -8 L34 0 L8 8 L0 34 L-8 8 L-34 0 L-8 -8 Z" fill={C.amarelo} stroke={C.tinta} strokeWidth={4} opacity={kk * (1 - entra(lf, 30 + i, 12))} transform={`translate(${1236 + Math.cos(i * 1.3) * 120 * kk} ${640 + Math.sin(i * 1.3) * 110 * kk - 40}) scale(${0.6 + (i % 2) * 0.5})`} />; })}</Cam>); })()}
           {plano === 'relogio' && (() => { const k = vai(lf, 2, dur - 3, 0, 1); const h = (21.2 + k * 6) % 24; const hh = Math.floor(h), mm = Math.floor((h % 1) * 60); return (
             <g><rect {...SANGRA} fill={C.noite} />{Array.from({ length: 40 }).map((_, i) => <circle key={i} cx={(i * 397 + k * 1400) % 2100 - 90} cy={(i * 211) % 1080} r={2 + (i % 3)} fill="#fff" opacity={0.5} />)}
               <g transform={`translate(${300 + k * 1320} ${760 - Math.sin(k * Math.PI) * 560})`}><circle r={90} fill="#FFF3C4" /><circle cx={-34} cy={-22} r={80} fill={C.noite} /></g>
@@ -170,7 +170,7 @@ export const BPVideo: React.FC<{ tempos: BPTempos; pasta?: string }> = ({ tempos
                     <text x={0} y={96} textAnchor="middle" fontFamily={NUN} fontWeight={800} fontSize={20} fill={C.cinza}>de: BOI GORDO AGRO S.A.</text><text x={0} y={130} textAnchor="middle" fontFamily={NUN} fontWeight={800} fontSize={20} fill={C.cinza}>agora mesmo</text></g></Celular></g></Cam>
               {f >= tPix + 4 && Array.from({ length: 22 }).map((_, i) => { const a = random('m' + i) * 6.28, d = (f - tPix - 4) * (10 + random('v' + i) * 16), q = Math.min(1, (f - tPix - 4) / 30); return <g key={i} transform={`translate(${960 + Math.cos(a) * d} ${560 + Math.sin(a) * d + q * q * 300}) rotate(${f * 9 + i * 40})`} opacity={1 - q * 0.6}><ellipse rx={22} ry={22 * Math.abs(Math.cos(f / 4 + i))} fill={C.amarelo} stroke={C.tinta} strokeWidth={4} /></g>; })}</g>); })()}
           {plano === 'eita' && (() => { const z = lf < 9 ? 3.3 : interpolate(lf, [9, 19], [3.3, 1.28], { ...cl, easing: Easing.out(Easing.back(1.4)) }); const cy = lf < 9 ? 395 : interpolate(lf, [9, 19], [395, 470], cl); return (
-            <Cam f={f} z={z + p(0, 0.08)} cx={920} cy={cy} rot={lf < 9 ? 0 : p(-2, 0)} mao={lf > 9 && lf < 20 ? 5 : 1}><g transform="translate(0 30)"><Dentro f={f} hora={3.2} noite={1} /></g><circle cx={1150} cy={560} r={640} fill="url(#tela)" />
+            <Cam f={f} z={z + p(0, 0.08)} cx={920} cy={cy} rot={lf < 9 ? 0 : p(-2, 0)} mao={lf > 9 && lf < 20 ? 5 : 1}><g transform="translate(0 30)"><Dentro f={f} hora={3.2} noite={1} /></g><circle cx={1150} cy={560} r={520} fill="url(#tela)" opacity={0.6} />
               <Valdir x={900} y={1130} s={1.3} expr="susto" pose="celular" boca={boca('v')} f={f} olhar={[0.7, -0.2]} luz="#7FF0DD" /></Cam>); })()}
         </g></g>
         <rect width={1920} height={1080} filter="url(#grao)" opacity={0.9} style={{ mixBlendMode: 'multiply' }} />
@@ -178,7 +178,7 @@ export const BPVideo: React.FC<{ tempos: BPTempos; pasta?: string }> = ({ tempos
         {plano === 'aereo' && <Placa x={390} y={140} txt="21:12 · GUARULHOS, SP" k={pula(f, 10)} tam={44} fundo="#111" cor={C.amarelo} rot={-2} />}
         {plano === 'mesa' && <><g transform={`translate(1500 760) rotate(${-12 + (1 - pula(f, pal('mesa', 'dezenove'), 10)) * 20}) scale(${3 - 2 * Math.min(1, pula(f, pal('mesa', 'dezenove'), 10))})`} opacity={entra(f, pal('mesa', 'dezenove'), 3)}><circle r={170} fill="none" stroke={C.verm} strokeWidth={14} /><circle r={146} fill="none" stroke={C.verm} strokeWidth={5} /><text y={30} textAnchor="middle" fontFamily={NUN} fontWeight={900} fontSize={150} fill={C.verm}>19</text><text y={96} textAnchor="middle" fontFamily={NUN} fontWeight={900} fontSize={46} fill={C.verm} letterSpacing={6}>ANOS</text></g>
           <Placa x={640} y={960} txt="ENCOMENDAS PERDIDAS: 0" k={pula(f, pal('mesa', 'nenhuma') + 8)} tam={50} rot={-2} /></>}
-        {plano === 'deixa' && <g transform={`translate(1430 300) rotate(3) scale(${pula(f, fr('deixa') + 3)})`}><path d="M-300 -110 H300 Q330 -110 330 -80 V80 Q330 110 300 110 H-120 L-250 190 L-200 110 H-300 Q-330 110 -330 80 V-80 Q-330 -110 -300 -110 Z" fill="#000" opacity={0.25} transform="translate(10 12)" /><path d="M-300 -110 H300 Q330 -110 330 -80 V80 Q330 110 300 110 H-120 L-250 190 L-200 110 H-300 Q-330 110 -330 80 V-80 Q-330 -110 -300 -110 Z" fill="#fff" {...T} /><text y={26} textAnchor="middle" fontFamily={MARK} fontSize={78} fill={C.tinta}>Deixa comigo.</text></g>}
+        {plano === 'deixa' && <g transform={`translate(1380 360) rotate(3) scale(${pula(f, fr('deixa') + 3)})`}><path d="M-300 -110 H300 Q330 -110 330 -80 V80 Q330 110 300 110 H-120 L-250 190 L-200 110 H-300 Q-330 110 -330 80 V-80 Q-330 -110 -300 -110 Z" fill="#000" opacity={0.25} transform="translate(10 12)" /><path d="M-300 -110 H300 Q330 -110 330 -80 V80 Q330 110 300 110 H-120 L-250 190 L-200 110 H-300 Q-330 110 -330 80 V-80 Q-330 -110 -300 -110 Z" fill="#fff" {...T} /><text y={26} textAnchor="middle" fontFamily={MARK} fontSize={78} fill={C.tinta}>Deixa comigo.</text></g>}
         {plano === 'relogio' && <Placa x={960} y={880} txt="6 HORAS DEPOIS" k={pula(lf, 4)} tam={70} fundo={C.amarelo} fonte={NUN} rot={-2} />}
         {plano === 'pix' && <Placa x={960} y={985} txt="R$ 50.000.000,00" k={pula(f, tPix + 22)} cor={C.verde} tam={80} />}
         {hudK > 0 && plano !== 'relogio' && <Extrato valor={saldo} k={hudK} pulso={hudPulso} />}
