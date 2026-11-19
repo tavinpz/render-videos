@@ -1,0 +1,52 @@
+{
+ "falas": [
+  {
+   "c": "x0",
+   "q": "n",
+   "txt": "Ele desligou o celular. Ligou de novo. O dinheiro continuava lá.",
+   "ex": 0.5
+  },
+  {
+   "c": "x1",
+   "q": "n",
+   "txt": "Com capitão, cozinheiro e um rapaz só pra abrir o guarda-sol.",
+   "ex": 0.55
+  },
+  {
+   "c": "x2",
+   "q": "v",
+   "txt": "Outra chave? Mas o dinheiro não veio dessa.",
+   "ex": 0.55
+  },
+  {
+   "c": "x3",
+   "q": "g",
+   "txt": "É coisa do sistema, seu Valdir. Pode confiar.",
+   "ex": 0.65
+  },
+  {
+   "c": "x4",
+   "q": "l",
+   "txt": "Carregador?",
+   "ex": 0.6
+  },
+  {
+   "c": "x5",
+   "q": "v",
+   "txt": "É pra devolver o dinheiro, doutor. Travou bem na hora.",
+   "ex": 0.6
+  },
+  {
+   "c": "x6",
+   "q": "n",
+   "txt": "O Valdir comprou um celular novo, pagou três meses de aluguel adiantado e guardou o resto.",
+   "ex": 0.5
+  },
+  {
+   "c": "x7",
+   "q": "n",
+   "txt": "O celular novo ele comprou parcelado. Por via das dúvidas.",
+   "ex": 0.5
+  }
+ ]
+}

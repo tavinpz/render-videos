@@ -119,7 +119,7 @@
   },
   {
    "q": "v",
-   "txt": "Chegou hoje à tarde, Dona Neide. Tá aqui.",
+   "txt": "Chegou hoje à tarde, dona Neide. Está aqui.",
    "s": {
     "t": "ots",
     "frente": "valdir",
@@ -271,6 +271,21 @@
    "c": "f20"
   },
   {
+   "q": "n",
+   "txt": "Ele desligou o celular. Ligou de novo. O dinheiro continuava lá.",
+   "s": {
+    "t": "cel",
+    "tela": "pix",
+    "valor": 50000000,
+    "de": "BOI GORDO AGRO S.A.",
+    "hora": "03:24",
+    "pal": "ele",
+    "parado": 1
+   },
+   "p": 0.3,
+   "c": "f21"
+  },
+  {
    "q": "v",
    "txt": "Cinquenta milhões... Isso dá quantos anos de salário?",
    "s": {
@@ -281,7 +296,7 @@
     "pose": "celular"
    },
    "ex": 0.7,
-   "c": "f21"
+   "c": "f22"
   },
   {
    "q": "n",
@@ -293,7 +308,7 @@
     "cor": "verde"
    },
    "p": 0.2,
-   "c": "f22"
+   "c": "f23"
   },
   {
    "q": "n",
@@ -310,7 +325,7 @@
     "zoom": "entra"
    },
    "m": "",
-   "c": "f23"
+   "c": "f24"
   },
   {
    "q": "n",
@@ -321,7 +336,7 @@
    },
    "m": "sonho",
    "hud": 49800037.12,
-   "c": "f24"
+   "c": "f25"
   },
   {
    "q": "n",
@@ -331,13 +346,13 @@
     "item": "churrasco"
    },
    "hud": 49500037.12,
-   "c": "f25"
+   "c": "f26"
   },
   {
    "q": "v",
-   "txt": "Pode pegar mais picanha, Dona Neide!",
+   "txt": "Pode pegar mais picanha, vizinha!",
    "ex": 0.75,
-   "c": "f26"
+   "c": "f27"
   },
   {
    "q": "n",
@@ -347,7 +362,7 @@
     "item": "praia"
    },
    "hud": 47500037.12,
-   "c": "f27"
+   "c": "f28"
   },
   {
    "q": "n",
@@ -357,7 +372,12 @@
     "item": "barco"
    },
    "hud": 46000037.12,
-   "c": "f28"
+   "c": "f29"
+  },
+  {
+   "q": "n",
+   "txt": "Com capitão, cozinheiro e um rapaz só pra abrir o guarda-sol.",
+   "c": "f30"
   },
   {
    "q": "n",
@@ -366,13 +386,13 @@
     "t": "sonho",
     "item": "audio"
    },
-   "c": "f29"
+   "c": "f31"
   },
   {
    "q": "v",
    "txt": "Deixa comigo, não. Agora deixa com outro!",
    "ex": 0.8,
-   "c": "f30"
+   "c": "f32"
   },
   {
    "q": "n",
@@ -400,7 +420,7 @@
     ],
     "total": "- R$ 4.000.000,00"
    },
-   "c": "f31"
+   "c": "f33"
   },
   {
    "q": "n",
@@ -415,7 +435,7 @@
    "m": "",
    "hud": 50000037.12,
    "p": 0.2,
-   "c": "f32"
+   "c": "f34"
   },
   {
    "q": "n",
@@ -432,22 +452,22 @@
     ]
    },
    "m": "reflexao",
-   "c": "f33"
-  },
-  {
-   "q": "n",
-   "txt": "Ficar com ele é crime.",
-   "c": "f34"
-  },
-  {
-   "q": "n",
-   "txt": "Tá no artigo cento e sessenta e nove do Código Penal: detenção de um mês a um ano, ou multa.",
    "c": "f35"
   },
   {
    "q": "n",
-   "txt": "E a Justiça ainda manda devolver tudo, com correção.",
+   "txt": "Ficar com ele é crime.",
    "c": "f36"
+  },
+  {
+   "q": "n",
+   "txt": "Tá no artigo cento e sessenta e nove do Código Penal: detenção de um mês a um ano, ou multa.",
+   "c": "f37"
+  },
+  {
+   "q": "n",
+   "txt": "E a Justiça ainda manda devolver tudo, com correção.",
+   "c": "f38"
   },
   {
    "q": "n",
@@ -458,7 +478,7 @@
     "afunda": 1
    },
    "m": "",
-   "c": "f37"
+   "c": "f39"
   },
   {
    "q": "v",
@@ -471,7 +491,7 @@
     "pose": "celular"
    },
    "p": 0.2,
-   "c": "f38"
+   "c": "f40"
   },
   {
    "q": "n",
@@ -482,7 +502,7 @@
    },
    "m": "tensao",
    "p": 0.3,
-   "c": "f39"
+   "c": "f41"
   },
   {
    "q": "n",
@@ -493,7 +513,7 @@
     "hora": "07:00"
    },
    "m": "",
-   "c": "f40"
+   "c": "f42"
   },
   {
    "q": "g",
@@ -504,7 +524,7 @@
    },
    "m": "tensao",
    "ex": 0.6,
-   "c": "f41"
+   "c": "f43"
   },
   {
    "q": "v",
@@ -513,7 +533,7 @@
     "t": "duplo",
     "fala": "v"
    },
-   "c": "f42"
+   "c": "f44"
   },
   {
    "q": "g",
@@ -524,7 +544,26 @@
     "chave": 1
    },
    "ex": 0.65,
-   "c": "f43"
+   "c": "f45"
+  },
+  {
+   "q": "v",
+   "txt": "Outra chave? Mas o dinheiro não veio dessa.",
+   "s": {
+    "t": "duplo",
+    "fala": "v"
+   },
+   "c": "f46"
+  },
+  {
+   "q": "g",
+   "txt": "É coisa do sistema, seu Valdir. Pode confiar.",
+   "s": {
+    "t": "duplo",
+    "fala": "g"
+   },
+   "ex": 0.65,
+   "c": "f47"
   },
   {
    "q": "n",
@@ -536,7 +575,7 @@
     "cor": "verm"
    },
    "p": 0.2,
-   "c": "f44"
+   "c": "f48"
   },
   {
    "q": "n",
@@ -545,7 +584,7 @@
     "t": "cel",
     "tela": "chave2"
    },
-   "c": "f45"
+   "c": "f49"
   },
   {
    "q": "n",
@@ -557,7 +596,7 @@
     "fundo": "covil",
     "zoom": "entra"
    },
-   "c": "f46"
+   "c": "f50"
   },
   {
    "q": "n",
@@ -577,7 +616,7 @@
     ],
     "total": "- R$ 100.000.000,00"
    },
-   "c": "f47"
+   "c": "f51"
   },
   {
    "q": "n",
@@ -593,17 +632,17 @@
     ]
    },
    "m": "reflexao",
-   "c": "f48"
+   "c": "f52"
   },
   {
    "q": "n",
    "txt": "Use o botão devolver, que fica dentro da própria transação.",
-   "c": "f49"
+   "c": "f53"
   },
   {
    "q": "n",
    "txt": "Ele manda o dinheiro de volta pra conta de onde veio.",
-   "c": "f50"
+   "c": "f54"
   },
   {
    "q": "v",
@@ -614,7 +653,7 @@
     "expr": "confiante"
    },
    "m": "",
-   "c": "f51"
+   "c": "f55"
   },
   {
    "q": "g",
@@ -628,7 +667,7 @@
    "ex": 0.9,
    "cfg": 0.3,
    "p": 0.4,
-   "c": "f52"
+   "c": "f56"
   },
   {
    "q": "n",
@@ -642,7 +681,7 @@
     "hora": "12:00"
    },
    "m": "cotidiano",
-   "c": "f53"
+   "c": "f57"
   },
   {
    "q": "e",
@@ -654,7 +693,7 @@
     "fundo": "ruaDia"
    },
    "ex": 0.55,
-   "c": "f54"
+   "c": "f58"
   },
   {
    "q": "n",
@@ -671,22 +710,22 @@
     ]
    },
    "m": "reflexao",
-   "c": "f55"
+   "c": "f59"
   },
   {
    "q": "n",
    "txt": "Lição número três: o MED serve pra golpe, fraude e falha do sistema.",
-   "c": "f56"
+   "c": "f60"
   },
   {
    "q": "n",
    "txt": "Pra erro de digitação de quem enviou, ele não vale.",
-   "c": "f57"
+   "c": "f61"
   },
   {
    "q": "n",
    "txt": "Nesse caso, a devolução não é automática. Ela depende do Valdir.",
-   "c": "f58"
+   "c": "f62"
   },
   {
    "q": "e",
@@ -698,7 +737,7 @@
     "fundo": "ruaDia"
    },
    "m": "",
-   "c": "f59"
+   "c": "f63"
   },
   {
    "q": "v",
@@ -710,7 +749,7 @@
     "fundo": "guaritaDia",
     "expr": "sorriso"
    },
-   "c": "f60"
+   "c": "f64"
   },
   {
    "q": "e",
@@ -722,11 +761,11 @@
     "fundo": "ruaDia"
    },
    "p": 0.2,
-   "c": "f61"
+   "c": "f65"
   },
   {
    "q": "v",
-   "txt": "Dona, eu nunca perdi nem encomenda de sabonete. Não vou perder cinquenta milhões dos outros.",
+   "txt": "Dona, eu nunca perdi uma encomenda. Não vou perder cinquenta milhões dos outros.",
    "s": {
     "t": "ots",
     "frente": "valdir",
@@ -734,7 +773,7 @@
     "fundo": "guaritaDia",
     "expr": "confiante"
    },
-   "c": "f62"
+   "c": "f66"
   },
   {
    "q": "n",
@@ -750,7 +789,7 @@
    },
    "m": "cotidiano",
    "p": 0.3,
-   "c": "f63"
+   "c": "f67"
   },
   {
    "q": "n",
@@ -762,13 +801,13 @@
     "pal": "apertou"
    },
    "m": "",
-   "c": "f64"
+   "c": "f68"
   },
   {
    "q": "n",
    "txt": "E nada aconteceu.",
-   "p": 0.3,
-   "c": "f65"
+   "p": 1.4,
+   "c": "f69"
   },
   {
    "q": "n",
@@ -778,7 +817,7 @@
     "tela": "travado"
    },
    "m": "tensao",
-   "c": "f66"
+   "c": "f70"
   },
   {
    "q": "v",
@@ -793,7 +832,7 @@
    },
    "ex": 0.85,
    "cfg": 0.3,
-   "c": "f67"
+   "c": "f71"
   },
   {
    "q": "n",
@@ -803,7 +842,7 @@
     "quem": "policia",
     "hora": "18:00"
    },
-   "c": "f68"
+   "c": "f72"
   },
   {
    "q": "l",
@@ -815,7 +854,7 @@
     "fundo": "rua"
    },
    "ex": 0.5,
-   "c": "f69"
+   "c": "f73"
   },
   {
    "q": "n",
@@ -828,7 +867,7 @@
     "luzes": 1,
     "zoom": "entra"
    },
-   "c": "f70"
+   "c": "f74"
   },
   {
    "q": "n",
@@ -841,13 +880,38 @@
     "expr": "neutro"
    },
    "m": "",
-   "c": "f71"
+   "c": "f75"
   },
   {
    "q": "v",
    "txt": "Doutor, o senhor me empresta um carregador?",
    "ex": 0.6,
-   "c": "f72"
+   "c": "f76"
+  },
+  {
+   "q": "l",
+   "txt": "Carregador?",
+   "s": {
+    "t": "close",
+    "quem": "delegado",
+    "expr": "susto",
+    "fundo": "delegacia"
+   },
+   "ex": 0.6,
+   "c": "f77"
+  },
+  {
+   "q": "v",
+   "txt": "É pra devolver o dinheiro, doutor. Travou bem na hora.",
+   "s": {
+    "t": "ots",
+    "frente": "valdir",
+    "costas": "delegado",
+    "fundo": "delegacia",
+    "expr": "sorriso"
+   },
+   "ex": 0.6,
+   "c": "f78"
   },
   {
    "q": "n",
@@ -860,7 +924,7 @@
     "cabo": 1
    },
    "m": "reflexao",
-   "c": "f73"
+   "c": "f79"
   },
   {
    "q": "n",
@@ -872,7 +936,7 @@
     "fundo": "delegacia",
     "zoom": "entra"
    },
-   "c": "f74"
+   "c": "f80"
   },
   {
    "q": "n",
@@ -883,7 +947,7 @@
     "pal": "saíram"
    },
    "hud": 37.12,
-   "c": "f75"
+   "c": "f81"
   },
   {
    "q": "l",
@@ -895,7 +959,7 @@
     "fundo": "delegacia"
    },
    "ex": 0.55,
-   "c": "f76"
+   "c": "f82"
   },
   {
    "q": "v",
@@ -908,7 +972,7 @@
     "pose": "celular"
    },
    "p": 0.4,
-   "c": "f77"
+   "c": "f83"
   },
   {
    "q": "n",
@@ -917,7 +981,7 @@
     "t": "chegada"
    },
    "m": "cotidiano",
-   "c": "f78"
+   "c": "f84"
   },
   {
    "q": "d",
@@ -929,7 +993,7 @@
     "fundo": "rua"
    },
    "ex": 0.6,
-   "c": "f79"
+   "c": "f85"
   },
   {
    "q": "v",
@@ -942,7 +1006,7 @@
     "expr": "sorriso"
    },
    "p": 0.3,
-   "c": "f80"
+   "c": "f86"
   },
   {
    "q": "d",
@@ -955,7 +1019,7 @@
     "torto": 1
    },
    "ex": 0.7,
-   "c": "f81"
+   "c": "f87"
   },
   {
    "q": "n",
@@ -965,7 +1029,7 @@
     "modo": "vibra"
    },
    "m": "",
-   "c": "f82"
+   "c": "f88"
   },
   {
    "q": "n",
@@ -981,7 +1045,7 @@
    },
    "m": "reflexao",
    "hud": 50037.12,
-   "c": "f83"
+   "c": "f89"
   },
   {
    "q": "v",
@@ -996,7 +1060,7 @@
    },
    "ex": 0.8,
    "cfg": 0.3,
-   "c": "f84"
+   "c": "f90"
   },
   {
    "q": "n",
@@ -1007,7 +1071,7 @@
     "sub": "\"Obrigado pela honestidade.\"",
     "cor": "verde"
    },
-   "c": "f85"
+   "c": "f91"
   },
   {
    "q": "n",
@@ -1022,7 +1086,42 @@
    },
    "m": "cotidiano",
    "p": 0.3,
-   "c": "f86"
+   "c": "f92"
+  },
+  {
+   "q": "n",
+   "txt": "O Valdir comprou um celular novo, pagou três meses de aluguel adiantado e guardou o resto.",
+   "s": {
+    "t": "extrato",
+    "titulo": "O VALDIR DE VERDADE",
+    "linhas": [
+     [
+      "Celular novo",
+      -1800
+     ],
+     [
+      "3 meses de aluguel",
+      -2700
+     ]
+    ],
+    "total": "sobrou R$ 45.537,12"
+   },
+   "hud": 45537.12,
+   "c": "f93"
+  },
+  {
+   "q": "n",
+   "txt": "O celular novo ele comprou parcelado. Por via das dúvidas.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "confiante",
+    "fundo": "dentro",
+    "pose": "celular",
+    "novo": 1
+   },
+   "p": 0.4,
+   "c": "f94"
   },
   {
    "q": "n",
@@ -1032,7 +1131,7 @@
     "modo": "pergunta"
    },
    "hud": null,
-   "c": "f87"
+   "c": "f95"
   },
   {
    "q": "n",
@@ -1041,7 +1140,7 @@
     "t": "fim",
     "modo": "proximo"
    },
-   "c": "f88"
+   "c": "f96"
   },
   {
    "q": "v",
@@ -1055,8 +1154,9 @@
     "bal": "Deixa comigo."
    },
    "ex": 0.6,
-   "p": 1.2,
-   "c": "f89"
+   "p": 0.8,
+   "fim": 9.0,
+   "c": "f97"
   }
  ]
 }
