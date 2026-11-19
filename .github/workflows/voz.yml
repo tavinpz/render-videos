@@ -11,7 +11,8 @@ jobs:
     timeout-minutes: 50
     strategy:
       fail-fast: false
-      matrix: { k: [0, 1, 2, 3, 4] }
+      max-parallel: 20
+      matrix: { k: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19] }
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 2 }
@@ -25,7 +26,7 @@ jobs:
         run: |
           F=$(git diff --name-only HEAD~1 HEAD -- fila-voz | grep '\.txt$' | head -1); [ -z "$F" ] && F=$(ls -t fila-voz/*.txt | head -1)
           PASTA=$(sed -n 1p "$F" | tr -d '\r '); T=$(sed -n 2p "$F" | tr -dc 0-9); export TOMADAS=${T:-3}
-          python3 ferramentas/bp_voz.py public/$PASTA ${{ matrix.k }} 5 out
+          python3 ferramentas/bp_voz.py public/$PASTA ${{ matrix.k }} 20 out
       - uses: actions/upload-artifact@v4
         with: { name: 'voz-${{ matrix.k }}', path: out, retention-days: 3 }
   juntar:

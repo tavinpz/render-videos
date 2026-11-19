@@ -53,4 +53,30 @@ for c in range(15):
     for s in range(8): bl.append((t0 + s * 0.5, 76 if s % 2 == 0 else 77, 0.1, 40 if s % 2 == 0 else 28))
     if c % 4 == 3: bl.append((t0 + 3.5, 47, 0.4, 70)); bl.append((t0 + 3.75, 45, 0.4, 76))
 salva('tensao', 112, [(0, 45, piz, {91: 50, 7: 100}), (1, 43, grave, {7: 78}), (9, 0, bl, {7: 80})], 15)
+# ---------- sonho: samba animado, 118 bpm, 16 compassos ----------
+cav, bx2, pc2, met = [], [], [], []
+AS = [('C6', 48, [60, 64, 67, 69]), ('A7', 45, [61, 64, 67, 69]), ('Dm7', 50, [62, 65, 69, 72]), ('G7', 43, [59, 62, 65, 67])]
+for c in range(16):
+    nome, b0, ac = AS[c % 4]; t0 = c * 4
+    for r in [0, 0.5, 1.25, 1.75, 2.5, 3.0, 3.5]:
+        for j, n in enumerate(ac): cav.append((t0 + r + j * 0.008, n + 12, 0.2, rnd.randint(54, 70)))
+    for r, n, d in [(0, b0, 0.9), (1.5, b0 + 7, 0.4), (2, b0 + 12, 0.9), (3.5, b0 + 7, 0.4)]: bx2.append((t0 + r, n - 12 if n > 50 else n, d, 90))
+    for s_ in range(16):
+        t = t0 + s_ * 0.25; pc2.append((t, 82, 0.1, 50 if s_ % 4 == 0 else 30 + rnd.randint(0, 8)))
+        if s_ in (0, 3, 6, 8, 11, 14): pc2.append((t, 54, 0.1, 52))
+        if s_ in (0, 6, 8, 14): pc2.append((t, 36, 0.2, 70))
+        if s_ in (4, 10, 12): pc2.append((t, 62 if s_ != 10 else 63, 0.15, 56))
+    if c % 4 == 3:
+        for r, n in [(2, 67), (2.5, 71), (3, 74), (3.5, 79)]: met.append((t0 + r, n, 0.3, 80))
+    if c % 4 == 0 and c:
+        for n in (72, 76, 79): met.append((t0, n, 0.5, 84))
+salva('sonho', 118, [(0, 25, cav, {91: 30, 7: 92}), (1, 32, bx2, {7: 104}), (9, 0, pc2, {7: 92}), (2, 61, met, {91: 50, 7: 76})], 16)
+# ---------- reflexão: piano elétrico e cordas, 72 bpm, 12 compassos ----------
+ep, cd, bx3 = [], [], []
+AR = [('Fmaj7', 41, [57, 60, 64, 65]), ('G6', 43, [59, 62, 64, 67]), ('Em7', 40, [59, 62, 64, 67]), ('Am7', 45, [57, 60, 64, 67])]
+for c in range(12):
+    nome, b0, ac = AR[c % 4]; t0 = c * 4
+    for j, n in enumerate(ac): ep.append((t0 + j * 0.5, n, 2.6 - j * 0.4, 52 - j * 3)); cd.append((t0, n + 12, 3.8, 34))
+    ep.append((t0 + 2.5, ac[2] + 12, 1.2, 46)); ep.append((t0 + 3.25, ac[1] + 12, 0.7, 40)); bx3.append((t0, b0, 3.6, 70))
+salva('reflexao', 72, [(0, 4, ep, {91: 70, 7: 96}), (1, 48, cd, {91: 80, 7: 62}), (2, 32, bx3, {7: 84})], 12)
 print('ok', [p.name for p in out.iterdir()])

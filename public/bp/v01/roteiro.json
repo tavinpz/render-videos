@@ -1,0 +1,1062 @@
+{
+ "falas": [
+  {
+   "q": "n",
+   "txt": "Três e doze da manhã. Um porteiro de Guarulhos recebe um Pix de cinquenta milhões de reais. Por engano.",
+   "s": {
+    "t": "cel",
+    "tela": "pix",
+    "valor": 50000000,
+    "de": "BOI GORDO AGRO S.A.",
+    "hora": "03:12",
+    "pal": "cinquenta"
+   },
+   "m": "tensao",
+   "hud": null,
+   "ex": 0.6,
+   "c": "f00"
+  },
+  {
+   "q": "v",
+   "txt": "Eita, rapaz... cinquenta milhão?",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "susto",
+    "fundo": "dentroNoite",
+    "pose": "celular",
+    "zoom": "susto"
+   },
+   "ex": 0.85,
+   "cfg": 0.3,
+   "hud": 50000037.12,
+   "c": "f01"
+  },
+  {
+   "q": "n",
+   "txt": "Um minuto antes, o saldo dele era de trinta e sete reais e doze centavos.",
+   "s": {
+    "t": "cel",
+    "tela": "saldo",
+    "pal": "trinta"
+   },
+   "hud": 37.12,
+   "c": "f02"
+  },
+  {
+   "q": "n",
+   "txt": "Nas próximas setenta e duas horas, três pessoas vão atrás desse dinheiro: um golpista, uma gerente de banco e um delegado.",
+   "s": {
+    "t": "visita",
+    "quem": [
+     "golpista",
+     "gerente",
+     "delegado"
+    ],
+    "pal": [
+     "um golpista",
+     "uma gerente",
+     "um delegado"
+    ],
+    "relogio": 72
+   },
+   "hud": 50000037.12,
+   "c": "f03"
+  },
+  {
+   "q": "n",
+   "txt": "E o Valdir só precisa apertar um botão. O problema é que a maioria das pessoas aperta o errado.",
+   "s": {
+    "t": "cel",
+    "tela": "botoes",
+    "placa": "A MAIORIA APERTA O ERRADO",
+    "pal": "errado"
+   },
+   "c": "f04"
+  },
+  {
+   "q": "n",
+   "txt": "Fica até o fim, porque um dos botões leva o Valdir pra delegacia. E o outro muda a vida dele.",
+   "p": 0.2,
+   "c": "f05"
+  },
+  {
+   "q": "n",
+   "txt": "Tudo começou seis horas antes.",
+   "s": {
+    "t": "relogio",
+    "de": 3.2,
+    "ate": 21.2,
+    "txt": "6 HORAS ANTES"
+   },
+   "m": "",
+   "hud": null,
+   "p": 0.2,
+   "c": "f06"
+  },
+  {
+   "q": "n",
+   "txt": "Vinte e uma e doze. O Valdir assume a portaria do Edifício Jatobá.",
+   "s": {
+    "t": "chegada"
+   },
+   "m": "cotidiano",
+   "hud": null,
+   "c": "f07"
+  },
+  {
+   "q": "d",
+   "txt": "Boa noite, Valdir! Chegou a minha encomenda?",
+   "s": {
+    "t": "ots",
+    "frente": "neide",
+    "costas": "valdir",
+    "fundo": "rua"
+   },
+   "ex": 0.6,
+   "hud": 37.12,
+   "c": "f08"
+  },
+  {
+   "q": "v",
+   "txt": "Chegou hoje à tarde, Dona Neide. Tá aqui.",
+   "s": {
+    "t": "ots",
+    "frente": "valdir",
+    "costas": "neide",
+    "fundo": "guarita",
+    "pose": "entrega",
+    "expr": "sorriso"
+   },
+   "c": "f09"
+  },
+  {
+   "q": "n",
+   "txt": "Dezenove anos de portaria. Nenhuma encomenda perdida.",
+   "s": {
+    "t": "mesa",
+    "modo": "caderno",
+    "carimbo": "dezenove",
+    "check": "nenhuma",
+    "placa": "ENCOMENDAS PERDIDAS: 0"
+   },
+   "c": "f10"
+  },
+  {
+   "q": "d",
+   "txt": "Você devia ganhar mais, viu?",
+   "s": {
+    "t": "close",
+    "quem": "neide",
+    "expr": "bronca",
+    "fundo": "rua",
+    "torto": 1
+   },
+   "ex": 0.6,
+   "c": "f11"
+  },
+  {
+   "q": "v",
+   "txt": "Deixa comigo.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "confiante",
+    "fundo": "dentro",
+    "pose": "joia",
+    "bal": "Deixa comigo."
+   },
+   "ex": 0.6,
+   "p": 0.3,
+   "c": "f12"
+  },
+  {
+   "q": "n",
+   "txt": "Era o que ele sempre dizia. Pro síndico, pro entregador, pro boleto atrasado.",
+   "s": {
+    "t": "mesa",
+    "modo": "boletos",
+    "pal": [
+     "síndico",
+     "entregador",
+     "boleto"
+    ]
+   },
+   "c": "f13"
+  },
+  {
+   "q": "n",
+   "txt": "O salário: mil oitocentos e trinta reais. O aluguel: novecentos. O que sobrava no fim do mês cabia numa mão.",
+   "s": {
+    "t": "cel",
+    "tela": "saldo",
+    "pal": "sobrava"
+   },
+   "c": "f14"
+  },
+  {
+   "q": "n",
+   "txt": "Se você já gostou do Valdir, se inscreve no canal. Ele agradece.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "sorriso",
+    "fundo": "dentro",
+    "pose": "joia",
+    "placa": "INSCREVA-SE",
+    "pal": "inscreve"
+   },
+   "p": 0.3,
+   "c": "f15"
+  },
+  {
+   "q": "n",
+   "txt": "Às três e doze, o celular vibrou.",
+   "s": {
+    "t": "relogio",
+    "de": 21.2,
+    "ate": 3.2,
+    "txt": "6 HORAS DEPOIS"
+   },
+   "m": "",
+   "c": "f16"
+  },
+  {
+   "q": "n",
+   "txt": "O remetente era uma empresa de gado do Mato Grosso. Alguém digitou a chave errada. Um número de diferença.",
+   "s": {
+    "t": "mesa",
+    "modo": "vibra"
+   },
+   "m": "tensao",
+   "p": 0.1,
+   "c": "f17"
+  },
+  {
+   "q": "n",
+   "txt": "Só um número.",
+   "s": {
+    "t": "cel",
+    "tela": "chave",
+    "pal": "número"
+   },
+   "hud": 50000037.12,
+   "c": "f18"
+  },
+  {
+   "q": "n",
+   "txt": "Durante dez minutos, o Valdir só olhou pra tela. Conferiu o nome. Conferiu os zeros. Sete zeros.",
+   "s": {
+    "t": "cel",
+    "tela": "pix",
+    "valor": 50000000,
+    "de": "BOI GORDO AGRO S.A.",
+    "hora": "03:22",
+    "pal": "durante",
+    "parado": 1
+   },
+   "c": "f19"
+  },
+  {
+   "q": "v",
+   "txt": "Deve ser vírus.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "neutro",
+    "fundo": "dentroNoite",
+    "pose": "celular"
+   },
+   "p": 0.2,
+   "c": "f20"
+  },
+  {
+   "q": "v",
+   "txt": "Cinquenta milhões... Isso dá quantos anos de salário?",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "susto",
+    "fundo": "dentroNoite",
+    "pose": "celular"
+   },
+   "ex": 0.7,
+   "c": "f21"
+  },
+  {
+   "q": "n",
+   "txt": "Mais de dois mil e duzentos anos.",
+   "s": {
+    "t": "texto",
+    "txt": "2.276 ANOS",
+    "sub": "de salário de porteiro",
+    "cor": "verde"
+   },
+   "p": 0.2,
+   "c": "f22"
+  },
+  {
+   "q": "n",
+   "txt": "E foi aí que a cabeça do Valdir começou a gastar.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "sorriso",
+    "fundo": "dentroNoite",
+    "olhar": [
+     0.2,
+     -0.8
+    ],
+    "zoom": "entra"
+   },
+   "m": "",
+   "c": "f23"
+  },
+  {
+   "q": "n",
+   "txt": "Primeiro, um carro zero.",
+   "s": {
+    "t": "sonho",
+    "item": "carro"
+   },
+   "m": "sonho",
+   "hud": 49800037.12,
+   "c": "f24"
+  },
+  {
+   "q": "n",
+   "txt": "Depois, churrasco pro prédio inteiro, todo domingo.",
+   "s": {
+    "t": "sonho",
+    "item": "churrasco"
+   },
+   "hud": 49500037.12,
+   "c": "f25"
+  },
+  {
+   "q": "v",
+   "txt": "Pode pegar mais picanha, Dona Neide!",
+   "ex": 0.75,
+   "c": "f26"
+  },
+  {
+   "q": "n",
+   "txt": "Uma casa na praia.",
+   "s": {
+    "t": "sonho",
+    "item": "praia"
+   },
+   "hud": 47500037.12,
+   "c": "f27"
+  },
+  {
+   "q": "n",
+   "txt": "E um barco que ele nem sabe pilotar.",
+   "s": {
+    "t": "sonho",
+    "item": "barco"
+   },
+   "hud": 46000037.12,
+   "c": "f28"
+  },
+  {
+   "q": "n",
+   "txt": "E um áudio pro síndico, pedindo as contas.",
+   "s": {
+    "t": "sonho",
+    "item": "audio"
+   },
+   "c": "f29"
+  },
+  {
+   "q": "v",
+   "txt": "Deixa comigo, não. Agora deixa com outro!",
+   "ex": 0.8,
+   "c": "f30"
+  },
+  {
+   "q": "n",
+   "txt": "Em um mês, o Valdir da imaginação já tinha torrado quatro milhões.",
+   "s": {
+    "t": "extrato",
+    "titulo": "O VALDIR DA IMAGINAÇÃO",
+    "linhas": [
+     [
+      "Carro zero",
+      -200000
+     ],
+     [
+      "Churrasco todo domingo",
+      -300000
+     ],
+     [
+      "Casa na praia",
+      -2000000
+     ],
+     [
+      "Barco",
+      -1500000
+     ]
+    ],
+    "total": "- R$ 4.000.000,00"
+   },
+   "c": "f31"
+  },
+  {
+   "q": "n",
+   "txt": "Só que esse Valdir esqueceu de um detalhe.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "neutro",
+    "fundo": "dentroNoite",
+    "zoom": "entra"
+   },
+   "m": "",
+   "hud": 50000037.12,
+   "p": 0.2,
+   "c": "f32"
+  },
+  {
+   "q": "n",
+   "txt": "Lição número um: dinheiro que cai na sua conta por engano não é seu.",
+   "s": {
+    "t": "cartao",
+    "n": 1,
+    "titulo": "Caiu por engano? Não é seu.",
+    "linhas": [
+     "Ficar com o dinheiro é crime",
+     "Código Penal, artigo 169",
+     "Detenção de 1 mês a 1 ano, ou multa",
+     "E ainda tem que devolver tudo, corrigido"
+    ]
+   },
+   "m": "reflexao",
+   "c": "f33"
+  },
+  {
+   "q": "n",
+   "txt": "Ficar com ele é crime.",
+   "c": "f34"
+  },
+  {
+   "q": "n",
+   "txt": "Tá no artigo cento e sessenta e nove do Código Penal: detenção de um mês a um ano, ou multa.",
+   "c": "f35"
+  },
+  {
+   "q": "n",
+   "txt": "E a Justiça ainda manda devolver tudo, com correção.",
+   "c": "f36"
+  },
+  {
+   "q": "n",
+   "txt": "Ou seja: o Valdir da imaginação ia terminar sem o barco, sem a casa e com um processo.",
+   "s": {
+    "t": "sonho",
+    "item": "barco",
+    "afunda": 1
+   },
+   "m": "",
+   "c": "f37"
+  },
+  {
+   "q": "v",
+   "txt": "Melhor devolver.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "neutro",
+    "fundo": "dentroNoite",
+    "pose": "celular"
+   },
+   "p": 0.2,
+   "c": "f38"
+  },
+  {
+   "q": "n",
+   "txt": "Só que devolver também tem armadilha.",
+   "s": {
+    "t": "cel",
+    "tela": "botoes"
+   },
+   "m": "tensao",
+   "p": 0.3,
+   "c": "f39"
+  },
+  {
+   "q": "n",
+   "txt": "Sete da manhã. O telefone toca.",
+   "s": {
+    "t": "cel",
+    "tela": "ligacao",
+    "hora": "07:00"
+   },
+   "m": "",
+   "c": "f40"
+  },
+  {
+   "q": "g",
+   "txt": "Seu Valdir? Aqui é do financeiro da Boi Gordo. O senhor recebeu um Pix nosso por engano.",
+   "s": {
+    "t": "duplo",
+    "fala": "g"
+   },
+   "m": "tensao",
+   "ex": 0.6,
+   "c": "f41"
+  },
+  {
+   "q": "v",
+   "txt": "Recebi, sim. Já ia devolver.",
+   "s": {
+    "t": "duplo",
+    "fala": "v"
+   },
+   "c": "f42"
+  },
+  {
+   "q": "g",
+   "txt": "Ótimo! Só que aquela conta foi bloqueada. Faz um Pix novo pra esta outra chave, que eu vou te passar.",
+   "s": {
+    "t": "duplo",
+    "fala": "g",
+    "chave": 1
+   },
+   "ex": 0.65,
+   "c": "f43"
+  },
+  {
+   "q": "n",
+   "txt": "Parece ajuda. É golpe.",
+   "s": {
+    "t": "texto",
+    "txt": "É GOLPE",
+    "sub": "parece ajuda",
+    "cor": "verm"
+   },
+   "p": 0.2,
+   "c": "f44"
+  },
+  {
+   "q": "n",
+   "txt": "Esse golpe tem nome: golpe do Pix errado. E ele funciona porque a vítima acha que está sendo honesta.",
+   "s": {
+    "t": "cel",
+    "tela": "chave2"
+   },
+   "c": "f45"
+  },
+  {
+   "q": "n",
+   "txt": "Esse homem não trabalha na empresa. Ele só quer que o Valdir mande o dinheiro pra conta dele.",
+   "s": {
+    "t": "close",
+    "quem": "golpista",
+    "expr": "sorriso",
+    "fundo": "covil",
+    "zoom": "entra"
+   },
+   "c": "f46"
+  },
+  {
+   "q": "n",
+   "txt": "E se o Valdir mandasse, ia continuar devendo os cinquenta milhões pra dona de verdade.",
+   "s": {
+    "t": "extrato",
+    "titulo": "SE ELE CAI NO GOLPE",
+    "linhas": [
+     [
+      "Pix novo para o golpista",
+      -50000000
+     ],
+     [
+      "Dívida com a dona do dinheiro",
+      -50000000
+     ]
+    ],
+    "total": "- R$ 100.000.000,00"
+   },
+   "c": "f47"
+  },
+  {
+   "q": "n",
+   "txt": "Lição número dois: nunca devolva fazendo um Pix novo.",
+   "s": {
+    "t": "cartao",
+    "n": 2,
+    "titulo": "Nunca devolva com um Pix novo.",
+    "linhas": [
+     "Use o botão DEVOLVER",
+     "Ele fica dentro da própria transação",
+     "O dinheiro volta para a conta de onde veio"
+    ]
+   },
+   "m": "reflexao",
+   "c": "f48"
+  },
+  {
+   "q": "n",
+   "txt": "Use o botão devolver, que fica dentro da própria transação.",
+   "c": "f49"
+  },
+  {
+   "q": "n",
+   "txt": "Ele manda o dinheiro de volta pra conta de onde veio.",
+   "c": "f50"
+  },
+  {
+   "q": "v",
+   "txt": "O senhor me dá licença, que eu vou apertar o botão certo.",
+   "s": {
+    "t": "duplo",
+    "fala": "v",
+    "expr": "confiante"
+   },
+   "m": "",
+   "c": "f51"
+  },
+  {
+   "q": "g",
+   "txt": "Não, não, espera!",
+   "s": {
+    "t": "duplo",
+    "fala": "g",
+    "expr": "susto",
+    "desliga": 1
+   },
+   "ex": 0.9,
+   "cfg": 0.3,
+   "p": 0.4,
+   "c": "f52"
+  },
+  {
+   "q": "n",
+   "txt": "Meio-dia. Uma gerente de banco aparece na portaria. De terninho. Num prédio que nunca recebeu gerente nenhum.",
+   "s": {
+    "t": "visita",
+    "quem": [
+     "gerente"
+    ],
+    "dia": 1,
+    "hora": "12:00"
+   },
+   "m": "cotidiano",
+   "c": "f53"
+  },
+  {
+   "q": "e",
+   "txt": "Seu Valdir, eu vim pessoalmente. A empresa pediu o dinheiro de volta pelo sistema do Banco Central, e não funcionou.",
+   "s": {
+    "t": "ots",
+    "frente": "gerente",
+    "costas": "valdir",
+    "fundo": "ruaDia"
+   },
+   "ex": 0.55,
+   "c": "f54"
+  },
+  {
+   "q": "n",
+   "txt": "Ela tá falando do MED, o Mecanismo Especial de Devolução.",
+   "s": {
+    "t": "cartao",
+    "n": 3,
+    "titulo": "O MED não cobre erro de digitação.",
+    "linhas": [
+     "MED: Mecanismo Especial de Devolução",
+     "Vale para golpe, fraude e falha do sistema",
+     "Não vale para erro de quem enviou",
+     "Nesse caso, a devolução não é automática"
+    ]
+   },
+   "m": "reflexao",
+   "c": "f55"
+  },
+  {
+   "q": "n",
+   "txt": "Lição número três: o MED serve pra golpe, fraude e falha do sistema.",
+   "c": "f56"
+  },
+  {
+   "q": "n",
+   "txt": "Pra erro de digitação de quem enviou, ele não vale.",
+   "c": "f57"
+  },
+  {
+   "q": "n",
+   "txt": "Nesse caso, a devolução não é automática. Ela depende do Valdir.",
+   "c": "f58"
+  },
+  {
+   "q": "e",
+   "txt": "Se o senhor quisesse, podia dificultar muito a nossa vida.",
+   "s": {
+    "t": "close",
+    "quem": "gerente",
+    "expr": "bronca",
+    "fundo": "ruaDia"
+   },
+   "m": "",
+   "c": "f59"
+  },
+  {
+   "q": "v",
+   "txt": "A senhora aceita um café?",
+   "s": {
+    "t": "ots",
+    "frente": "valdir",
+    "costas": "gerente",
+    "fundo": "guaritaDia",
+    "expr": "sorriso"
+   },
+   "c": "f60"
+  },
+  {
+   "q": "e",
+   "txt": "Eu aceito a devolução.",
+   "s": {
+    "t": "close",
+    "quem": "gerente",
+    "expr": "neutro",
+    "fundo": "ruaDia"
+   },
+   "p": 0.2,
+   "c": "f61"
+  },
+  {
+   "q": "v",
+   "txt": "Dona, eu nunca perdi nem encomenda de sabonete. Não vou perder cinquenta milhões dos outros.",
+   "s": {
+    "t": "ots",
+    "frente": "valdir",
+    "costas": "gerente",
+    "fundo": "guaritaDia",
+    "expr": "confiante"
+   },
+   "c": "f62"
+  },
+  {
+   "q": "n",
+   "txt": "Se você faria igual ao Valdir, deixa o like. Se ia pensar duas vezes, pode confessar nos comentários.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "sorriso",
+    "fundo": "dentro",
+    "pose": "joia",
+    "placa": "E VOCÊ?",
+    "pal": "confessar"
+   },
+   "m": "cotidiano",
+   "p": 0.3,
+   "c": "f63"
+  },
+  {
+   "q": "n",
+   "txt": "O Valdir abriu o aplicativo e apertou devolver.",
+   "s": {
+    "t": "cel",
+    "tela": "botoes",
+    "aperta": "devolver",
+    "pal": "apertou"
+   },
+   "m": "",
+   "c": "f64"
+  },
+  {
+   "q": "n",
+   "txt": "E nada aconteceu.",
+   "p": 0.3,
+   "c": "f65"
+  },
+  {
+   "q": "n",
+   "txt": "O celular dele, de dois mil e dezesseis, travou. Bateria em um por cento.",
+   "s": {
+    "t": "cel",
+    "tela": "travado"
+   },
+   "m": "tensao",
+   "c": "f66"
+  },
+  {
+   "q": "v",
+   "txt": "Agora não, pelo amor de Deus!",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "susto",
+    "fundo": "dentro",
+    "pose": "celular",
+    "zoom": "susto"
+   },
+   "ex": 0.85,
+   "cfg": 0.3,
+   "c": "f67"
+  },
+  {
+   "q": "n",
+   "txt": "Dezoito horas. Um carro da polícia para na frente do prédio.",
+   "s": {
+    "t": "aereo",
+    "quem": "policia",
+    "hora": "18:00"
+   },
+   "c": "f68"
+  },
+  {
+   "q": "l",
+   "txt": "Valdir Aparecido de Souza? A empresa registrou ocorrência. O senhor precisa me acompanhar.",
+   "s": {
+    "t": "ots",
+    "frente": "delegado",
+    "costas": "valdir",
+    "fundo": "rua"
+   },
+   "ex": 0.5,
+   "c": "f69"
+  },
+  {
+   "q": "n",
+   "txt": "Pra quem olha de fora, quinze horas com cinquenta milhões na conta parece outra coisa.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "susto",
+    "fundo": "rua",
+    "luzes": 1,
+    "zoom": "entra"
+   },
+   "c": "f70"
+  },
+  {
+   "q": "n",
+   "txt": "Na delegacia, o Valdir fez a única coisa que sabia fazer.",
+   "s": {
+    "t": "ots",
+    "frente": "valdir",
+    "costas": "delegado",
+    "fundo": "delegacia",
+    "expr": "neutro"
+   },
+   "m": "",
+   "c": "f71"
+  },
+  {
+   "q": "v",
+   "txt": "Doutor, o senhor me empresta um carregador?",
+   "ex": 0.6,
+   "c": "f72"
+  },
+  {
+   "q": "n",
+   "txt": "Ele ligou o celular na tomada da delegacia, abriu o aplicativo na frente de todo mundo e apertou devolver.",
+   "s": {
+    "t": "cel",
+    "tela": "botoes",
+    "aperta": "devolver",
+    "pal": "apertou",
+    "cabo": 1
+   },
+   "m": "reflexao",
+   "c": "f73"
+  },
+  {
+   "q": "n",
+   "txt": "O escrivão parou de digitar. O delegado tirou os óculos. Até o preso da cela ao lado esticou o pescoço.",
+   "s": {
+    "t": "close",
+    "quem": "delegado",
+    "expr": "susto",
+    "fundo": "delegacia",
+    "zoom": "entra"
+   },
+   "c": "f74"
+  },
+  {
+   "q": "n",
+   "txt": "Cinquenta milhões de reais saíram da conta. O saldo voltou pra trinta e sete e doze.",
+   "s": {
+    "t": "cel",
+    "tela": "devolvido",
+    "pal": "saíram"
+   },
+   "hud": 37.12,
+   "c": "f75"
+  },
+  {
+   "q": "l",
+   "txt": "Em vinte anos de polícia, eu nunca vi ninguém devolver tão rápido.",
+   "s": {
+    "t": "close",
+    "quem": "delegado",
+    "expr": "sorriso",
+    "fundo": "delegacia"
+   },
+   "ex": 0.55,
+   "c": "f76"
+  },
+  {
+   "q": "v",
+   "txt": "É que eu tô sem bateria, doutor.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "sorriso",
+    "fundo": "delegacia",
+    "pose": "celular"
+   },
+   "p": 0.4,
+   "c": "f77"
+  },
+  {
+   "q": "n",
+   "txt": "O Valdir voltou pro turno da noite. Mesmo uniforme. Mesma guarita. Mesmo saldo.",
+   "s": {
+    "t": "chegada"
+   },
+   "m": "cotidiano",
+   "c": "f78"
+  },
+  {
+   "q": "d",
+   "txt": "E aí, ficou rico?",
+   "s": {
+    "t": "ots",
+    "frente": "neide",
+    "costas": "valdir",
+    "fundo": "rua"
+   },
+   "ex": 0.6,
+   "c": "f79"
+  },
+  {
+   "q": "v",
+   "txt": "Fiquei não, Dona Neide. Mas tô com a consciência limpa.",
+   "s": {
+    "t": "ots",
+    "frente": "valdir",
+    "costas": "neide",
+    "fundo": "guarita",
+    "expr": "sorriso"
+   },
+   "p": 0.3,
+   "c": "f80"
+  },
+  {
+   "q": "d",
+   "txt": "Cinquenta milhões, Valdir! Eu teria pelo menos comprado um pão de queijo antes.",
+   "s": {
+    "t": "close",
+    "quem": "neide",
+    "expr": "bronca",
+    "fundo": "rua",
+    "torto": 1
+   },
+   "ex": 0.7,
+   "c": "f81"
+  },
+  {
+   "q": "n",
+   "txt": "Três dias depois, às três e doze da manhã, o celular vibrou de novo.",
+   "s": {
+    "t": "mesa",
+    "modo": "vibra"
+   },
+   "m": "",
+   "c": "f82"
+  },
+  {
+   "q": "n",
+   "txt": "Era a Boi Gordo. E dessa vez não foi engano.",
+   "s": {
+    "t": "cel",
+    "tela": "pix",
+    "valor": 50000,
+    "de": "BOI GORDO AGRO S.A.",
+    "hora": "03:12",
+    "pal": "dessa",
+    "recado": "Obrigado pela honestidade."
+   },
+   "m": "reflexao",
+   "hud": 50037.12,
+   "c": "f83"
+  },
+  {
+   "q": "v",
+   "txt": "Eita.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "susto",
+    "fundo": "dentroNoite",
+    "pose": "celular",
+    "zoom": "susto"
+   },
+   "ex": 0.8,
+   "cfg": 0.3,
+   "c": "f84"
+  },
+  {
+   "q": "n",
+   "txt": "Cinquenta mil reais. Com um recado: obrigado pela honestidade.",
+   "s": {
+    "t": "texto",
+    "txt": "R$ 50.000,00",
+    "sub": "\"Obrigado pela honestidade.\"",
+    "cor": "verde"
+   },
+   "c": "f85"
+  },
+  {
+   "q": "n",
+   "txt": "Não era o barco. Mas dava pra trocar o celular.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "sorriso",
+    "fundo": "dentro",
+    "pose": "celular",
+    "novo": 1
+   },
+   "m": "cotidiano",
+   "p": 0.3,
+   "c": "f86"
+  },
+  {
+   "q": "n",
+   "txt": "E você? Se caíssem cinquenta milhões na sua conta por engano, o que você faria nas primeiras setenta e duas horas? Conta aqui embaixo.",
+   "s": {
+    "t": "fim",
+    "modo": "pergunta"
+   },
+   "hud": null,
+   "c": "f87"
+  },
+  {
+   "q": "n",
+   "txt": "E se inscreve no canal, porque semana que vem o Valdir encontra uma mala esquecida no elevador.",
+   "s": {
+    "t": "fim",
+    "modo": "proximo"
+   },
+   "c": "f88"
+  },
+  {
+   "q": "v",
+   "txt": "Deixa comigo.",
+   "s": {
+    "t": "close",
+    "quem": "valdir",
+    "expr": "confiante",
+    "fundo": "dentro",
+    "pose": "joia",
+    "bal": "Deixa comigo."
+   },
+   "ex": 0.6,
+   "p": 1.2,
+   "c": "f89"
+  }
+ ]
+}

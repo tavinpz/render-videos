@@ -55,6 +55,6 @@ for i, f in enumerate(falas):
         esp = max(0.7, len(f['txt']) / 15.5); pen = max(0, abs(dur - esp) / esp - 0.45) * 0.5
         nota = sim - pen; print(f"{i} t{t} sim={sim:.2f} dur={dur:.1f}s esp={esp:.1f}s nota={nota:.2f} gen={time.time()-t0:.0f}s | {ouv.strip()}", flush=True)
         if melhor is None or nota > melhor['nota']: melhor = {'i': i, 'c': f['c'], 'q': f['q'], 'tomada': t, 'sim': round(sim, 3), 'dur': round(dur, 2), 'nota': round(nota, 3), 'ouvido': ouv.strip(), 'arq': tmp}
-        if sim > 0.97 and pen == 0: break
+        if sim > 0.95 and pen == 0: break
     shutil.copy(melhor.pop('arq'), saida / f'f{i:02d}.wav'); rel.append(melhor)
 json.dump({'info': info, 'sr': m.sr, 'falas': rel}, open(saida / f'rel_{K}.json', 'w'), ensure_ascii=False, indent=1)
