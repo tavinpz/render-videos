@@ -1,0 +1,117 @@
+{
+ "info": {
+  "pt_br_arquivos": [
+   ".gitattributes",
+   "README.md",
+   "grapheme_mtl_merged_expanded_v1.json",
+   "s3gen_v3.pt",
+   "s3gen_v3.safetensors",
+   "t3_pt_br.safetensors"
+  ],
+  "modelo": "pt-br:t3_pt_br.safetensors",
+  "s3gen": "pack v3 (faltando 2, sobrando 0)"
+ },
+ "sr": 24000,
+ "falas": [
+  {
+   "i": 0,
+   "c": "chega",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 6.08,
+   "nota": 1.0,
+   "ouvido": "21.12. Guarulhos. O Valdir assume a portaria do edifício Jatobá."
+  },
+  {
+   "i": 1,
+   "c": "neide1",
+   "q": "d",
+   "tomada": 0,
+   "sim": 0.937,
+   "dur": 3.52,
+   "nota": 0.937,
+   "ouvido": "Boa noite, Valdir. Chegou a me encomenda."
+  },
+  {
+   "i": 2,
+   "c": "entrega",
+   "q": "v",
+   "tomada": 2,
+   "sim": 0.923,
+   "dur": 3.88,
+   "nota": 0.923,
+   "ouvido": "Chegou às 13h40, dona Ned, tá aqui?"
+  },
+  {
+   "i": 3,
+   "c": "mesa",
+   "q": "n",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 4.48,
+   "nota": 1.0,
+   "ouvido": "19 anos de portaria, nenhuma encomenda perdida."
+  },
+  {
+   "i": 4,
+   "c": "saldo",
+   "q": "n",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 5.24,
+   "nota": 0.944,
+   "ouvido": "saldo na conta, 37 reais e 12 centavos."
+  },
+  {
+   "i": 5,
+   "c": "neide2",
+   "q": "d",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 2.44,
+   "nota": 1.0,
+   "ouvido": "Você devia ganhar mais, viu?"
+  },
+  {
+   "i": 6,
+   "c": "deixa",
+   "q": "v",
+   "tomada": 2,
+   "sim": 0.917,
+   "dur": 1.56,
+   "nota": 0.712,
+   "ouvido": "Deixe comigo!"
+  },
+  {
+   "i": 7,
+   "c": "vibra",
+   "q": "n",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 3.8,
+   "nota": 0.989,
+   "ouvido": "Seis horas depois, o celular dele vibra."
+  },
+  {
+   "i": 8,
+   "c": "pix",
+   "q": "n",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 3.76,
+   "nota": 1.0,
+   "ouvido": "PIX recebido, 50 milhões de reais."
+  },
+  {
+   "i": 9,
+   "c": "eita",
+   "q": "v",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 2.84,
+   "nota": 1.0,
+   "ouvido": "Eita, rapaz, 50 milhões?"
+  }
+ ]
+}
