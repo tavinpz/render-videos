@@ -1,0 +1,118 @@
+{
+ "info": {
+  "pt_br_arquivos": [
+   ".gitattributes",
+   "README.md",
+   "grapheme_mtl_merged_expanded_v1.json",
+   "s3gen_v3.pt",
+   "s3gen_v3.safetensors",
+   "t3_pt_br.safetensors"
+  ],
+  "s3gen": "pack v3",
+  "pt_br_erro": "RuntimeError('Error(s) in loading state_dict for S3Token2Wav:\\n\\tMissing key(s) in state_dict: \"tokenizer._mel_filters\", \"tokenizer.window\". ')",
+  "modelo": "geral-v3"
+ },
+ "sr": 24000,
+ "falas": [
+  {
+   "i": 0,
+   "c": "chega",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.984,
+   "dur": 5.68,
+   "nota": 0.984,
+   "ouvido": "21.12. Guarulhos. O Valdir assume a porteria do edifício Jatobá."
+  },
+  {
+   "i": 1,
+   "c": "neide1",
+   "q": "d",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 3.56,
+   "nota": 1.0,
+   "ouvido": "Boa noite! Valdir chegou à minha encomenda!"
+  },
+  {
+   "i": 2,
+   "c": "entrega",
+   "q": "v",
+   "tomada": 2,
+   "sim": 0.955,
+   "dur": 3.56,
+   "nota": 0.955,
+   "ouvido": "Chegou às 13h40, Dona Neide. Tá aqui!"
+  },
+  {
+   "i": 3,
+   "c": "mesa",
+   "q": "n",
+   "tomada": 2,
+   "sim": 0.967,
+   "dur": 4.16,
+   "nota": 0.967,
+   "ouvido": "19 anos de portaria, nenhuma em comenda perdida."
+  },
+  {
+   "i": 4,
+   "c": "saldo",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.678,
+   "dur": 4.4,
+   "nota": 0.678,
+   "ouvido": "Saldo na conta, R$ 37,12."
+  },
+  {
+   "i": 5,
+   "c": "neide2",
+   "q": "d",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 2.36,
+   "nota": 1.0,
+   "ouvido": "Você devia ganhar mais, viu?"
+  },
+  {
+   "i": 6,
+   "c": "deixa",
+   "q": "v",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 1.36,
+   "nota": 0.914,
+   "ouvido": "Deixa comigo."
+  },
+  {
+   "i": 7,
+   "c": "vibra",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.4,
+   "nota": 1.0,
+   "ouvido": "Seis horas depois, o celular dele vibra."
+  },
+  {
+   "i": 8,
+   "c": "pix",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.08,
+   "nota": 1.0,
+   "ouvido": "PIX recebido 50 milhões de reais."
+  },
+  {
+   "i": 9,
+   "c": "eita",
+   "q": "v",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 2.6,
+   "nota": 1.0,
+   "ouvido": "Eita, rapaz, 50 milhão?"
+  }
+ ]
+}
