@@ -112,7 +112,7 @@ f('n', 'O Valdir comprou um celular novo, pagou três meses de aluguel adiantado
 f('n', 'O celular novo ele comprou parcelado. Por via das dúvidas.', S('close', quem='valdir', expr='confiante', fundo='dentro', pose='celular', novo=1), p=0.4)
 f('n', 'E você? Se caíssem cinquenta milhões na sua conta por engano, o que você faria nas primeiras setenta e duas horas? Conta aqui embaixo.', S('fim', modo='pergunta'), hud=None)
 f('n', 'E se inscreve no canal, porque semana que vem o Valdir encontra uma mala esquecida no elevador.', S('fim', modo='proximo'))
-f('v', 'Deixa comigo.', S('close', quem='valdir', expr='confiante', fundo='dentro', pose='joia', bal='Deixa comigo.'), ex=0.6, p=0.8)
+f('v', 'Deixa comigo.', S('close', quem='valdir', expr='confiante', fundo='dentro', pose='joia', bal='Deixa comigo.', placa='INSCREVA-SE'), ex=0.6, p=0.8)
 F[-1]['fim'] = 9.0  # tela final para os cards do YouTube
 for i, x in enumerate(F): x['c'] = f'f{i:02d}'
 json.dump({'falas': F}, open('public/bp/v01/roteiro.json', 'w'), ensure_ascii=False, indent=1)

@@ -17,8 +17,8 @@ for i, f in enumerate(falas):
     a, _ = sf.read(tmp, dtype='float32'); idx = np.where(np.abs(a) > 0.012)[0]; a = a[max(0, idx[0] - 500):min(len(a), idx[-1] + 2600)]
     a[:240] *= np.linspace(0, 1, 240); a[-1200:] *= np.linspace(1, 0, 1200)
     saida.append({'c': f['c'], 'q': f['q'], 't': round(t, 3), 'd': round(len(a) / SR, 3), 'txt': f['txt'], **{k: f[k] for k in ('s', 'hud', 'm') if k in f}}); partes.append(a); t += len(a) / SR
-    pausa = 0.38 + f.get('p', 0); partes.append(np.zeros(int(SR * pausa), np.float32)); t += pausa
-partes.append(np.zeros(int(SR * 1.4), np.float32)); t += 1.4
+    pausa = 0.5 + f.get('p', 0); partes.append(np.zeros(int(SR * pausa), np.float32)); t += pausa
+cauda = falas[-1].get('fim', 1.4); partes.append(np.zeros(int(SR * cauda), np.float32)); t += cauda
 x = np.clip(np.concatenate(partes), -1, 1); sf.write(f'{pasta}/voz.wav', x, SR, subtype='PCM_16')
 n = int(np.ceil(t * 30)); env = [float(np.sqrt(np.mean(x[int(i / 30 * SR):int((i + 1) / 30 * SR)] ** 2))) for i in range(n)]
 m = np.percentile([e for e in env if e > 0.005] or [1], 92); env = [round(min(1.0, e / m), 2) for e in env]
