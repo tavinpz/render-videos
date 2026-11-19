@@ -176,4 +176,60 @@ const C03c: React.FC = () => (
   </svg>
 );
 
-export const CAPAS: Record<string, React.FC> = { '02a': C02a, '02b': C02b, '02c': C02c, '03a': C03a, '03b': C03b, '03c': C03c };
+// estouro (estrela de impacto)
+export const Estouro: React.FC<{ x: number; y: number; k?: number; c?: string; c2?: string }> = ({ x, y, k = 1, c = K.amar, c2 = K.branco }) => { const pts = (r1: number, r2: number) => Array.from({ length: 24 }, (_, i) => { const a = (i / 24) * Math.PI * 2, r = i % 2 ? r1 : r2; return `${Math.cos(a) * r},${Math.sin(a) * r}`; }).join(' '); return (
+  <g transform={`translate(${x},${y}) scale(${k})`} stroke={TINTA} strokeWidth={9} strokeLinejoin="round"><polygon points={pts(110, 190)} fill={c} /><polygon points={pts(60, 110)} fill={c2} strokeWidth={6} /></g>); };
+// emissor de laser (caixa com bocal) e feixe
+export const Canhao: React.FC<{ x: number; y: number; k?: number; rot?: number }> = ({ x, y, k = 1, rot = 0 }) => (
+  <G x={x} y={y} k={k} rot={rot}>
+    <rect x={-200} y={-90} width={330} height={180} rx={20} fill="#2B3442" /><rect x={-200} y={-90} width={330} height={44} rx={16} fill={K.verm} />
+    <rect x={130} y={-46} width={70} height={92} fill={K.cinza} /><rect x={200} y={-30} width={36} height={60} fill={K.cinzaE} />
+    {[-140, -80, -20].map((cx) => <circle key={cx} cx={cx} cy={30} r={18} fill={K.amar} strokeWidth={6} />)}
+    <path d="M -150,90 L -180,160 L -90,160 L -60,90 Z M 30,90 L 0,160 L 90,160 L 120,90 Z" fill={K.cinzaE} />
+  </G>
+);
+export const Feixe: React.FC<{ x1: number; y1: number; x2: number; y2: number; c?: string; l?: number }> = ({ x1, y1, x2, y2, c = K.verm, l = 30 }) => (<g strokeLinecap="round"><line x1={x1} y1={y1} x2={x2} y2={y2} stroke={TINTA} strokeWidth={l + 20} /><line x1={x1} y1={y1} x2={x2} y2={y2} stroke={c} strokeWidth={l} /><line x1={x1} y1={y1} x2={x2} y2={y2} stroke={K.branco} strokeWidth={l * 0.3} /></g>);
+// globo simples
+export const Globo: React.FC<{ x: number; y: number; k?: number }> = ({ x, y, k = 1 }) => (
+  <G x={x} y={y} k={k}><circle r={190} fill="#3BA7FF" /><ellipse rx={80} ry={190} fill="none" strokeWidth={7} /><line x1={-190} y1={0} x2={190} y2={0} strokeWidth={7} /><path d="M -165,-95 Q 0,-50 165,-95 M -165,95 Q 0,50 165,95" fill="none" strokeWidth={7} /></G>
+);
+// chapa de aço cortada
+export const Chapa: React.FC<{ x: number; y: number; k?: number; rot?: number }> = ({ x, y, k = 1, rot = -6 }) => (
+  <G x={x} y={y} k={k} rot={rot}><path d="M -240,-60 L 240,-100 L 260,60 L -220,100 Z" fill={K.cinza} /><path d="M -200,-30 L 200,-64" fill="none" stroke={K.branco} strokeWidth={10} opacity={0.7} /><path d="M 10,-90 L 30,82" stroke={TINTA} strokeWidth={22} /><path d="M 10,-90 L 30,82" stroke={K.laranja} strokeWidth={8} /></G>
+);
+
+const C04a: React.FC = () => (
+  <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+    <Raios cx={1010} cy={450} c1="#C81E1E" c2="#F0392B" />
+    <Feixe x1={330} y1={470} x2={960} y2={452} c={K.amar} l={34} />
+    <Canhao x={230} y={470} k={0.95} rot={-2} />
+    <Estouro x={1020} y={450} k={1.05} />
+    <circle cx={1020} cy={450} r={34} fill={K.cinza} stroke={TINTA} strokeWidth={9} />
+    <Pal x={40} y={170} t="50,000 SHOTS" s={136} c={K.amar} />
+    <Pal x={60} y={282} t="A SECOND" s={96} />
+    <Pal x={60} y={680} t="NEVER MISSES" s={84} rot={-2} />
+  </svg>
+);
+const C04b: React.FC = () => (
+  <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+    <Raios cx={950} cy={420} c1={K.creme} c2={K.creme2} />
+    <Globo x={950} y={430} k={1.25} />
+    <g stroke={TINTA} strokeWidth={9} strokeLinejoin="round"><path d="M 990,300 q -70,-150 0,-170 q 70,20 0,170 Z" fill={K.verm} /><circle cx={990} cy={190} r={22} fill={K.branco} /></g>
+    <Pal x={40} y={230} t="ONLY 1" s={210} c={K.verm} rot={-4} />
+    <Pal x={50} y={380} t="COMPANY" s={120} rot={-4} />
+    <Pal x={50} y={530} t="MAKES THIS LASER" s={72} c={K.amar} rot={-4} />
+  </svg>
+);
+const C04c: React.FC = () => (
+  <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+    <Raios cx={640} cy={430} c1={K.noite} c2={K.noite2} />
+    <Chapa x={300} y={500} k={1.05} />
+    <Estouro x={320} y={420} k={0.42} c={K.laranja} />
+    <path d="M 560,470 L 760,470" stroke={TINTA} strokeWidth={46} strokeLinecap="round" /><path d="M 560,470 L 760,470" stroke={K.amar} strokeWidth={26} strokeLinecap="round" /><path d="M 740,410 L 840,470 L 740,530 Z" fill={K.amar} stroke={TINTA} strokeWidth={10} strokeLinejoin="round" />
+    <Chip x={1040} y={470} k={1.05} rot={6} c={K.menta} t="AI" />
+    <Pal x={40} y={170} t="IT CUT STEEL." s={128} rot={-3} />
+    <Pal x={420} y={300} t="NOW: AI CHIPS" s={104} c={K.amar} rot={-3} />
+  </svg>
+);
+
+export const CAPAS: Record<string, React.FC> = { '02a': C02a, '02b': C02b, '02c': C02c, '03a': C03a, '03b': C03b, '03c': C03c, '04a': C04a, '04b': C04b, '04c': C04c };
