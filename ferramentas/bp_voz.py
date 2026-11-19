@@ -18,6 +18,9 @@ def carrega():
         for p in br.iterdir():
             if p.is_file() or p.is_symlink():
                 (junto / p.name).unlink(missing_ok=True); os.symlink(p.resolve(), junto / p.name)
+        print('LEIAME PT-BR\n' + (br / 'README.md').read_text()[:3500], flush=True)
+        if os.environ.get('S3GEN', 'pack') == 'pack' and (br / 's3gen_v3.pt').exists():  # vocoder que acompanha o finetune
+            (junto / 's3gen.pt').unlink(missing_ok=True); os.symlink((br / 's3gen_v3.pt').resolve(), junto / 's3gen.pt'); info['s3gen'] = 'pack v3'
         t3 = [a for a in arqs if a.endswith('.safetensors') and 't3' in a.lower()] or [a for a in arqs if a.endswith('.safetensors')]
         m = ChatterboxMultilingualTTS.from_local(junto, 'cpu', t3_model=t3[0]); info['modelo'] = 'pt-br:' + t3[0]; return m
     except Exception as e:
@@ -37,7 +40,7 @@ def chave(s):
 falas = json.load(open(f'{pasta}/roteiro.json'))['falas']; rel = []
 for i, f in enumerate(falas):
     if i % NK != K: continue
-    ref = f"public/bp/refs/{f['q']}.wav"; melhor = None
+    ref = f"public/bp/refs/{f['q']}.flac"; melhor = None
     for t in range(TOMADAS):
         torch.manual_seed(1000 * i + 17 * t + 3); t0 = time.time()
         w = m.generate(f['txt'], language_id='pt', audio_prompt_path=ref, exaggeration=f.get('ex', 0.5), cfg_weight=f.get('cfg', 0.45), temperature=0.75 if t == 0 else 0.85)
