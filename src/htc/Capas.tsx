@@ -108,4 +108,72 @@ const C02c: React.FC = () => (
   </svg>
 );
 
-export const CAPAS: Record<string, React.FC> = { '02a': C02a, '02b': C02b, '02c': C02c };
+// cadeado
+export const Cadeado: React.FC<{ x: number; y: number; k?: number; rot?: number; c?: string }> = ({ x, y, k = 1, rot = 0, c = K.amar }) => (
+  <g transform={`translate(${x},${y}) rotate(${rot}) scale(${k})`} stroke={TINTA} strokeWidth={9} strokeLinejoin="round">
+    <path d="M -110,-40 L -110,-120 Q 0,-240 110,-120 L 110,-40" fill="none" strokeWidth={46} /><path d="M -110,-40 L -110,-120 Q 0,-240 110,-120 L 110,-40" fill="none" stroke={K.cinza} strokeWidth={26} />
+    <rect x={-170} y={-40} width={340} height={230} rx={22} fill={c} /><circle cx={0} cy={50} r={30} fill={TINTA} /><rect x={-11} y={50} width={22} height={70} rx={6} fill={TINTA} />
+  </g>
+);
+// placa de vídeo com duas ventoinhas
+export const Placa: React.FC<{ x: number; y: number; k?: number; rot?: number }> = ({ x, y, k = 1, rot = -6 }) => (
+  <G x={x} y={y} k={k} rot={rot}>
+    <rect x={-300} y={110} width={520} height={34} fill={K.amar} strokeWidth={7} />{Array.from({ length: 12 }, (_, i) => <line key={i} x1={-280 + i * 42} y1={112} x2={-280 + i * 42} y2={142} strokeWidth={5} />)}
+    <rect x={-330} y={-130} width={660} height={240} rx={22} fill="#2B3442" /><rect x={-330} y={-130} width={660} height={46} rx={18} fill={K.menta} />
+    {[-150, 150].map((fx) => <g key={fx}><circle cx={fx} cy={10} r={96} fill="#11161D" /><circle cx={fx} cy={10} r={26} fill={K.cinza} />{Array.from({ length: 7 }, (_, i) => <path key={i} d={`M ${fx},10 Q ${fx + 60 * Math.cos(i * 0.9 + 0.5)},${10 + 60 * Math.sin(i * 0.9 + 0.5)} ${fx + 88 * Math.cos(i * 0.9)},${10 + 88 * Math.sin(i * 0.9)}`} fill="none" stroke={K.cinza} strokeWidth={12} />)}</g>)}
+    <rect x={330} y={-150} width={26} height={300} fill={K.cinza} />
+  </G>
+);
+// cadeira de escritório vazia
+export const Cadeira: React.FC<{ x: number; y: number; k?: number; c?: string }> = ({ x, y, k = 1, c = '#2B3442' }) => (
+  <G x={x} y={y} k={k}>
+    <path d="M -110,-260 Q 0,-300 110,-260 L 124,-20 Q 0,10 -124,-20 Z" fill={c} /><path d="M -70,-220 Q 0,-240 70,-220" fill="none" stroke={K.cinzaE} strokeWidth={10} />
+    <rect x={-150} y={-10} width={300} height={62} rx={24} fill={c} /><rect x={-18} y={52} width={36} height={90} fill={K.cinza} />
+    <path d="M 0,140 L -150,190 M 0,140 L 150,190 M 0,140 L 0,200" fill="none" strokeWidth={22} /><path d="M 0,140 L -150,190 M 0,140 L 150,190 M 0,140 L 0,200" fill="none" stroke={K.cinza} strokeWidth={10} />
+    {[-150, 0, 150].map((cx) => <circle key={cx} cx={cx} cy={206} r={20} fill={TINTA} />)}
+    <path d="M -150,-60 L -190,-60 L -190,20 M 150,-60 L 190,-60 L 190,20" fill="none" strokeWidth={24} /><path d="M -150,-60 L -190,-60 L -190,20 M 150,-60 L 190,-60 L 190,20" fill="none" stroke={K.cinzaE} strokeWidth={10} />
+  </G>
+);
+// corrente (elos) entre dois pontos
+export const Corrente: React.FC<{ x1: number; y1: number; x2: number; y2: number; n?: number }> = ({ x1, y1, x2, y2, n = 6 }) => (
+  <g>{Array.from({ length: n }, (_, i) => { const t = (i + 0.5) / n, x = x1 + (x2 - x1) * t, y = y1 + (y2 - y1) * t + Math.sin(t * Math.PI) * 40, ang = (Math.atan2(y2 - y1, x2 - x1) * 180) / Math.PI + (i % 2 ? 25 : -25);
+    return <g key={i} transform={`translate(${x},${y}) rotate(${ang})`}><rect x={-46} y={-24} width={92} height={48} rx={24} fill="none" stroke={TINTA} strokeWidth={30} /><rect x={-46} y={-24} width={92} height={48} rx={24} fill="none" stroke={K.cinza} strokeWidth={13} /></g>; })}</g>
+);
+// etiqueta de preço
+export const Etiqueta: React.FC<{ x: number; y: number; k?: number; rot?: number; t: string; c?: string }> = ({ x, y, k = 1, rot = 12, t, c = K.verm }) => (
+  <G x={x} y={y} k={k} rot={rot}><path d="M -210,0 L -120,-100 L 210,-100 L 210,100 L -120,100 Z" fill={c} /><circle cx={-130} cy={0} r={22} fill={K.creme} /><text x={50} y={46} textAnchor="middle" fontFamily={F} fontWeight={900} fontSize={130} fill={K.branco} stroke={TINTA} strokeWidth={10} paintOrder="stroke">{t}</text></G>
+);
+
+const C03a: React.FC = () => (
+  <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+    <Raios cx={420} cy={450} c1={K.roxo} c2={K.roxo2} />
+    <Placa x={400} y={470} k={0.95} rot={-8} />
+    <Corrente x1={640} y1={430} x2={930} y2={470} n={5} />
+    <Cadeado x={1030} y={480} k={0.95} rot={6} />
+    <Pal x={36} y={176} t="NOBODY LEAVES" s={128} />
+    <Pal x={60} y={290} t="HERE'S WHY" s={92} c={K.amar} />
+  </svg>
+);
+const C03b: React.FC = () => (
+  <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+    <Raios cx={900} cy={420} c1={K.creme} c2={K.creme2} />
+    <rect x={0} y={600} width={W} height={120} fill="#D9C7A0" stroke={TINTA} strokeWidth={9} />
+    <Cadeira x={960} y={400} k={1.1} c={K.verde} />
+    <Interroga x={960} y={330} s={230} c={K.verm} rot={6} />
+    <Pal x={40} y={210} t="FOUNDER" s={150} c={K.verm} rot={-3} />
+    <Pal x={48} y={350} t="GONE." s={150} c={K.verm} rot={-3} />
+    <Pal x={48} y={520} t="MOAT: STILL" s={88} rot={-3} />
+    <Pal x={48} y={620} t="THERE" s={88} rot={-3} />
+  </svg>
+);
+const C03c: React.FC = () => (
+  <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+    <Raios cx={860} cy={440} c1={K.noite} c2={K.noite2} />
+    <Chip x={900} y={440} k={1.3} rot={8} c={K.menta} />
+    <Etiqueta x={560} y={520} k={0.95} rot={-14} t="$0" />
+    <Pal x={40} y={190} t="FREE" s={190} c={K.amar} rot={-4} />
+    <Pal x={470} y={190} t="IS THE TRAP" s={104} rot={-4} />
+  </svg>
+);
+
+export const CAPAS: Record<string, React.FC> = { '02a': C02a, '02b': C02b, '02c': C02c, '03a': C03a, '03b': C03b, '03c': C03c };

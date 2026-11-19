@@ -1,4 +1,5 @@
 import React from 'react';
 import { D02 } from './D02';
+import { D03 } from './D03';
 // Diagramas feitos sob medida para cada vídeo (hc002 em diante). Cada arquivo D0N.tsx exporta o seu conjunto.
-export const EXTRA: Record<string, React.FC<any>> = { ...D02 };
+export const EXTRA: Record<string, React.FC<any>> = { ...D02, ...D03 };

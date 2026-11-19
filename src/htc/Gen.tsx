@@ -125,7 +125,7 @@ const Rosca: React.FC<Ctx> = ({ g, v, a }) => {
 
 // grade: tot pontos (cada um = "cada"); passo 1 enche, passo 2 acende lit pontos. r1 = [número, rótulo], r2 = [número, rótulo].
 const Grade: React.FC<Ctx> = ({ g, v, a }) => {
-  const tot = v.tot || 900, cols = 45, lin = Math.ceil(tot / cols), px = 30, x0 = 960 - (cols * px) / 2 + 15, y0 = 560 - (lin * px) / 2 - 40, on = a(1, 40), lit = a(2, 40), nl = v.lit || 0, r1 = v.r1 || [0, ''], r2 = v.r2;
+  const tot = v.tot || 900, cols = tot > 620 ? 50 : 45, lin = Math.ceil(tot / cols), px = 30, x0 = 960 - (cols * px) / 2 + 15, y0 = lin > 13 ? 262 : 560 - (lin * px) / 2 - 40, on = a(1, 40), lit = a(2, 40), nl = v.lit || 0, r1 = v.r1 || [0, ''], r2 = v.r2;
   return (
     <g>
       {Array.from({ length: tot }, (_, i) => {
@@ -160,12 +160,12 @@ const Pilha: React.FC<Ctx> = ({ g, v, a, q }) => {
   return (
     <g>
       {it.map((c, i) => {
-        const p = a(i + 1, 12), s = pop(g, q(i + 1)); if (p <= 0) return null; const cor = COR[c[2]] || P.fantasma, y = yb - (i + 1) * h, fora = v.sai === i ? a(sn, 26) : 0, forte = cor !== P.fantasma;
+        const esc = q(i + 1) === q(1) ? i * 4 : 0, p = a(i + 1, 12, esc), s = pop(g, q(i + 1) + esc); if (p <= 0) return null; const cor = COR[c[2]] || P.fantasma, y = yb - (i + 1) * h, fora = v.sai === i ? a(sn, 26) : 0, forte = cor !== P.fantasma;
         return (
           <g key={i} opacity={p * (1 - fora)} transform={`translate(${fora * 520},${-(1 - Math.min(1, s)) * 50 - fora * 40}) rotate(${fora * 9} ${x + larg} ${y})`}>
             <rect x={x} y={y + 5} width={larg} height={h - 10} rx={10} fill={forte ? '#101C17' : P.painel} stroke={cor} strokeWidth={forte ? 4 : 2.5} />
-            <Txt x={x + 36} y={y + h / 2 + 16} s={Math.min(46, h * 0.44)} c={forte ? cor : P.osso}>{c[0]}</Txt>
-            {c[1] && <Rot x={x + larg - 36} y={y + h / 2 + 8} t={c[1]} anc="end" tam={Math.min(20, 520 / (0.66 * c[1].length))} cor={P.cinza} esp={1} />}
+            <Txt x={x + 36} y={y + h / 2 + 18} s={Math.min(54, h * 0.5)} c={forte ? cor : P.osso}>{c[0]}</Txt>
+            {c[1] && <Rot x={x + larg - 36} y={y + h / 2 + 8} t={c[1]} anc="end" tam={Math.min(22, 520 / (0.66 * c[1].length))} cor={P.cinza} esp={1} />}
           </g>
         );
       })}
