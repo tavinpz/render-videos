@@ -1,0 +1,3551 @@
+{
+ "total": 480.976,
+ "blocos": [
+  {
+   "cena": "gancho",
+   "trava": null,
+   "nome": null,
+   "fonte": "AJINOMOTO GROUP",
+   "ini": 0.6,
+   "fim": 16.269,
+   "falas": [
+    {
+     "t": 0.6,
+     "d": 4.723,
+     "txt": "This is a jar of seasoning. M-S-G. The stuff that makes soup taste better.",
+     "v": {
+      "d": "pote",
+      "n": 1,
+      "k": "A jar of seasoning. *MSG*.",
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 5.743,
+     "d": 3.246,
+     "txt": "And this is one of the most advanced AI chips in the world.",
+     "v": {
+      "n": 2,
+      "k": "One of the most advanced *AI chips* in the world."
+     }
+    },
+    {
+     "t": 9.409,
+     "d": 5.64,
+     "txt": "The company that makes the first one, makes a part of the second one. And nobody else on Earth can.",
+     "v": {
+      "n": 3,
+      "k": null
+     }
+    }
+   ]
+  },
+  {
+   "cena": "aposta",
+   "trava": null,
+   "nome": null,
+   "fonte": "AJINOMOTO (COMPANY FIGURE, VIA R&D WORLD)",
+   "ini": 16.269,
+   "fim": 31.859,
+   "falas": [
+    {
+     "t": 16.269,
+     "d": 5.955,
+     "txt": "It's a thin plastic film. And the seasoning company has more than ninety five percent of the market.",
+     "v": {
+      "d": "rosca",
+      "n": 1,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "ONE FOOD COMPANY",
+      "rot": null,
+      "sub": "share of the insulating film in high-end chip packages",
+      "cor": "menta",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": 95,
+      "linhas": null,
+      "resto": "EVERYONE ELSE: UNDER 5%",
+      "pre": "",
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 22.643,
+     "d": 4.558,
+     "txt": "Nvidia's chips need it. A-M-D's chips need it. Intel's chips need it.",
+     "v": {
+      "n": 2,
+      "linhas": [
+       "Nvidia, AMD and Intel all need it"
+      ]
+     }
+    },
+    {
+     "t": 27.622,
+     "d": 3.018,
+     "txt": "And it's made by the people who sell you frozen dumplings.",
+     "v": {
+      "n": 3,
+      "linhas": [
+       "Nvidia, AMD and Intel all need it",
+       "Made by a company that sells seasoning"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "cena": "caso",
+   "trava": null,
+   "nome": null,
+   "fonte": null,
+   "ini": 31.859,
+   "fim": 48.068,
+   "falas": [
+    {
+     "t": 31.859,
+     "d": 5.136,
+     "txt": "Think about how strange that is. The chip industry has the best chemists in the world.",
+     "v": {
+      "d": "check",
+      "n": 1,
+      "k": null,
+      "tit": null,
+      "it": [
+       [
+        "THE BEST CHEMISTS IN THE WORLD",
+        1
+       ],
+       [
+        "BILLIONS OF DOLLARS",
+        1
+       ],
+       [
+        "EVERY REASON TO WANT A SECOND SUPPLIER",
+        1
+       ],
+       [
+        "A SECOND SUPPLIER",
+        0
+       ]
+      ],
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": "THE CHIP INDUSTRY HAS",
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 37.415,
+     "d": 1.455,
+     "txt": "It has billions of dollars.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 39.29,
+     "d": 2.715,
+     "txt": "And it has every reason to want a second supplier.",
+     "v": {
+      "n": 3
+     }
+    },
+    {
+     "t": 42.426,
+     "d": 2.539,
+     "txt": "It's had more than twenty five years to find one.",
+     "v": {
+      "k": "More than *25 years* to find one."
+     }
+    },
+    {
+     "t": 45.385,
+     "d": 1.363,
+     "txt": "It still doesn't have one.",
+     "v": {
+      "n": 4,
+      "k": null
+     }
+    }
+   ]
+  },
+  {
+   "cena": "mapa",
+   "trava": null,
+   "nome": null,
+   "fonte": null,
+   "ini": 48.068,
+   "fim": 61.351,
+   "falas": [
+    {
+     "t": 48.068,
+     "d": 2.555,
+     "txt": "So why can't anyone copy a piece of plastic?",
+     "v": {
+      "d": "big",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "WHY?",
+      "rot": null,
+      "sub": "Why can't anyone copy a piece of plastic?",
+      "cor": "ambar",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 51.043,
+     "d": 1.086,
+     "txt": "There are five locks.",
+     "v": {
+      "d": "travas",
+      "n": 1,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": 0,
+      "at": 0,
+      "tl": [
+       "Five locks."
+      ],
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": [
+       [
+        "THE LAYERS",
+        "What sits under every chip"
+       ],
+       [
+        "THE RECIPE",
+        "A film born from seasoning chemistry"
+       ],
+       [
+        "THE STANDARD",
+        "A whole industry tuned to one film"
+       ],
+       [
+        "THE APPETITE",
+        "AI needs ten times more of it"
+       ],
+       [
+        "? ? ?",
+        "Not technology at all"
+       ]
+      ],
+      "grupo": "CHEMISTRY + ENGINEERING",
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 52.55,
+     "d": 2.232,
+     "txt": "Four of them are chemistry and engineering.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 55.202,
+     "d": 2.845,
+     "txt": "The fifth is the strangest one in this whole series.",
+     "v": {
+      "n": 3,
+      "tl": [
+       "Five locks.",
+       "The last one",
+       "is *the strangest*."
+      ]
+     }
+    },
+    {
+     "t": 58.467,
+     "d": 1.564,
+     "txt": "It's that the prize is too small.",
+     "v": {
+      "k": "The prize is *too small*."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "cam0",
+   "trava": 1,
+   "nome": "THE LAYERS",
+   "fonte": null,
+   "ini": 61.351,
+   "fim": 63.549,
+   "falas": [
+    {
+     "t": 61.351,
+     "d": 1.278,
+     "txt": "Lock one. The layers.",
+     "v": {
+      "d": "big",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "THE LAYERS",
+      "rot": "LOCK 1 OF 5",
+      "sub": null,
+      "cor": "ambar",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    }
+   ]
+  },
+  {
+   "cena": "cam1",
+   "trava": 1,
+   "nome": "THE LAYERS",
+   "fonte": "AJINOMOTO (ABF) \u00b7 ILLUSTRATION, NOT TO SCALE",
+   "ini": 63.549,
+   "fim": 99.658,
+   "falas": [
+    {
+     "t": 63.549,
+     "d": 2.348,
+     "txt": "A chip can't be plugged straight into a computer.",
+     "v": {
+      "d": "sub",
+      "n": 0,
+      "k": null,
+      "tit": [
+       "Under every chip: *a tiny skyscraper* of wiring."
+      ],
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 66.317,
+     "d": 5.516,
+     "txt": "The connections on the chip are far too small. The connections on the board are far too big.",
+     "v": {
+      "n": 1
+     }
+    },
+    {
+     "t": 72.253,
+     "d": 7.601,
+     "txt": "So between them sits a part called the substrate. Its job is to fan thousands of tiny connections out into bigger ones.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 80.274,
+     "d": 7.864,
+     "txt": "Zoom in, and it's built like a skyscraper. A layer of copper wiring. Then a layer of insulation. Then copper again.",
+     "v": {
+      "n": 3
+     }
+    },
+    {
+     "t": 88.558,
+     "d": 5.061,
+     "txt": "Over and over, with tiny holes drilled by laser to connect one floor to the next.",
+     "v": {
+      "n": 4
+     }
+    },
+    {
+     "t": 94.04,
+     "d": 4.398,
+     "txt": "That insulation is the film. Every floor of the skyscraper stands on it.",
+     "v": {
+      "n": 5,
+      "k": "Every floor stands on *the film*."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "cam2",
+   "trava": 1,
+   "nome": "THE LAYERS",
+   "fonte": null,
+   "ini": 99.658,
+   "fim": 114.066,
+   "falas": [
+    {
+     "t": 99.658,
+     "d": 4.255,
+     "txt": "If the insulation is uneven, the wiring on top of it is uneven.",
+     "v": {
+      "d": "duas",
+      "n": 1,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": "Uneven insulation,",
+      "l2": "",
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 104.333,
+     "d": 2.182,
+     "txt": "And one bad floor ruins the whole building.",
+     "v": {
+      "n": 2,
+      "l2": "one bad floor ruins the building."
+     }
+    },
+    {
+     "t": 107.235,
+     "d": 5.912,
+     "txt": "So the film has to be perfectly flat, perfectly clean, and exactly the same, every single time.",
+     "v": {
+      "k": "Flat. Clean. *Exactly the same*, every time."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "rec0",
+   "trava": 2,
+   "nome": "THE RECIPE",
+   "fonte": null,
+   "ini": 114.066,
+   "fim": 116.349,
+   "falas": [
+    {
+     "t": 114.066,
+     "d": 1.363,
+     "txt": "Lock two. The recipe.",
+     "v": {
+      "d": "big",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "THE RECIPE",
+      "rot": "LOCK 2 OF 5",
+      "sub": null,
+      "cor": "ambar",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    }
+   ]
+  },
+  {
+   "cena": "rec1",
+   "trava": 2,
+   "nome": "THE RECIPE",
+   "fonte": "AJINOMOTO GROUP (ABF STORY)",
+   "ini": 116.349,
+   "fim": 140.048,
+   "falas": [
+    {
+     "t": 116.349,
+     "d": 4.809,
+     "txt": "In the nineteen nineties, that insulation wasn't a film. It was a liquid. An ink.",
+     "v": {
+      "d": "tinta",
+      "n": 0,
+      "k": null,
+      "tit": [
+       "It used to be *an ink*."
+      ],
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 121.578,
+     "d": 2.274,
+     "txt": "You spread it on, and waited for it to dry.",
+     "v": {
+      "n": 1
+     }
+    },
+    {
+     "t": 124.272,
+     "d": 3.826,
+     "txt": "It was slow. It picked up dust. And it didn't dry perfectly flat.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 128.518,
+     "d": 4.79,
+     "txt": "The chip industry wanted something better. A solid film you could just press on.",
+     "v": {
+      "n": 3
+     }
+    },
+    {
+     "t": 133.728,
+     "d": 5.1,
+     "txt": "In nineteen ninety six, a chipmaker asked a very unlikely company to make one.",
+     "v": {
+      "k": "1996: a chipmaker asks *a very unlikely company*."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "rec2",
+   "trava": 2,
+   "nome": "THE RECIPE",
+   "fonte": "AJINOMOTO GROUP (ABF STORY \u00b7 COMPANY CHRONOLOGY)",
+   "ini": 140.048,
+   "fim": 178.725,
+   "falas": [
+    {
+     "t": 140.048,
+     "d": 3.619,
+     "txt": "Ajinomoto had been making M-S-G since nineteen oh nine.",
+     "v": {
+      "d": "linhaT",
+      "n": 1,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": [
+       [
+        1909,
+        "SEASONING",
+        "MSG"
+       ],
+       [
+        1975,
+        "RESEARCH",
+        "BEYOND FOOD",
+        null,
+        "1970s"
+       ],
+       [
+        1996,
+        "THE REQUEST",
+        "A FILM INSULATOR",
+        "ambar"
+       ],
+       [
+        1999,
+        "THE FILM",
+        "GOES ON SALE",
+        "menta"
+       ]
+      ],
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": 1909,
+      "ate": 1999,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 144.087,
+     "d": 8.273,
+     "txt": "Making it leaves behind a lot of chemistry. And since the nineteen seventies, the company had been studying what else that chemistry could do.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 152.78,
+     "d": 4.843,
+     "txt": "Some of it turned out to make excellent resins. The kind used in electronics.",
+     "v": {
+      "k": "Seasoning chemistry made *excellent resins*."
+     }
+    },
+    {
+     "t": 158.043,
+     "d": 4.744,
+     "txt": "So when the request came, a young researcher named Shigeo Nakamura took it on.",
+     "v": {
+      "n": 3,
+      "k": null
+     }
+    },
+    {
+     "t": 163.207,
+     "d": 7.052,
+     "txt": "He picked a resin so unstable, it had to be kept in a deep freezer. He later called that choice young and naive.",
+     "v": {
+      "k": "A resin that had to live *in a deep freezer*."
+     }
+    },
+    {
+     "t": 170.679,
+     "d": 4.411,
+     "txt": "It worked. According to Ajinomoto, the film was perfected in four months.",
+     "v": {
+      "k": "Perfected in *four months*."
+     }
+    },
+    {
+     "t": 175.51,
+     "d": 1.995,
+     "txt": "It went on sale in nineteen ninety nine.",
+     "v": {
+      "n": 4,
+      "k": null
+     }
+    }
+   ]
+  },
+  {
+   "cena": "rec3",
+   "trava": 2,
+   "nome": "THE RECIPE",
+   "fonte": null,
+   "ini": 178.725,
+   "fim": 187.294,
+   "falas": [
+    {
+     "t": 178.725,
+     "d": 2.939,
+     "txt": "So the recipe isn't one invention you can look up.",
+     "v": {
+      "d": "big",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "90 YEARS DEEP",
+      "rot": "THE RECIPE IS",
+      "sub": null,
+      "cor": "ambar",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 182.084,
+     "d": 3.99,
+     "txt": "It sits on top of ninety years of chemistry, that started with soup.",
+     "v": {
+      "sub": "Ninety years of chemistry that started with soup."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "pad0",
+   "trava": 3,
+   "nome": "THE STANDARD",
+   "fonte": null,
+   "ini": 187.294,
+   "fim": 189.495,
+   "falas": [
+    {
+     "t": 187.294,
+     "d": 1.281,
+     "txt": "Lock three. The standard.",
+     "v": {
+      "d": "big",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "THE STANDARD",
+      "rot": "LOCK 3 OF 5",
+      "sub": null,
+      "cor": "ambar",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    }
+   ]
+  },
+  {
+   "cena": "pad1",
+   "trava": 3,
+   "nome": "THE STANDARD",
+   "fonte": "AJINOMOTO GROUP (ABF STORY)",
+   "ini": 189.495,
+   "fim": 201.748,
+   "falas": [
+    {
+     "t": 189.495,
+     "d": 4.75,
+     "txt": "In nineteen ninety nine, the biggest processor maker in the world adopted the film.",
+     "v": {
+      "d": "big",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "1999",
+      "rot": "ADOPTED BY THE LARGEST CPU MAKER",
+      "sub": null,
+      "cor": "osso",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 194.666,
+     "d": 3.777,
+     "txt": "Nakamura assumed it would stay in production for about ten years.",
+     "v": {
+      "d": "barras",
+      "n": 1,
+      "k": null,
+      "tit": null,
+      "it": [
+       [
+        "EXPECTED",
+        10,
+        "\u2248 10 YEARS"
+       ],
+       [
+        "SO FAR",
+        27,
+        "27 YEARS",
+        "menta"
+       ]
+      ],
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": "HOW LONG THE FILM HAS LASTED",
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 198.863,
+     "d": 1.664,
+     "txt": "That was twenty seven years ago.",
+     "v": {
+      "n": 2
+     }
+    }
+   ]
+  },
+  {
+   "cena": "pad2",
+   "trava": 3,
+   "nome": "THE STANDARD",
+   "fonte": null,
+   "ini": 201.748,
+   "fim": 227.98,
+   "falas": [
+    {
+     "t": 201.748,
+     "d": 1.323,
+     "txt": "Here's why it never left.",
+     "v": {
+      "d": "cadeia",
+      "n": 1,
+      "k": null,
+      "tit": [
+       "Everything downstream is *tuned to it*."
+      ],
+      "it": [
+       [
+        "THE FILM",
+        "ONE SUPPLIER",
+        "menta"
+       ],
+       [
+        "SUBSTRATE MAKERS",
+        "TOOLS TUNED TO THE FILM",
+        "fantasma"
+       ],
+       [
+        "CHIP DESIGNERS",
+        "DESIGN FOR THAT SUBSTRATE",
+        "fantasma"
+       ],
+       [
+        "THE AI CHIP",
+        "TESTED FOR MONTHS",
+        "osso"
+       ]
+      ],
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 203.49,
+     "d": 8.513,
+     "txt": "The companies that build substrates set up their whole factories around this one film. Their presses. Their lasers. Their chemical baths.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 212.423,
+     "d": 3.595,
+     "txt": "The chip designers then design their chips for those substrates.",
+     "v": {
+      "n": 3
+     }
+    },
+    {
+     "t": 216.438,
+     "d": 5.759,
+     "txt": "And every new chip is tested for months on that exact combination, before a single one ships.",
+     "v": {
+      "n": 4
+     }
+    },
+    {
+     "t": 222.617,
+     "d": 4.142,
+     "txt": "Change the film, and you don't change one part. You restart all of that.",
+     "v": {
+      "k": "Change the film, and you *restart all of that*."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "cta1",
+   "trava": 3,
+   "nome": "THE STANDARD",
+   "fonte": null,
+   "ini": 227.98,
+   "fim": 243.494,
+   "falas": [
+    {
+     "t": 227.98,
+     "d": 1.863,
+     "txt": "Quick question, before the next lock.",
+     "v": {
+      "d": "cta",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": [
+       "QUICK QUESTION"
+      ],
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": "com",
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 230.263,
+     "d": 8.303,
+     "txt": "If a part costs you almost nothing, but a failure costs you the whole chip, how much cheaper would a new supplier have to be, before you'd switch?",
+     "v": {
+      "n": 1,
+      "t": [
+       "HOW MUCH CHEAPER",
+       "TO RISK IT?"
+      ]
+     }
+    },
+    {
+     "t": 238.986,
+     "d": 3.588,
+     "txt": "Put your answer in the comments. Keep it in mind for lock five.",
+     "v": {
+      "n": 2,
+      "s": "Comment your answer"
+     }
+    }
+   ]
+  },
+  {
+   "cena": "ape0",
+   "trava": 4,
+   "nome": "THE APPETITE",
+   "fonte": null,
+   "ini": 243.494,
+   "fim": 245.772,
+   "falas": [
+    {
+     "t": 243.494,
+     "d": 1.358,
+     "txt": "Lock four. The appetite.",
+     "v": {
+      "d": "big",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "THE APPETITE",
+      "rot": "LOCK 4 OF 5",
+      "sub": null,
+      "cor": "ambar",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    }
+   ]
+  },
+  {
+   "cena": "ape1",
+   "trava": 4,
+   "nome": "THE APPETITE",
+   "fonte": "SEMIANALYSIS DATA, VIA TECHNEWS AND R&D WORLD",
+   "ini": 245.772,
+   "fim": 269.535,
+   "falas": [
+    {
+     "t": 245.772,
+     "d": 5.672,
+     "txt": "A processor from ten years ago sat on a substrate with about four to six layers of this film.",
+     "v": {
+      "d": "barras",
+      "n": 1,
+      "k": null,
+      "tit": [
+       "AI chips eat *far more film*."
+      ],
+      "it": [
+       [
+        "PC CHIP, 10 YEARS AGO",
+        6,
+        "4\u20136"
+       ],
+       [
+        "AI CHIP TODAY",
+        24,
+        "20\u201324",
+        "ambar"
+       ]
+      ],
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": "LAYERS OF FILM UNDER ONE CHIP",
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 251.864,
+     "d": 3.552,
+     "txt": "The newest AI accelerators use twenty to twenty four.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 255.837,
+     "d": 4.859,
+     "txt": "And the packages are much bigger. So each one needs more film on every layer, too.",
+     "v": {
+      "k": "More layers. And *bigger* layers."
+     }
+    },
+    {
+     "t": 261.115,
+     "d": 7.2,
+     "txt": "Ajinomoto's own math says a high performance substrate uses over ten times more film than one for a PC.",
+     "v": {
+      "k": "Over *10 times* more film than a PC chip."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "ape2",
+   "trava": 4,
+   "nome": "THE APPETITE",
+   "fonte": "AJINOMOTO BRIEFING, JUNE 30, 2026 \u00b7 TOM'S HARDWARE",
+   "ini": 269.535,
+   "fim": 293.304,
+   "falas": [
+    {
+     "t": 269.535,
+     "d": 2.813,
+     "txt": "And it isn't the same film as in nineteen ninety nine.",
+     "v": {
+      "d": "big",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "A MOVING TARGET",
+      "rot": "NOT THE SAME FILM AS 1999",
+      "sub": null,
+      "cor": "ambar",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 272.769,
+     "d": 7.348,
+     "txt": "Every generation of chips needs thinner layers, finer wiring, and less signal loss. So the recipe keeps changing.",
+     "v": {
+      "sub": "Thinner layers. Finer wiring. Less signal loss."
+     }
+    },
+    {
+     "t": 280.537,
+     "d": 5.329,
+     "txt": "Ajinomoto says it develops each new version years before the chips that need it exist.",
+     "v": {
+      "d": "duas",
+      "n": 1,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": "It builds the next film",
+      "l2": "",
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 286.286,
+     "d": 5.798,
+     "txt": "A copycat who finally matches today's film, is matching a product that's about to be replaced.",
+     "v": {
+      "n": 2,
+      "l2": "before the chips that need it exist."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "recap",
+   "trava": 4,
+   "nome": "THE APPETITE",
+   "fonte": null,
+   "ini": 293.304,
+   "fim": 318.654,
+   "falas": [
+    {
+     "t": 293.304,
+     "d": 0.991,
+     "txt": "That's four locks.",
+     "v": {
+      "d": "travas",
+      "n": 3,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": 0,
+      "at": 0,
+      "tl": [
+       "Four locks."
+      ],
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": [
+       [
+        "THE LAYERS",
+        "What sits under every chip"
+       ],
+       [
+        "THE RECIPE",
+        "A film born from seasoning chemistry"
+       ],
+       [
+        "THE STANDARD",
+        "A whole industry tuned to one film"
+       ],
+       [
+        "THE APPETITE",
+        "AI needs ten times more of it"
+       ],
+       [
+        "? ? ?",
+        "Not technology at all"
+       ]
+      ],
+      "grupo": "CHEMISTRY + ENGINEERING",
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 294.715,
+     "d": 1.926,
+     "txt": "A skyscraper that stands on the film.",
+     "v": {
+      "ab": 1
+     }
+    },
+    {
+     "t": 297.061,
+     "d": 1.652,
+     "txt": "A recipe ninety years deep.",
+     "v": {
+      "ab": 2
+     }
+    },
+    {
+     "t": 299.133,
+     "d": 1.464,
+     "txt": "A whole industry tuned to it.",
+     "v": {
+      "ab": 3
+     }
+    },
+    {
+     "t": 301.016,
+     "d": 2.054,
+     "txt": "And a target that never stops moving.",
+     "v": {
+      "ab": 4
+     }
+    },
+    {
+     "t": 303.49,
+     "d": 6.719,
+     "txt": "All four can be beaten. Big chemical companies have made rival films. A startup is trying right now.",
+     "v": {
+      "tl": [
+       "Four locks.",
+       "*Beatable*, in theory."
+      ],
+      "k": "Rival films exist. A startup is trying right now."
+     }
+    },
+    {
+     "t": 310.629,
+     "d": 3.123,
+     "txt": "So why does one company still have ninety five percent?",
+     "v": {
+      "k": "So why does one company still have *95%*?"
+     }
+    },
+    {
+     "t": 314.172,
+     "d": 0.883,
+     "txt": "The fifth lock.",
+     "v": {
+      "d": "travas",
+      "n": 3,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": 4,
+      "at": 5,
+      "tl": [
+       "The fifth lock",
+       "is *the strangest*."
+      ],
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": [
+       [
+        "THE LAYERS",
+        "What sits under every chip"
+       ],
+       [
+        "THE RECIPE",
+        "A film born from seasoning chemistry"
+       ],
+       [
+        "THE STANDARD",
+        "A whole industry tuned to one film"
+       ],
+       [
+        "THE APPETITE",
+        "AI needs ten times more of it"
+       ],
+       [
+        "? ? ?",
+        "Not technology at all"
+       ]
+      ],
+      "grupo": "CHEMISTRY + ENGINEERING",
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 315.475,
+     "d": 1.659,
+     "txt": "Remember the question I asked you?",
+     "v": {
+      "k": "Remember the question?"
+     }
+    }
+   ]
+  },
+  {
+   "cena": "peq0",
+   "trava": 5,
+   "nome": "? ? ?",
+   "fonte": null,
+   "ini": 318.654,
+   "fim": 320.658,
+   "falas": [
+    {
+     "t": 318.654,
+     "d": 0.784,
+     "txt": "Lock five.",
+     "v": {
+      "d": "big",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "? ? ?",
+      "rot": "LOCK 5 OF 5",
+      "sub": null,
+      "cor": "ambar",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    }
+   ]
+  },
+  {
+   "cena": "peq1",
+   "trava": 5,
+   "nome": "? ? ?",
+   "fonte": "AJINOMOTO \u00b7 TSMC (CAPEX GUIDANCE) \u00b7 TOM'S HARDWARE",
+   "ini": 320.658,
+   "fim": 347.982,
+   "falas": [
+    {
+     "t": 320.658,
+     "d": 10.044,
+     "txt": "Since twenty twenty three, Ajinomoto has invested about twenty five billion yen in making this film. It plans at least that much again by twenty thirty.",
+     "v": {
+      "d": "barras",
+      "n": 1,
+      "k": null,
+      "tit": [
+       "The whole expansion costs *less than a rounding error*."
+      ],
+      "it": [
+       [
+        "THE FILM, TO 2030",
+        0.33,
+        "\u2248 $0.3 bn",
+        "menta"
+       ],
+       [
+        "ONE CHIPMAKER, ONE YEAR",
+        54,
+        "$52\u201356 bn",
+        "fantasma"
+       ]
+      ],
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": "US$ \u00b7 AJINOMOTO'S FILM EXPANSION VS TSMC'S 2026 SPENDING PLAN",
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 331.122,
+     "d": 2.837,
+     "txt": "Together, that's roughly three hundred million dollars.",
+     "v": {
+      "n": 1
+     }
+    },
+    {
+     "t": 334.38,
+     "d": 5.673,
+     "txt": "The company that makes the chips themselves plans to spend more than fifty billion. In one year.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 340.473,
+     "d": 6.289,
+     "txt": "Every advanced chip in the world depends on a business you could fund with the loose change of its customers.",
+     "v": {
+      "k": "A business you could fund with *loose change*."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "peq2",
+   "trava": 5,
+   "nome": "THE SMALL PRIZE",
+   "fonte": null,
+   "ini": 347.982,
+   "fim": 362.305,
+   "falas": [
+    {
+     "t": 347.982,
+     "d": 1.973,
+     "txt": "That's lock five. The small prize.",
+     "v": {
+      "d": "big",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "THE SMALL PRIZE",
+      "rot": "LOCK 5 OF 5",
+      "sub": null,
+      "cor": "menta",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 350.375,
+     "d": 3.776,
+     "txt": "The film is a tiny fraction of what a finished AI chip costs.",
+     "v": {
+      "sub": "A tiny fraction of what an AI chip costs."
+     }
+    },
+    {
+     "t": 354.571,
+     "d": 2.301,
+     "txt": "So nobody saves real money by switching.",
+     "v": {
+      "sub": "Nobody saves real money by switching."
+     }
+    },
+    {
+     "t": 357.292,
+     "d": 3.793,
+     "txt": "But if a new film fails, you don't lose the film. You lose the chip.",
+     "v": {
+      "sub": "If it fails, you don't lose the film. You lose the chip."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "peq3",
+   "trava": 5,
+   "nome": "THE SMALL PRIZE",
+   "fonte": null,
+   "ini": 362.305,
+   "fim": 383.802,
+   "falas": [
+    {
+     "t": 362.305,
+     "d": 1.669,
+     "txt": "Now look at it from both sides.",
+     "v": {
+      "d": "versus",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": "THE CUSTOMER",
+      "b": "THE CHALLENGER",
+      "la": [
+       "Switching saves almost nothing",
+       "A failure costs the whole chip",
+       "Months of new testing"
+      ],
+      "lb": [
+       "Years of work to match it",
+       "For a market this small",
+       "That one company already owns"
+      ],
+      "ra": "WHY NOT SWITCH?",
+      "rb": "WHY NOT ATTACK?",
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 364.393,
+     "d": 4.374,
+     "txt": "If you're the customer, switching saves you almost nothing, and risks everything.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 369.187,
+     "d": 3.55,
+     "txt": "If you're the challenger, you spend years matching a moving target,",
+     "v": {
+      "n": 1
+     }
+    },
+    {
+     "t": 372.987,
+     "d": 3.769,
+     "txt": "for a market that is small, and already ninety five percent taken.",
+     "v": {
+      "n": 3
+     }
+    },
+    {
+     "t": 377.176,
+     "d": 5.406,
+     "txt": "The giants look at that prize, and walk away. Not because they can't. Because it isn't worth it.",
+     "v": {
+      "k": "Not because they can't. Because it *isn't worth it*."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "peq4",
+   "trava": 5,
+   "nome": "THE SMALL PRIZE",
+   "fonte": "TRENDFORCE, MAY 2026 (AJINOMOTO FISCAL 2025 RESULTS)",
+   "ini": 383.802,
+   "fim": 414.316,
+   "falas": [
+    {
+     "t": 383.802,
+     "d": 3.348,
+     "txt": "For the seasoning company, though, it's a wonderful business.",
+     "v": {
+      "d": "nums",
+      "n": 1,
+      "k": null,
+      "tit": null,
+      "it": [
+       [
+        "30%",
+        "OF AJINOMOTO'S OPERATING PROFIT, FISCAL 2025"
+       ],
+       [
+        "50%+",
+        "PROFIT MARGIN OF THE FILM BUSINESS"
+       ]
+      ],
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 387.57,
+     "d": 7.379,
+     "txt": "In its last fiscal year, the division built around this film made about thirty percent of the whole company's operating profit.",
+     "v": {
+      "n": 1
+     }
+    },
+    {
+     "t": 395.369,
+     "d": 2.489,
+     "txt": "With margins reported above fifty percent.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 398.277,
+     "d": 2.083,
+     "txt": "So here's what a real copy would need.",
+     "v": {
+      "d": "check",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": [
+       [
+        "A FILM AS FLAT AS THE ORIGINAL",
+        0
+       ],
+       [
+        "A RECIPE THAT KEEPS UP",
+        0
+       ],
+       [
+        "AN INDUSTRY WILLING TO RE-TEST EVERYTHING",
+        0
+       ],
+       [
+        "A REASON TO BOTHER",
+        0
+       ]
+      ],
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": "WHAT A REAL COPY WOULD NEED",
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 400.78,
+     "d": 1.769,
+     "txt": "A film as flat as the original.",
+     "v": {
+      "n": 1
+     }
+    },
+    {
+     "t": 402.969,
+     "d": 1.321,
+     "txt": "A recipe that keeps up.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 404.711,
+     "d": 2.377,
+     "txt": "An industry willing to re test everything.",
+     "v": {
+      "n": 3
+     }
+    },
+    {
+     "t": 407.508,
+     "d": 1.204,
+     "txt": "And a reason to bother.",
+     "v": {
+      "n": 4
+     }
+    },
+    {
+     "t": 409.132,
+     "d": 1.224,
+     "txt": "You can copy the film.",
+     "v": {
+      "d": "duas",
+      "n": 1,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": "You can copy the film.",
+      "l2": "",
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 410.776,
+     "d": 1.92,
+     "txt": "You can't make it worth anyone's risk.",
+     "v": {
+      "n": 2,
+      "l2": "You can't make it worth the risk."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "cta2",
+   "trava": 5,
+   "nome": "THE SMALL PRIZE",
+   "fonte": null,
+   "ini": 414.316,
+   "fim": 422.022,
+   "falas": [
+    {
+     "t": 414.316,
+     "d": 5.096,
+     "txt": "If you know someone who thinks AI only depends on Nvidia, send them this video.",
+     "v": {
+      "d": "cta",
+      "n": 1,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": [
+       "SEND THIS",
+       "to that friend"
+      ],
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": "env",
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 419.831,
+     "d": 1.271,
+     "txt": "And tell them about the soup.",
+     "v": {
+      "n": 2,
+      "s": "Tell them about the soup"
+     }
+    }
+   ]
+  },
+  {
+   "cena": "fecho1",
+   "trava": null,
+   "nome": null,
+   "fonte": "AJINOMOTO BRIEFING, JUNE 30, 2026",
+   "ini": 422.022,
+   "fim": 443.275,
+   "falas": [
+    {
+     "t": 422.022,
+     "d": 0.916,
+     "txt": "One last thing.",
+     "v": {
+      "d": "big",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": "ONE LAST THING",
+      "rot": null,
+      "sub": null,
+      "cor": "osso",
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 423.359,
+     "d": 5.515,
+     "txt": "The AI boom needs far more of this film. So Ajinomoto is building a new plant.",
+     "v": {
+      "d": "linhaT",
+      "n": 1,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": [
+       [
+        2025,
+        "NEW LINE",
+        "GUNMA PLANT",
+        "menta"
+       ],
+       [
+        2026,
+        "LAND BOUGHT",
+        "GIFU"
+       ],
+       [
+        2030,
+        "DEMAND COVERED",
+        "UNTIL ABOUT HERE"
+       ],
+       [
+        2032,
+        "NEW PLANT",
+        "PLANNED START",
+        "ambar"
+       ]
+      ],
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": 2025,
+      "ate": 2032,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 429.293,
+     "d": 2.015,
+     "txt": "It bought the land in twenty twenty six.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 431.728,
+     "d": 3.414,
+     "txt": "The company says it can cover demand through about twenty thirty.",
+     "v": {
+      "n": 3
+     }
+    },
+    {
+     "t": 435.562,
+     "d": 2.963,
+     "txt": "The new plant is scheduled to start in twenty thirty two.",
+     "v": {
+      "n": 4
+     }
+    },
+    {
+     "t": 438.945,
+     "d": 3.01,
+     "txt": "Six years, for the only company that already knows how.",
+     "v": {
+      "n": 5,
+      "vao": [
+       "6 YEARS",
+       "FROM BUYING THE LAND TO THE FIRST FILM"
+      ],
+      "v0": 2026,
+      "v1": 2032
+     }
+    }
+   ]
+  },
+  {
+   "cena": "fecho2",
+   "trava": null,
+   "nome": null,
+   "fonte": "AJINOMOTO GROUP",
+   "ini": 443.275,
+   "fim": 452.797,
+   "falas": [
+    {
+     "t": 443.275,
+     "d": 3.046,
+     "txt": "And the young researcher who kept that resin in a freezer?",
+     "v": {
+      "d": "duas",
+      "n": 1,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": "The researcher with the freezer",
+      "l2": "",
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 446.741,
+     "d": 4.736,
+     "txt": "In twenty twenty five, Shigeo Nakamura became president of the whole company.",
+     "v": {
+      "n": 2,
+      "l2": "now runs the whole company."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "fecho3",
+   "trava": null,
+   "nome": null,
+   "fonte": null,
+   "ini": 452.797,
+   "fim": 462.475,
+   "falas": [
+    {
+     "t": 452.797,
+     "d": 3.162,
+     "txt": "So that's the real reason nobody can copy this film.",
+     "v": {
+      "d": "pote",
+      "n": 3,
+      "k": "The real reason nobody can copy this film:",
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": null,
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 456.38,
+     "d": 4.275,
+     "txt": "It's too small to be worth stealing. And too important to risk replacing.",
+     "v": {
+      "k": "Too small to steal. *Too important to replace*."
+     }
+    }
+   ]
+  },
+  {
+   "cena": "fim",
+   "trava": null,
+   "nome": null,
+   "fonte": null,
+   "ini": 462.475,
+   "fim": 476.976,
+   "falas": [
+    {
+     "t": 462.475,
+     "d": 5.54,
+     "txt": "The film is one link in a chain. And almost every link has a company like this hiding in it.",
+     "v": {
+      "d": "fim",
+      "n": 0,
+      "k": null,
+      "tit": null,
+      "it": null,
+      "t": null,
+      "rot": null,
+      "sub": null,
+      "cor": null,
+      "ab": null,
+      "at": null,
+      "tl": null,
+      "cab": null,
+      "rev": null,
+      "l1": null,
+      "l2": null,
+      "ic": null,
+      "s": null,
+      "nomes": null,
+      "grupo": null,
+      "pts": null,
+      "vao": null,
+      "a": null,
+      "b": null,
+      "la": null,
+      "lb": null,
+      "ra": null,
+      "rb": null,
+      "fl": null,
+      "fala": null,
+      "elo": "THE FILM",
+      "pc": null,
+      "linhas": null,
+      "resto": null,
+      "pre": null,
+      "tot": null,
+      "lit": null,
+      "r1": null,
+      "r2": null,
+      "cada": null,
+      "x": null,
+      "xn": null,
+      "leg": null,
+      "ln": null,
+      "sai": null,
+      "sn": null,
+      "N": null,
+      "base": null,
+      "base2": null,
+      "ex": null,
+      "ey": null,
+      "f1": null,
+      "de": null,
+      "ate": null,
+      "v0": null,
+      "v1": null,
+      "ca": null,
+      "cb": null,
+      "id": null
+     }
+    },
+    {
+     "t": 468.435,
+     "d": 1.372,
+     "txt": "Next, we open another one.",
+     "v": {
+      "n": 1
+     }
+    },
+    {
+     "t": 470.227,
+     "d": 1.524,
+     "txt": "Subscribe, so it finds you.",
+     "v": {
+      "n": 2
+     }
+    },
+    {
+     "t": 472.171,
+     "d": 3.884,
+     "txt": "And tell me in the comments which company you want taken apart next.",
+     "v": {
+      "n": 3
+     }
+    }
+   ]
+  }
+ ]
+}

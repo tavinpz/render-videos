@@ -232,4 +232,50 @@ const C04c: React.FC = () => (
   </svg>
 );
 
-export const CAPAS: Record<string, React.FC> = { '02a': C02a, '02b': C02b, '02c': C02c, '03a': C03a, '03b': C03b, '03c': C03c, '04a': C04a, '04b': C04b, '04c': C04c };
+// saleiro / pote de tempero
+export const Saleiro: React.FC<{ x: number; y: number; k?: number; rot?: number }> = ({ x, y, k = 1, rot = -10 }) => (
+  <G x={x} y={y} k={k} rot={rot}>
+    <rect x={-130} y={-120} width={260} height={330} rx={44} fill={K.branco} /><path d="M -112,-120 Q -112,-240 0,-246 Q 112,-240 112,-120 Z" fill={K.verm} />
+    {[[-44, -196], [0, -210], [44, -196], [-22, -168], [22, -168]].map(([dx, dy], i) => <circle key={i} cx={dx} cy={dy} r={10} fill={TINTA} stroke="none" />)}
+    <rect x={-98} y={-40} width={196} height={130} rx={10} fill={K.amar} strokeWidth={7} /><text x={0} y={52} textAnchor="middle" fontFamily={F} fontWeight={900} fontSize={84} fill={TINTA} stroke="none">MSG</text>
+    {Array.from({ length: 7 }, (_, i) => <circle key={i} cx={-60 + i * 22 + (i % 2) * 6} cy={-300 - (i % 3) * 34} r={8} fill={K.branco} strokeWidth={5} />)}
+  </G>
+);
+// pilha de camadas (o filme entre o cobre)
+export const Camadas: React.FC<{ x: number; y: number; k?: number; n?: number }> = ({ x, y, k = 1, n = 5 }) => (
+  <G x={x} y={y} k={k}>{Array.from({ length: n }, (_, i) => <g key={i}><rect x={-230} y={120 - i * 70} width={460} height={42} rx={6} fill={K.menta} /><rect x={-230} y={162 - i * 70} width={460} height={28} rx={4} fill={K.laranja} /></g>)}</G>
+);
+
+const C05a: React.FC = () => (
+  <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+    <Raios cx={640} cy={430} c1={K.ceu} c2={K.ceu2} />
+    <Saleiro x={260} y={480} k={0.92} rot={-12} />
+    <path d="M 470,470 L 690,470" stroke={TINTA} strokeWidth={46} strokeLinecap="round" /><path d="M 470,470 L 690,470" stroke={K.amar} strokeWidth={26} strokeLinecap="round" /><path d="M 670,410 L 770,470 L 670,530 Z" fill={K.amar} stroke={TINTA} strokeWidth={10} strokeLinejoin="round" />
+    <Chip x={1000} y={470} k={1.15} rot={6} c={K.menta} t="AI" />
+    <Pal x={36} y={150} t="MSG MAKER" s={128} c={K.amar} rot={-3} />
+    <Pal x={440} y={270} t="INSIDE AI CHIPS" s={100} rot={-3} />
+  </svg>
+);
+const C05b: React.FC = () => (
+  <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+    <Raios cx={900} cy={420} c1={K.creme} c2={K.creme2} />
+    <Chip x={980} y={330} k={0.85} rot={0} c={K.roxo2} t="AI" />
+    <Camadas x={980} y={520} k={0.9} n={3} />
+    <Pal x={40} y={240} t="95%" s={260} c={K.verm} rot={-4} />
+    <Pal x={50} y={390} t="ONE FOOD" s={110} rot={-4} />
+    <Pal x={50} y={510} t="COMPANY" s={110} rot={-4} />
+    <Pal x={50} y={640} t="UNDER EVERY AI CHIP" s={60} c={K.amar} rot={-2} />
+  </svg>
+);
+const C05c: React.FC = () => (
+  <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
+    <Raios cx={380} cy={450} c1={K.verde} c2={K.verde2} />
+    <Saleiro x={330} y={500} k={1.0} rot={8} />
+    <Interroga x={620} y={560} s={260} c={K.amar} rot={10} />
+    <Pal x={520} y={180} t="NVIDIA NEEDS" s={88} rot={-3} />
+    <Pal x={700} y={330} t="THIS?" s={170} c={K.amar} rot={-3} />
+    <Chip x={1060} y={520} k={0.72} rot={-8} c={K.menta} />
+  </svg>
+);
+
+export const CAPAS: Record<string, React.FC> = { '02a': C02a, '02b': C02b, '02c': C02c, '03a': C03a, '03b': C03b, '03c': C03c, '04a': C04a, '04b': C04b, '04c': C04c, '05a': C05a, '05b': C05b, '05c': C05c };

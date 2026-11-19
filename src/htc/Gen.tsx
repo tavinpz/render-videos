@@ -8,7 +8,7 @@ import { COR, Ctx, L, Txt, cabe, pop } from './base';
 
 // barras: it = [[rótulo, valor, texto do valor, cor?]]; passo i mostra a barra i. cab = legenda em cima.
 const Barras: React.FC<Ctx> = ({ v, a }) => {
-  const it: any[][] = v.it || [], n = it.length, passo = Math.min(132, 540 / n), y0 = 610 - (n * passo) / 2, max = Math.max(...it.map((x) => x[1])), xl = 600, bw = 880;
+  const it: any[][] = v.it || [], n = it.length, passo = Math.min(132, 540 / n), y0 = 610 - (n * passo) / 2, max = Math.max(...it.map((x) => x[1])), xl = 600, bw = Math.min(880, 1180 - Math.max(...it.map((x) => String(x[2]).length)) * 30);
   return (
     <g>
       {v.cab && <g opacity={a(0, 10)}><Rot x={xl} y={y0 - 26} t={v.cab} tam={20} /></g>}
@@ -61,7 +61,7 @@ const LinhaT: React.FC<Ctx> = ({ g, v, a, q }) => {
         <g key={i} opacity={o}>
           {baixo > 0 && <line x1={X(p[0])} y1={y + 20} x2={X(p[0])} y2={y + baixo + 34} stroke={P.fantasma} strokeWidth={2} strokeDasharray="3 7" />}
           <circle cx={X(p[0])} cy={y} r={14 * Math.min(1.15, s)} fill={P.fundo} stroke={COR[p[3]] || P.menta} strokeWidth={5} />
-          <Txt x={X(p[0])} y={y + 96 + baixo} textAnchor={anc} s={64} c={COR[p[3]] || P.osso}>{String(p[0])}</Txt>
+          <Txt x={X(p[0])} y={y + 96 + baixo} textAnchor={anc} s={64} c={COR[p[3]] || P.osso}>{p[4] || String(p[0])}</Txt>
           <Rot x={X(p[0])} y={y + 134 + baixo} t={p[1]} anc={anc as any} tam={20} />{p[2] && <Rot x={X(p[0])} y={y + 162 + baixo} t={p[2]} anc={anc as any} tam={20} />}
         </g>); })}
       {vao.length > 0 && (
