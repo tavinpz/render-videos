@@ -2,6 +2,7 @@
 import React from 'react';
 import { Composition, staticFile } from 'remotion';
 import { Bunker01, BUNKER01_FRAMES } from './bunker/Video01';
+import { BunkerEp } from './bunker/Serie';
 import { Arte } from './arte/Arte';
 import { ArteCapa } from './arte/Capa';
 import { SNBVideo } from './snb/Video';
@@ -33,6 +34,9 @@ export const Root: React.FC = () => (
     <Composition id="SNBVideo" component={SNBVideo as any} width={1920} height={1080} fps={30} durationInFrames={300} defaultProps={{ pasta: 'snb/v01' }}
       calculateMetadata={async ({ props }: any) => { const tempos = await fetch(staticFile(`${props.pasta}/tempos.json`)).then((x) => x.json()); return { durationInFrames: props.n || Math.ceil(tempos.total * 30), props: { ...props, tempos } }; }} />
     {/* Bunker (alemão): vídeo 1, tempos fixos em public/bunker/v01/tempos.json (as props pasta/n da fila são ignoradas) */}
+    {/* Bunker, episódios 2 em diante: guiado por public/<pasta>/tempos.json (falas com diretivas visuais) */}
+    <Composition id="BunkerEp" component={BunkerEp as any} width={1920} height={1080} fps={30} durationInFrames={300} defaultProps={{ pasta: 'bunker/v02' }}
+      calculateMetadata={async ({ props }: any) => { const tempos = await fetch(staticFile(`${props.pasta}/tempos.json`)).then((x) => x.json()); return { durationInFrames: props.n || Math.ceil(tempos.total * 30), props: { ...props, tempos } }; }} />
     <Composition id="Bunker01" component={Bunker01 as any} width={1920} height={1080} fps={30} durationInFrames={BUNKER01_FRAMES} />
     <Composition id="SNBThumb" component={SNBThumb as any} width={1280} height={720} fps={30} durationInFrames={1} defaultProps={{ v: 'a' }} />
     {/* Brasileiro Padrão: vídeo guiado por public/<pasta>/tempos.json */}
