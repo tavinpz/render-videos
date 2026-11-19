@@ -1,6 +1,7 @@
 // Só as composições do motor Arte (os 3 canais longos), para renderizar no GitHub Actions.
 import React from 'react';
 import { Composition, staticFile } from 'remotion';
+import { Bunker01, BUNKER01_FRAMES } from './bunker/Video01';
 import { Arte } from './arte/Arte';
 import { ArteCapa } from './arte/Capa';
 import { SNBVideo } from './snb/Video';
@@ -31,6 +32,8 @@ export const Root: React.FC = () => (
     {/* Strong Not Big: vídeo guiado por public/<pasta>/tempos.json (props.n limita os quadros num teste curto) */}
     <Composition id="SNBVideo" component={SNBVideo as any} width={1920} height={1080} fps={30} durationInFrames={300} defaultProps={{ pasta: 'snb/v01' }}
       calculateMetadata={async ({ props }: any) => { const tempos = await fetch(staticFile(`${props.pasta}/tempos.json`)).then((x) => x.json()); return { durationInFrames: props.n || Math.ceil(tempos.total * 30), props: { ...props, tempos } }; }} />
+    {/* Bunker (alemão): vídeo 1, tempos fixos em public/bunker/v01/tempos.json (as props pasta/n da fila são ignoradas) */}
+    <Composition id="Bunker01" component={Bunker01 as any} width={1920} height={1080} fps={30} durationInFrames={BUNKER01_FRAMES} />
     <Composition id="SNBThumb" component={SNBThumb as any} width={1280} height={720} fps={30} durationInFrames={1} defaultProps={{ v: 'a' }} />
     {/* Brasileiro Padrão: vídeo guiado por public/<pasta>/tempos.json */}
     <Composition id="BPVideo" component={BPVideo as any} width={1920} height={1080} fps={30} durationInFrames={300} defaultProps={{ pasta: 'bp/v01' }}
