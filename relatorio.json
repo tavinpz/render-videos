@@ -1,0 +1,97 @@
+{
+ "info": {
+  "pt_br_arquivos": [
+   ".gitattributes",
+   "README.md",
+   "grapheme_mtl_merged_expanded_v1.json",
+   "s3gen_v3.pt",
+   "s3gen_v3.safetensors",
+   "t3_pt_br.safetensors"
+  ],
+  "modelo": "pt-br:t3_pt_br.safetensors",
+  "s3gen": "pack v3 (faltando 2, sobrando 0)"
+ },
+ "sr": 24000,
+ "falas": [
+  {
+   "i": 0,
+   "c": "x0",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 5.56,
+   "nota": 1.0,
+   "ouvido": "Ele desligou o celular, ligou de novo, o dinheiro continuava lá."
+  },
+  {
+   "i": 1,
+   "c": "x1",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.992,
+   "dur": 5.0,
+   "nota": 0.992,
+   "ouvido": "com capitão, cozinheiro e um rapaz só para abrir o guarda-sol."
+  },
+  {
+   "i": 2,
+   "c": "x2",
+   "q": "v",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 3.92,
+   "nota": 1.0,
+   "ouvido": "Outra chave?  Mas o dinheiro não veio dessa."
+  },
+  {
+   "i": 3,
+   "c": "x3",
+   "q": "g",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.76,
+   "nota": 1.0,
+   "ouvido": "É coisa do sistema, seu Valdir. Pode confiar."
+  },
+  {
+   "i": 4,
+   "c": "x4",
+   "q": "l",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 1.4,
+   "nota": 0.739,
+   "ouvido": "Carregador."
+  },
+  {
+   "i": 5,
+   "c": "x5",
+   "q": "v",
+   "tomada": 1,
+   "sim": 0.99,
+   "dur": 3.6,
+   "nota": 0.99,
+   "ouvido": "É para devolver o dinheiro, doutor.  Travou bem na hora."
+  },
+  {
+   "i": 6,
+   "c": "x6",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.989,
+   "dur": 7.0,
+   "nota": 0.989,
+   "ouvido": "O Valdiv comprou um celular novo, pagou três meses de aluguel adiantado e guardou o resto."
+  },
+  {
+   "i": 7,
+   "c": "x7",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 4.76,
+   "nota": 1.0,
+   "ouvido": "O celular novo ele comprou parcelado, por via das dúvidas."
+  }
+ ]
+}
