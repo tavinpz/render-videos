@@ -1,0 +1,45 @@
+# Transcrição com tempo por palavra (faster-whisper) do bruto de um longo.
+# Disparo: push que mude longos/<id>/transcrever.txt (linha 1 = modelo: small | medium).
+# Saída: ramo transcricao-<id> com words.json (palavras com início/fim em segundos do bruto).
+name: transcrever
+on:
+  push:
+    paths: ['longos/*/transcrever.txt']
+jobs:
+  t:
+    runs-on: ubuntu-latest
+    permissions: { contents: write }
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - id: p
+        run: |
+          F=$(git diff --name-only HEAD~1 HEAD -- longos | grep 'transcrever\.txt$' | head -1)
+          ID=$(basename $(dirname "$F")); M=$(head -1 "$F" | tr -dc a-z0-9-)
+          echo "id=$ID" >> $GITHUB_OUTPUT; echo "m=${M:-small}" >> $GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        with: { ref: 'bruto-${{ steps.p.outputs.id }}', path: bruto }
+      - name: ffmpeg + faster-whisper
+        run: |
+          for i in 1 2 3; do command -v ffmpeg && break; (timeout 60 sudo apt-get update -qq && timeout 150 sudo apt-get install -y -qq ffmpeg > /dev/null) || sleep 5; done
+          pip install -q faster-whisper
+      - name: transcrever
+        run: |
+          cd bruto/segs && awk -F, '{print "file \x27"$1"\x27"}' segs.csv > lista.txt
+          ffmpeg -v error -y -f concat -safe 0 -i lista.txt -vn -ac 1 -ar 16000 /tmp/a.wav
+          cd $GITHUB_WORKSPACE && python3 - <<'PY'
+          import json
+          from faster_whisper import WhisperModel
+          m=WhisperModel("${{ steps.p.outputs.m }}",device="cpu",compute_type="int8")
+          segs,_=m.transcribe("/tmp/a.wav",language="pt",word_timestamps=True,vad_filter=False,beam_size=5,condition_on_previous_text=False)
+          out=[]
+          for s in segs:
+              for w in s.words: out.append({"w":w.word.strip(),"s":round(w.start,3),"e":round(w.end,3),"p":round(w.probability,3)})
+          json.dump(out,open("words.json","w"),ensure_ascii=False)
+          print(len(out),"palavras")
+          PY
+      - name: publicar
+        run: |
+          ID=${{ steps.p.outputs.id }}; mkdir pub && mv words.json pub/ && cd pub
+          git init -q -b transcricao-$ID && git config user.name render-bot && git config user.email render-bot@users.noreply.github.com
+          git add -A && git commit -qm "transcrição $ID" && git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" transcricao-$ID
