@@ -1,0 +1,72 @@
+{
+ "id": "yt02",
+ "crf": 20,
+ "janelas": [
+  [
+   369.58,
+   373.5
+  ],
+  [
+   374.16,
+   390.55
+  ],
+  [
+   390.8,
+   392.12
+  ],
+  [
+   392.25,
+   395.3
+  ],
+  [
+   397.42,
+   400.1
+  ],
+  [
+   412.55,
+   427.42
+  ]
+ ],
+ "legendas": [
+  {
+   "id": "conclusao",
+   "ini": 420.2,
+   "fim": 427.38,
+   "linhas": [
+    [
+     "te cobra cada vez mais",
+     "s"
+    ],
+    [
+     "detalhismo",
+     "i"
+    ],
+    [
+     "em suas decisões",
+     "s"
+    ]
+   ],
+   "x0": 96,
+   "lado": "e",
+   "maxw": 353
+  }
+ ],
+ "cartao": {
+  "dur": 3.0,
+  "linhas": [
+   [
+    "create your",
+    "s"
+   ],
+   [
+    "own reality",
+    "i"
+   ]
+  ]
+ },
+ "capitulos": [],
+ "segdir": "bruto/segs",
+ "work": "w",
+ "acab": "longos/acab",
+ "saida": "w/yt02.mp4"
+}
