@@ -1,2 +1,2 @@
 20
-# v3d: 3 emendas sem pausa resolvidas
+# v3e: abertura com 'mas seguinte' e 'sabe' inteiro
