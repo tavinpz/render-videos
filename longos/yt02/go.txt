@@ -1,1 +1,2 @@
-20 # v2 lado da legenda pelo rosto
+20
+# v3: edição pela linha de raciocínio, sem rótulo de capítulo
