@@ -25,8 +25,9 @@ jobs:
           pip install -q faster-whisper
       - name: transcrever
         run: |
+          if [ -f bruto/audio16k.wav ]; then ffmpeg -v error -y -i bruto/audio16k.wav -ac 1 -ar 16000 -f f32le /tmp/a.f32; else
           cd bruto/segs && awk -F, '{print "file \x27"$1"\x27"}' segs.csv > lista.txt
-          ffmpeg -v error -y -f concat -safe 0 -i lista.txt -vn -ac 1 -ar 16000 -f f32le /tmp/a.f32
+          ffmpeg -v error -y -f concat -safe 0 -i lista.txt -vn -ac 1 -ar 16000 -f f32le /tmp/a.f32; fi
           cd $GITHUB_WORKSPACE && python3 - <<'PY'
           import json, numpy as np
           from faster_whisper import WhisperModel
