@@ -80,7 +80,7 @@ jobs:
           python3 longos/motor/full.py longos/$ID/spec.json final
           D=$(ffprobe -v error -show_entries format=duration -of csv=p=0 w/$ID.mp4); echo "duração $D"
           VB=$(python3 -c "print(int(46*8*1024*1024/$D/1000 - 100))")
-          ffmpeg -v error -y -i w/$ID.mp4 -c:v libx264 -preset medium -b:v ${VB}k -maxrate $((VB*2))k -bufsize $((VB*4))k -c:a aac -b:a 96k -movflags +faststart w/${ID}_leve.mp4
+          ffmpeg -v error -y -i w/$ID.mp4 -c:v libx264 -preset veryfast -b:v ${VB}k -maxrate $((VB*2))k -bufsize $((VB*4))k -c:a aac -b:a 96k -movflags +faststart w/${ID}_leve.mp4
           mkdir -p pub/conf && for t in 3 40 90 130 160 190 225 255 290 360 400; do ffmpeg -loglevel error -ss $t -i w/$ID.mp4 -frames:v 1 -vf scale=640:-1 pub/conf/q_$t.jpg || true; done
           split -b 90m -d w/$ID.mp4 pub/${ID}.mp4.part_
           mv w/${ID}_leve.mp4 pub/

@@ -85,7 +85,10 @@
      "do Brasil",
      "s"
     ]
-   ]
+   ],
+   "x0": 96,
+   "lado": "e",
+   "maxw": 435
   },
   {
    "id": "100mil",
@@ -104,7 +107,10 @@
      "100 mil",
      "i"
     ]
-   ]
+   ],
+   "x0": 96,
+   "lado": "d",
+   "maxw": 471
   },
   {
    "id": "6mil",
@@ -123,7 +129,10 @@
      "gente que fatura milhões",
      "s"
     ]
-   ]
+   ],
+   "x0": 96,
+   "lado": "e",
+   "maxw": 416
   },
   {
    "id": "largado",
@@ -142,7 +151,10 @@
      "do evento",
      "s"
     ]
-   ]
+   ],
+   "x0": 96,
+   "lado": "e",
+   "maxw": 370
   },
   {
    "id": "parecem",
@@ -157,7 +169,10 @@
      "mais do que são",
      "i"
     ]
-   ]
+   ],
+   "x0": 96,
+   "lado": "e",
+   "maxw": 433
   },
   {
    "id": "antietico",
@@ -172,7 +187,10 @@
      "antiético",
      "i"
     ]
-   ]
+   ],
+   "x0": 96,
+   "lado": "e",
+   "maxw": 396
   },
   {
    "id": "vender",
@@ -187,7 +205,10 @@
      "você vender",
      "i"
     ]
-   ]
+   ],
+   "x0": 96,
+   "lado": "d",
+   "maxw": 343
   },
   {
    "id": "detalhe",
@@ -206,7 +227,10 @@
      "importa",
      "s"
     ]
-   ]
+   ],
+   "x0": 96,
+   "lado": "d",
+   "maxw": 421
   },
   {
    "id": "10x",
@@ -225,7 +249,10 @@
      "que você",
      "s"
     ]
-   ]
+   ],
+   "x0": 96,
+   "lado": "d",
+   "maxw": 376
   },
   {
    "id": "coragem",
@@ -240,7 +267,10 @@
      "coragem",
      "i"
     ]
-   ]
+   ],
+   "x0": 96,
+   "lado": "e",
+   "maxw": 391
   },
   {
    "id": "nivel",
@@ -259,7 +289,10 @@
      "importam",
      "s"
     ]
-   ]
+   ],
+   "x0": 96,
+   "lado": "e",
+   "maxw": 361
   }
  ],
  "cartao": {

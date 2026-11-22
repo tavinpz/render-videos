@@ -54,7 +54,7 @@ def _shadow(im, blur=16, op=0.42, dy=4):
     return b
 
 
-def caption_png(lines, out, x0=104, yc=520, maxw=560):
+def caption_png(lines, out, x0=104, yc=520, maxw=560, lado="e"):
     """v2 (22/11): caixa alta pequena e espaçada (Inter Tight 800, 40 px, tracking 7%)
     + ênfase grande em Playfair Italic (108 px). Espaço entre linhas, sombra suave."""
     from PIL import Image, ImageDraw, ImageFont
@@ -88,10 +88,12 @@ def caption_png(lines, out, x0=104, yc=520, maxw=560):
     tot = sum(r[4] for r in rows) + sum(gaps); y = yc - tot // 2
     for i, (t, f, sp, k, h) in enumerate(rows):
         y += h
+        lw = _tw(t, f, sp) if k == "s" else f.getlength(t)
+        x = x0 if lado == "e" else W - x0 - int(lw)
         if k == "s":
-            _track(d, (x0, y), t, f, sp, (255, 255, 255, 240))
+            _track(d, (x, y), t, f, sp, (255, 255, 255, 240))
         else:
-            d.text((x0 - 4, y), t, font=f, fill=(255, 255, 255, 255), anchor="ls")
+            d.text((x - 4 if lado == "e" else x + 4, y), t, font=f, fill=(255, 255, 255, 255), anchor="ls")
         if i < len(gaps):
             y += gaps[i]
     _shadow(im).save(out)
@@ -120,7 +122,7 @@ def make_pngs(spec, work):
     for c in spec["legendas"]:
         png = work / f"cap_{c['id']}.png"
         if not png.exists():
-            caption_png(c["linhas"], png)
+            caption_png(c["linhas"], png, x0=c.get("x0", 104), maxw=c.get("maxw", 560), lado=c.get("lado", "e"))
     for n, ch in enumerate(spec.get("capitulos", []), 1):
         png = work / f"chap_{n:02d}.png"
         if not png.exists():
