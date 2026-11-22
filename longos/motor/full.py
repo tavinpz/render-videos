@@ -122,7 +122,7 @@ def make_pngs(spec, work):
     for c in spec["legendas"]:
         png = work / f"cap_{c['id']}.png"
         if not png.exists():
-            caption_png(c["linhas"], png, x0=c.get("x0", 104), maxw=c.get("maxw", 560), lado=c.get("lado", "e"))
+            caption_png(c["linhas"], png, x0=c.get("x0", 104), yc=c.get("yc", 520), maxw=c.get("maxw", 560), lado=c.get("lado", "e"))
     for n, ch in enumerate(spec.get("capitulos", []), 1):
         png = work / f"chap_{n:02d}.png"
         if not png.exists():
@@ -263,8 +263,9 @@ def render_audio(spec, work):
 
 
 def main():
-    global ACAB
+    global ACAB, FPS
     spec = json.load(open(sys.argv[1]))
+    FPS = int(spec.get("fps", FPS))
     if spec.get("acab"):
         ACAB = Path(spec["acab"])
     work = Path(spec["work"])

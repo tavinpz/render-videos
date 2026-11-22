@@ -1,0 +1,346 @@
+{
+ "id": "yt03",
+ "fps": 24,
+ "crf": 20,
+ "janelas": [
+  [
+   21.87,
+   44.87
+  ],
+  [
+   48.77,
+   96.79
+  ],
+  [
+   111.17,
+   118.11
+  ],
+  [
+   123.7,
+   237.47
+  ],
+  [
+   241.07,
+   260.61
+  ],
+  [
+   280.09,
+   374.87
+  ],
+  [
+   388.93,
+   448.79
+  ],
+  [
+   452.93,
+   502.55
+  ],
+  [
+   505.43,
+   607.85
+  ],
+  [
+   611.08,
+   645.98
+  ]
+ ],
+ "legendas": [
+  {
+   "id": "zona",
+   "ini": 40.1,
+   "fim": 44.85,
+   "linhas": [
+    [
+     "isso mudou a minha vida",
+     "s"
+    ],
+    [
+     "sair da",
+     "s"
+    ],
+    [
+     "zona de conforto",
+     "i"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  },
+  {
+   "id": "motivacao",
+   "ini": 72.82,
+   "fim": 75.02,
+   "linhas": [
+    [
+     "sexta, 11 da noite",
+     "s"
+    ],
+    [
+     "e isso me dá",
+     "s"
+    ],
+    [
+     "motivação",
+     "i"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  },
+  {
+   "id": "sabia",
+   "ini": 138.62,
+   "fim": 140.98,
+   "linhas": [
+    [
+     "o pior é que",
+     "s"
+    ],
+    [
+     "eu sabia",
+     "i"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  },
+  {
+   "id": "tabom",
+   "ini": 165.5,
+   "fim": 168.2,
+   "linhas": [
+    [
+     "5 mil, 10 mil",
+     "s"
+    ],
+    [
+     "tá bom pra mim",
+     "i"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  },
+  {
+   "id": "moleque",
+   "ini": 188.84,
+   "fim": 191.04,
+   "linhas": [
+    [
+     "eu era um moleque",
+     "s"
+    ],
+    [
+     "que não escutava",
+     "i"
+    ],
+    [
+     "ninguém",
+     "s"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  },
+  {
+   "id": "soberba",
+   "ini": 227.4,
+   "fim": 229.6,
+   "linhas": [
+    [
+     "isso é muita",
+     "s"
+    ],
+    [
+     "soberba",
+     "i"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  },
+  {
+   "id": "naogosto",
+   "ini": 321.1,
+   "fim": 323.3,
+   "linhas": [
+    [
+     "pela primeira vez",
+     "s"
+    ],
+    [
+     "fazer o que",
+     "s"
+    ],
+    [
+     "eu não gosto",
+     "i"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  },
+  {
+   "id": "naoeruim",
+   "ini": 405.92,
+   "fim": 408.12,
+   "linhas": [
+    [
+     "isso aqui",
+     "s"
+    ],
+    [
+     "não é tão ruim",
+     "i"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  },
+  {
+   "id": "deixeitudo",
+   "ini": 475.78,
+   "fim": 477.98,
+   "linhas": [
+    [
+     "eu deixei",
+     "s"
+    ],
+    [
+     "tudo",
+     "i"
+    ],
+    [
+     "em Vitória",
+     "s"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  },
+  {
+   "id": "sozinho",
+   "ini": 527.6,
+   "fim": 529.8,
+   "linhas": [
+    [
+     "eu me sinto",
+     "s"
+    ],
+    [
+     "sozinho",
+     "i"
+    ],
+    [
+     "todos os dias",
+     "s"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  },
+  {
+   "id": "grande",
+   "ini": 545.3,
+   "fim": 547.6,
+   "linhas": [
+    [
+     "eu vim aqui",
+     "s"
+    ],
+    [
+     "pra ser grande",
+     "i"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  },
+  {
+   "id": "15vezes",
+   "ini": 589.06,
+   "fim": 591.46,
+   "linhas": [
+    [
+     "dois meses atrás",
+     "s"
+    ],
+    [
+     "sem cortar",
+     "s"
+    ],
+    [
+     "15 vezes",
+     "i"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  },
+  {
+   "id": "realidade",
+   "ini": 643.3,
+   "fim": 645.98,
+   "linhas": [
+    [
+     "começa a criar",
+     "s"
+    ],
+    [
+     "a sua própria",
+     "s"
+    ],
+    [
+     "realidade",
+     "i"
+    ]
+   ],
+   "lado": "d",
+   "x0": 110,
+   "maxw": 560,
+   "yc": 330
+  }
+ ],
+ "capitulos": [],
+ "cartao": {
+  "dur": 3.0,
+  "linhas": [
+   [
+    "create your",
+    "s"
+   ],
+   [
+    "own reality",
+    "i"
+   ]
+  ]
+ },
+ "segdir": "bruto/segs",
+ "work": "w",
+ "acab": "longos/acab",
+ "saida": "w/yt03.mp4"
+}
