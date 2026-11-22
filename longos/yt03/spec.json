@@ -342,5 +342,6 @@
  "segdir": "bruto/segs",
  "work": "w",
  "acab": "longos/acab",
- "saida": "w/yt03.mp4"
+ "saida": "w/yt03.mp4",
+ "sem_audio": true
 }

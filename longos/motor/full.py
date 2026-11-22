@@ -243,6 +243,11 @@ def render_audio(spec, work):
     out = work / "audio.wav"
     if out.exists():
         return
+    if spec.get("sem_audio"):
+        # o áudio exato entra depois por remux (sai do bruto original no Mac)
+        tot = sum(q(b) - q(a) for a, b in spec["janelas"]) / FPS + (spec["cartao"]["dur"] if spec.get("cartao") else 0)
+        run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo", "-t", f"{tot:.4f}", str(out)])
+        return
     parts = []
     for wi, (a, b) in enumerate(spec["janelas"]):
         s, e = q(a) / FPS, q(b) / FPS
