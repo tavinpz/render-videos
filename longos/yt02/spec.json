@@ -1,0 +1,316 @@
+{
+ "id": "yt02",
+ "crf": 20,
+ "janelas": [
+  [
+   0.8,
+   6.72
+  ],
+  [
+   17.0,
+   30.25
+  ],
+  [
+   30.58,
+   78.58
+  ],
+  [
+   94.22,
+   100.3
+  ],
+  [
+   103.85,
+   149.12
+  ],
+  [
+   155.45,
+   166.94
+  ],
+  [
+   170.0,
+   173.45
+  ],
+  [
+   187.45,
+   199.25
+  ],
+  [
+   206.68,
+   226.28
+  ],
+  [
+   229.42,
+   249.6
+  ],
+  [
+   251.95,
+   271.8
+  ],
+  [
+   272.75,
+   301.36
+  ],
+  [
+   306.95,
+   309.05
+  ],
+  [
+   314.52,
+   321.4
+  ],
+  [
+   357.1,
+   369.45
+  ],
+  [
+   374.25,
+   389.75
+  ]
+ ],
+ "legendas": [
+  {
+   "id": "evento",
+   "ini": 3.66,
+   "fim": 6.72,
+   "linhas": [
+    [
+     "um dos maiores eventos",
+     "s"
+    ],
+    [
+     "de odontologia",
+     "i"
+    ],
+    [
+     "do Brasil",
+     "s"
+    ]
+   ]
+  },
+  {
+   "id": "100mil",
+   "ini": 50.94,
+   "fim": 53.3,
+   "linhas": [
+    [
+     "clientes que faturam",
+     "s"
+    ],
+    [
+     "no mínimo",
+     "s"
+    ],
+    [
+     "100 mil",
+     "i"
+    ]
+   ]
+  },
+  {
+   "id": "6mil",
+   "ini": 126.62,
+   "fim": 130.5,
+   "linhas": [
+    [
+     "dentro dessas",
+     "s"
+    ],
+    [
+     "6 mil pessoas",
+     "i"
+    ],
+    [
+     "gente que fatura milhões",
+     "s"
+    ]
+   ]
+  },
+  {
+   "id": "largado",
+   "ini": 158.9,
+   "fim": 162.9,
+   "linhas": [
+    [
+     "sou o cara",
+     "s"
+    ],
+    [
+     "mais largado",
+     "i"
+    ],
+    [
+     "do evento",
+     "s"
+    ]
+   ]
+  },
+  {
+   "id": "parecem",
+   "ini": 187.74,
+   "fim": 189.7,
+   "linhas": [
+    [
+     "elas parecem",
+     "s"
+    ],
+    [
+     "mais do que são",
+     "i"
+    ]
+   ]
+  },
+  {
+   "id": "antietico",
+   "ini": 190.64,
+   "fim": 192.6,
+   "linhas": [
+    [
+     "e isso não é",
+     "s"
+    ],
+    [
+     "antiético",
+     "i"
+    ]
+   ]
+  },
+  {
+   "id": "vender",
+   "ini": 224.44,
+   "fim": 226.28,
+   "linhas": [
+    [
+     "isso faz",
+     "s"
+    ],
+    [
+     "você vender",
+     "i"
+    ]
+   ]
+  },
+  {
+   "id": "detalhe",
+   "ini": 253.02,
+   "fim": 255.8,
+   "linhas": [
+    [
+     "aqui",
+     "s"
+    ],
+    [
+     "cada detalhe",
+     "i"
+    ],
+    [
+     "importa",
+     "s"
+    ]
+   ]
+  },
+  {
+   "id": "10x",
+   "ini": 288.26,
+   "fim": 290.85,
+   "linhas": [
+    [
+     "10 vezes mais",
+     "s"
+    ],
+    [
+     "resultado",
+     "i"
+    ],
+    [
+     "que você",
+     "s"
+    ]
+   ]
+  },
+  {
+   "id": "coragem",
+   "ini": 299.4,
+   "fim": 301.36,
+   "linhas": [
+    [
+     "o que eles têm a mais",
+     "s"
+    ],
+    [
+     "coragem",
+     "i"
+    ]
+   ]
+  },
+  {
+   "id": "nivel",
+   "ini": 359.46,
+   "fim": 362.6,
+   "linhas": [
+    [
+     "quanto mais alto o nível",
+     "s"
+    ],
+    [
+     "mais os detalhes",
+     "i"
+    ],
+    [
+     "importam",
+     "s"
+    ]
+   ]
+  }
+ ],
+ "cartao": {
+  "dur": 3.0,
+  "linhas": [
+   [
+    "create your",
+    "s"
+   ],
+   [
+    "own reality",
+    "i"
+   ]
+  ]
+ },
+ "capitulos": [
+  {
+   "janela": 1,
+   "titulo": "O evento"
+  },
+  {
+   "janela": 3,
+   "titulo": "Quem compra a nossa IA"
+  },
+  {
+   "janela": 5,
+   "titulo": "Quem está nesse evento"
+  },
+  {
+   "janela": 6,
+   "titulo": "O mais largado da sala"
+  },
+  {
+   "janela": 8,
+   "titulo": "Parecer mais do que é"
+  },
+  {
+   "janela": 11,
+   "titulo": "Cada detalhe importa"
+  },
+  {
+   "janela": 12,
+   "titulo": "Coragem"
+  },
+  {
+   "janela": 15,
+   "titulo": "No nível alto, tudo importa"
+  }
+ ],
+ "segdir": "bruto/segs",
+ "work": "w",
+ "acab": "longos/acab",
+ "saida": "w/yt02.mp4"
+}

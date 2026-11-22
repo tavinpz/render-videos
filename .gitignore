@@ -3,3 +3,4 @@ node_modules/
 *.wav
 out/
 __pycache__/
+w/

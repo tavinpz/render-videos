@@ -1,0 +1,93 @@
+# Longos do @gusttacosta (vídeo de câmera, motor ffmpeg longos/motor/full.py) em paralelo.
+# Disparo: push que mude longos/<id>/go.txt (linha 1 = nº de máquinas).
+# O bruto fica no ramo bruto-<id> (blocos de ~12 s cortados sem recomprimir + audio.wav).
+# Saída: ramo saida-<id> com o vídeo em pedaços de 90 MB (alta) e a versão leve (<= 47 MB, painel).
+name: longo
+on:
+  push:
+    paths: ['longos/*/go.txt']
+  workflow_dispatch:
+    inputs:
+      id: { description: 'id (pasta em longos/)', required: true }
+      partes: { description: 'máquinas', default: '20' }
+
+jobs:
+  plano:
+    runs-on: ubuntu-latest
+    outputs:
+      id: ${{ steps.p.outputs.id }}
+      matriz: ${{ steps.p.outputs.matriz }}
+      n: ${{ steps.p.outputs.n }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - id: p
+        run: |
+          ID="${{ github.event.inputs.id }}"; N="${{ github.event.inputs.partes }}"
+          if [ -z "$ID" ]; then
+            F=$(git diff --name-only HEAD~1 HEAD -- longos | grep 'go\.txt$' | head -1)
+            ID=$(basename $(dirname "$F")); N=$(head -1 "$F" | tr -dc 0-9)
+          fi
+          [ -z "$N" ] && N=20
+          P=$(python3 longos/motor/full.py longos/$ID/spec.json n)
+          [ "$N" -gt "$P" ] && N=$P
+          echo "id=$ID" >> $GITHUB_OUTPUT; echo "n=$N" >> $GITHUB_OUTPUT
+          echo "matriz=$(python3 -c "import json;print(json.dumps(list(range($N))))")" >> $GITHUB_OUTPUT
+          echo "$ID: $P pedaços em $N máquinas"
+
+  render:
+    needs: plano
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        k: ${{ fromJson(needs.plano.outputs.matriz) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { ref: 'bruto-${{ needs.plano.outputs.id }}', path: bruto }
+      - name: ffmpeg + pillow
+        run: |
+          for i in 1 2 3; do command -v ffmpeg && break; (timeout 60 sudo apt-get update -qq && timeout 150 sudo apt-get install -y -qq ffmpeg > /dev/null) || sleep 5; done
+          pip install -q pillow
+      - name: render parte ${{ matrix.k }}
+        run: python3 longos/motor/full.py longos/${{ needs.plano.outputs.id }}/spec.json parte ${{ matrix.k }} ${{ needs.plano.outputs.n }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: parte-${{ matrix.k }}
+          path: w/p*.mp4
+          retention-days: 3
+
+  juntar:
+    needs: [plano, render]
+    runs-on: ubuntu-latest
+    permissions: { contents: write }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with: { ref: 'bruto-${{ needs.plano.outputs.id }}', path: bruto, sparse-checkout: audio.wav, sparse-checkout-cone-mode: false }
+      - uses: actions/download-artifact@v4
+        with: { pattern: 'parte-*', merge-multiple: true, path: w }
+      - name: ffmpeg + pillow
+        run: |
+          for i in 1 2 3; do command -v ffmpeg && break; (timeout 60 sudo apt-get update -qq && timeout 150 sudo apt-get install -y -qq ffmpeg > /dev/null) || sleep 5; done
+          pip install -q pillow
+      - name: juntar, versão leve e conferência
+        run: |
+          ID=${{ needs.plano.outputs.id }}
+          cp bruto/audio.wav w/audio.wav
+          python3 longos/motor/full.py longos/$ID/spec.json final
+          D=$(ffprobe -v error -show_entries format=duration -of csv=p=0 w/$ID.mp4); echo "duração $D"
+          VB=$(python3 -c "print(int(46*8*1024*1024/$D/1000 - 100))")
+          ffmpeg -v error -y -i w/$ID.mp4 -c:v libx264 -preset medium -b:v ${VB}k -maxrate $((VB*2))k -bufsize $((VB*4))k -c:a aac -b:a 96k -movflags +faststart w/${ID}_leve.mp4
+          mkdir -p pub/conf && for t in 3 40 90 130 160 190 225 255 290 360 400; do ffmpeg -loglevel error -ss $t -i w/$ID.mp4 -frames:v 1 -vf scale=640:-1 pub/conf/q_$t.jpg || true; done
+          split -b 90m -d w/$ID.mp4 pub/${ID}.mp4.part_
+          mv w/${ID}_leve.mp4 pub/
+          sha256sum w/$ID.mp4 > pub/sha256.txt; ls -la pub
+      - name: publicar no ramo saida-<id>
+        run: |
+          ID=${{ needs.plano.outputs.id }}
+          cd pub && git init -q -b saida-$ID && git config user.name render-bot && git config user.email render-bot@users.noreply.github.com
+          git add -A && git commit -qm "longo $ID ($(date -u +%FT%TZ))"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" saida-$ID
