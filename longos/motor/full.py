@@ -252,7 +252,13 @@ def render_audio(spec, work):
     n = len(spec["janelas"])
     pad = f",apad=pad_dur={spec['cartao']['dur']}" if spec.get("cartao") else ""
     fc = ";".join(parts) + ";" + "".join(f"[a{i}]" for i in range(n)) + f"concat=n={n}:v=0:a=1{pad}[ao]"
-    run(["ffmpeg", "-v", "error", "-y", "-vn", "-i", spec["bruto"], "-filter_complex", fc,
+    if spec.get("segdir") and Path(spec["segdir"], "segs.csv").exists():
+        lst = work / "src_audio.txt"
+        lst.write_text("".join(f"file '{Path(spec['segdir'], r[0]).resolve()}'\n" for r in segs(spec)))
+        src = ["-f", "concat", "-safe", "0", "-i", str(lst)]
+    else:
+        src = ["-i", spec["bruto"]]
+    run(["ffmpeg", "-v", "error", "-y", "-vn"] + src + ["-filter_complex", fc,
          "-map", "[ao]", "-ar", "48000", "-ac", "2", str(out)])
 
 

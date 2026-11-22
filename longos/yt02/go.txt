@@ -1,2 +1,2 @@
 20
-# v3: edição pela linha de raciocínio, sem rótulo de capítulo
+# v3b: áudio gerado do bruto

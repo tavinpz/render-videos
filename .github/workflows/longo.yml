@@ -66,7 +66,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
-        with: { ref: 'bruto-${{ needs.plano.outputs.id }}', path: bruto, sparse-checkout: audio.wav, sparse-checkout-cone-mode: false }
+        with: { ref: 'bruto-${{ needs.plano.outputs.id }}', path: bruto }
       - uses: actions/download-artifact@v4
         with: { pattern: 'parte-*', merge-multiple: true, path: w }
       - name: ffmpeg + pillow
@@ -76,7 +76,7 @@ jobs:
       - name: juntar, versão leve e conferência
         run: |
           ID=${{ needs.plano.outputs.id }}
-          cp bruto/audio.wav w/audio.wav
+          rm -f w/audio.wav  # o áudio sai do bruto com os cortes da spec atual
           python3 longos/motor/full.py longos/$ID/spec.json final
           D=$(ffprobe -v error -show_entries format=duration -of csv=p=0 w/$ID.mp4); echo "duração $D"
           VB=$(python3 -c "print(int(46*8*1024*1024/$D/1000 - 100))")
