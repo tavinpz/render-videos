@@ -1,2 +1,2 @@
 20
-# v3b: áudio gerado do bruto
+# v3c: final retranscrito e todos os cortes nas pausas reais do áudio
