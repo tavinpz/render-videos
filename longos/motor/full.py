@@ -154,6 +154,20 @@ def fonte(spec, t0, t1, work, tag):
     if not sd or not Path(sd, "segs.csv").exists():
         return ["-ss", f"{t0:.4f}", "-i", spec["bruto"]], 0
     rows = segs(spec)
+    if spec.get("decodifica_blocos"):
+        # blocos copiados de HEVC de GOP aberto (iPhone): o concat por cópia escorrega a
+        # sincronia. Decodifica cada bloco só no seu intervalo [a, b) e junta: quadro exato.
+        use = [r for r in rows if r[2] > t0 and r[1] < t1 + 0.1]
+        tmp = work / f"src_{tag}.mkv"
+        a, fc = ["ffmpeg", "-v", "error", "-y"], ""
+        for i, (n, ra, rb) in enumerate(use):
+            s, e = max(t0, ra) - ra, min(t1 + 0.1, rb - 0.008) - ra
+            a += ["-ss", f"{s:.4f}", "-t", f"{e - s:.4f}", "-i", str(Path(sd, n).resolve())]
+            fc += f"[{i}:v]setpts=PTS-STARTPTS[s{i}];"
+        fc += "".join(f"[s{i}]" for i in range(len(use))) + f"concat=n={len(use)}:v=1:a=0[v]"
+        run(a + ["-filter_complex", fc, "-map", "[v]", "-an", "-c:v", "libx264",
+                 "-preset", "ultrafast", "-crf", "8", str(tmp)])
+        return ["-i", str(tmp)], t0
     use = [r for r in rows if r[2] > t0 - 0.2 and r[1] < t1 + 0.2]
     lst = work / f"src_{tag}.txt"
     lst.write_text("".join(f"file '{Path(sd, r[0]).resolve()}'\n" for r in use))
