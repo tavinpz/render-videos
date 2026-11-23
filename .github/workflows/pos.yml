@@ -1,6 +1,6 @@
 # Pós de um vídeo pronto: tapa os buracos de quadro (câmera perdeu quadros → imagem congela e parece fora de sincronia)
 # com interpolação de movimento, acelera e exporta em alta. Áudio já tratado vem pronto (limpo.flac).
-# Disparo: push que mude pos/<id>.txt (linhas: velocidade, máquinas). Entrada no ramo possrc-<id>: src.mp4.part_* + limpo.flac
+# Disparo: push que mude pos/<id>.txt (linhas: velocidade, máquinas, fps do vídeo — padrão 24). Entrada no ramo possrc-<id>: src.mp4.part_* + limpo.flac
 # Saída: ramo saida-<id>pos com <id>.mp4 em pedaços de 90 MB + sha256.txt + quadros de conferência.
 name: pos
 on:
@@ -9,7 +9,7 @@ on:
 jobs:
   plano:
     runs-on: ubuntu-latest
-    outputs: { id: '${{ steps.p.outputs.id }}', vel: '${{ steps.p.outputs.vel }}', n: '${{ steps.p.outputs.n }}', matriz: '${{ steps.p.outputs.matriz }}' }
+    outputs: { id: '${{ steps.p.outputs.id }}', vel: '${{ steps.p.outputs.vel }}', fps: '${{ steps.p.outputs.fps }}', n: '${{ steps.p.outputs.n }}', matriz: '${{ steps.p.outputs.matriz }}' }
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 2 }
@@ -17,6 +17,7 @@ jobs:
         run: |
           F=$(git diff --name-only HEAD~1 HEAD -- pos | grep '\.txt$' | head -1); ID=$(basename "$F" .txt)
           VEL=$(sed -n 1p "$F"); N=$(sed -n 2p "$F" | tr -dc 0-9); [ -z "$N" ] && N=20
+          FPS=$(sed -n 3p "$F" | tr -dc 0-9); [ -z "$FPS" ] && FPS=24; echo "fps=$FPS" >> $GITHUB_OUTPUT
           echo "id=$ID" >> $GITHUB_OUTPUT; echo "vel=$VEL" >> $GITHUB_OUTPUT; echo "n=$N" >> $GITHUB_OUTPUT
           echo "matriz=$(python3 -c "print(list(range($N)))")" >> $GITHUB_OUTPUT
   parte:
@@ -30,13 +31,13 @@ jobs:
       - name: parte ${{ matrix.k }}
         run: |
           cat src/src.mp4.part_* > src.mp4
-          K=${{ matrix.k }}; N=${{ needs.plano.outputs.n }}; V=${{ needs.plano.outputs.vel }}
+          K=${{ matrix.k }}; N=${{ needs.plano.outputs.n }}; V=${{ needs.plano.outputs.vel }}; FPS=${{ needs.plano.outputs.fps }}
           TOT=$(ffprobe -v error -select_streams v -count_packets -show_entries stream=nb_read_packets -of csv=p=0 src.mp4)
           C=$(( (TOT + N - 1) / N )); A=$(( K * C )); Q=$(( TOT - A )); [ $Q -gt $C ] && Q=$C
           echo "total $TOT, parte $K: quadros $A..$((A+Q))"
-          R=$(python3 -c "print(24*$V)")
-          ffmpeg -v error -y -ss $(python3 -c "print($A/24)") -i src.mp4 -an \
-            -vf "mpdecimate=hi=200:lo=64:frac=0.1,minterpolate=fps=24:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1,setpts=(PTS-STARTPTS)/$V,tpad=stop_mode=clone:stop=48" \
+          R=$(python3 -c "print($FPS*$V)")
+          ffmpeg -v error -y -ss $(python3 -c "print($A/$FPS)") -i src.mp4 -an \
+            -vf "mpdecimate=hi=200:lo=64:frac=0.1,minterpolate=fps=$FPS:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1,setpts=(PTS-STARTPTS)/$V,tpad=stop_mode=clone:stop=48" \
             -frames:v $Q -r $R -fps_mode cfr -c:v libx264 -preset slow -crf 18 -maxrate 9M -bufsize 18M -pix_fmt yuv420p -g 56 -bf 2 -x264-params scenecut=0 p$(printf %03d $K).mp4
           ffprobe -v error -count_packets -show_entries stream=nb_read_packets -of csv=p=0 p$(printf %03d $K).mp4
       - uses: actions/upload-artifact@v4
