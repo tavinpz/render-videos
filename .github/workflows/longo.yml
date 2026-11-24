@@ -49,7 +49,7 @@ jobs:
         with: { ref: 'bruto-${{ needs.plano.outputs.id }}', path: bruto }
       - name: ffmpeg + pillow
         run: |
-          for i in 1 2 3; do command -v ffmpeg && break; (timeout 60 sudo apt-get update -qq && timeout 150 sudo apt-get install -y -qq ffmpeg > /dev/null) || sleep 5; done
+          for i in 1 2 3 4 5; do command -v ffmpeg && break; (timeout 120 sudo apt-get update -qq && timeout 300 sudo apt-get install -y -qq -o Acquire::Retries=5 ffmpeg > /dev/null) || sleep 15; done; command -v ffmpeg
           pip install -q pillow
       - name: render parte ${{ matrix.k }}
         run: python3 longos/motor/full.py longos/${{ needs.plano.outputs.id }}/spec.json parte ${{ matrix.k }} ${{ needs.plano.outputs.n }}
@@ -71,7 +71,7 @@ jobs:
         with: { pattern: 'parte-*', merge-multiple: true, path: w }
       - name: ffmpeg + pillow
         run: |
-          for i in 1 2 3; do command -v ffmpeg && break; (timeout 60 sudo apt-get update -qq && timeout 150 sudo apt-get install -y -qq ffmpeg > /dev/null) || sleep 5; done
+          for i in 1 2 3 4 5; do command -v ffmpeg && break; (timeout 120 sudo apt-get update -qq && timeout 300 sudo apt-get install -y -qq -o Acquire::Retries=5 ffmpeg > /dev/null) || sleep 15; done; command -v ffmpeg
           pip install -q pillow
       - name: juntar, versão leve e conferência
         run: |

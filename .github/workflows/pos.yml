@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: 'possrc-${{ needs.plano.outputs.id }}', path: src }
-      - run: for i in 1 2 3; do command -v ffmpeg && break; (timeout 60 sudo apt-get update -qq && timeout 150 sudo apt-get install -y -qq ffmpeg > /dev/null) || sleep 5; done
+      - run: for i in 1 2 3 4 5; do command -v ffmpeg && break; (timeout 120 sudo apt-get update -qq && timeout 300 sudo apt-get install -y -qq -o Acquire::Retries=5 ffmpeg > /dev/null) || sleep 15; done; command -v ffmpeg
       - name: parte ${{ matrix.k }}
         run: |
           cat src/src.mp4.part_* > src.mp4
@@ -51,7 +51,7 @@ jobs:
         with: { ref: 'possrc-${{ needs.plano.outputs.id }}', path: src }
       - uses: actions/download-artifact@v4
         with: { pattern: 'p-*', merge-multiple: true, path: w }
-      - run: for i in 1 2 3; do command -v ffmpeg && break; (timeout 60 sudo apt-get update -qq && timeout 150 sudo apt-get install -y -qq ffmpeg > /dev/null) || sleep 5; done
+      - run: for i in 1 2 3 4 5; do command -v ffmpeg && break; (timeout 120 sudo apt-get update -qq && timeout 300 sudo apt-get install -y -qq -o Acquire::Retries=5 ffmpeg > /dev/null) || sleep 15; done; command -v ffmpeg
       - run: |
           ID=${{ needs.plano.outputs.id }}
           ls w/p*.mp4 | sort | sed "s/^/file '/;s/$/'/" | sed "s#file 'w/#file '#" > w/l.txt

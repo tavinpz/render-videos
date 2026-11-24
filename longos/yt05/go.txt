@@ -1,2 +1,2 @@
 20
-# yt05 egoista (2a tentativa: ffmpeg falhou em 3 máquinas)
+# yt05 (3a: apt com mais tentativas)
