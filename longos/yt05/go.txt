@@ -1,2 +1,2 @@
 20
-# yt05 egoista
+# yt05 egoista (2a tentativa: ffmpeg falhou em 3 máquinas)
