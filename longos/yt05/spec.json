@@ -1,0 +1,400 @@
+{
+ "id": "yt05",
+ "fps": 30,
+ "crf": 18,
+ "janelas": [
+  [
+   12.52,
+   50.76
+  ],
+  [
+   52.84,
+   60.82
+  ],
+  [
+   61.86,
+   74.72
+  ],
+  [
+   127.34,
+   134.86
+  ],
+  [
+   135.84,
+   154.26
+  ],
+  [
+   172.96,
+   183.06
+  ],
+  [
+   183.9,
+   184.46
+  ],
+  [
+   185.28,
+   195.1
+  ],
+  [
+   217.84,
+   244.07
+  ],
+  [
+   244.43,
+   249.98
+  ],
+  [
+   256.88,
+   276.56
+  ],
+  [
+   279.68,
+   287.7
+  ],
+  [
+   299.3,
+   302.9
+  ],
+  [
+   331.56,
+   334.1
+  ],
+  [
+   335.6,
+   341.24
+  ],
+  [
+   342.18,
+   391.64
+  ],
+  [
+   432.58,
+   452.47
+  ],
+  [
+   452.77,
+   465.34
+  ],
+  [
+   469.52,
+   489.07
+  ],
+  [
+   489.36,
+   500.94
+  ],
+  [
+   502.16,
+   520.72
+  ],
+  [
+   521.03,
+   523.62
+  ],
+  [
+   524.54,
+   558.48
+  ],
+  [
+   560.28,
+   563.1
+  ],
+  [
+   564.78,
+   574.92
+  ],
+  [
+   575.66,
+   576.86
+  ],
+  [
+   577.56,
+   592.64
+  ],
+  [
+   594.18,
+   598.76
+  ],
+  [
+   599.11,
+   609.92
+  ]
+ ],
+ "legendas": [
+  {
+   "id": "egoista",
+   "ini": 12.85,
+   "fim": 15.1,
+   "linhas": [
+    [
+     "seja",
+     "s"
+    ],
+    [
+     "egoísta",
+     "i"
+    ],
+    [
+     "pense só em você",
+     "s"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  },
+  {
+   "id": "mascara",
+   "ini": 69.2,
+   "fim": 71.4,
+   "linhas": [
+    [
+     "coloque a máscara",
+     "s"
+    ],
+    [
+     "primeiro em você",
+     "i"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  },
+  {
+   "id": "cuide",
+   "ini": 129.45,
+   "fim": 131.6,
+   "linhas": [
+    [
+     "cuide primeiro de você",
+     "s"
+    ],
+    [
+     "depois dos outros",
+     "i"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  },
+  {
+   "id": "resto",
+   "ini": 135.9,
+   "fim": 139.2,
+   "linhas": [
+    [
+     "não é pro resto",
+     "s"
+    ],
+    [
+     "da sua vida",
+     "i"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  },
+  {
+   "id": "generoso",
+   "ini": 179.9,
+   "fim": 183.0,
+   "linhas": [
+    [
+     "ser egoísta é diferente de",
+     "s"
+    ],
+    [
+     "não ser generoso",
+     "i"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  },
+  {
+   "id": "neymar",
+   "ini": 282.2,
+   "fim": 286.4,
+   "linhas": [
+    [
+     "ele cresceu primeiro",
+     "s"
+    ],
+    [
+     "depois levou os amigos",
+     "i"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  },
+  {
+   "id": "processo",
+   "ini": 332.75,
+   "fim": 334.1,
+   "linhas": [
+    [
+     "dê tempo",
+     "s"
+    ],
+    [
+     "ao processo",
+     "i"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  },
+  {
+   "id": "imperio",
+   "ini": 347.4,
+   "fim": 349.0,
+   "linhas": [
+    [
+     "construa o seu",
+     "s"
+    ],
+    [
+     "império primeiro",
+     "i"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  },
+  {
+   "id": "abracar",
+   "ini": 486.25,
+   "fim": 488.8,
+   "linhas": [
+    [
+     "quem quer abraçar o mundo",
+     "s"
+    ],
+    [
+     "não abraça ninguém",
+     "i"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  },
+  {
+   "id": "calma",
+   "ini": 554.7,
+   "fim": 558.1,
+   "linhas": [
+    [
+     "cresça o seu império",
+     "s"
+    ],
+    [
+     "com calma",
+     "i"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  },
+  {
+   "id": "proporcional",
+   "ini": 565.85,
+   "fim": 569.4,
+   "linhas": [
+    [
+     "ajude",
+     "s"
+    ],
+    [
+     "proporcional",
+     "i"
+    ],
+    [
+     "ao que você tem",
+     "s"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  },
+  {
+   "id": "agradecer",
+   "ini": 586.5,
+   "fim": 588.6,
+   "linhas": [
+    [
+     "eles vão me agradecer",
+     "s"
+    ],
+    [
+     "no futuro",
+     "i"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  },
+  {
+   "id": "realidade",
+   "ini": 608.45,
+   "fim": 609.85,
+   "linhas": [
+    [
+     "crie a sua",
+     "s"
+    ],
+    [
+     "própria realidade",
+     "i"
+    ]
+   ],
+   "lado": "e",
+   "x0": 90,
+   "maxw": 560,
+   "yc": 300
+  }
+ ],
+ "capitulos": [],
+ "cartao": {
+  "dur": 3.0,
+  "linhas": [
+   [
+    "crie a sua",
+    "s"
+   ],
+   [
+    "própria realidade",
+    "i"
+   ]
+  ]
+ },
+ "segdir": "bruto/segs",
+ "work": "w",
+ "acab": "longos/acab",
+ "saida": "w/yt05.mp4",
+ "sem_audio": true,
+ "decodifica_blocos": true
+}
