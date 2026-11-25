@@ -1,0 +1,24 @@
+name: quadros
+on:
+  push:
+    paths: ['quadros/go.txt']
+jobs:
+  q:
+    runs-on: ubuntu-latest
+    permissions: { contents: write }
+    strategy: { fail-fast: false, matrix: { id: [yt02, yt03, yt04, yt05, yt06] } }
+    steps:
+      - uses: actions/checkout@v4
+        with: { path: main }
+      - uses: actions/checkout@v4
+        with: { ref: 'bruto-${{ matrix.id }}', path: bruto }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: |
+          for i in 1 2 3 4 5; do sudo apt-get -o Acquire::Retries=5 update -qq && sudo apt-get -o Acquire::Retries=5 install -y -qq ffmpeg && break; sleep 15; done
+          pip install -q mediapipe==0.10.14 opencv-python-headless pillow numpy
+      - run: python3 main/quadros/score.py ${{ matrix.id }} bruto/segs out
+      - run: |
+          cd out && git init -q && git checkout -q -b quadros-${{ matrix.id }} && git add -A
+          git -c user.name=bot -c user.email=bot@x commit -qm out
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" quadros-${{ matrix.id }}
