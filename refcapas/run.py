@@ -10,7 +10,8 @@ for linha in open("refcapas/lista.txt"):
     url = f"https://www.youtube.com/{h}/videos"
     try:
         r = subprocess.run(["yt-dlp", "--flat-playlist", "-J", "--playlist-end", "120", url], capture_output=True, text=True, timeout=240)
-        d = json.loads(r.stdout)
+        d = json.loads(r.stdout or "null")
+        if not d: raise Exception(r.stderr[-400:])
     except Exception as e:
         resumo.append({"handle": h, "erro": str(e)[:200]}); continue
     ents = [e for e in d.get("entries", []) if e and e.get("view_count")]
