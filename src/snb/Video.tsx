@@ -20,7 +20,7 @@ const Tx: React.FC<{ txt: string; cor?: string; dest?: string }> = ({ txt, cor =
 const entra = (g: number, ini: number) => ({ o: L(g, [ini, ini + 5], [0, 1]), s: Math.min(1.12, pop(g, ini)) });
 
 const Pose: React.FC<{ g: number; ini: number; f: V; brilho?: string }> = ({ g, ini, f, brilho }) => {
-  const k = f.a / 1772, { o } = entra(g, ini);
+  const k = f.a / 1772, { o } = f.ja ? { o: 1 } : entra(g, ini);
   const bob = f.anda ? Math.abs(Math.sin(g / 5.2)) * -9 : Math.sin(g / 17) * 1.6;
   const rot = f.anda ? Math.sin(g / 5.2) * 1.1 : 0;
   const tx = f.treme ? Math.sin(g * 2.1) * 3.5 * Math.max(0.25, 1 - (g - ini) / 40) : 0;
@@ -185,12 +185,17 @@ const Cena: React.FC<{ g: number; D: number; b: Bloco; ini: number }> = ({ g, D,
   const ant = i > 0 ? est[i - 1] : est[i], kz = L(g, [ts[i], ts[i] + 18], [0, 1]);
   const z0 = ant.zoom || 1, z1 = v.zoom || 1, f0 = ant.foco || [960, 540], f1 = v.foco || [960, 540];
   const zc = z0 + (z1 - z0) * kz, fx = f0[0] + (f1[0] - f0[0]) * kz, fy = f0[1] + (f1[1] - f0[1]) * kz;
+  // movimento contínuo (#06+, só quando a fala usa as chaves novas): câmera nunca parada e um "reenquadre" no meio das falas longas
+  const novo = v.tl !== undefined, di = (i + 1 < ts.length ? ts[i + 1] : D) - ts[i], u = g - ts[i];
+  const drift = novo ? 1 + 0.045 * Math.min(1, u / Math.max(30, di)) : 1;
+  const pan = novo ? (i % 2 ? 1 : -1) * 28 * Math.min(1, u / Math.max(30, di)) : 0;
+  const snap = novo && di > 105 ? 0.07 * L(g, [ts[i] + Math.round(di * 0.5), ts[i] + Math.round(di * 0.5) + 6], [0, 1]) : 0;
   const imp = (b.falas[i].v || {}).imp ? g - ts[i] : 1e9, sh = imp >= 0 && imp < 8 ? (imp % 2 ? 1 : -1) * 9 * (1 - imp / 8) : 0;
   const objs: V[] = v.obj || [];
   const desdeObj = (n: number) => desde('obj', (x) => x && x[n]);
   const antesObj = (n: number) => { let j = i; while (j > 0 && J(est[j - 1].obj && est[j - 1].obj[n]) === J(v.obj && v.obj[n])) j--; return j > 0 ? (est[j - 1].obj || [])[n] : undefined; };
   return (<>
-    <AbsoluteFill style={{ transformOrigin: `${fx}px ${fy}px`, transform: `translate(${sh}px,${sh * 0.6}px) scale(${zc * (1 + 0.035 * Math.min(1, g / D)) * punch})` }}>
+    <AbsoluteFill style={{ transformOrigin: `${fx}px ${fy}px`, transform: `translate(${sh + pan}px,${sh * 0.6}px) scale(${zc * (novo ? drift + snap : 1 + 0.035 * Math.min(1, g / D)) * punch})` }}>
       {objs.length > 0 && <svg viewBox={`0 0 ${W} ${H}`} width={W} height={H} style={{ position: 'absolute', left: 0, top: 0 }}><Objetos g={g} lista={objs} desde={desdeObj} antes={antesObj} /></svg>}
       {v.mao && <div style={{ position: 'absolute', left: 90 - (1 - em.o) * 40, top: 170 + Math.sin(g / 15) * 4, width: 800, opacity: em.o }}>
         <Img src={staticFile('snb/poses/mao_close.png')} style={{ width: 800, transform: `rotate(${Math.sin(g / 21) * 0.8}deg)` }} />
@@ -223,7 +228,7 @@ export const SNBVideo: React.FC<{ tempos: TemposSNB }> = ({ tempos }) => {
       })}
       <AbsoluteFill style={{ background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%)' }} />
       <AbsoluteFill style={{ opacity: 0.05, mixBlendMode: 'overlay' }}><Img src={staticFile(`fx/grain${f % 4}.png`)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></AbsoluteFill>
-      <AbsoluteFill style={{ background: '#000', opacity: Math.max(L(f, [0, 8], [1, 0]), L(f, [fimV - 20, fimV - 2], [0, 1])) }} />
+      <AbsoluteFill style={{ background: '#000', opacity: Math.max(0, L(f, [fimV - 20, fimV - 2], [0, 1])) }} />
     </AbsoluteFill>
   );
 };
