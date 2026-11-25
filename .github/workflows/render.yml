@@ -51,6 +51,8 @@ jobs:
           print(json.dumps([{'k':i,'ini':i*p,'fim':min(Q,(i+1)*p)-1} for i in range(N) if i*p<Q]))")
           # painel aceita até 50 MB: 47 MB no total, 128 kbps de áudio, o resto para o vídeo
           VB=$(python3 -c "print(min(8000, int(47*8*1024*1024/($Q/30)/1000 - 128 - 6)))")
+          # linha 3 "hq <kbps>": versão em alta para o YouTube (sai em pedaços de 90 MB no ramo)
+          HQ=$(sed -n 3p "fila/$ID.txt" 2>/dev/null | tr -d '\r' | awk '$1=="hq"{print $2}' | tr -dc 0-9); [ -n "$HQ" ] && VB=$HQ
           echo "id=$ID" >> $GITHUB_OUTPUT; echo "matriz=$M" >> $GITHUB_OUTPUT; echo "vb=$VB" >> $GITHUB_OUTPUT
           echo "comp=$COMP" >> $GITHUB_OUTPUT; echo "props=$PROPS" >> $GITHUB_OUTPUT; echo "mix=$MIX" >> $GITHUB_OUTPUT
           echo "$ID: $Q quadros em $N partes"
@@ -101,7 +103,9 @@ jobs:
       - name: publicar no ramo saida-<id>
         run: |
           ID=${{ needs.plano.outputs.id }}
-          mkdir pub && mv $ID.mp4 conf pub/ && cd pub
+          mkdir pub && mv conf pub/
+          if [ $(stat -c %s $ID.mp4) -gt 95000000 ]; then sha256sum $ID.mp4 > pub/sha256.txt; split -b 90m -d $ID.mp4 pub/$ID.mp4.part_; else mv $ID.mp4 pub/; fi
+          cd pub
           git init -q -b saida-$ID && git config user.name render-bot && git config user.email render-bot@users.noreply.github.com
           git add -A && git commit -qm "vídeo $ID ($(date -u +%FT%TZ))"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" saida-$ID
