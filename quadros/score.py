@@ -76,8 +76,20 @@ def rodar(nome, fontes, alta, saida):
         dr.text(((i % 6) * 480 + 6, (i // 6) * 300 + 272), f"{i + 1:02d}  {t:.1f}s  nota {s:.1f}", font=F, fill=(255, 210, 60))
     G.save(f"{saida}/{nome}_folha.jpg", quality=86)
 
+def de_imagens(nome, pasta, saida):
+    import glob
+    fs = sorted(glob.glob(f"{pasta}/*.jpg"))
+    def gen():
+        for f in fs:
+            yield int(os.path.basename(f)[:-4]) / 30, np.asarray(Image.open(f).convert("RGB"))
+    global quadros
+    quadros = lambda fontes: gen()
+    mapa = {round(int(os.path.basename(f)[:-4]) / 30, 3): f for f in fs}
+    rodar(nome, [], lambda t: (mapa[min(mapa, key=lambda k: abs(k - t))], 0), saida)
+
 if __name__ == "__main__":
     nome, pasta, saida = sys.argv[1], sys.argv[2], sys.argv[3]
+    if nome == "yt01": de_imagens(nome, pasta, saida); sys.exit()
     rows = [r for r in csv.reader(open(f"{pasta}/segs.csv")) if r]
     fontes = [(f"{pasta}/{r[0]}", float(r[1])) for r in rows]
     def alta(t):
