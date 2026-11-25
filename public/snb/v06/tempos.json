@@ -14,7 +14,7 @@
      "txt": "What if tomorrow morning you woke up twice as strong, and you didn't gain a single pound?",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "2X STRONGER · +0 KG",
       "sub": null,
       "num": null,
       "lista": null,
@@ -39,8 +39,8 @@
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": 1.06,
@@ -96,7 +96,7 @@
      "txt": "But the bar that crushed you yesterday now bends in your hands.",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "IT BENDS",
       "sub": null,
       "num": null,
       "lista": null,
@@ -114,8 +114,8 @@
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": 1.15,
@@ -237,7 +237,7 @@
   {
    "cena": "dia1",
    "et": null,
-   "fonte": "Moritani & deVries 1979 · Am J Phys Med · 15 young adults · 8 weeks",
+   "fonte": null,
    "ini": 23.529,
    "fim": 111.759,
    "falas": [
@@ -371,7 +371,7 @@
      "txt": "Here's the thing nobody tells you.",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "NOBODY TELLS YOU THIS",
       "sub": null,
       "num": null,
       "lista": null,
@@ -389,8 +389,8 @@
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": 1.2,
@@ -465,8 +465,8 @@
      "txt": "And it's not just how many pull. Your brain can also fire each one faster, so every worker pulls harder, more often.",
      "v": {
       "icone": null,
-      "big": "FASTER",
-      "sub": "every fiber fires MORE often",
+      "big": null,
+      "sub": null,
       "num": null,
       "lista": null,
       "cart": null,
@@ -474,18 +474,18 @@
       "barras": null,
       "anel": null,
       "brilho": null,
-      "figs": [
-       {
-        "p": "heroi_esforco",
-        "x": 520,
-        "a": 800
-       }
-      ],
+      "figs": null,
       "mao": null,
       "aviso": null,
       "bigy": null,
       "c": null,
-      "obj": null,
+      "obj": [
+       {
+        "t": "corda",
+        "on": 1.0,
+        "rapido": 1
+       }
+      ],
       "face": null,
       "zoom": null,
       "foco": null,
@@ -531,7 +531,7 @@
      "txt": "And that is exactly what happens to every beginner.",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "EVERY BEGINNER",
       "sub": null,
       "num": null,
       "lista": null,
@@ -549,8 +549,8 @@
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": 1.1,
@@ -746,7 +746,7 @@
   {
    "cena": "semana1",
    "et": null,
-   "fonte": "Weightlifting, 1988 Olympic Games · 60 kg class · clean & jerk 190 kg at 59.7 kg body weight",
+   "fonte": null,
    "ini": 111.759,
    "fim": 197.658,
    "falas": [
@@ -756,8 +756,8 @@
      "txt": "Week one. You walk into the gym.",
      "v": {
       "icone": null,
-      "big": null,
-      "sub": null,
+      "big": "SAME BODY",
+      "sub": "walking into the GYM",
       "num": null,
       "lista": null,
       "cart": null,
@@ -775,8 +775,8 @@
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": null,
@@ -865,8 +865,8 @@
      "txt": "The guy next to you, twice your size, stops in the middle of his set.",
      "v": {
       "icone": null,
-      "big": null,
-      "sub": null,
+      "big": "TWICE YOUR SIZE",
+      "sub": "and he just STOPPED",
       "num": null,
       "lista": null,
       "cart": null,
@@ -874,16 +874,10 @@
       "barras": null,
       "anel": null,
       "brilho": null,
-      "figs": [
-       {
-        "p": "heroi_deboche",
-        "x": 430,
-        "a": 800
-       }
-      ],
+      "figs": null,
       "mao": null,
       "aviso": null,
-      "bigy": null,
+      "bigy": 1,
       "c": null,
       "obj": null,
       "face": {
@@ -903,7 +897,7 @@
      "txt": "He's bigger. He has more muscle. Shouldn't he win?",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "BIGGER = STRONGER?",
       "sub": null,
       "num": null,
       "lista": null,
@@ -926,8 +920,8 @@
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": null,
@@ -1042,8 +1036,8 @@
      "txt": "That's why, pound for pound, the strongest humans alive are usually the small ones.",
      "v": {
       "icone": null,
-      "big": null,
-      "sub": null,
+      "big": "POUND FOR POUND",
+      "sub": "the SMALL ones win",
       "num": null,
       "lista": null,
       "cart": null,
@@ -1065,8 +1059,8 @@
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": null,
@@ -1195,7 +1189,7 @@
      "txt": "Back in your gym, the big guy finally walks over and asks what program you're on.",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "\"WHAT PROGRAM ARE YOU ON?\"",
       "sub": null,
       "num": null,
       "lista": null,
@@ -1207,7 +1201,7 @@
       "figs": [
        {
         "p": "heroi",
-        "x": 560,
+        "x": 640,
         "a": 760
        },
        {
@@ -1219,8 +1213,8 @@
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": null,
@@ -1309,7 +1303,7 @@
   {
    "cena": "semana3",
    "et": null,
-   "fonte": "Munn et al. 2004 · J Appl Physiol · meta-analysis  |  Ranganathan et al. 2004 · Neuropsychologia",
+   "fonte": null,
    "ini": 197.658,
    "fim": 272.034,
    "falas": [
@@ -1385,8 +1379,8 @@
      "txt": "It's stronger.",
      "v": {
       "icone": null,
-      "big": null,
-      "sub": null,
+      "big": "STRONGER",
+      "sub": "and you NEVER trained it",
       "num": null,
       "lista": null,
       "cart": null,
@@ -1397,7 +1391,7 @@
       "figs": null,
       "mao": null,
       "aviso": null,
-      "bigy": null,
+      "bigy": 1,
       "c": null,
       "obj": null,
       "face": {
@@ -1550,7 +1544,7 @@
      "txt": "Which brings us to the strangest experiment in this whole video.",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "THE STRANGEST EXPERIMENT",
       "sub": null,
       "num": null,
       "lista": null,
@@ -1568,8 +1562,8 @@
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": 1.2,
@@ -1823,7 +1817,7 @@
   {
    "cena": "mes1",
    "et": null,
-   "fonte": "Mersmann, Bohm & Arampatzis 2017 · Frontiers in Physiology · review",
+   "fonte": null,
    "ini": 272.034,
    "fim": 337.762,
    "falas": [
@@ -1869,7 +1863,7 @@
      "txt": "You jump for a high branch, and catch it.",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "ONE JUMP. CAUGHT.",
       "sub": null,
       "num": null,
       "lista": null,
@@ -1887,8 +1881,8 @@
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": 1.12,
@@ -1943,7 +1937,7 @@
      "txt": "The jar your dad gave up on? Open.",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "DAD GAVE UP. YOU DIDN'T.",
       "sub": null,
       "num": null,
       "lista": null,
@@ -1956,18 +1950,18 @@
        {
         "p": "pai_choque",
         "x": 640,
-        "a": 820
+        "a": 760
        },
        {
         "p": "heroi_deboche",
         "x": 1250,
-        "a": 780
+        "a": 740
        }
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": null,
@@ -2252,7 +2246,7 @@
   {
    "cena": "mes6",
    "et": null,
-   "fonte": "Mersmann, Bohm & Arampatzis 2017 · Frontiers in Physiology",
+   "fonte": null,
    "ini": 337.762,
    "fim": 397.842,
    "falas": [
@@ -2262,7 +2256,7 @@
      "txt": "Month six. You're lifting weights that make the whole gym stop and stare.",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "THE WHOLE GYM STARES",
       "sub": null,
       "num": null,
       "lista": null,
@@ -2274,17 +2268,22 @@
       "figs": [
        {
         "p": "heroi_barra",
-        "x": 960,
+        "x": 640,
         "a": 640
+       },
+       {
+        "p": "academia_choque",
+        "x": 1320,
+        "a": 800
        }
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
-      "zoom": 1.08,
+      "zoom": null,
       "foco": null,
       "tl": 4
      }
@@ -2619,7 +2618,7 @@
   {
    "cena": "ano1",
    "et": null,
-   "fonte": "Tendon loading: Mersmann, Bohm & Arampatzis 2017 (≈3 s high-strain contractions)",
+   "fonte": null,
    "ini": 397.842,
    "fim": 468.898,
    "falas": [
@@ -2912,7 +2911,7 @@
      "txt": "That's the real superpower. Nobody sees it coming.",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "NOBODY SEES IT COMING",
       "sub": null,
       "num": null,
       "lista": null,
@@ -2930,8 +2929,8 @@
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": 1.15,
@@ -2948,7 +2947,7 @@
      "txt": "The bar bends. The scale doesn't move. And the big guy next to you finally asks, how?",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "\"HOW?\"",
       "sub": null,
       "num": null,
       "lista": null,
@@ -2971,8 +2970,8 @@
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": 1.06,
@@ -3061,7 +3060,7 @@
      "txt": "And if you want to know who wins between a farmer and a gym guy, that's the next video.",
      "v": {
       "icone": null,
-      "big": null,
+      "big": "NEXT: FARMER VS GYM GUY",
       "sub": null,
       "num": null,
       "lista": null,
@@ -3074,18 +3073,18 @@
        {
         "p": "fazendeiro",
         "x": 640,
-        "a": 820
+        "a": 760
        },
        {
         "p": "academia",
         "x": 1300,
-        "a": 860
+        "a": 800
        }
       ],
       "mao": null,
       "aviso": null,
-      "bigy": null,
-      "c": null,
+      "bigy": 1,
+      "c": 1,
       "obj": null,
       "face": null,
       "zoom": null,
