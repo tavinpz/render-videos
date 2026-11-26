@@ -110,6 +110,36 @@ const LSS: Record<string, () => React.ReactElement> = {
   </>),
 };
 
+
+// variações B (o #1 em destaque) e C (o número gigante)
+const Rotulo: React.FC<{ x: number; y: number; pos: string; nome: string; sub: string }> = ({ x, y, pos, nome, sub }) => (
+  <g transform={`translate(${x} ${y})`}>
+    <rect x={0} y={0} width={150} height={130} fill="#ff2b1c" stroke="#000" strokeWidth={6} /><text x={75} y={105} textAnchor="middle" fontFamily={AN} fontSize={110} fill="#fff">{pos}</text>
+    <rect x={150} y={0} width={nome.length * 46 + 50} height={130} fill="#fff" stroke="#000" strokeWidth={6} /><text x={175} y={100} fontFamily={AN} fontSize={92} fill="#111">{nome}</text>
+    <text x={4} y={180} fontFamily={AN} fontSize={44} fill="#ffd21f" stroke="#000" strokeWidth={6} paintOrder="stroke">{sub}</text>
+  </g>
+);
+const LSSX: Record<string, () => React.ReactElement> = {
+  '1b': () => (<><Espaco /><MapaNoite tr="translate(-420 -300) scale(1.75)" quente={['MS']} />
+    <Titulo partes={[['FIRST TO ', false], ['BREAK', true]]} s={130} y={150} /><Rotulo x={60} y={420} pos="#1" nome="MISSISSIPPI" sub="IF GAS HIT $10 A GALLON" /></>),
+  '1c': () => (<><Espaco /><MapaNoite tr="translate(330 260) scale(0.9)" quente={['MS', 'AR', 'LA', 'AL', 'WV']} />
+    <g transform="translate(60 120)"><rect width={420} height={300} fill="#ffd21f" stroke="#000" strokeWidth={10} transform="rotate(-4)" />
+      <text x={200} y={230} textAnchor="middle" fontFamily={AN} fontSize={250} fill="#111" transform="rotate(-4)">$10</text></g>
+    <Titulo partes={[['GAS', false]]} s={110} y={560} x={70} /><Titulo partes={[['WHO BREAKS?', true]]} s={90} y={670} x={70} /></>),
+  '2b': () => (<><Espaco /><MapaNoite tr="translate(-1100 40) scale(2.1)" quente={['NY']} />
+    <Titulo partes={[['HARDEST', true], [' TO BUY', false]]} s={130} y={150} /><Rotulo x={60} y={420} pos="#50" nome="NEW YORK" sub="A HOUSE IN EVERY STATE, RANKED" /></>),
+  '2c': () => (<><Espaco /><MapaNoite tr="translate(330 260) scale(0.9)" apagado={EST.map((e) => e.ab).filter((a) => !['MI', 'MD', 'PA', 'MO', 'KS', 'IA', 'NE', 'IL', 'OH'].includes(a))} />
+    <text x={70} y={330} fontFamily={AN} fontSize={260} fill="#fff" stroke="#000" strokeWidth={14} paintOrder="stroke">48</text>
+    <text x={300} y={300} fontFamily={AN} fontSize={130} fill="#ffd21f" stroke="#000" strokeWidth={10} paintOrder="stroke">→</text>
+    <text x={70} y={600} fontFamily={AN} fontSize={260} fill="#ff2b1c" stroke="#000" strokeWidth={14} paintOrder="stroke">9</text>
+    <text x={210} y={560} fontFamily={AN} fontSize={56} fill="#fff" stroke="#000" strokeWidth={6} paintOrder="stroke">STATES LEFT</text></>),
+  '3b': () => (<><Espaco /><rect width={1280} height={720} fill="#ff3a10" opacity={0.08} /><MapaNoite tr="translate(80 -250) scale(1.6)" quente={['AK']} />
+    <Titulo partes={[['FIRST TO ', false], ['MELT', true]]} s={130} y={150} /><Rotulo x={560} y={300} pos="#1" nome="ALASKA" sub="122°F FOR A WEEK · ALMOST NO AC" /></>),
+  '3c': () => (<><Espaco /><rect width={1280} height={720} fill="#ff3a10" opacity={0.12} /><MapaNoite tr="translate(330 260) scale(0.9)" quente={['AK', 'WA', 'MT', 'VT']} />
+    <text x={60} y={330} fontFamily={AN} fontSize={250} fill="#ff2b1c" stroke="#000" strokeWidth={14} paintOrder="stroke">122°F</text>
+    <Titulo partes={[['IN EVERY STATE', false]]} s={80} y={450} x={70} /><Titulo partes={[['WHO BREAKS?', true]]} s={90} y={640} x={70} /></>),
+};
+
 const QV: Record<string, { foto: string; ano: string; sub: string; x?: string }> = {
   '1': { foto: 'bonde_virado_revolta_da_vacina_jpg.jpg', ano: '1904', sub: 'REVOLTA DA VACINA' },
   '2': { foto: 'canudos_village_jpg.jpg', ano: '1897', sub: 'CANUDOS' },
@@ -136,12 +166,38 @@ const QVD: React.FC<{ n: string }> = ({ n }) => {
   );
 };
 
+
+const QVX: Record<string, { foto: string; l1: string; l2: string; tag: string }> = {
+  '1b': { foto: 'bonde_revolta_da_vacina_jpg.jpg', l1: 'VACINA', l2: 'À FORÇA?', tag: 'RIO, 1904' },
+  '1c': { foto: 'guerra_vaccino_obrigateza_jpg.jpg', l1: 'VOCÊ FOGE', l2: 'OU LUTA?', tag: 'REVOLTA DA VACINA' },
+  '2b': { foto: '40th_infantry_batallion_canudos_1897_jpg.jpg', l1: 'FICAR', l2: 'OU FUGIR?', tag: 'CANUDOS, 1897' },
+  '2c': { foto: 'canudos_rebels_jpg.jpg', l1: '25 MIL PESSOAS.', l2: 'NENHUMA CASA FICOU.', tag: 'SERTÃO, 1897' },
+  '3b': { foto: 'largo_da_s_vincenzo_pastore_jpg.jpg', l1: 'TRABALHAR', l2: 'OU FICAR EM CASA?', tag: 'SÃO PAULO, 1918' },
+  '3c': { foto: 'prociss_o_na_rua_direita_vincenzo_pastor.jpg', l1: '5.331 MORTOS', l2: 'EM 2 MESES', tag: 'GRIPE ESPANHOLA' },
+};
+const QVD2: React.FC<{ k: string }> = ({ k }) => {
+  const q = QVX[k];
+  const f2 = Math.min(150, 1150 / (q.l2.length * 0.5));
+  return (
+    <AbsoluteFill style={{ background: '#000' }}>
+      <Img src={staticFile(`arte/qvd/${q.foto}`)} style={{ width: 1280, height: 720, objectFit: 'cover', filter: 'sepia(0.55) contrast(1.25) brightness(0.75) saturate(1.3)' }} />
+      <svg viewBox="0 0 1280 720" width={1280} height={720} style={{ position: 'absolute', inset: 0 }}>
+        <defs><linearGradient id="esc2" x1="0" y1="0" x2="0" y2="1"><stop offset="0.35" stopColor="#000" stopOpacity="0" /><stop offset="1" stopColor="#000" stopOpacity="0.85" /></linearGradient></defs>
+        <rect width={1280} height={720} fill="url(#esc2)" />
+        <g transform="translate(40 40)"><rect width={q.tag.length * 26 + 50} height={70} fill="#e21b12" /><text x={25} y={52} fontFamily={AN} fontSize={48} fill="#fff">{q.tag}</text></g>
+        <text x={640} y={520} textAnchor="middle" fontFamily={AN} fontSize={Math.min(150, 1150 / (q.l1.length * 0.5))} fill="#fff" stroke="#000" strokeWidth={12} paintOrder="stroke">{q.l1}</text>
+        <text x={640} y={680} textAnchor="middle" fontFamily={AN} fontSize={f2} fill="#ffd21f" stroke="#000" strokeWidth={12} paintOrder="stroke">{q.l2}</text>
+      </svg>
+    </AbsoluteFill>
+  );
+};
+
 export const CapasV2: React.FC<{ c: string; v: string }> = ({ c, v }) => {
-  if (c === 'qvd') return <QVD n={v} />;
+  if (c === 'qvd') return v.length > 1 ? <QVD2 k={v} /> : <QVD n={v} />;
   if (c === 'htc') return <AbsoluteFill><HTCV4 v={v} /></AbsoluteFill>;
   return (
     <AbsoluteFill style={{ background: '#020409' }}>
-      <svg viewBox="0 0 1280 720" width={1280} height={720}>{(LSS[v] || LSS['1'])()}</svg>
+      <svg viewBox="0 0 1280 720" width={1280} height={720}>{(LSS[v] || LSSX[v] || LSS['1'])()}</svg>
     </AbsoluteFill>
   );
 };
