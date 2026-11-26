@@ -1,0 +1,16 @@
+name: capasatuais
+on:
+  push:
+    paths: ['capasatuais/lista.txt']
+jobs:
+  r:
+    runs-on: ubuntu-latest
+    permissions: { contents: write }
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q pillow
+      - run: python3 capasatuais/run.py
+      - run: |
+          cd out && git init -q && git checkout -q -b capasatuais-out && git add -A
+          git -c user.name=bot -c user.email=bot@x commit -qm out
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" capasatuais-out
