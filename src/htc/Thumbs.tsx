@@ -21,7 +21,7 @@ const Raios: React.FC<{ cx: number; cy: number; c1: string; c2: string }> = ({ c
   <g><rect width={W} height={H} fill={c1} />{Array.from({ length: 12 }, (_, i) => { const a = (i / 12) * Math.PI * 2, b = a + Math.PI / 12; return <path key={i} d={`M ${cx},${cy} L ${cx + Math.cos(a) * 1800},${cy + Math.sin(a) * 1800} L ${cx + Math.cos(b) * 1800},${cy + Math.sin(b) * 1800} Z`} fill={c2} opacity={0.55} />; })}</g>
 );
 // o espelho: disco brilhante em perspectiva, com base
-const Espelho: React.FC<{ cx: number; cy: number; k?: number }> = ({ cx, cy, k = 1 }) => (
+export const Espelho: React.FC<{ cx: number; cy: number; k?: number }> = ({ cx, cy, k = 1 }) => (
   <g transform={`translate(${cx},${cy}) scale(${k})`} stroke={TINTA} strokeWidth={9} strokeLinejoin="round">
     <path d="M -70,150 L 70,150 L 110,215 L -110,215 Z" fill="#8A97A8" /><rect x={-22} y={70} width={44} height={90} fill="#B9C4D2" />
     <ellipse cx={0} cy={0} rx={230} ry={150} fill="#5B6B7E" />
