@@ -1,8 +1,32 @@
-@canaldoeslen
-@hamza97
-@dankoetalks
-@geracaodevalor
-@pablomarcal1
-@brunoperini
-@thiagofinch
-# r2
+# r3 capas por nicho (26/11)
+# bunker
+channel/UCyXAbzVT0HzkuhntnxaP1Ow
+channel/UCEwbkI91uCLJnbf9Wf67X9w
+channel/UCDhjERwOYIaHgJ-X3W2XNsA
+channel/UCtFZbEtFBvYiFzgCSNfY2Qg
+# crosswind
+channel/UCysUS3TjpBLsEPkp0NTV8FA
+channel/UCFeHoMRr-hku0hPZ-zst_JQ
+channel/UCH5iEG9uKeBBk4IXMTuXH-g
+channel/UCJi0Y6O8jzDTvjeYx9dxx_g
+# lss
+channel/UCI2NzePLxfjXvlvg2ahrgjg
+channel/UCEquzWGxmLCRr7U-lqLZW4w
+@GridAtlas
+@Hindcast
+# two childhoods
+channel/UCZipkF7MNE_-eH4CPcfrKDg
+# hard to copy
+channel/UCK4OLqlggZDluZ_jNwI9AoQ
+channel/UCdyNZcgs1ZcFFM1cy4g04og
+channel/UC6xGqFWil2qps3aZPj5zasA
+# ttr
+channel/UCN6XxorahzAiDNyRnI1of2g
+channel/UCXLmTWAlqEaWrGRWBTrY84Q
+# qvd / valdir (PT)
+channel/UCTT_AMU2eT7trAwYykyQDKA
+@GranQuizas
+@meubrasilanimado
+# pit of view
+@IntoTheFormula
+channel/UC88Pk3tuQZ_pJUVQi9wUYsg
