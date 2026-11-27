@@ -14,7 +14,8 @@ import { PawWorld, Tempos } from "./world";
 import { GuiltWorld } from "./world2";
 import { FireworksWorld } from "./world3";
 import { TreeWorld } from "./world4";
-const mkWorld = (T: Tempos) => ((T as any).ep === 4 ? new TreeWorld(T) : (T as any).ep === 3 ? new FireworksWorld(T) : (T as any).ep === 2 ? new GuiltWorld(T) : new PawWorld(T));
+import { BathWorld } from "./world5";
+const mkWorld = (T: Tempos) => ((T as any).ep === 5 ? new BathWorld(T) : (T as any).ep === 4 ? new TreeWorld(T) : (T as any).ep === 3 ? new FireworksWorld(T) : (T as any).ep === 2 ? new GuiltWorld(T) : new PawWorld(T));
 
 const fwd = new THREE.Vector3();
 const makeBloom = () => {
@@ -310,6 +311,58 @@ const Overlay4: React.FC<{ T: Tempos }> = ({ T }) => {
 };
 const sm2 = (x: number, d: number) => { const u = Math.max(0, Math.min(1, x / d)); return u * u * (3 - 2 * u); };
 
+const HI5 = new Set(["BATHROOM", "WEIRD", "DOOR", "WAITS", "NOSE", "GAP", "VANISHED", "TINY", "TODDLERS", "WAITED", "GREET", "CALMED", "ATTACHMENT", "BOND", "PARENT", "BONUS", "TALK", "PET", "CLOSE", "GOOD", "PANICS", "VET", "CLINGY", "SHADOW", "SEND", "ALONE"]);
+const Hearts: React.FC<{ t: number; t0: number; t1: number }> = ({ t, t0, t1 }) => {
+  if (t < t0 || t > t1) return null;
+  return <>{Array.from({ length: 7 }, (_, i) => { const ph = ((t - t0) * 0.7 + i / 7) % 1; return <div key={i} style={{ position: "absolute", left: 220 + i * 95 + Math.sin(i * 3 + t * 2) * 30, top: 1000 - ph * 650, fontSize: 70, opacity: 1 - ph, color: "#FF5D73", textShadow: outline(4) }}>♥</div>; })}</>;
+};
+const Overlay5: React.FC<{ T: Tempos }> = ({ T }) => {
+  const f = useCurrentFrame(); const t = f / 30;
+  const fr = (k: string) => T.frases.find((x) => x.k === k)!;
+  const wt = (k: string, re: RegExp) => (T.palavras.find((w) => w.k === k && re.test(w.w)) ?? T.palavras.find((w) => w.k === k)!).t0;
+  const w = T.palavras.find((x) => t >= x.t0 - 0.02 && t < x.t1 + 0.12) ?? null;
+  const word = w ? w.w.replace(/[.,?!:]/g, "").toUpperCase() : "";
+  const hook = fr("hook");
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      {t < hook.t1 + 0.25 && (
+        <div style={{ position: "absolute", top: 300, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 100, lineHeight: 1.0, color: "#fff", textShadow: outline(8), transform: `scale(${pop(t, 0)})` }}>
+          WHY HE FOLLOWS<br /><span style={{ color: YEL }}>YOU IN HERE</span>
+        </div>
+      )}
+      <Chip txt="*CLICK*" t={t} t0={wt("door", /close/)} t1={wt("door", /waits/)} y={380} bg="#FFFFFF" size={64} rot={-5} x={700} />
+      <Chip txt="NOSE AT THE GAP" t={t} t0={wt("door", /Nose/)} t1={fr("door").t1 + 0.1} y={380} bg={YEL} />
+      <Chip txt="YOU: GONE?!" t={t} t0={wt("vanish", /vanished/)} t1={wt("vanish", /tiny/) - 0.05} y={380} bg="#FF6B5E" fg="#fff" rot={-3} />
+      <Chip txt="TODDLER TEST, FOR DOGS" t={t} t0={wt("test", /toddlers/) - 0.6} t1={fr("test").t1 + 0.1} y={360} bg="#C9B6FF" size={46} />
+      {t >= fr("test").t0 && t < fr("back").t1 + 0.1 && (
+        <div style={{ position: "absolute", top: 455, left: 110, right: 110, display: "flex", justifyContent: "space-between", fontFamily: FONT, fontWeight: 900, fontSize: 40, color: "#fff", textShadow: outline(5) }}>
+          <span>LAB · 1998</span><span><span style={{ color: "#FF4545", opacity: Math.floor(t * 2) % 2 ? 1 : 0.25 }}>●</span> REC</span>
+        </div>
+      )}
+      <Chip txt="WAITED AT THE DOOR" t={t} t0={wt("left", /door/)} t1={fr("left").t1 + 0.1} y={360} bg={YEL} />
+      <Chip txt="GREETED + CALMED DOWN" t={t} t0={wt("back", /greet/)} t1={fr("back").t1 + 0.1} y={360} bg={LIME} size={46} />
+      <Chip txt="LIKE A CHILD & PARENT" t={t} t0={wt("bond", /child/) - 0.3} t1={fr("bond").t1 + 0.1} y={360} bg="#FFC8DD" size={48} />
+      <Hearts t={t} t0={fr("bond").t0 + 0.3} t1={fr("bond").t1} />
+      <Chip txt="+ BONUS" t={t} t0={fr("plus").t0} t1={fr("plus").t1 + 0.1} y={380} bg={YEL} size={72} rot={-4} />
+      <Chip txt="✓ YOU TALK" t={t} t0={wt("good", /talk/)} t1={fr("good").t1 + 0.1} y={330} bg={LIME} size={44} x={340} rot={-2} />
+      <Chip txt="✓ YOU PET" t={t} t0={wt("good", /pet/)} t1={fr("good").t1 + 0.1} y={330} bg={LIME} size={44} x={740} rot={2} />
+      <Hearts t={t} t0={wt("good", /pet/)} t1={fr("good").t1} />
+      <Chip txt="STAY CLOSE = GOOD STUFF" t={t} t0={fr("learn").t0 + 0.2} t1={fr("learn").t1 + 0.1} y={360} bg={YEL} size={46} />
+      <Chip txt="PANICS WHEN ALONE?" t={t} t0={wt("worry", /panics/)} t1={fr("worry").t1 + 0.1} y={340} bg="#FF6B5E" fg="#fff" size={48} />
+      <Chip txt="→ TALK TO YOUR VET" t={t} t0={wt("worry", /vet/) - 0.4} t1={fr("worry").t1 + 0.1} y={455} bg="#FFFFFF" size={46} rot={2} />
+      <Chip txt="NOT CLINGY. YOUR SHADOW." t={t} t0={wt("shadow", /shadow/) - 0.5} t1={fr("shadow").t1 + 0.1} y={360} bg={LIME} size={44} />
+      <Chip txt="SEND THIS TO A DOG PARENT" t={t} t0={fr("cta").t0} t1={T.total + 1} y={360} bg={LIME} size={46} />
+      {t >= fr("test").t0 && t < fr("bond").t1 && (
+        <div style={{ position: "absolute", top: 1235, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 26, color: "#fff", opacity: 0.85, textShadow: outline(3) }}>Topál et al. (1998), J. Comparative Psychology</div>
+      )}
+      {word && (
+        <div style={{ position: "absolute", top: 1090, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 96, color: HI5.has(word) ? YEL : "#fff", textShadow: outline(8), transform: `scale(${pop(t, w!.t0)})` }}>{word}</div>
+      )}
+      <div style={{ position: "absolute", top: 1262, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 26, color: "#fff", opacity: 0.7, textShadow: outline(2) }}>@pawslated</div>
+    </AbsoluteFill>
+  );
+};
+
 export const Paw3: React.FC<{ pasta: string; tempos: Tempos }> = ({ tempos }) => {
   const f = useCurrentFrame();
   const T = tempos;
@@ -324,7 +377,7 @@ export const Paw3: React.FC<{ pasta: string; tempos: Tempos }> = ({ tempos }) =>
         <Inner T={T} />
       </ThreeCanvas>
       {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
-      {(T as any).ep === 4 ? <Overlay4 T={T} /> : (T as any).ep === 3 ? <Overlay3 T={T} /> : (T as any).ep === 2 ? <Overlay2 T={T} /> : <Overlay T={T} />}
+      {(T as any).ep === 5 ? <Overlay5 T={T} /> : (T as any).ep === 4 ? <Overlay4 T={T} /> : (T as any).ep === 3 ? <Overlay3 T={T} /> : (T as any).ep === 2 ? <Overlay2 T={T} /> : <Overlay T={T} />}
     </AbsoluteFill>
   );
 };
