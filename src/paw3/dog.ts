@@ -22,6 +22,8 @@ export type DogPose = {
   breath?: number;    // amplitude da respiração
   walk?: number;      // fase da caminhada (ciclos); undefined = parado
   curl?: number;      // 0..1 enroladinho (dormindo de lado)
+  guilt?: number;     // 0..1 cara de culpa: orelha para trás, rabo entre as pernas, cabeça baixa, olho para cima
+  bark?: number;      // 0..1 abre a boca
 };
 
 const cap = (r: number, l: number) => new THREE.CapsuleGeometry(r, l, 6, 16);
@@ -135,21 +137,24 @@ export class Dog {
     this.headPivot.rotation.y = p.turn ?? 0;
     this.head.rotation.z = (p.tilt ?? 0) + Math.sin(t * 1.6) * 0.03;
     this.head.rotation.x = Math.sin(t * 1.1) * 0.02;
+    const g = p.guilt ?? 0;
+    this.headPivot.rotation.x += g * 0.35; this.headPivot.position.y -= g * 0.05;
+    for (const e of [this.eyeL, this.eyeR]) { (e.children[1] as THREE.Object3D).position.y = -0.004 + g * 0.028; (e.children[2] as THREE.Object3D).position.y = 0.022 + g * 0.02; }
     // orelhas
     const ea = p.ears ?? 0;
     this.earL.rotation.z = -0.25 - ea * 0.9 + Math.sin(t * 3) * 0.04;
     this.earR.rotation.z = 0.25 + ea * 0.9 - Math.sin(t * 3 + 1) * 0.04;
-    this.earL.rotation.x = this.earR.rotation.x = -ea * 0.4;
+    this.earL.rotation.x = this.earR.rotation.x = -ea * 0.4 + g * 0.9;
     // olhos (pálpebra desce) + piscada automática
     const bl = ((t * 0.7) % 3.1) < 0.09 ? 0 : 1;
     const open = Math.min(p.eyes ?? 1, bl);
     for (const l of [this.lidL, this.lidR]) { l.rotation.x = -1.4 - open * 1.6; l.visible = open < 0.98; }
-    const wr = p.worried ?? 0;
+    const wr = Math.max(p.worried ?? 0, g);
     this.browL.rotation.z = Math.PI / 2 + wr * 0.45; this.browR.rotation.z = Math.PI / 2 - wr * 0.45;
     this.browL.position.y = this.browR.position.y = 0.15 + wr * 0.015;
     // rabo
     const wag = p.wag ?? 0.2;
     this.tail.rotation.z = Math.sin(t * 14) * 0.6 * wag + lie * 0.7;
-    this.tail.rotation.x = -0.7 - lie * 0.55 + wag * 0.2;
+    this.tail.rotation.x = -0.7 - lie * 0.55 + wag * 0.2 - g * 1.6;
   }
 }

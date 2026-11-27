@@ -9,12 +9,12 @@ import { NOINK } from "./ink";
 export type Frase = { k: string; t0: number; t1: number; txt: string };
 export type Tempos = { total: number; frases: Frase[]; palavras: { w: string; t0: number; t1: number; k: string }[] };
 
-const V = (x: number, y: number, z: number) => new THREE.Vector3(x, y, z);
-const clamp01 = (x: number) => Math.max(0, Math.min(1, x));
-const sm = (x: number) => { const u = clamp01(x); return u * u * (3 - 2 * u); };
-const eo = (x: number) => 1 - (1 - clamp01(x)) ** 3;
-const L = (a: number, b: number, u: number) => a + (b - a) * u;
-const FX = 1000; // floresta
+export const V = (x: number, y: number, z: number) => new THREE.Vector3(x, y, z);
+export const clamp01 = (x: number) => Math.max(0, Math.min(1, x));
+export const sm = (x: number) => { const u = clamp01(x); return u * u * (3 - 2 * u); };
+export const eo = (x: number) => 1 - (1 - clamp01(x)) ** 3;
+export const L = (a: number, b: number, u: number) => a + (b - a) * u;
+export const FX = 1000; // floresta
 
 const canvasTex = (w: number, h: number, draw: (g: CanvasRenderingContext2D) => void, rep?: [number, number]) => {
   const cv = document.createElement("canvas"); cv.width = w; cv.height = h; draw(cv.getContext("2d")!);
@@ -24,9 +24,9 @@ const canvasTex = (w: number, h: number, draw: (g: CanvasRenderingContext2D) => 
 };
 const GRAD = (toon("#fff") as THREE.MeshToonMaterial).gradientMap;
 const toonMap = (map: THREE.Texture, color = "#ffffff") => new THREE.MeshToonMaterial({ map, color, gradientMap: GRAD });
-const M = (g: THREE.BufferGeometry, m: THREE.Material, p: THREE.Vector3, cast = true) => { const x = new THREE.Mesh(g, m); x.position.copy(p); x.castShadow = cast; x.receiveShadow = true; return x; };
-const B = (w: number, h: number, d: number) => new THREE.BoxGeometry(w, h, d);
-const RB = (w: number, h: number, d: number, r: number) => { const g = new THREE.BoxGeometry(w, h, d, 6, 6, 6); const p = g.attributes.position; const v = new THREE.Vector3();
+export const M = (g: THREE.BufferGeometry, m: THREE.Material, p: THREE.Vector3, cast = true) => { const x = new THREE.Mesh(g, m); x.position.copy(p); x.castShadow = cast; x.receiveShadow = true; return x; };
+export const B = (w: number, h: number, d: number) => new THREE.BoxGeometry(w, h, d);
+export const RB = (w: number, h: number, d: number, r: number) => { const g = new THREE.BoxGeometry(w, h, d, 6, 6, 6); const p = g.attributes.position; const v = new THREE.Vector3();
   for (let i = 0; i < p.count; i++) { v.fromBufferAttribute(p, i); const hx = w / 2 - r, hy = h / 2 - r, hz = d / 2 - r; const c = V(Math.max(-hx, Math.min(hx, v.x)), Math.max(-hy, Math.min(hy, v.y)), Math.max(-hz, Math.min(hz, v.z))); const n = v.clone().sub(c); if (n.length() > 1e-6) { n.setLength(r); v.copy(c.add(n)); } p.setXYZ(i, v.x, v.y, v.z); }
   g.computeVertexNormals(); return g; };
 
@@ -35,7 +35,7 @@ const wallTex = canvasTex(256, 256, (g) => { g.fillStyle = "#3D4F86"; g.fillRect
 const quiltTex = canvasTex(256, 256, (g) => { g.fillStyle = "#3F7FD0"; g.fillRect(0, 0, 256, 256); g.strokeStyle = "#2F64AE"; g.lineWidth = 6; for (let i = 0; i <= 256; i += 64) { g.beginPath(); g.moveTo(i, 0); g.lineTo(i, 256); g.stroke(); g.beginPath(); g.moveTo(0, i); g.lineTo(256, i); g.stroke(); } g.fillStyle = "#F2C94C"; for (let x = 32; x < 256; x += 64) for (let y = 32; y < 256; y += 64) { g.beginPath(); g.arc(x, y, 5, 0, 7); g.fill(); } }, [2, 2]);
 const skyTex = canvasTex(512, 512, (g) => { const gr = g.createLinearGradient(0, 0, 0, 512); gr.addColorStop(0, "#0E1640"); gr.addColorStop(1, "#2B3B7A"); g.fillStyle = gr; g.fillRect(0, 0, 512, 512); g.fillStyle = "#fff"; for (let i = 0; i < 70; i++) { g.globalAlpha = 0.4 + (i % 5) / 8; g.beginPath(); g.arc((i * 137) % 512, (i * 71) % 400, i % 7 ? 1.4 : 2.6, 0, 7); g.fill(); } });
 const unlit = (map: THREE.Texture) => new THREE.MeshBasicMaterial({ map, toneMapped: false });
-const glow = (c: string) => new THREE.MeshBasicMaterial({ color: c, toneMapped: false });
+export const glow = (c: string) => new THREE.MeshBasicMaterial({ color: c, toneMapped: false });
 
 export type Shot = { k: string; a: number; b: number; set: "room" | "forest"; cam: [THREE.Vector3, THREE.Vector3]; look: [THREE.Vector3, THREE.Vector3]; fov: number; focus: () => THREE.Vector3 };
 
@@ -112,7 +112,7 @@ export class PawWorld {
     r.add(M(RB(0.6, 0.6, 0.55, 0.05), toon("#B07A4E"), V(-2.45, 0.3, -1.4)));
     r.add(M(new THREE.CylinderGeometry(0.07, 0.11, 0.3, 16), toon("#E8D9C0"), V(-2.45, 0.75, -1.4)));
     const shade = M(new THREE.CylinderGeometry(0.16, 0.26, 0.28, 24, 1, true), glow("#FFD9A0"), V(-2.45, 1.02, -1.4), false); r.add(shade);
-    this.lamp.position.set(-2.4, 1.05, -1.2); this.lamp.castShadow = true; this.lamp.shadow.mapSize.set(1024, 1024); r.add(this.lamp);
+    this.lamp.position.set(-2.4, 1.05, -1.2); this.lamp.castShadow = true; this.lamp.shadow.mapSize.set(1024, 1024); this.lamp.shadow.bias = -0.003; this.lamp.shadow.normalBias = 0.03; r.add(this.lamp);
     // tapete
     const rug = M(new THREE.CircleGeometry(1.1, 40).rotateX(-Math.PI / 2), toon("#E58B7A"), V(2.0, 0.012, 1.3), false); rug.scale.set(1.4, 1, 1); r.add(rug);
     // porta: batente + folha entreaberta + corredor que acende
@@ -138,7 +138,7 @@ export class PawWorld {
     this.moon.position.set(1.2, 6, -6); this.moon.target.position.set(0, 0, 0.5);
     this.moon.castShadow = true; this.moon.shadow.mapSize.set(2048, 2048);
     const sc = this.moon.shadow.camera as THREE.OrthographicCamera; sc.left = -5; sc.right = 5; sc.top = 5; sc.bottom = -5; sc.far = 20;
-    this.moon.shadow.bias = -0.0008;
+    this.moon.shadow.bias = -0.0008; this.moon.shadow.normalBias = 0.02;
     r.add(this.moon, this.moon.target);
     this.root.add(r);
   }

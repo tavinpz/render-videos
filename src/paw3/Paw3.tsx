@@ -11,6 +11,8 @@ import { InkPass, noInkFallback } from "./ink";
 import { LensBlur } from "./lensblur";
 import { GradeEffect, GRADES, gradeFor } from "./grade";
 import { PawWorld, Tempos } from "./world";
+import { GuiltWorld } from "./world2";
+const mkWorld = (T: Tempos) => ((T as any).ep === 2 ? new GuiltWorld(T) : new PawWorld(T));
 
 const fwd = new THREE.Vector3();
 const makeBloom = () => {
@@ -23,7 +25,7 @@ const makeBloom = () => {
 const Inner: React.FC<{ T: Tempos }> = ({ T }) => {
   const f = useCurrentFrame();
   const { camera, scene } = useThree();
-  const world = useMemo(() => new PawWorld(T), [T]);
+  const world = useMemo(() => mkWorld(T), [T]);
   const fx = useMemo(() => ({
     ink: new InkPass(scene, camera as THREE.PerspectiveCamera),
     lens: new LensBlur({ maxCoC: 22, nearScale: 1.2 }),
@@ -126,11 +128,57 @@ const Overlay: React.FC<{ T: Tempos }> = ({ T }) => {
   );
 };
 
+const HI2 = new Set(["GUILTY", "GUILT", "SLIPPER", "EARS", "EYES", "TAIL", "2009", "TREAT", "SECRETLY", "DIDN'T", "NOTHING", "WRONG", "SCOLDED", "CONFESSION", "CALM", "FACE", "SCOLDING", "SEND", "EXACTLY"]);
+const Overlay2: React.FC<{ T: Tempos }> = ({ T }) => {
+  const f = useCurrentFrame(); const t = f / 30;
+  const fr = (k: string) => T.frases.find((x) => x.k === k)!;
+  const wt = (k: string, re: RegExp) => (T.palavras.find((w) => w.k === k && re.test(w.w)) ?? T.palavras.find((w) => w.k === k)!).t0;
+  const w = T.palavras.find((x) => t >= x.t0 - 0.02 && t < x.t1 + 0.12) ?? null;
+  const word = w ? w.w.replace(/[.,?!:]/g, "").toUpperCase() : "";
+  const hook = fr("hook");
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      {t < hook.t1 + 0.25 && (
+        <div style={{ position: "absolute", top: 300, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 104, lineHeight: 1.0, color: "#fff", textShadow: outline(8), transform: `scale(${pop(t, 0)})` }}>
+          THAT GUILTY<br /><span style={{ color: YEL }}>FACE?</span>
+        </div>
+      )}
+      <Chip txt="EARS BACK" t={t} t0={wt("face", /Ears/)} t1={fr("face").t1 + 0.15} y={340} bg="#9DB4FF" rot={-3} />
+      <Chip txt="EYES UP" t={t} t0={wt("face", /Eyes/)} t1={fr("face").t1 + 0.15} y={455} bg={YEL} rot={2} />
+      <Chip txt="TAIL LOW" t={t} t0={wt("face", /Tail/)} t1={fr("face").t1 + 0.15} y={570} bg={LIME} rot={-2} />
+      {t >= fr("test").t0 && t < fr("result").t0 && (
+        <div style={{ position: "absolute", top: 300, left: 110, right: 110, display: "flex", justifyContent: "space-between", fontFamily: FONT, fontWeight: 900, fontSize: 46, color: "#fff", textShadow: outline(5) }}>
+          <span>THE TEST</span><span><span style={{ color: "#FF4545", opacity: Math.floor(t * 2) % 2 ? 1 : 0.25 }}>●</span> REC</span>
+        </div>
+      )}
+      <Chip txt="BARNARD COLLEGE · 2009" t={t} t0={wt("test", /2009/)} t1={fr("test").t1 + 0.1} y={420} bg="#E9E2FF" size={44} />
+      <Chip txt="DON'T EAT IT!" t={t} t0={wt("rule", /don't/)} t1={fr("rule").t1} y={430} bg="#FF6B5E" fg="#fff" rot={-4} />
+      <Chip txt="ATE IT" t={t} t0={fr("swap").t0} t1={wt("swap", /scientist/) - 0.2} y={430} bg={LIME} />
+      <Chip txt="TAKEN AWAY" t={t} t0={wt("swap", /scientist/)} t1={fr("swap").t1 + 0.1} y={430} bg="#9DB4FF" rot={3} />
+      <Chip txt={'"HE ATE IT."'} t={t} t0={wt("lie", /told/)} t1={wt("lie", /didn't/) - 0.05} y={430} bg="#FFFFFF" size={60} rot={-3} />
+      <Chip txt="(HE DIDN'T)" t={t} t0={wt("lie", /didn't/)} t1={fr("lie").t1 + 0.1} y={430} bg={YEL} size={60} rot={2} />
+      <Chip txt="DID NOTHING WRONG" t={t} t0={wt("result", /nothing/)} t1={fr("result").t1 + 0.1} y={420} bg={LIME} />
+      <Chip txt="= PLEASE CALM DOWN" t={t} t0={wt("signal", /please/)} t1={fr("signal").t1 + 0.1} y={420} bg="#FFFFFF" />
+      <Chip txt="READING YOUR FACE" t={t} t0={fr("reading").t0 + 0.2} t1={fr("reading").t1 + 0.1} y={420} bg="#9DB4FF" />
+      <Chip txt="✗ SCOLDING" t={t} t0={wt("tip", /skip/)} t1={fr("tip").t1 + 0.1} y={360} bg="#FF6B5E" fg="#fff" rot={-3} />
+      <Chip txt="✓ MOVE IT UP HIGH" t={t} t0={wt("tip", /move/)} t1={fr("tip").t1 + 0.1} y={475} bg={LIME} rot={2} />
+      <Chip txt="SEND THIS TO A DOG PARENT" t={t} t0={fr("cta").t0} t1={T.total + 1} y={360} bg={LIME} size={46} />
+      {t >= fr("test").t0 && t < fr("signal").t0 && (
+        <div style={{ position: "absolute", top: 1235, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 28, color: "#fff", opacity: 0.85, textShadow: outline(3) }}>Horowitz (2009), Behavioural Processes</div>
+      )}
+      {word && (
+        <div style={{ position: "absolute", top: 1090, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 96, color: HI2.has(word) ? YEL : "#fff", textShadow: outline(8), transform: `scale(${pop(t, w!.t0)})` }}>{word}</div>
+      )}
+      <div style={{ position: "absolute", top: 1262, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 26, color: "#fff", opacity: 0.7, textShadow: outline(2) }}>@pawslated</div>
+    </AbsoluteFill>
+  );
+};
+
 export const Paw3: React.FC<{ pasta: string; tempos: Tempos }> = ({ tempos }) => {
   const f = useCurrentFrame();
   const T = tempos;
   // flash branco curto nas trocas de lugar
-  const w = useMemo(() => new PawWorld(T), [T]);
+  const w = useMemo(() => mkWorld(T), [T]);
   const cuts = w.shots.slice(1).filter((s, i) => s.set !== w.shots[i].set).map((s) => Math.round(s.a * 30));
   const flash = cuts.reduce((a, F) => (f >= F && f < F + 4 ? [0.9, 0.6, 0.3, 0.1][f - F] : a), 0);
   return (
@@ -140,7 +188,7 @@ export const Paw3: React.FC<{ pasta: string; tempos: Tempos }> = ({ tempos }) =>
         <Inner T={T} />
       </ThreeCanvas>
       {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
-      <Overlay T={T} />
+      {(T as any).ep === 2 ? <Overlay2 T={T} /> : <Overlay T={T} />}
     </AbsoluteFill>
   );
 };
