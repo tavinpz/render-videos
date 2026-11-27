@@ -62,7 +62,7 @@ export class BathWorld extends PawWorld {
     this.doorB.add(M(new THREE.SphereGeometry(0.045, 10, 8), toon("#E0B341"), V(0.06, 1.0, 0.85)));
     this.doorB.position.set(0, 0, -0.49); r.add(this.doorB);
     // fresta de luz debaixo da porta
-    this.gap = M(new THREE.PlaneGeometry(0.06, 0.95), glow("#FFE7A3"), V(0.03, 0.012, 0), false); this.gap.rotation.set(-Math.PI / 2, 0, 0); this.gap.layers.set(NOINK); r.add(this.gap);
+    this.gap = M(new THREE.PlaneGeometry(0.35, 0.95), new THREE.MeshBasicMaterial({ color: "#FFD27A", transparent: true, opacity: 0.85, toneMapped: false }), V(0.18, 0.012, 0), false); this.gap.rotation.set(-Math.PI / 2, 0, 0); this.gap.layers.set(NOINK); r.add(this.gap);
     // banheiro: pia + espelho, vaso, banheira, toalha
     r.add(M(RB(0.7, 0.85, 0.5, 0.04), toon("#FFFFFF"), V(-1.6, 0.42, -1.7)));
     r.add(M(RB(0.6, 0.08, 0.42, 0.04), toon("#E8F4F8"), V(-1.6, 0.86, -1.65)));
@@ -112,8 +112,8 @@ export class BathWorld extends PawWorld {
     const sh: Shot[] = [
       S("hook", "room", V(1.45, 0.65, 1.75), V(1.32, 0.6, 1.55), V(0.65, 0.75, 0.0), V(0.65, 0.78, 0.0), 48, d, 0, 0.04),
       S("door", "room", V(2.9, 1.5, 2.2), V(2.7, 1.45, 2.0), V(0.4, 1.0, 0.0), V(0.4, 0.9, 0.0), 50, d),
-      { ...S("door", "room", V(0.95, 0.45, 1.9), V(0.88, 0.42, 1.75), V(0.25, 0.2, 0.0), V(0.22, 0.2, 0.0), 40, () => V(0.2, 0.12, 0)), a: wt("door", /Nose/) - 0.06 },
-      S("vanish", "room", V(0.45, 0.4, 0.06), V(0.38, 0.38, 0.05), V(0.0, 0.5, 0.0), V(0.0, 0.55, 0.0), 70, () => V(0, 1, 0)),
+      { ...S("door", "room", V(1.3, 0.65, 2.9), V(1.2, 0.6, 2.7), V(0.45, 0.28, 0.0), V(0.42, 0.26, 0.0), 46, () => V(0.2, 0.12, 0)), a: wt("door", /Nose/) - 0.06 },
+      S("vanish", "room", V(0.75, 0.32, 0.25), V(0.6, 0.3, 0.2), V(0.0, 0.35, 0.0), V(0.0, 0.42, 0.0), 72, () => V(0, 1, 0)),
       { ...S("vanish", "room", V(-0.5, 2.6, 1.0), V(-0.6, 2.55, 0.8), V(-1.4, 0.8, -1.2), V(-1.4, 0.8, -1.3), 52, o), a: wt("vanish", /tiny/) - 0.06 },
       S("test", "forest", V(FX + 1.8, 1.9, 2.8), V(FX + 1.4, 1.8, 2.6), V(FX - 0.3, 0.5, -1.0), V(FX - 0.3, 0.5, -1.1), 50, d),
       S("left", "forest", V(FX - 1.0, 1.4, 1.8), V(FX - 0.6, 1.35, 1.6), V(FX + 1.1, 0.8, -2.1), V(FX + 1.1, 0.7, -2.1), 50, d),
