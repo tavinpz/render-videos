@@ -107,8 +107,10 @@ export class FireworksWorld extends PawWorld {
     // fogos: explosões lá fora (gerados pelos tempos)
     const fr0 = (k: string) => T.frases.find((f) => f.k === k)!;
     const times: number[] = [];
-    for (let t = 0.15; t < fr0("good").t0 - 0.3; t += 0.9) times.push(t);
-    for (let t = fr0("night").t0; t < T.total; t += 0.75) times.push(t);
+    if (fr0("good") && fr0("night")) {
+      for (let t = 0.15; t < fr0("good").t0 - 0.3; t += 0.9) times.push(t);
+      for (let t = fr0("night").t0; t < T.total; t += 0.75) times.push(t);
+    }
     let seed = 11; const rnd = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
     times.forEach((t0, i) => {
       const g = new THREE.Group(); const col = PAL[i % PAL.length];

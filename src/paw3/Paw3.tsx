@@ -13,7 +13,8 @@ import { GradeEffect, GRADES, gradeFor } from "./grade";
 import { PawWorld, Tempos } from "./world";
 import { GuiltWorld } from "./world2";
 import { FireworksWorld } from "./world3";
-const mkWorld = (T: Tempos) => ((T as any).ep === 3 ? new FireworksWorld(T) : (T as any).ep === 2 ? new GuiltWorld(T) : new PawWorld(T));
+import { TreeWorld } from "./world4";
+const mkWorld = (T: Tempos) => ((T as any).ep === 4 ? new TreeWorld(T) : (T as any).ep === 3 ? new FireworksWorld(T) : (T as any).ep === 2 ? new GuiltWorld(T) : new PawWorld(T));
 
 const fwd = new THREE.Vector3();
 const makeBloom = () => {
@@ -36,6 +37,7 @@ const Inner: React.FC<{ T: Tempos }> = ({ T }) => {
   }), [camera, scene]);
   useEffect(() => () => fx.ink.dispose(), [fx]);
   const gl = useThree((st) => st.gl);
+  useMemo(() => { gl.shadowMap.type = THREE.PCFSoftShadowMap; gl.shadowMap.needsUpdate = true; }, [gl]);
   const size = useThree((st) => st.size);
   const ip = getInputProps() as { nopost?: boolean; ms?: number };
   const composer = useMemo(() => {
@@ -54,7 +56,8 @@ const Inner: React.FC<{ T: Tempos }> = ({ T }) => {
   cam.getWorldDirection(fwd);
   fx.lens.focus = Math.max(0.3, s.focus().sub(cam.position).dot(fwd));
   fx.lens.cInf = s.set === "forest" ? 10 : 9;
-  gradeFor(fx.grade, "golden");
+  if ((T as any).ep >= 4) { const tag = fx.grade as any; if (!tag._cozy) { fx.grade.set({ ky: [0, 0.085, 0.265, 0.575, 0.83, 0.945, 1], sat: [1.05, 1.22, 1.15], tintS: [0.03, 0.004], tintM: [0.0, 0.006], tintH: [-0.016, 0.012], vig: [0.24, 0.4] }); tag._cozy = 1; } fx.grade.amount = 1; }
+  else gradeFor(fx.grade, "golden");
   return <primitive object={world.root} dispose={null} />;
 };
 
@@ -245,6 +248,68 @@ const Overlay3: React.FC<{ T: Tempos }> = ({ T }) => {
   );
 };
 
+const HI4 = new Set(["CHRISTMAS", "TOY", "SHINY", "STRINGS", "BALLS", "WATER", "TINSEL", "BLOCK", "INTESTINES", "BACTERIA", "FERTILIZER", "CHOCOLATE", "DARKER", "WORSE", "GLASS", "BREAK", "SWALLOWED", "FIVE", "SKIP", "COVER", "HIGH", "LOCK", "TIE", "TIP", "PRESENT", "SEND"]);
+const Overlay4: React.FC<{ T: Tempos }> = ({ T }) => {
+  const f = useCurrentFrame(); const t = f / 30;
+  const fr = (k: string) => T.frases.find((x) => x.k === k)!;
+  const wt = (k: string, re: RegExp) => (T.palavras.find((w) => w.k === k && re.test(w.w)) ?? T.palavras.find((w) => w.k === k)!).t0;
+  const w = T.palavras.find((x) => t >= x.t0 - 0.02 && t < x.t1 + 0.12) ?? null;
+  const word = w ? w.w.replace(/[.,?!:]/g, "").toUpperCase() : "";
+  const hook = fr("hook"), tin = fr("tinsel"), ch = fr("choc");
+  const xr0 = wt("tinsel", /swallows/), xr = Math.min(1, Math.max(0, (t - xr0) / 1.6));
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      {t < hook.t1 + 0.25 && (
+        <div style={{ position: "absolute", top: 300, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 100, lineHeight: 1.0, color: "#fff", textShadow: outline(8), transform: `scale(${pop(t, 0)})` }}>
+          TO HIM, IT'S A<br /><span style={{ color: YEL }}>GIANT TOY</span>
+        </div>
+      )}
+      <Chip txt="SHINY STRINGS" t={t} t0={wt("shiny", /Shiny/)} t1={fr("shiny").t1 + 0.1} y={330} bg="#DDE3EA" rot={-3} />
+      <Chip txt="HANGING BALLS" t={t} t0={wt("shiny", /Hanging/)} t1={fr("shiny").t1 + 0.1} y={445} bg="#FF6B5E" fg="#fff" rot={2} />
+      <Chip txt="A WATER BOWL?!" t={t} t0={wt("shiny", /water/)} t1={fr("shiny").t1 + 0.1} y={560} bg="#7BDFF2" rot={-2} />
+      <Chip txt="WHAT VETS WARN ABOUT" t={t} t0={fr("vets").t0} t1={fr("vets").t1 + 0.1} y={360} bg={YEL} size={48} />
+      <Chip txt="1 · TINSEL" t={t} t0={tin.t0} t1={xr0} y={360} bg="#DDE3EA" />
+      {t >= xr0 && t < tin.t1 + 0.15 && (
+        <div style={{ position: "absolute", top: 300, left: 140, width: 800, height: 760, borderRadius: 40, background: "#0E2340", border: `8px solid ${INK}`, boxShadow: `0 10px 0 ${INK}`, overflow: "hidden", transform: `scale(${pop(t, xr0)})` }}>
+          <div style={{ position: "absolute", top: 18, left: 28, fontFamily: FONT, fontWeight: 900, fontSize: 40, color: "#7BDFF2", letterSpacing: 3 }}>X-RAY</div>
+          <svg width="800" height="760" viewBox="0 0 800 760">
+            <g fill="none" stroke="#7BDFF2" strokeWidth="10" opacity="0.55"><ellipse cx="400" cy="430" rx="250" ry="150" /><circle cx="640" cy="300" r="90" /><path d="M200 560 L190 700 M300 570 L300 700 M500 570 L500 700 M600 560 L610 700" /></g>
+            <path d="M330 420 C360 380 420 470 450 420 S520 380 480 460 S380 500 420 440 S500 420 470 480" fill="none" stroke="#FF4D6D" strokeWidth="14" strokeLinecap="round" strokeDasharray="900" strokeDashoffset={900 * (1 - xr)} />
+          </svg>
+          <div style={{ position: "absolute", bottom: 26, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 56, color: "#FF4D6D" }}>BLOCKAGE</div>
+        </div>
+      )}
+      <Chip txt="2 · TREE WATER" t={t} t0={fr("water").t0} t1={fr("water").t1 + 0.1} y={340} bg="#7BDFF2" />
+      <Chip txt="BACTERIA + FERTILIZER" t={t} t0={wt("water", /bacteria/)} t1={fr("water").t1 + 0.1} y={455} bg="#8BE04E" size={46} rot={2} />
+      <Chip txt="3 · CHOCOLATE" t={t} t0={ch.t0} t1={ch.t1 + 0.1} y={340} bg="#C98A4B" fg="#fff" />
+      {t >= wt("choc", /darker/) && t < ch.t1 + 0.1 && (
+        <div style={{ position: "absolute", top: 430, left: 270, right: 270, height: 280, display: "flex", alignItems: "flex-end", justifyContent: "space-around", fontFamily: FONT, fontWeight: 900, color: "#fff", textShadow: outline(5) }}>
+          {[["MILK", 0.25, "#C98A4B"], ["DARK", 1, "#5B2C1A"]].map(([n, h, c], i) => (
+            <div key={i} style={{ textAlign: "center" }}><div style={{ width: 150, height: 220 * (h as number) * sm2(t - wt("choc", /darker/), 0.4), background: c as string, border: `6px solid ${INK}`, borderRadius: 16 }} /><div style={{ fontSize: 40 }}>{n as string}</div></div>
+          ))}
+        </div>
+      )}
+      <Chip txt="4 · GLASS ORNAMENTS" t={t} t0={fr("orn").t0} t1={fr("orn").t1 + 0.1} y={340} bg="#9EDCF9" size={48} />
+      <Chip txt="5-MINUTE FIX" t={t} t0={wt("fix", /five/)} t1={fr("fix").t1 + 0.1} y={360} bg={LIME} />
+      <Chip txt="✗ TINSEL" t={t} t0={wt("skip", /tinsel/)} t1={fr("tie").t1 + 0.1} y={320} bg="#FF6B5E" fg="#fff" size={40} x={330} rot={-2} />
+      <Chip txt="✓ COVER WATER" t={t} t0={wt("skip", /Cover/)} t1={fr("tie").t1 + 0.1} y={320} bg={LIME} size={40} x={740} rot={2} />
+      <Chip txt="✓ UP HIGH" t={t} t0={wt("high", /Hang/)} t1={fr("tie").t1 + 0.1} y={420} bg={LIME} size={40} x={330} rot={2} />
+      <Chip txt="✓ LOCK CHOCOLATE" t={t} t0={wt("high", /Lock/)} t1={fr("tie").t1 + 0.1} y={420} bg={LIME} size={40} x={740} rot={-2} />
+      <Chip txt="✓ TIE THE TREE" t={t} t0={wt("tie", /tie/)} t1={fr("tie").t1 + 0.1} y={520} bg={LIME} size={40} />
+      <Chip txt="MERRY & SAFE" t={t} t0={fr("safe").t0 + 0.6} t1={fr("safe").t1 + 0.1} y={360} bg="#FF6B5E" fg="#fff" />
+      <Chip txt="SEND THIS BEFORE THEY DECORATE" t={t} t0={fr("cta").t0} t1={T.total + 1} y={360} bg={LIME} size={40} />
+      {t >= fr("vets").t0 && t < fr("fix").t0 && (
+        <div style={{ position: "absolute", top: 1235, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 26, color: "#fff", opacity: 0.85, textShadow: outline(3) }}>Sources: Cornell Vet · ASPCA · AVMA</div>
+      )}
+      {word && (
+        <div style={{ position: "absolute", top: 1090, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 96, color: HI4.has(word) ? YEL : "#fff", textShadow: outline(8), transform: `scale(${pop(t, w!.t0)})` }}>{word}</div>
+      )}
+      <div style={{ position: "absolute", top: 1262, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 26, color: "#fff", opacity: 0.7, textShadow: outline(2) }}>@pawslated</div>
+    </AbsoluteFill>
+  );
+};
+const sm2 = (x: number, d: number) => { const u = Math.max(0, Math.min(1, x / d)); return u * u * (3 - 2 * u); };
+
 export const Paw3: React.FC<{ pasta: string; tempos: Tempos }> = ({ tempos }) => {
   const f = useCurrentFrame();
   const T = tempos;
@@ -259,7 +324,7 @@ export const Paw3: React.FC<{ pasta: string; tempos: Tempos }> = ({ tempos }) =>
         <Inner T={T} />
       </ThreeCanvas>
       {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
-      {(T as any).ep === 3 ? <Overlay3 T={T} /> : (T as any).ep === 2 ? <Overlay2 T={T} /> : <Overlay T={T} />}
+      {(T as any).ep === 4 ? <Overlay4 T={T} /> : (T as any).ep === 3 ? <Overlay3 T={T} /> : (T as any).ep === 2 ? <Overlay2 T={T} /> : <Overlay T={T} />}
     </AbsoluteFill>
   );
 };

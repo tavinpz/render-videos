@@ -37,7 +37,11 @@ const skyTex = canvasTex(512, 512, (g) => { const gr = g.createLinearGradient(0,
 const unlit = (map: THREE.Texture) => new THREE.MeshBasicMaterial({ map, toneMapped: false });
 export const glow = (c: string) => new THREE.MeshBasicMaterial({ color: c, toneMapped: false });
 
-export type Shot = { k: string; a: number; b: number; set: "room" | "forest"; cam: [THREE.Vector3, THREE.Vector3]; look: [THREE.Vector3, THREE.Vector3]; fov: number; focus: () => THREE.Vector3 };
+export type Shot = { roll?: number; k: string; a: number; b: number; set: "room" | "forest"; cam: [THREE.Vector3, THREE.Vector3]; look: [THREE.Vector3, THREE.Vector3]; fov: number; focus: () => THREE.Vector3 };
+
+// sombra de contato (mancha suave no chão debaixo do personagem)
+const blobTex = (() => { const cv = document.createElement("canvas"); cv.width = cv.height = 128; const g = cv.getContext("2d")!; const gr = g.createRadialGradient(64, 64, 4, 64, 64, 62); gr.addColorStop(0, "rgba(20,10,30,0.55)"); gr.addColorStop(1, "rgba(20,10,30,0)"); g.fillStyle = gr; g.fillRect(0, 0, 128, 128); const t = new THREE.CanvasTexture(cv); return t; })();
+export const blob = (w: number, d: number) => { const m = new THREE.Mesh(new THREE.PlaneGeometry(w, d).rotateX(-Math.PI / 2), new THREE.MeshBasicMaterial({ map: blobTex, transparent: true, depthWrite: false, toneMapped: false })); m.position.y = 0.006; m.layers.set(NOINK); m.renderOrder = 1; return m; };
 
 export class PawWorld {
   root = new THREE.Group();
