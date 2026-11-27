@@ -12,7 +12,8 @@ import { LensBlur } from "./lensblur";
 import { GradeEffect, GRADES, gradeFor } from "./grade";
 import { PawWorld, Tempos } from "./world";
 import { GuiltWorld } from "./world2";
-const mkWorld = (T: Tempos) => ((T as any).ep === 2 ? new GuiltWorld(T) : new PawWorld(T));
+import { FireworksWorld } from "./world3";
+const mkWorld = (T: Tempos) => ((T as any).ep === 3 ? new FireworksWorld(T) : (T as any).ep === 2 ? new GuiltWorld(T) : new PawWorld(T));
 
 const fwd = new THREE.Vector3();
 const makeBloom = () => {
@@ -174,6 +175,76 @@ const Overlay2: React.FC<{ T: Tempos }> = ({ T }) => {
   );
 };
 
+const HI3 = new Set(["DRAMATIC", "FIREWORK", "BREAKING", "CAN'T", "SHAKES", "HIDES", "PANTS", "RUN", "HALF", "FEAR", "TIME", "QUIETLY", "TREAT", "LOUDER", "NEVER", "DEN", "COMFORT", "WORSE", "MIDNIGHT", "COUCH", "SEND", "HATES"]);
+const Paw: React.FC<{ on: boolean; k: number }> = ({ on, k }) => (
+  <div style={{ width: 120, height: 120, borderRadius: 60, background: on ? YEL : "rgba(255,255,255,.25)", border: `6px solid ${INK}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 64, transform: `scale(${k})` }}>
+    <svg width="70" height="70" viewBox="0 0 100 100"><g fill={INK}><ellipse cx="50" cy="66" rx="24" ry="20" /><circle cx="24" cy="40" r="10" /><circle cx="40" cy="24" r="10" /><circle cx="60" cy="24" r="10" /><circle cx="76" cy="40" r="10" /></g></svg>
+  </div>
+);
+const Overlay3: React.FC<{ T: Tempos }> = ({ T }) => {
+  const f = useCurrentFrame(); const t = f / 30;
+  const fr = (k: string) => T.frases.find((x) => x.k === k)!;
+  const wt = (k: string, re: RegExp) => (T.palavras.find((w) => w.k === k && re.test(w.w)) ?? T.palavras.find((w) => w.k === k)!).t0;
+  const w = T.palavras.find((x) => t >= x.t0 - 0.02 && t < x.t1 + 0.12) ?? null;
+  const word = w ? w.w.replace(/[.,?!:]/g, "").toUpperCase() : "";
+  const hook = fr("hook"), lo = fr("louder"), pl = fr("play");
+  const day = t < lo.t0 ? 1 : Math.max(1, Math.min(14, Math.round(interpolate(t, [lo.t0, lo.t1], [1, 14], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }))));
+  const st = fr("study"), hf = fr("half");
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      {t < hook.t1 + 0.25 && (
+        <div style={{ position: "absolute", top: 300, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 96, lineHeight: 1.0, color: "#fff", textShadow: outline(8), transform: `scale(${pop(t, 0)})` }}>
+          HE'S NOT BEING<br /><span style={{ color: YEL }}>DRAMATIC</span>
+        </div>
+      )}
+      <Chip txt="IN HIS EARS" t={t} t0={fr("ears").t0 + 0.1} t1={fr("ears").t1 + 0.05} y={360} bg={YEL} />
+      <Chip txt="HE HEARS WHAT YOU CAN'T" t={t} t0={fr("hear").t0} t1={fr("hear").t1 + 0.1} y={360} bg="#9DB4FF" size={46} />
+      <Chip txt="SHAKES" t={t} t0={wt("signs", /shakes/)} t1={fr("signs").t1 + 0.1} y={330} bg="#FF6B5E" fg="#fff" rot={-3} x={380} />
+      <Chip txt="HIDES" t={t} t0={wt("signs", /hides/)} t1={fr("signs").t1 + 0.1} y={330} bg={YEL} rot={3} x={720} />
+      <Chip txt="PANTS" t={t} t0={wt("signs", /pants/)} t1={fr("signs").t1 + 0.1} y={450} bg="#9DB4FF" rot={2} x={380} />
+      <Chip txt="RUNS" t={t} t0={wt("signs", /run/)} t1={fr("signs").t1 + 0.1} y={450} bg={LIME} rot={-2} x={720} />
+      {t >= st.t0 && t < hf.t1 + 0.1 && (
+        <div style={{ position: "absolute", top: 300, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", fontFamily: FONT, fontWeight: 900, color: "#fff", textShadow: outline(7) }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 130px)", gap: 8 }}>
+            {Array.from({ length: 10 }, (_, i) => <Paw key={i} on={t >= wt("half", /half/) && i < 5} k={pop(t, st.t0 + i * 0.12)} />)}
+          </div>
+          {t >= wt("half", /half/) && <div style={{ fontSize: 120, color: YEL, lineHeight: 1.1, transform: `scale(${pop(t, wt("half", /half/))})` }}>1 IN 2</div>}
+          {t >= wt("half", /half/) && <div style={{ fontSize: 48 }}>FEAR LOUD NOISES</div>}
+        </div>
+      )}
+      {t >= st.t0 && t < hf.t1 + 0.1 && (
+        <div style={{ position: "absolute", top: 1235, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 26, color: "#fff", opacity: 0.85, textShadow: outline(3) }}>Blackwell et al. 2013 · Riemer 2019</div>
+      )}
+      <Chip txt="THERE'S STILL TIME ✓" t={t} t0={wt("good", /time/)} t1={fr("good").t1 + 0.1} y={360} bg={LIME} />
+      {t >= pl.t0 && t < lo.t1 + 0.1 && (
+        <div style={{ position: "absolute", top: 300, left: 140, right: 140, fontFamily: FONT, fontWeight: 900, color: "#fff", textShadow: outline(6), textAlign: "center" }}>
+          <div style={{ fontSize: 76 }}>DAY <span style={{ color: YEL }}>{day}</span></div>
+          <div style={{ marginTop: 10, height: 44, borderRadius: 22, border: `6px solid ${INK}`, background: "rgba(255,255,255,.35)", overflow: "hidden" }}>
+            <div style={{ height: "100%", width: `${8 + (day - 1) * 3.2}%`, background: LIME }} />
+          </div>
+          <div style={{ fontSize: 34, marginTop: 6 }}>VOLUME</div>
+        </div>
+      )}
+      <Chip txt="NEVER TOO LOUD" t={t} t0={wt("louder", /Never/)} t1={lo.t1 + 0.1} y={560} bg="#FF6B5E" fg="#fff" rot={-3} />
+      <Chip txt="COZY DEN" t={t} t0={fr("den").t0 + 0.1} t1={fr("den").t1 + 0.1} y={350} bg="#C9B6FF" />
+      <Chip txt="AWAY FROM WINDOWS" t={t} t0={wt("den", /windows/) - 0.3} t1={fr("den").t1 + 0.1} y={465} bg={YEL} size={44} rot={2} />
+      <Chip txt="COMFORT = OK ✓" t={t} t0={wt("night", /comfort/)} t1={fr("night").t1 + 0.1} y={360} bg={LIME} />
+      <Chip txt="WON'T MAKE IT WORSE" t={t} t0={fr("worse").t0} t1={fr("worse").t1 + 0.1} y={360} bg="#9DB4FF" />
+      {t >= fr("couch").t0 && t < fr("cta").t0 && (
+        <div style={{ position: "absolute", top: 290, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, color: "#fff", textShadow: outline(8) }}>
+          <div style={{ fontSize: 170, color: YEL, lineHeight: 1, transform: `scale(${pop(t, wt("couch", /midnight/))})` }}>{t < wt("couch", /midnight/) ? "23:59" : "00:00"}</div>
+          <div style={{ fontSize: 50 }}>HAPPY NEW YEAR</div>
+        </div>
+      )}
+      <Chip txt="SEND THIS TO A DOG PARENT" t={t} t0={fr("cta").t0} t1={T.total + 1} y={360} bg={LIME} size={46} />
+      {word && (
+        <div style={{ position: "absolute", top: 1090, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 96, color: HI3.has(word) ? YEL : "#fff", textShadow: outline(8), transform: `scale(${pop(t, w!.t0)})` }}>{word}</div>
+      )}
+      <div style={{ position: "absolute", top: 1262, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 900, fontSize: 26, color: "#fff", opacity: 0.7, textShadow: outline(2) }}>@pawslated</div>
+    </AbsoluteFill>
+  );
+};
+
 export const Paw3: React.FC<{ pasta: string; tempos: Tempos }> = ({ tempos }) => {
   const f = useCurrentFrame();
   const T = tempos;
@@ -188,7 +259,7 @@ export const Paw3: React.FC<{ pasta: string; tempos: Tempos }> = ({ tempos }) =>
         <Inner T={T} />
       </ThreeCanvas>
       {flash > 0 && <AbsoluteFill style={{ background: "#ffffff", opacity: flash }} />}
-      {(T as any).ep === 2 ? <Overlay2 T={T} /> : <Overlay T={T} />}
+      {(T as any).ep === 3 ? <Overlay3 T={T} /> : (T as any).ep === 2 ? <Overlay2 T={T} /> : <Overlay T={T} />}
     </AbsoluteFill>
   );
 };

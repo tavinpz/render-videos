@@ -24,6 +24,7 @@ export type DogPose = {
   curl?: number;      // 0..1 enroladinho (dormindo de lado)
   guilt?: number;     // 0..1 cara de culpa: orelha para trás, rabo entre as pernas, cabeça baixa, olho para cima
   bark?: number;      // 0..1 abre a boca
+  pant?: number;      // 0..1 língua de fora, ofegante
 };
 
 const cap = (r: number, l: number) => new THREE.CapsuleGeometry(r, l, 6, 16);
@@ -40,6 +41,7 @@ export class Dog {
   eyeL = new THREE.Group(); eyeR = new THREE.Group();
   lidL: THREE.Mesh; lidR: THREE.Mesh;
   browL: THREE.Mesh; browR: THREE.Mesh;
+  tongue = new THREE.Group();
   look: DogLook;
   constructor(look: DogLook) {
     this.look = look;
@@ -74,6 +76,8 @@ export class Dog {
     const sk = add(new THREE.Mesh(sph(0.24), fur), this.head); sk.scale.set(1.05, 0.95, 0.95);
     const muz = add(new THREE.Mesh(sph(0.13), cr), this.head); muz.position.set(0, -0.07, 0.19); muz.scale.set(1.15, 0.8, 0.95);
     const nose = add(new THREE.Mesh(sph(0.05), toon("#2A1A14")), this.head); nose.position.set(0, -0.02, 0.31); nose.scale.set(1.3, 0.85, 0.8);
+    const tg = add(new THREE.Mesh(new THREE.CapsuleGeometry(0.045, 0.06, 4, 12), toon("#F27A8A")), this.tongue); tg.scale.set(1.2, 1, 0.45);
+    this.tongue.position.set(0, -0.15, 0.24); this.tongue.rotation.x = 0.5; this.head.add(this.tongue);
     const cheekL = add(new THREE.Mesh(sph(0.03), toon("#F29C8C")), this.head); cheekL.position.set(-0.15, -0.06, 0.17);
     const cheekR = add(new THREE.Mesh(sph(0.03), toon("#F29C8C")), this.head); cheekR.position.set(0.15, -0.06, 0.17);
     cheekL.layers.set(NOINK); cheekR.layers.set(NOINK);
@@ -152,6 +156,7 @@ export class Dog {
     const wr = Math.max(p.worried ?? 0, g);
     this.browL.rotation.z = Math.PI / 2 + wr * 0.45; this.browR.rotation.z = Math.PI / 2 - wr * 0.45;
     this.browL.position.y = this.browR.position.y = 0.15 + wr * 0.015;
+    const pa = p.pant ?? 0; this.tongue.visible = pa > 0.05; this.tongue.scale.set(1, 0.6 + 0.4 * pa + Math.sin(t * 22) * 0.12 * pa, 1);
     // rabo
     const wag = p.wag ?? 0.2;
     this.tail.rotation.z = Math.sin(t * 14) * 0.6 * wag + lie * 0.7;
