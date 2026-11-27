@@ -14,6 +14,7 @@ import { BPVideo } from './bp/Video';
 import { BPThumb } from './bp/Thumbs';
 import { BPMarca } from './bp/Marca';
 import { HTCThumb } from './htc/Thumbs';
+import { Paw3 } from './paw3/Paw3';
 
 export const Root: React.FC = () => (
   <>
@@ -53,6 +54,9 @@ export const Root: React.FC = () => (
     <Composition id="ArteCapa" component={ArteCapa as any} durationInFrames={1} fps={30} width={1920} height={1080} defaultProps={{ canal: 'last-state-standing', v: { tipo: 'numero', txt: '$10' }, titulo: ['TESTE'] }} />
     {/* Two Childhoods: vídeo guiado por public/<pasta>/tempos.json */}
     <Composition id="TCVideo" component={TCVideo as any} width={1920} height={1080} fps={30} durationInFrames={300} defaultProps={{ pasta: 'tc/v01' }}
+      calculateMetadata={async ({ props }: any) => { const tempos = await fetch(staticFile(`${props.pasta}/tempos.json`)).then((x) => x.json()); return { durationInFrames: props.n || Math.ceil(tempos.total * 30), props: { ...props, tempos } }; }} />
+    {/* Pawslated v3: mini-história 3D toon, vertical, guiado por public/<pasta>/tempos.json */}
+    <Composition id="Paw3" component={Paw3 as any} width={1080} height={1920} fps={30} durationInFrames={300} defaultProps={{ pasta: 'paw3/v001' }}
       calculateMetadata={async ({ props }: any) => { const tempos = await fetch(staticFile(`${props.pasta}/tempos.json`)).then((x) => x.json()); return { durationInFrames: props.n || Math.ceil(tempos.total * 30), props: { ...props, tempos } }; }} />
   </>
 );
