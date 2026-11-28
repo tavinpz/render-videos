@@ -1,0 +1,81 @@
+{
+ "falas": [
+  {
+   "c": "e06_14",
+   "q": "v",
+   "txt": "Olha a onda!",
+   "ex": 0.6,
+   "cfg": 0.5
+  },
+  {
+   "c": "e06_17",
+   "q": "m",
+   "txt": "Tem em casa.",
+   "ex": 0.45,
+   "cfg": 0.5
+  },
+  {
+   "c": "e06_02",
+   "q": "m",
+   "txt": "Tem hambúrguer em casa.",
+   "ex": 0.5,
+   "cfg": 0.5
+  },
+  {
+   "c": "e07_00",
+   "q": "n",
+   "txt": "Nessa cidade, cada já vô que a criança fala deixa a mãe um metro mais alta.",
+   "ex": 0.55,
+   "cfg": 0.5
+  },
+  {
+   "c": "e07_02",
+   "q": "c",
+   "txt": "Já vô!",
+   "ex": 0.55,
+   "cfg": 0.5
+  },
+  {
+   "c": "e07_06",
+   "q": "n",
+   "txt": "Já tô indo, vale três.",
+   "ex": 0.5,
+   "cfg": 0.5
+  },
+  {
+   "c": "e07_16",
+   "q": "v",
+   "txt": "Já vô, mãe.",
+   "ex": 0.5,
+   "cfg": 0.5
+  },
+  {
+   "c": "e07_18",
+   "q": "n",
+   "txt": "Comenta quantos já vô você fala por dia.",
+   "ex": 0.55,
+   "cfg": 0.5
+  },
+  {
+   "c": "e08_01",
+   "q": "m",
+   "txt": "Engole o choro!",
+   "ex": 0.6,
+   "cfg": 0.5
+  },
+  {
+   "c": "e08_09",
+   "q": "m",
+   "txt": "Engole o choro!",
+   "ex": 0.7,
+   "cfg": 0.5
+  },
+  {
+   "c": "e06_16",
+   "q": "c",
+   "txt": "Eu quero uma mãe mais legal!",
+   "ex": 0.8,
+   "cfg": 0.5
+  }
+ ]
+}
