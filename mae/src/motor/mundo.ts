@@ -7,7 +7,7 @@ import { TONE, CHAR, untone } from "./shade";
 import { NOINK } from "./ink";
 import { Pool, Actor, Fx, Stage, person, blob, lidAt, viewOf, setLight, syncSun, Who as WhoKey } from "./actors";
 import { Outfit, FrontOpts, SideOpts, Expr, fxBurst, fxStars, fxPuff, fxRing, fxNote, fxCloud } from "./toon";
-import { buildSets, SETS } from "./sets";
+import { buildSets, buildSetsV2, SETS } from "./sets";
 import { PropRack } from "./props";
 import { FPS, V3, clamp01, glide, smooth, hh } from "./base";
 import type { Ep, ShotSpec, At, ActSpec, Light } from "./spec";
@@ -24,6 +24,10 @@ export const OUTFITS: Record<string, (v: number) => Outfit> = {
   amigo: (v) => ({ jacket: ["#f08a2c", "#e86e9a", "#3f6fb5"][v % 3], pants: "#3b5b9a", boots: "#f4f1ea", hat: v % 2 ? "cap" : "hair", cap: "#e2453c", hair: "#5a3b2a", skin: SK[(v + 2) % 5], build: "kid" }),
   apresentador: () => ({ jacket: "#2b3a5e", pants: "#2b2d36", boots: "#1d1a2a", hat: "hair", hair: "#1a1414", skin: SK[4], buttons: "#d9dde0" }),
   cientista: (v) => ({ jacket: "#f4f1ea", pants: "#5a5f6b", boots: "#3a2a22", hat: "hair", hair: ["#9a9a9a", "#4a3020", "#c9893a"][v % 3], skin: SK[(v + 1) % 5], glasses: true, buttons: "#9aa3b5" }),
+  maeMeme: () => ({ jacket: "#e04a5a", dress: "#e04a5a", pants: "#3b3f52", boots: "#2f6fd0", hat: "bun", hair: "#3b2418", skin: SK[0], build: "stout", bobes: true, apron: "#f6f1e4", rag: true }),
+  medico: () => ({ jacket: "#f4f6f8", pants: "#6fb7a8", boots: "#f4f1ea", hat: "cap", cap: "#6fb7a8", skin: SK[2], glasses: true, buttons: "#c9ccd2", moustache: "#3a2a20" }),
+  bombeiro: (v) => ({ jacket: "#c8352d", pants: "#2b2d36", boots: "#1d1a2a", hat: "hair", hair: "#2a201a", skin: SK[(v + 1) % 5], helmet: "#e8b923", belt: "#f3d35a", moustache: v % 2 ? "#2a1d16" : undefined }),
+  daviAdulto: () => ({ jacket: "#3fa45a", pants: "#3b5b9a", boots: "#4a3426", hat: "hair", hair: "#2a201a", skin: SK[1], build: "stout", moustache: "#2a1d16" }),
   enfermeira: () => ({ jacket: "#7fd1c2", dress: "#7fd1c2", pants: "#ffffff", boots: "#ffffff", hat: "bun", hair: "#2a201a", skin: SK[2], build: "adult" }),
 };
 const KID_WHO: Record<string, boolean> = { davi: true, kid: true, amigo: true };
@@ -49,9 +53,15 @@ const keyedNum = (ep: Ep, v: number | [At, number][] | undefined, t: number, def
 const STORM: LightPreset = { ...LIGHTS.day, lit: [0.95, 0.98, 1.08], shade: [0.3, 0.32, 0.42], lift: [0.06, 0.08, 0.14], charTint: [0.86, 0.9, 1.0],
   fog: "#8592a8", fogNear: 18, fogFar: 160, sunI: 1.4, sky: "#b8c4d8", hemiI: 0.7 };
 const LOOK_STORM = { ...LOOK.day, sky: { c: ["#8a96aa", "#7d8aa0", "#6a7790", "#59657e", "#4a546a"], e: [0, 3, 8, 16, 40] }, cloud: { lit: "#c9cfdb", mid: "#a9b1c2", shade: "#8a93a8" } };
-const lightOf = (l: Light) => (l === "storm" ? STORM : LIGHTS[l]);
-const lookOf = (l: Light) => (l === "storm" ? LOOK_STORM : LOOK[l]);
-export const gradeKey = (l: Light): "day" | "golden" => (l === "golden" ? "golden" : "day");
+const NIGHT: LightPreset = { ...LIGHTS.golden, lit: [0.75, 0.85, 1.35], shade: [0.12, 0.14, 0.3], lift: [0.04, 0.06, 0.16], charTint: [0.8, 0.86, 1.05],
+  fog: "#1d2a48", fogNear: 20, fogFar: 200, sunCol: "#9db8ff", sunI: 2.2, sky: "#5b6ea8", hemiI: 0.45, az: 30, el: 25 };
+const LOOK_NIGHT = { ...LOOK.golden, sky: { c: ["#2a3b66", "#22325a", "#1b284c", "#151f3d", "#0e1630"], e: [0, 3, 8, 16, 40] }, cloud: { lit: "#5f6f9e", mid: "#4a5888", shade: "#36416b" }, bounce: [0, 0, 0.02] as [number, number, number] };
+// interior de fim de tarde: luz quente entrando, sombra neutra (sem o violeta do golden)
+const WARM: LightPreset = { ...LIGHTS.day, lit: [1.62, 1.4, 1.1], shade: [0.46, 0.4, 0.42], lift: [0.06, 0.05, 0.06], charTint: [1.0, 0.93, 0.84], sideTint: [0.95, 0.9, 0.92],
+  fog: "#f1d9b8", sunCol: "#ffe2b8", sunI: 3.0, sky: "#ffe9cc", ground: "#b48a6a", hemiI: 0.6 };
+const lightOf = (l: Light) => (l === "storm" ? STORM : l === "night" ? NIGHT : l === "warm" ? WARM : LIGHTS[l]);
+const lookOf = (l: Light) => (l === "storm" ? LOOK_STORM : l === "night" ? LOOK_NIGHT : l === "warm" ? LOOK.day : LOOK[l]);
+export const gradeKey = (l: Light): "day" | "golden" => (l === "golden" || l === "night" ? "golden" : "day");
 
 export type CamNow = { pos: V3; look: V3; fov: number; roll: number };
 export const camAt = (ep: Ep, si: number, f: number, fr: { a: number; b: number }): CamNow => {
@@ -107,12 +117,12 @@ export class World {
     this.sun = new THREE.DirectionalLight("#fff0d6", 2.6);
     this.sun.castShadow = true; this.sun.shadow.mapSize.set(2048, 2048);
     R.add(this.hemi, this.sun, this.sun.target);
-    this.cloudMaps = { day: [0, 1, 2, 3].map((k) => cloudHD(k, LOOK.day.cloud)), golden: [0, 1, 2, 3].map((k) => cloudHD(k, LOOK.golden.cloud)), storm: [0, 1, 2, 3].map((k) => cloudHD(k, LOOK_STORM.cloud)) };
+    this.cloudMaps = { warm: [0, 1, 2, 3].map((k) => cloudHD(k, LOOK.day.cloud)), night: [0, 1, 2, 3].map((k) => cloudHD(k, LOOK_NIGHT.cloud)), day: [0, 1, 2, 3].map((k) => cloudHD(k, LOOK.day.cloud)), golden: [0, 1, 2, 3].map((k) => cloudHD(k, LOOK.golden.cloud)), storm: [0, 1, 2, 3].map((k) => cloudHD(k, LOOK_STORM.cloud)) };
     for (let i = 0; i < 10; i++) {
       const m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: this.cloudMaps.day[i % 4], color: new THREE.Color(1.1, 1.1, 1.1), transparent: true, depthWrite: false, fog: false }));
       m.layers.set(NOINK); this.clouds.push(m); R.add(m);
     }
-    buildSets(R);
+    buildSets(R); buildSetsV2(R);
     this.rack = new PropRack(R);
     // água da enchente (rua)
     const wt = ctex("agua", 256, 256, (g, r) => { g.fillStyle = "#6f8fa8"; g.fillRect(0, 0, 256, 256); for (let i = 0; i < 160; i++) { g.fillStyle = `rgba(255,255,255,${0.08 + r() * 0.12})`; g.fillRect(r() * 256, r() * 256, 20 + r() * 40, 3); } });
@@ -140,6 +150,7 @@ export class World {
       const sc = keyedNum(ep, a.s, t, 1) * (KID_WHO[a.who] ? 0.82 : 1);
       const expr = keyed<Expr>(ep, a.ex, t, "neutral");
       const armK = keyed<string>(ep, a.arms as never, t, "none");
+      const propK = keyed<string>(ep, a.prop as never, t, "none");
       const shake = a.shake ? Math.sin(t * 60 + i) * a.shake * 0.02 : 0;
       const ostr = a.who + (a.v ?? 0);
       const who: WhoKey = { i: i * 13 + (a.v ?? 0) * 7 + 11, o: OUTFITS[a.who](a.v ?? 0), okey: ostr };
@@ -148,7 +159,7 @@ export class World {
       const view = a.walk ? viewOf(cam, x, z, a.walk[0], a.walk[1]) : { side: !!a.side, mirror: false, fs: 1 };
       const blink = lidAt(t, who.i, a.ex && Array.isArray(a.ex) ? (a.ex as [At, Expr][]).map(([k]) => timeOf(ep, k)) : []);
       const fo: FrontOpts = { phase: ph, expr, mode: moving ? "stroll" : (a.mode ?? "stand"), blink, look: a.look ?? 0, facing: a.facing ?? 0,
-        ...(a.wave ? { wave: Math.round(Math.sin(t * 9 + i) * 15) / 15 } : {}), ...(armK !== "none" ? { arms: armK as FrontOpts["arms"] } : {}) };
+        ...(a.wave ? { wave: Math.round(Math.sin(t * 9 + i) * 15) / 15 } : {}), ...(armK !== "none" ? { arms: armK as FrontOpts["arms"] } : {}), ...(propK !== "none" ? { prop: propK as FrontOpts["prop"] } : {}) };
       const so: SideOpts = { phase: ph, expr, mode: moving ? "stroll" : "stand", blink, stride: view.fs } as SideOpts;
       out.places.push(person(cam, who, x + shake, y, z, view, fo, so, sc));
       if ((a.y ?? 0) < 0.3) blob(out, x, o[1] + 0.005, z, sc);
@@ -173,7 +184,7 @@ export class World {
     const focus = V(...c.look), dist = cam.position.distanceTo(focus);
     // sol relativo à câmera: de lado/trás-direita (az 120) e alto
     const fx0 = c.look[0] - c.pos[0], fz0 = c.look[2] - c.pos[2], n0 = Math.hypot(fx0, fz0) || 1;
-    const az = THREE.MathUtils.degToRad(light === "golden" ? 20 : 125), el = THREE.MathUtils.degToRad(light === "golden" ? 9 : SETS[s.set].ext ? 48 : 62);
+    const az = THREE.MathUtils.degToRad(light === "golden" ? 20 : light === "night" ? 50 : 125), el = THREE.MathUtils.degToRad(light === "golden" ? 9 : light === "night" ? 30 : SETS[s.set].ext ? 48 : 62);
     const hx = (fx0 / n0) * Math.cos(az) - (fz0 / n0) * Math.sin(az), hz = (fz0 / n0) * Math.cos(az) + (fx0 / n0) * Math.sin(az);
     const sunDir = new THREE.Vector3(hx * Math.cos(el), Math.sin(el), hz * Math.cos(el)).normalize();
     this.hemi.color.set(L.sky); this.hemi.groundColor.set(L.ground); this.hemi.intensity = L.hemiI;

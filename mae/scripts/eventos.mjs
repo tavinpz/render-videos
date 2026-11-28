@@ -12,5 +12,5 @@ const planos = e.shots.map((s, i) => {
     flash: !!s.flash, kicks, fx: (s.fx ?? []).map((f) => ({ k: f.k, t: T(f.at) })), props: (s.props ?? []).filter((p) => p.drift || p.spin).map((p) => p.k), grow, rise,
     leg: s.leg ?? 480, hop: (s.acts ?? []).some((a) => a.hop), shake: (s.acts ?? []).some((a) => a.shake) };
 });
-fs.writeFileSync(`../public/mm/${ep}/eventos.json`, JSON.stringify({ total: e.tempos.total, planos }, null, 1));
+fs.writeFileSync(process.argv[3] ?? `../public/mm/${ep}/eventos.json`, JSON.stringify({ total: e.tempos.total, planos }, null, 1));
 console.log(ep, planos.length, "planos");

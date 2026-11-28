@@ -5,7 +5,7 @@ import { Batch, boxGeo, V, lam, house } from "./build";
 import { ctex, rep, grassHD, roofHD } from "./paint";
 import { D0, V3, hh } from "./base";
 
-export type SetName = "cozinha" | "sala" | "quarto" | "mercado" | "escola" | "estudio" | "rua" | "quintal" | "posto";
+export type SetName = "cozinha" | "sala" | "quarto" | "mercado" | "escola" | "estudio" | "rua" | "quintal" | "posto" | "maternidade" | "raiox";
 export const SETS: Record<SetName, { o: V3; ext: boolean }> = {
   cozinha: { o: [0, 0, 0], ext: false },
   sala: { o: [200, 0, 0], ext: false },
@@ -14,6 +14,8 @@ export const SETS: Record<SetName, { o: V3; ext: boolean }> = {
   escola: { o: [800, 0, 0], ext: false },
   estudio: { o: [1000, 0, 0], ext: false },
   posto: { o: [1200, 0, 0], ext: false },
+  maternidade: { o: [1400, 0, 0], ext: false },
+  raiox: { o: [1600, 0, 0], ext: false },
   rua: { o: [0, 0, -700], ext: true },
   quintal: { o: [700, 0, -700], ext: true },
 };
@@ -272,6 +274,97 @@ export const buildSets = (root: THREE.Object3D) => {
     ([["#e2453c", -6.3], ["#3f6fb5", -5.4], ["#f3d35a", -4.4]] as const).forEach(([c, x]) => b.add(boxGeo(V(o.x + x, 1.35, o.z + 3.53), V(o.x + x + 0.6, 1.95, o.z + 3.57)), lam("roupa" + c, () => ({ color: c }))));
     tree(b, m, o.x + 6, o.z + 4.5, 1.0, 7);
     for (let i = 0; i < 12; i++) tree(b, m, o.x - 30 + i * 6, o.z + 22 + hh(i) * 8, 1.1 + hh(i, 2) * 0.3, i);
+  }
+  b.build(root);
+};
+
+// ---------------- maternidade e raio-X (v2) ----------------
+const blinds = () => ctex("persiana", 256, 256, (g) => {
+  const gr = g.createLinearGradient(0, 0, 0, 256); gr.addColorStop(0, "#ffd9a0"); gr.addColorStop(1, "#ffefd2"); g.fillStyle = gr; g.fillRect(0, 0, 256, 256);
+  for (let y = 0; y < 256; y += 22) { g.fillStyle = "#efe6d6"; g.fillRect(0, y, 256, 14); g.fillStyle = "rgba(120,100,80,0.35)"; g.fillRect(0, y + 13, 256, 2); }
+});
+const monitorTex = () => ctex("monitorUTI", 256, 160, (g) => {
+  g.fillStyle = "#06140c"; g.fillRect(0, 0, 256, 160); g.strokeStyle = "#3dff8a"; g.lineWidth = 4; g.beginPath();
+  for (let x = 0; x < 256; x++) { const k = x % 64; const y = k > 28 && k < 34 ? 60 - (k - 28) * 14 : k >= 34 && k < 38 ? 30 + (k - 34) * 22 : 70; x ? g.lineTo(x, y) : g.moveTo(x, y); } g.stroke();
+  g.fillStyle = "#3dff8a"; g.font = "700 40px monospace"; g.fillText("♥ 128", 20, 140);
+});
+const clockTex = () => ctex("relogio", 128, 128, (g) => {
+  g.fillStyle = "#ffffff"; g.beginPath(); g.arc(64, 64, 60, 0, 7); g.fill(); g.strokeStyle = "#2b2d36"; g.lineWidth = 6; g.stroke();
+  g.lineWidth = 5; g.beginPath(); g.moveTo(64, 64); g.lineTo(64, 26); g.moveTo(64, 64); g.lineTo(92, 74); g.stroke();
+});
+const xrayTex = () => ctex("raiox", 512, 640, (g) => {
+  g.fillStyle = "#0b1622"; g.fillRect(0, 0, 512, 640); g.fillStyle = "rgba(170,210,255,0.85)"; g.strokeStyle = "rgba(220,240,255,0.95)"; g.lineWidth = 10; g.lineCap = "round";
+  // ossos da mão
+  for (const [x0, y0, x1, y1] of [[180, 600, 200, 400], [240, 610, 250, 390], [300, 610, 300, 395], [350, 600, 340, 410], [400, 560, 430, 450]]) { g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke(); }
+  for (const [x, y] of [[200, 380], [252, 370], [302, 372], [338, 388], [436, 430]]) { g.beginPath(); g.moveTo(x, y); g.lineTo(x + (x - 300) * 0.15, y - 90); g.stroke(); }
+  // o chinelo DENTRO da mão
+  g.fillStyle = "rgba(255,255,255,0.92)"; g.beginPath(); g.ellipse(290, 250, 85, 190, 0, 0, 7); g.fill();
+  g.strokeStyle = "#0b1622"; g.lineWidth = 12; g.beginPath(); g.moveTo(240, 190); g.lineTo(290, 110); g.lineTo(340, 190); g.stroke();
+  g.fillStyle = "#ff3b3b"; g.font = "900 54px sans-serif"; g.fillText("?!", 400, 120);
+});
+export const buildSetsV2 = (root: THREE.Object3D) => {
+  const m = mats(), b = new Batch();
+  const L = (c: string) => lam("v2" + c, () => ({ color: c }));
+  // MATERNIDADE: azulejo verde-água até 1,4 m, tinta creme em cima, piso de granilite, cama, berço, monitor, soro, cortina, ar-condicionado, TV de tubo
+  {
+    const o = V(...SETS.maternidade.o);
+    room(b, m, o, 10, 9, 4, lam("v2_granilite", () => ({ map: rep(tiles("#d9d6cf", "#cfcbc2", 6), 10, 10) })), lam("v2_paredeMat", () => ({ map: rep(wallTex("#f3ead2"), 3, 2) })), false);
+    const zb = o.z + 4.5, x0 = o.x - 5, x1 = o.x + 5;
+    const azul = lam("v2_azulejo", () => ({ map: rep(tiles("#bfe6dc", "#aad9cd", 8), 6, 1) }));
+    b.add(boxGeo(V(x0, 0, zb - 0.04), V(x1, 1.4, zb)), azul);
+    b.add(boxGeo(V(x0, 0, o.z - 6.5), V(x0 + 0.04, 1.4, zb)), azul);
+    b.add(boxGeo(V(x1 - 0.04, 0, o.z - 6.5), V(x1, 1.4, zb)), azul);
+    b.add(boxGeo(V(x0, 1.4, zb - 0.07), V(x1, 1.48, zb - 0.02)), L("#7fbfae"));
+    // janela grande com persiana (luz de fim de tarde)
+    b.add(boxGeo(V(o.x - 3.8, 1.6, zb - 0.06), V(o.x - 1.2, 3.4, zb - 0.03)), new THREE.MeshBasicMaterial({ map: blinds() }));
+    for (const [a, c] of [[[o.x - 3.95, 1.5], [o.x - 1.05, 1.6]], [[o.x - 3.95, 3.4], [o.x - 1.05, 3.5]], [[o.x - 3.95, 1.5], [o.x - 3.8, 3.5]], [[o.x - 1.2, 1.5], [o.x - 1.05, 3.5]]] as const)
+      b.add(boxGeo(V(a[0], a[1], zb - 0.12), V(c[0], c[1], zb)), m.white);
+    // ar-condicionado, relógio, placa, cruz
+    b.add(boxGeo(V(o.x + 1.2, 3.15, zb - 0.32), V(o.x + 2.6, 3.6, zb - 0.02)), L("#f4f4f2"));
+    b.add(boxGeo(V(o.x + 1.25, 3.17, zb - 0.34), V(o.x + 2.55, 3.22, zb - 0.3)), L("#c9ccd2"));
+    b.add(boxGeo(V(o.x + 0.1, 2.6, zb - 0.05), V(o.x + 0.6, 3.1, zb - 0.02)), lam("v2_relogio", () => ({ map: clockTex() })));
+    b.add(boxGeo(V(o.x - 0.2, 3.55, zb - 0.05), V(o.x + 0.9, 3.85, zb - 0.02)), lam("v2_placaMat", () => ({ map: textTex("maternidade", 512, 140, "#2f8a6f", "#ffffff", "MATERNIDADE", 70) })));
+    // TV de tubo no suporte, canto esquerdo
+    b.add(boxGeo(V(x0 + 0.05, 2.7, o.z + 2.4), V(x0 + 0.5, 2.75, o.z + 2.8)), m.metal);
+    b.add(boxGeo(V(x0 + 0.2, 2.75, o.z + 2.25), V(x0 + 0.95, 3.35, o.z + 2.95)), L("#3a3440"));
+    b.add(boxGeo(V(x0 + 0.95, 2.8, o.z + 2.32), V(x0 + 0.97, 3.28, o.z + 2.88)), L("#6c8fb0"));
+    // cama hospitalar
+    const bx = o.x + 1.8, bz = o.z + 2.6;
+    b.add(boxGeo(V(bx - 0.5, 0.55, bz - 1.0), V(bx + 0.5, 0.72, bz + 1.0)), m.white);
+    b.add(boxGeo(V(bx - 0.48, 0.72, bz - 0.3), V(bx + 0.48, 0.78, bz + 0.98)), L("#7ec9b0"));
+    b.add(boxGeo(V(bx - 0.35, 0.72, bz + 0.55), V(bx + 0.35, 0.86, bz + 0.92)), m.white);
+    for (const sx of [-1, 1]) for (const sz of [-1, 1]) b.add(cyl(0.03, 0.03, 0.55, 8), m.metal, at(bx + sx * 0.45, 0, bz + sz * 0.92));
+    b.add(boxGeo(V(bx - 0.52, 0.72, bz + 0.98), V(bx + 0.52, 1.25, bz + 1.02)), m.metal);
+    for (const sx of [-1, 1]) b.add(boxGeo(V(bx + sx * 0.52 - 0.02, 0.8, bz - 0.4), V(bx + sx * 0.52 + 0.02, 1.0, bz + 0.6)), m.metal);
+    // berço de acrílico no carrinho
+    const cx2 = o.x - 1.8, cz2 = o.z + 2.9;
+    b.add(boxGeo(V(cx2 - 0.4, 0.75, cz2 - 0.25), V(cx2 + 0.4, 1.05, cz2 + 0.25)), new THREE.MeshLambertMaterial({ color: "#d8f0ff", transparent: true, opacity: 0.55 }));
+    b.add(boxGeo(V(cx2 - 0.36, 0.0, cz2 - 0.2), V(cx2 + 0.36, 0.75, cz2 + 0.2)), m.white);
+    // monitor e soro
+    b.add(cyl(0.03, 0.03, 1.5, 8), m.metal, at(o.x + 3.6, 0, o.z + 3.4));
+    b.add(boxGeo(V(o.x + 3.35, 1.5, o.z + 3.25), V(o.x + 3.85, 1.85, o.z + 3.45)), L("#2b2d36"));
+    b.add(boxGeo(V(o.x + 3.38, 1.53, o.z + 3.24), V(o.x + 3.82, 1.82, o.z + 3.25)), new THREE.MeshBasicMaterial({ map: monitorTex() }));
+    b.add(cyl(0.02, 0.02, 2.0, 8), m.metal, at(o.x + 0.6, 0, o.z + 3.6));
+    b.add(new THREE.CapsuleGeometry(0.08, 0.16, 4, 12), new THREE.MeshLambertMaterial({ color: "#e8f6ff", transparent: true, opacity: 0.8 }), at(o.x + 0.6, 1.85, o.z + 3.6));
+    // cortina hospitalar no lado direito
+    for (let i = 0; i < 9; i++) b.add(boxGeo(V(x1 - 0.6, 0.3, o.z - 2.5 + i * 0.5), V(x1 - 0.5, 2.9, o.z - 2.5 + i * 0.5 + 0.45)), i % 2 ? L("#9fd3e8") : L("#8cc8df"));
+    b.add(boxGeo(V(x1 - 0.62, 2.9, o.z - 2.6), V(x1 - 0.48, 2.95, o.z + 2.0)), m.metal);
+    // carrinho de procedimento + cadeira azul de acompanhante
+    b.add(boxGeo(V(o.x - 3.9, 0.85, o.z + 1.0), V(o.x - 3.1, 0.9, o.z + 1.6)), m.metal);
+    b.add(boxGeo(V(o.x - 3.85, 0.0, o.z + 1.05), V(o.x - 3.15, 0.85, o.z + 1.55)), L("#dfe3e8"));
+    b.add(boxGeo(V(o.x + 3.4, 0.45, o.z + 0.6), V(o.x + 4.1, 0.55, o.z + 1.3)), L("#3f6fb5"));
+    b.add(boxGeo(V(o.x + 3.4, 0.55, o.z + 1.2), V(o.x + 4.1, 1.2, o.z + 1.3)), L("#3f6fb5"));
+  }
+  // RAIO-X: sala escura, negatoscópio com a mão e o chinelo dentro
+  {
+    const o = V(...SETS.raiox.o);
+    room(b, m, o, 8, 7, 4, lam("v2_pisoRx", () => ({ color: "#3a4150" })), lam("v2_paredeRx", () => ({ color: "#2b3446" })), false);
+    const zb = o.z + 3.5;
+    b.add(boxGeo(V(o.x - 1.1, 1.2, zb - 0.16), V(o.x + 1.1, 3.6, zb - 0.12)), new THREE.MeshBasicMaterial({ map: xrayTex(), color: new THREE.Color(1.3, 1.4, 1.5) }));
+    b.add(boxGeo(V(o.x - 1.25, 1.1, zb - 0.1), V(o.x + 1.25, 3.7, zb - 0.02)), L("#c9ccd2"));
+    b.add(boxGeo(V(o.x + 1.8, 0, zb - 1.6), V(o.x + 3.2, 1.0, zb - 0.6)), L("#dfe3e8"));
+    b.add(cyl(0.1, 0.1, 2.6, 12), m.metal, at(o.x + 2.5, 0, zb - 0.5));
+    b.add(boxGeo(V(o.x + 2.1, 2.3, zb - 1.4), V(o.x + 2.9, 2.7, zb - 0.6)), L("#e8b923"));
   }
   b.build(root);
 };

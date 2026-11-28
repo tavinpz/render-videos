@@ -1,0 +1,17 @@
+{
+ "trechos": [
+  {"de": 0, "nome": "cotidiano", "g": 1.0},
+  {"de": 6, "off": 0.55, "nome": "silencio"},
+  {"de": 7, "nome": "tensao", "g": 0.9, "fade_in": 0.02},
+  {"de": 8, "nome": "cotidiano", "fade_in": 0.2},
+  {"de": 9, "off": -0.55, "nome": "tensao", "fade_in": 0.05},
+  {"de": 12, "nome": "sonho", "fade_in": 0.4},
+  {"de": 13, "off": -0.05, "nome": "cotidiano", "fade_in": 0.02}
+ ],
+ "extras": [
+  {"k": "riser", "fala": 7, "off": -0.75, "d": 0.7, "g": 0.25},
+  {"k": "coral", "fala": 13, "off": -1.1, "d": 1.4, "g": 0.6},
+  {"k": "impacto", "fala": 13, "off": 0.0, "g": 0.5},
+  {"k": "chinelada", "fala": 2, "off": 0.0, "g": 0.6}
+ ]
+}

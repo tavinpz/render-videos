@@ -4,8 +4,12 @@
 # Posição: centro em y 480 (ou o "leg" do plano). CTA na faixa y 600–870 durante a última fala.
 import json, sys, re
 ep, chaves, cta = sys.argv[1], [k.strip().lower() for k in sys.argv[2].split('|') if k.strip()], sys.argv[3]
-T = json.load(open(f'mae/src/eps/{ep}_tempos.json')); E = json.load(open(f'public/mm/{ep}/eventos.json'))
-COR = {'n': '&H00FFFFFF', 'm': '&H00B07FFF', 'v': '&H00FFB45A', 'c': '&H0077E86A'}  # ASS = &HAABBGGRR
+PASTA = sys.argv[4] if len(sys.argv) > 4 else f'public/mm/{ep}'
+T = json.load(open(f'mae/src/eps/{ep}_tempos.json')); E = json.load(open(f'{PASTA}/eventos.json'))
+import os
+SEMLEG = {f['i'] for f in json.load(open(f'{PASTA}/plano_audio.json'))['falas'] if f.get('leg') is False} if os.path.exists(f'{PASTA}/plano_audio.json') else set()
+BEEP = {f['i']: f['beep'] for f in json.load(open(f'{PASTA}/plano_audio.json'))['falas'] if f.get('beep')} if os.path.exists(f'{PASTA}/plano_audio.json') else {}
+COR = {'n': '&H00FFFFFF', 'm': '&H00B07FFF', 'M': '&H00B07FFF', 'v': '&H0077E86A', 'c': '&H0077E86A', 'g': '&H00FFE0A0', 'e': '&H004FA0FF'}  # ASS = &HAABBGGRR
 AMARELO = '&H0036D8FF'
 def ts(t): t = max(0, t); h = int(t // 3600); m = int(t % 3600 // 60); s = t % 60; return f'{h}:{m:02d}:{s:05.2f}'
 def ylegenda(t):
@@ -30,7 +34,10 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 ev = []
 falas = T['falas']
 for fi, f in enumerate(falas):
+    if fi in SEMLEG: continue
     pal = f['pal']; i = 0; grupos = []
+    if fi in BEEP:  # a parte bipada vira PIIII na legenda
+        corte = f['a'] + BEEP[fi] * (f['b'] - f['a']); pal = [w for w in pal if w[1] < corte] + [['PIIII', corte, f['b']]]
     while i < len(pal):
         g = [pal[i]]
         # palavra curta (até 3 letras) vai junto com a seguinte, no máximo 2 por vez
@@ -48,5 +55,5 @@ for fi, f in enumerate(falas):
 # CTA: caixa branca com a palavra, durante a última fala
 u = falas[-1]
 ev.append(f'Dialogue: 1,{ts(u["a"] + 0.2)},{ts(T["total"])},C,,0,0,0,,{{\\an5\\pos(540,740)\\fscx80\\fscy80\\t(0,120,\\fscx100\\fscy100)}}{cta}')
-open(f'public/mm/{ep}/leg.ass', 'w').write(cab + '\n'.join(ev) + '\n')
+open(f'{PASTA}/leg.ass', 'w').write(cab + '\n'.join(ev) + '\n')
 print(ep, len(ev), 'eventos de legenda')
