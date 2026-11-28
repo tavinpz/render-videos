@@ -2,7 +2,7 @@
 # Uso: python3 ferramentas/mm_legenda.py <ep> "<palavras-chave separadas por |>" "<texto do CTA>"
 # Cor por quem fala: mãe rosa, pai azul, Davi verde, narrador branco; palavra-chave amarela. Contorno preto grosso.
 # Posição: centro em y 480 (ou o "leg" do plano). CTA na faixa y 600–870 durante a última fala.
-import json, sys, re
+import json, sys, re, os
 ep, chaves, cta = sys.argv[1], [k.strip().lower() for k in sys.argv[2].split('|') if k.strip()], sys.argv[3]
 PASTA = sys.argv[4] if len(sys.argv) > 4 else f'public/mm/{ep}'
 T = json.load(open(f'mae/src/eps/{ep}_tempos.json')); E = json.load(open(f'{PASTA}/eventos.json'))
@@ -14,8 +14,8 @@ AMARELO = '&H0036D8FF'
 def ts(t): t = max(0, t); h = int(t // 3600); m = int(t % 3600 // 60); s = t % 60; return f'{h}:{m:02d}:{s:05.2f}'
 def ylegenda(t):
     for p in E['planos']:
-        if p['a'] <= t < p['b']: return p.get('leg', 480)
-    return 480
+        if p['a'] <= t < p['b']: return p.get('leg', int(os.environ.get('LEGY', 480)))
+    return int(os.environ.get('LEGY', 480))
 def limpa(w): return re.sub(r'[^\wÀ-ú]', '', w.lower())
 cab = f"""[Script Info]
 ScriptType: v4.00+

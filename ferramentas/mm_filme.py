@@ -55,7 +55,7 @@ for f in PL['falas']:
         i0 = int((cob['a'] - f['a'] + 0.05) * SR); r = int(0.45 * SR); i1 = int((f['corta'] - f['a']) * SR)
         lp = filt(a, 'lowpass', 1300)
         k = np.zeros(n); k[i0:] = 1; k[i0:i0 + r] = np.linspace(0, 1, max(0, min(r, n - i0)))[:len(k[i0:i0 + r])]
-        a = a * (1 - k) + lp * k * 10 ** (-15 / 20)
+        a = a * (1 - k) + lp * k * 10 ** (-12 / 20)
         if i1 < n: env[i1:] = 0; env[max(0, i1 - int(0.3 * SR)):i1] = np.linspace(1, 0, min(int(0.3 * SR), i1))
     a = a[:n] * env[:n] if len(env) >= len(a[:n]) else a
     poe(VOZ, a * g, f['a'], 1.0, 0.0 if f['q'] == 'n' else rng.uniform(-0.12, 0.12))
@@ -150,7 +150,7 @@ for j, tr in enumerate(MAPA['trechos']):
 vm = VOZ.mean(1); w = int(0.05 * SR)
 rms = np.sqrt(np.maximum(signal.fftconvolve(vm ** 2, np.ones(w) / w, 'same'), 0))
 fala = signal.sosfiltfilt(signal.butter(1, 6, 'lowpass', fs=SR, output='sos'), (rms > 0.01).astype(np.float32)).clip(0, 1)
-MUSI *= (10 ** (-8 * fala / 20))[:, None]
+MUSI *= (10 ** (-7 * fala / 20))[:, None]
 def db(x): return 20 * np.log10(np.sqrt(np.mean(x ** 2)) + 1e-9)
 ativo = fala > 0.5
 ref = db(VOZ[ativo]) if ativo.any() else -20

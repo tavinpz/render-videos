@@ -4,7 +4,8 @@ import json, sys, subprocess
 ep, src, out = sys.argv[1:4]
 PASTA = sys.argv[4] if len(sys.argv) > 4 else f'public/mm/{ep}'
 T = json.load(open(f'mae/src/eps/{ep}_tempos.json')); E = json.load(open(f'{PASTA}/eventos.json'))
-TOT = T['total']; LOOP = 0.45
+import os
+TOT = min(T['total'], float(os.environ.get('MAXT', 1e9))); LOOP = 0.45 if 'MAXT' not in os.environ else 0.0
 cortes = [p['a'] for p in E['planos']]
 def perto(t, d=0.35): return any(abs(t - c) < d for c in cortes)
 viradas = []
@@ -30,7 +31,7 @@ for t, k in marcas:
         else: t0, z = t, True
 if z: blocos.append((t0, TOT - LOOP))
 expr = '1+0.12*(' + '+'.join(f'between(it,{a:.3f},{b - 0.001:.3f})' for a, b in blocos) + ')' if blocos else '1'
-vf = (f"[0:v]split[a][b];[a]trim=0:{TOT - LOOP:.3f},setpts=PTS-STARTPTS[m];[b]trim=0:{LOOP},setpts=PTS-STARTPTS[h];[m][h]concat=n=2:v=1[c];"
+vf = ((f"[0:v]split[a][b];[a]trim=0:{TOT - LOOP:.3f},setpts=PTS-STARTPTS[m];[b]trim=0:{LOOP},setpts=PTS-STARTPTS[h];[m][h]concat=n=2:v=1[c];") if LOOP else f"[0:v]trim=0:{TOT:.3f},setpts=PTS-STARTPTS[c];")+(
       f"[c]zoompan=z='{expr}':x='iw/2-iw/zoom/2':y='ih*0.62-ih*0.62/zoom':d=1:s=1080x1920:fps=30,"
       f"ass={PASTA}/leg.ass:fontsdir=mae/fontes[v]")
 subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', src, '-i', f'{PASTA}/mix.m4a', '-filter_complex', vf, '-map', '[v]', '-map', '1:a',
