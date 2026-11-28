@@ -1,0 +1,109 @@
+{
+ "falas": [
+  {
+   "c": "r1_00",
+   "q": "n",
+   "txt": "Nessa cidade, toda mãe nasce com quarenta e sete anos e um chinelo na mão.",
+   "ex": 0.5,
+   "cfg": 0.5
+  },
+  {
+   "c": "r1_01",
+   "q": "g",
+   "txt": "É uma menina!",
+   "ex": 0.75,
+   "cfg": 0.4
+  },
+  {
+   "c": "r1_02",
+   "q": "M",
+   "txt": "Quem deixou essa porta aberta?! Tá achando que eu sou porteira?!",
+   "ex": 0.9,
+   "cfg": 0.3
+  },
+  {
+   "c": "r1_03",
+   "q": "M",
+   "txt": "E esse lençol, quem lavou? Isso aqui tá limpo? Tá não. Tá não!",
+   "ex": 0.75,
+   "cfg": 0.35
+  },
+  {
+   "c": "r1_04",
+   "q": "n",
+   "txt": "Com dez minutos de vida, ela já tinha escondido o controle da TV do hospital.",
+   "ex": 0.55,
+   "cfg": 0.5
+  },
+  {
+   "c": "r1_05",
+   "q": "M",
+   "txt": "Esse ar-condicionado tá ligado pra quê? É tu que paga a luz?",
+   "ex": 0.75,
+   "cfg": 0.35
+  },
+  {
+   "c": "r1_06",
+   "q": "g",
+   "txt": "Puta que pa...",
+   "ex": 0.45,
+   "cfg": 0.5
+  },
+  {
+   "c": "r1_07",
+   "q": "M",
+   "txt": "Puta que o quê?",
+   "ex": 0.65,
+   "cfg": 0.4
+  },
+  {
+   "c": "r1_08",
+   "q": "g",
+   "txt": "Que paz, né. Que paz.",
+   "ex": 0.6,
+   "cfg": 0.45
+  },
+  {
+   "c": "r1_09",
+   "q": "n",
+   "txt": "Os cientistas tentaram tirar o chinelo dela. Chamaram três bombeiros.",
+   "ex": 0.6,
+   "cfg": 0.5
+  },
+  {
+   "c": "r1_10",
+   "q": "n",
+   "txt": "Ela acertou os três.",
+   "ex": 0.5,
+   "cfg": 0.5
+  },
+  {
+   "c": "r1_11",
+   "q": "e",
+   "txt": "Ô desgraça, acertou de longe!",
+   "ex": 0.9,
+   "cfg": 0.3
+  },
+  {
+   "c": "r1_12",
+   "q": "n",
+   "txt": "E aí... no aniversário de quarenta e sete anos do Davi...",
+   "ex": 0.4,
+   "cfg": 0.5
+  },
+  {
+   "c": "r1_13",
+   "q": "v",
+   "txt": "Quem deixou essa porta aberta, porra?!",
+   "ex": 0.95,
+   "cfg": 0.3
+  },
+  {
+   "c": "r1_14",
+   "q": "n",
+   "txt": "Comenta chinelo se a sua também nasceu assim.",
+   "ex": 0.55,
+   "cfg": 0.5
+  }
+ ]
+}
