@@ -1,0 +1,334 @@
+{
+ "falas": [
+  {
+   "c": "e06_00",
+   "q": "n",
+   "txt": "Nessa cidade, tudo que a mãe diz que tem em casa… aparece em casa.",
+   "ex": 0.55
+  },
+  {
+   "c": "e06_01",
+   "q": "c",
+   "txt": "Mãe, compra hambúrguer?",
+   "ex": 0.6
+  },
+  {
+   "c": "e06_02",
+   "q": "m",
+   "txt": "Tem hambúrguer em casa.",
+   "ex": 0.5
+  },
+  {
+   "c": "e06_03",
+   "q": "n",
+   "txt": "E tinha. Pão de forma, ovo frito e meia salsicha.",
+   "ex": 0.5
+  },
+  {
+   "c": "e06_04",
+   "q": "c",
+   "txt": "Mãe, eu quero o boneco do super-herói!",
+   "ex": 0.65
+  },
+  {
+   "c": "e06_05",
+   "q": "m",
+   "txt": "Tem boneco em casa.",
+   "ex": 0.5
+  },
+  {
+   "c": "e06_06",
+   "q": "n",
+   "txt": "Uma meia velha com dois botões. O nome dele é Clebinho.",
+   "ex": 0.5
+  },
+  {
+   "c": "e06_07",
+   "q": "c",
+   "txt": "Mãe, todo mundo tem videogame!",
+   "ex": 0.7
+  },
+  {
+   "c": "e06_08",
+   "q": "m",
+   "txt": "Tem videogame em casa.",
+   "ex": 0.55
+  },
+  {
+   "c": "e06_09",
+   "q": "n",
+   "txt": "Uma caixa de papelão com o controle desenhado de caneta.",
+   "ex": 0.5
+  },
+  {
+   "c": "e06_10",
+   "q": "n",
+   "txt": "Chegaram as férias. Os amigos foram pra praia.",
+   "ex": 0.5
+  },
+  {
+   "c": "e06_11",
+   "q": "c",
+   "txt": "Mãe! Eu quero ir pra praia!",
+   "ex": 0.8
+  },
+  {
+   "c": "e06_12",
+   "q": "m",
+   "txt": "Tem praia em casa.",
+   "ex": 0.55
+  },
+  {
+   "c": "e06_13",
+   "q": "n",
+   "txt": "Piscina de plástico, areia da obra do vizinho… e o pai de sunga no quintal.",
+   "ex": 0.55
+  },
+  {
+   "c": "e06_14",
+   "q": "v",
+   "txt": "Olha a onda!",
+   "ex": 0.75
+  },
+  {
+   "c": "e06_15",
+   "q": "n",
+   "txt": "Um dia, o Davi ficou bravo de verdade.",
+   "ex": 0.5
+  },
+  {
+   "c": "e06_16",
+   "q": "c",
+   "txt": "Eu quero uma mãe mais legal!",
+   "ex": 0.85
+  },
+  {
+   "c": "e06_17",
+   "q": "m",
+   "txt": "Tem em casa.",
+   "ex": 0.45
+  },
+  {
+   "c": "e06_18",
+   "q": "n",
+   "txt": "E tinha. A mesma que fritou o ovo, costurou o Clebinho e encheu a piscina de balde.",
+   "ex": 0.5
+  },
+  {
+   "c": "e06_19",
+   "q": "n",
+   "txt": "Comenta o que a sua mãe disse que tinha em casa.",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_00",
+   "q": "n",
+   "txt": "Nessa cidade, cada \"já vou\" que a criança fala deixa a mãe um metro mais alta.",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_01",
+   "q": "m",
+   "txt": "Davi, vem jantar!",
+   "ex": 0.7
+  },
+  {
+   "c": "e07_02",
+   "q": "c",
+   "txt": "Já vou!",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_03",
+   "q": "n",
+   "txt": "Um metro.",
+   "ex": 0.5
+  },
+  {
+   "c": "e07_04",
+   "q": "m",
+   "txt": "Davi, o banho!",
+   "ex": 0.7
+  },
+  {
+   "c": "e07_05",
+   "q": "c",
+   "txt": "Já tô indo!",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_06",
+   "q": "n",
+   "txt": "\"Já tô indo\" vale três.",
+   "ex": 0.5
+  },
+  {
+   "c": "e07_07",
+   "q": "n",
+   "txt": "Mas o Davi tava na última fase do jogo.",
+   "ex": 0.5
+  },
+  {
+   "c": "e07_08",
+   "q": "c",
+   "txt": "Já vou! Já vou! Já vou!",
+   "ex": 0.7
+  },
+  {
+   "c": "e07_09",
+   "q": "n",
+   "txt": "A mãe passou do teto. Depois do telhado.",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_10",
+   "q": "n",
+   "txt": "O ônibus desviou dela. O avião pediu licença.",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_11",
+   "q": "n",
+   "txt": "No jornal: mulher de quarenta metros procura filho no bairro.",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_12",
+   "q": "m",
+   "txt": "Davi Lucas!",
+   "ex": 0.9
+  },
+  {
+   "c": "e07_13",
+   "q": "n",
+   "txt": "Ele largou o controle, correu e sentou na mesa.",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_14",
+   "q": "n",
+   "txt": "A mãe voltou ao normal. A janta tava fria.",
+   "ex": 0.5
+  },
+  {
+   "c": "e07_15",
+   "q": "n",
+   "txt": "Aí o celular do pai tocou. Era a vó.",
+   "ex": 0.5
+  },
+  {
+   "c": "e07_16",
+   "q": "v",
+   "txt": "Já vou, mãe.",
+   "ex": 0.5
+  },
+  {
+   "c": "e07_17",
+   "q": "n",
+   "txt": "E atrás da montanha… apareceu a vó.",
+   "ex": 0.6
+  },
+  {
+   "c": "e07_18",
+   "q": "n",
+   "txt": "Comenta quantos \"já vou\" você fala por dia.",
+   "ex": 0.55
+  },
+  {
+   "c": "e08_00",
+   "q": "n",
+   "txt": "Nessa cidade, todo choro que a criança engole vira chuva.",
+   "ex": 0.55
+  },
+  {
+   "c": "e08_01",
+   "q": "m",
+   "txt": "Engole o choro!",
+   "ex": 0.75
+  },
+  {
+   "c": "e08_02",
+   "q": "n",
+   "txt": "Choro de vacina engolido: garoa.",
+   "ex": 0.5
+  },
+  {
+   "c": "e08_03",
+   "q": "n",
+   "txt": "Nota vermelha engolida: temporal.",
+   "ex": 0.55
+  },
+  {
+   "c": "e08_04",
+   "q": "n",
+   "txt": "Joelho ralado na bicicleta: granizo.",
+   "ex": 0.55
+  },
+  {
+   "c": "e08_05",
+   "q": "n",
+   "txt": "Um dia, a escola inteira tomou vacina na mesma hora.",
+   "ex": 0.5
+  },
+  {
+   "c": "e08_06",
+   "q": "n",
+   "txt": "Trezentas crianças engolindo o choro ao mesmo tempo.",
+   "ex": 0.55
+  },
+  {
+   "c": "e08_07",
+   "q": "n",
+   "txt": "A cidade alagou. Os carros boiaram. O homem do tempo desistiu.",
+   "ex": 0.6
+  },
+  {
+   "c": "e08_08",
+   "q": "n",
+   "txt": "Os cientistas investigaram. A resposta era uma frase só.",
+   "ex": 0.5
+  },
+  {
+   "c": "e08_09",
+   "q": "m",
+   "txt": "Engole o choro!",
+   "ex": 0.8
+  },
+  {
+   "c": "e08_10",
+   "q": "n",
+   "txt": "Aí chegou o Dia das Mães. O Davi deu um desenho feito à mão.",
+   "ex": 0.5
+  },
+  {
+   "c": "e08_11",
+   "q": "c",
+   "txt": "Fui eu que fiz, mãe.",
+   "ex": 0.55
+  },
+  {
+   "c": "e08_12",
+   "q": "m",
+   "txt": "Ai, filho… eu não vou chorar.",
+   "ex": 0.65
+  },
+  {
+   "c": "e08_13",
+   "q": "n",
+   "txt": "Ela engoliu o choro.",
+   "ex": 0.5
+  },
+  {
+   "c": "e08_14",
+   "q": "n",
+   "txt": "E pela primeira vez… saiu um arco-íris.",
+   "ex": 0.6
+  },
+  {
+   "c": "e08_15",
+   "q": "n",
+   "txt": "Comenta CHUVA se a sua mãe também falava isso.",
+   "ex": 0.55
+  }
+ ]
+}

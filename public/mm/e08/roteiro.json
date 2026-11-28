@@ -1,0 +1,100 @@
+{
+ "falas": [
+  {
+   "c": "e08_00",
+   "q": "n",
+   "txt": "Nessa cidade, todo choro que a criança engole vira chuva.",
+   "ex": 0.55
+  },
+  {
+   "c": "e08_01",
+   "q": "m",
+   "txt": "Engole o choro!",
+   "ex": 0.75
+  },
+  {
+   "c": "e08_02",
+   "q": "n",
+   "txt": "Choro de vacina engolido: garoa.",
+   "ex": 0.5
+  },
+  {
+   "c": "e08_03",
+   "q": "n",
+   "txt": "Nota vermelha engolida: temporal.",
+   "ex": 0.55
+  },
+  {
+   "c": "e08_04",
+   "q": "n",
+   "txt": "Joelho ralado na bicicleta: granizo.",
+   "ex": 0.55
+  },
+  {
+   "c": "e08_05",
+   "q": "n",
+   "txt": "Um dia, a escola inteira tomou vacina na mesma hora.",
+   "ex": 0.5
+  },
+  {
+   "c": "e08_06",
+   "q": "n",
+   "txt": "Trezentas crianças engolindo o choro ao mesmo tempo.",
+   "ex": 0.55
+  },
+  {
+   "c": "e08_07",
+   "q": "n",
+   "txt": "A cidade alagou. Os carros boiaram. O homem do tempo desistiu.",
+   "ex": 0.6
+  },
+  {
+   "c": "e08_08",
+   "q": "n",
+   "txt": "Os cientistas investigaram. A resposta era uma frase só.",
+   "ex": 0.5
+  },
+  {
+   "c": "e08_09",
+   "q": "m",
+   "txt": "Engole o choro!",
+   "ex": 0.8
+  },
+  {
+   "c": "e08_10",
+   "q": "n",
+   "txt": "Aí chegou o Dia das Mães. O Davi deu um desenho feito à mão.",
+   "ex": 0.5
+  },
+  {
+   "c": "e08_11",
+   "q": "c",
+   "txt": "Fui eu que fiz, mãe.",
+   "ex": 0.55
+  },
+  {
+   "c": "e08_12",
+   "q": "m",
+   "txt": "Ai, filho… eu não vou chorar.",
+   "ex": 0.65
+  },
+  {
+   "c": "e08_13",
+   "q": "n",
+   "txt": "Ela engoliu o choro.",
+   "ex": 0.5
+  },
+  {
+   "c": "e08_14",
+   "q": "n",
+   "txt": "E pela primeira vez… saiu um arco-íris.",
+   "ex": 0.6
+  },
+  {
+   "c": "e08_15",
+   "q": "n",
+   "txt": "Comenta CHUVA se a sua mãe também falava isso.",
+   "ex": 0.55
+  }
+ ]
+}

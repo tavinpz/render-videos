@@ -1,0 +1,118 @@
+{
+ "falas": [
+  {
+   "c": "e07_00",
+   "q": "n",
+   "txt": "Nessa cidade, cada \"já vou\" que a criança fala deixa a mãe um metro mais alta.",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_01",
+   "q": "m",
+   "txt": "Davi, vem jantar!",
+   "ex": 0.7
+  },
+  {
+   "c": "e07_02",
+   "q": "c",
+   "txt": "Já vou!",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_03",
+   "q": "n",
+   "txt": "Um metro.",
+   "ex": 0.5
+  },
+  {
+   "c": "e07_04",
+   "q": "m",
+   "txt": "Davi, o banho!",
+   "ex": 0.7
+  },
+  {
+   "c": "e07_05",
+   "q": "c",
+   "txt": "Já tô indo!",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_06",
+   "q": "n",
+   "txt": "\"Já tô indo\" vale três.",
+   "ex": 0.5
+  },
+  {
+   "c": "e07_07",
+   "q": "n",
+   "txt": "Mas o Davi tava na última fase do jogo.",
+   "ex": 0.5
+  },
+  {
+   "c": "e07_08",
+   "q": "c",
+   "txt": "Já vou! Já vou! Já vou!",
+   "ex": 0.7
+  },
+  {
+   "c": "e07_09",
+   "q": "n",
+   "txt": "A mãe passou do teto. Depois do telhado.",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_10",
+   "q": "n",
+   "txt": "O ônibus desviou dela. O avião pediu licença.",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_11",
+   "q": "n",
+   "txt": "No jornal: mulher de quarenta metros procura filho no bairro.",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_12",
+   "q": "m",
+   "txt": "Davi Lucas!",
+   "ex": 0.9
+  },
+  {
+   "c": "e07_13",
+   "q": "n",
+   "txt": "Ele largou o controle, correu e sentou na mesa.",
+   "ex": 0.55
+  },
+  {
+   "c": "e07_14",
+   "q": "n",
+   "txt": "A mãe voltou ao normal. A janta tava fria.",
+   "ex": 0.5
+  },
+  {
+   "c": "e07_15",
+   "q": "n",
+   "txt": "Aí o celular do pai tocou. Era a vó.",
+   "ex": 0.5
+  },
+  {
+   "c": "e07_16",
+   "q": "v",
+   "txt": "Já vou, mãe.",
+   "ex": 0.5
+  },
+  {
+   "c": "e07_17",
+   "q": "n",
+   "txt": "E atrás da montanha… apareceu a vó.",
+   "ex": 0.6
+  },
+  {
+   "c": "e07_18",
+   "q": "n",
+   "txt": "Comenta quantos \"já vou\" você fala por dia.",
+   "ex": 0.55
+  }
+ ]
+}
