@@ -63,12 +63,12 @@ export const E09: Ep = {
     { at: 12, set: "quarto", light: "night", dof: 8, tint: "#0d1530", cam: { p: [2.0, 1.4, -1.6], l: [2.2, 0.85, 2.6], fov: 34, p2: [2.1, 1.25, -0.4], fov2: 26, dur: 4 },
       acts: [{ who: "daviAdulto", x: 2.2, z: 2.6, y: 0.35, mode: "sit", ex: "dazed" }] },
     // 14 · o chinelo aparece na mão dele (brilho + coral)
-    { at: [12, 0.82, 1], set: "quarto", light: "warm", flash: true, cam: face(2.2, 2.6, 0.95, { az: -8, hf: 0.34, dy: 0.25 }),
-      acts: [{ who: "daviAdulto", x: 2.2, z: 2.6, y: 0.35, mode: "sit", ex: "shock", prop: "chinelo" }],
+    { at: [12, 0.82, 1], set: "quarto", light: "warm", flash: true, cam: face(2.05, 2.3, 1.44, { az: -4, hf: 0.3, fr: 0.62 }),
+      acts: [{ who: "daviAdulto", x: 2.2, z: 2.3, ex: "shock", prop: "chinelo" }],
       fx: [{ k: "stars", x: 2.0, y: 1.7, z: 2.4, w: 1.4, at: [12, 0.82, 1], dur: 1.2 }] },
     // 15 · "QUEM DEIXOU ESSA PORTA ABERTA, PORRA?!"
-    { at: 13, set: "quarto", light: "warm", cam: face(2.2, 2.6, 0.95, { az: 12, hf: 0.38, push: 0.85, dy: 0.25 }), kick: [13, [13, 0.6, 1]],
-      acts: [{ who: "daviAdulto", x: 2.2, z: 2.6, y: 0.35, mode: "sit", ex: "yell", prop: "chinelo", shake: 0.7 }] },
+    { at: 13, set: "quarto", light: "warm", cam: face(2.0, 2.3, 1.44, { az: 4, hf: 0.34, fr: 0.62, push: 0.88 }), kick: [13, [13, 0.6, 1]],
+      acts: [{ who: "daviAdulto", x: 2.2, z: 2.3, ex: "yell", prop: "chinelo", shake: 0.7 }] },
     // 16 · CTA e loop: volta para a mãe-bebê na maternidade
     { at: 14, set: "maternidade", light: "warm", cam: face(0.15, 1.5, MH, { az: -6, hf: 0.3, fr: 0.72 }), leg: 420,
       acts: [{ who: "maeMeme", x: 0.15, z: 1.5, y: UP, ex: "stern", prop: "chinelo", facing: 1 }, { who: "medico", x: -0.35, z: 1.75, ex: "grin", arms: "up" }] },
