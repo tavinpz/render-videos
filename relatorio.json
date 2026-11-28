@@ -1,0 +1,167 @@
+{
+ "info": {
+  "pt_br_arquivos": [
+   ".gitattributes",
+   "README.md",
+   "grapheme_mtl_merged_expanded_v1.json",
+   "s3gen_v3.pt",
+   "s3gen_v3.safetensors",
+   "t3_pt_br.safetensors"
+  ],
+  "modelo": "pt-br:t3_pt_br.safetensors",
+  "s3gen": "pack v3 (faltando 2, sobrando 0)"
+ },
+ "sr": 24000,
+ "falas": [
+  {
+   "i": 0,
+   "c": "r1_00",
+   "q": "n",
+   "tomada": 5,
+   "sim": 0.87,
+   "dur": 6.48,
+   "nota": 0.87,
+   "ouvido": "Nessa cidade, toda mãe nasce com 47 anos e um chinelo na mão."
+  },
+  {
+   "i": 1,
+   "c": "r1_01",
+   "q": "g",
+   "tomada": 5,
+   "sim": 1.0,
+   "dur": 1.48,
+   "nota": 0.843,
+   "ouvido": "É uma menina."
+  },
+  {
+   "i": 2,
+   "c": "r1_02",
+   "q": "M",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.64,
+   "nota": 1.0,
+   "ouvido": "Quem deixou essa porta aberta? Tá achando que eu sou porteira?"
+  },
+  {
+   "i": 3,
+   "c": "r1_03",
+   "q": "M",
+   "tomada": 1,
+   "sim": 0.982,
+   "dur": 5.24,
+   "nota": 0.982,
+   "ouvido": "E esse lençol, quem lavou?  Isto aqui tá limpo?  Tá não? Tá não!"
+  },
+  {
+   "i": 4,
+   "c": "r1_04",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.966,
+   "dur": 5.72,
+   "nota": 0.966,
+   "ouvido": "Com 10 minutos de vida, ela já tinha escondido o controle da TV do hospital."
+  },
+  {
+   "i": 5,
+   "c": "r1_05",
+   "q": "M",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 5.08,
+   "nota": 1.0,
+   "ouvido": "Esse ar condicionado tá ligado pra quê?  É tu que paga a luz?"
+  },
+  {
+   "i": 6,
+   "c": "r1_06",
+   "q": "g",
+   "tomada": 3,
+   "sim": 1.0,
+   "dur": 1.36,
+   "nota": 0.972,
+   "ouvido": "Puta que pá!"
+  },
+  {
+   "i": 7,
+   "c": "r1_07",
+   "q": "M",
+   "tomada": 3,
+   "sim": 1.0,
+   "dur": 1.4,
+   "nota": 1.0,
+   "ouvido": "Puta que o que?"
+  },
+  {
+   "i": 8,
+   "c": "r1_08",
+   "q": "g",
+   "tomada": 5,
+   "sim": 1.0,
+   "dur": 2.24,
+   "nota": 0.898,
+   "ouvido": "Que paz, né? Que paz!"
+  },
+  {
+   "i": 9,
+   "c": "r1_09",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 5.24,
+   "nota": 1.0,
+   "ouvido": "Os cientistas tentaram tirar o chinelo dela. Chamaram três bombeiros."
+  },
+  {
+   "i": 10,
+   "c": "r1_10",
+   "q": "n",
+   "tomada": 4,
+   "sim": 1.0,
+   "dur": 2.0,
+   "nota": 0.95,
+   "ouvido": "Ela acertou os três."
+  },
+  {
+   "i": 11,
+   "c": "r1_11",
+   "q": "e",
+   "tomada": 0,
+   "sim": 0.982,
+   "dur": 2.72,
+   "nota": 0.98,
+   "ouvido": "ou desgraça acertou de longe."
+  },
+  {
+   "i": 12,
+   "c": "r1_12",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.809,
+   "dur": 4.72,
+   "nota": 0.809,
+   "ouvido": "E aí, no aniversário de 47 anos do Davi..."
+  },
+  {
+   "i": 13,
+   "c": "r1_13",
+   "q": "v",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 3.12,
+   "nota": 1.0,
+   "ouvido": "Quem deixou essa porta aberta, porra?"
+  },
+  {
+   "i": 14,
+   "c": "r1_14",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.6,
+   "nota": 1.0,
+   "ouvido": "Comenta chinelo se a sua também nasceu assim."
+  }
+ ]
+}
