@@ -1,0 +1,567 @@
+{
+ "info": {
+  "pt_br_arquivos": [
+   ".gitattributes",
+   "README.md",
+   "grapheme_mtl_merged_expanded_v1.json",
+   "s3gen_v3.pt",
+   "s3gen_v3.safetensors",
+   "t3_pt_br.safetensors"
+  ],
+  "modelo": "pt-br:t3_pt_br.safetensors",
+  "s3gen": "pack v3 (faltando 2, sobrando 0)"
+ },
+ "sr": 24000,
+ "falas": [
+  {
+   "i": 0,
+   "c": "e06_00",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.984,
+   "dur": 5.56,
+   "nota": 0.984,
+   "ouvido": "Nessa cidade, tudo o que a mãe diz que tem em casa aparece em casa."
+  },
+  {
+   "i": 1,
+   "c": "e06_01",
+   "q": "c",
+   "tomada": 1,
+   "sim": 0.955,
+   "dur": 1.96,
+   "nota": 0.955,
+   "ouvido": "Mãe, compra a hambúrguer!"
+  },
+  {
+   "i": 2,
+   "c": "e06_02",
+   "q": "m",
+   "tomada": 0,
+   "sim": 0.955,
+   "dur": 2.04,
+   "nota": 0.955,
+   "ouvido": "Tem hambúlguer em casa."
+  },
+  {
+   "i": 3,
+   "c": "e06_03",
+   "q": "n",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 4.52,
+   "nota": 1.0,
+   "ouvido": "e tinha, pão de forma, ovo frito e meia salsicha."
+  },
+  {
+   "i": 4,
+   "c": "e06_04",
+   "q": "c",
+   "tomada": 0,
+   "sim": 0.971,
+   "dur": 2.8,
+   "nota": 0.971,
+   "ouvido": "Mãe, eu quero boneco do super-herói!"
+  },
+  {
+   "i": 5,
+   "c": "e06_05",
+   "q": "m",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 1.68,
+   "nota": 1.0,
+   "ouvido": "Tem boneco em casa."
+  },
+  {
+   "i": 6,
+   "c": "e06_06",
+   "q": "n",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 4.72,
+   "nota": 1.0,
+   "ouvido": "Uma meia velha com dois botões. O nome dele é Clebinho."
+  },
+  {
+   "i": 7,
+   "c": "e06_07",
+   "q": "c",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 2.92,
+   "nota": 0.971,
+   "ouvido": "Mãe, todo mundo tem videogame!"
+  },
+  {
+   "i": 8,
+   "c": "e06_08",
+   "q": "m",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 2.12,
+   "nota": 0.978,
+   "ouvido": "Tem videogame em casa."
+  },
+  {
+   "i": 9,
+   "c": "e06_09",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.981,
+   "dur": 4.48,
+   "nota": 0.981,
+   "ouvido": "uma caixa de papelão com controle desenhado de caneta."
+  },
+  {
+   "i": 10,
+   "c": "e06_10",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.92,
+   "nota": 1.0,
+   "ouvido": "Chegaram as férias. Os amigos foram pra praia."
+  },
+  {
+   "i": 11,
+   "c": "e06_11",
+   "q": "c",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 2.44,
+   "nota": 1.0,
+   "ouvido": "Mãe, eu quero ir pra praia!"
+  },
+  {
+   "i": 12,
+   "c": "e06_12",
+   "q": "m",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 1.64,
+   "nota": 1.0,
+   "ouvido": "Tem praia em casa."
+  },
+  {
+   "i": 13,
+   "c": "e06_13",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 5.76,
+   "nota": 1.0,
+   "ouvido": "piscina de plástico, areia da obra do vizinho e o pai de sunga no quintal."
+  },
+  {
+   "i": 14,
+   "c": "e06_14",
+   "q": "v",
+   "tomada": 1,
+   "sim": 0.762,
+   "dur": 1.36,
+   "nota": 0.609,
+   "ouvido": "ou da onda."
+  },
+  {
+   "i": 15,
+   "c": "e06_15",
+   "q": "n",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 3.36,
+   "nota": 1.0,
+   "ouvido": "Um dia, o Davi ficou bravo de verdade."
+  },
+  {
+   "i": 16,
+   "c": "e06_16",
+   "q": "c",
+   "tomada": 0,
+   "sim": 0.962,
+   "dur": 1.84,
+   "nota": 0.962,
+   "ouvido": "Eu quero mamãe mais legal."
+  },
+  {
+   "i": 17,
+   "c": "e06_17",
+   "q": "m",
+   "tomada": 0,
+   "sim": 0.833,
+   "dur": 1.32,
+   "nota": 0.706,
+   "ouvido": "Tenha em casa!"
+  },
+  {
+   "i": 18,
+   "c": "e06_18",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 6.84,
+   "nota": 1.0,
+   "ouvido": "e tinha. A mesma que fritou o ovo, costurou o clebinho e encheu a piscina de balde."
+  },
+  {
+   "i": 19,
+   "c": "e06_19",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.36,
+   "nota": 1.0,
+   "ouvido": "Comenta o que a sua mãe disse que tinha em casa."
+  },
+  {
+   "i": 20,
+   "c": "e07_00",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.986,
+   "dur": 6.88,
+   "nota": 0.986,
+   "ouvido": "Nessa cidade, cada javô que a criança fala deixa a mãe um metro mais alta."
+  },
+  {
+   "i": 21,
+   "c": "e07_01",
+   "q": "m",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 1.8,
+   "nota": 0.904,
+   "ouvido": "Davi, vem jantar!"
+  },
+  {
+   "i": 22,
+   "c": "e07_02",
+   "q": "c",
+   "tomada": 2,
+   "sim": 0.833,
+   "dur": 1.28,
+   "nota": 0.644,
+   "ouvido": "Já sou!"
+  },
+  {
+   "i": 23,
+   "c": "e07_03",
+   "q": "n",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 1.28,
+   "nota": 0.811,
+   "ouvido": "um metro."
+  },
+  {
+   "i": 24,
+   "c": "e07_04",
+   "q": "m",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 2.08,
+   "nota": 0.574,
+   "ouvido": "Davi! O banho!"
+  },
+  {
+   "i": 25,
+   "c": "e07_05",
+   "q": "c",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 1.52,
+   "nota": 0.654,
+   "ouvido": "Já tô indo!"
+  },
+  {
+   "i": 26,
+   "c": "e07_06",
+   "q": "n",
+   "tomada": 1,
+   "sim": 0.8,
+   "dur": 2.4,
+   "nota": 0.716,
+   "ouvido": "Já estou indo Vale 3."
+  },
+  {
+   "i": 27,
+   "c": "e07_07",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.974,
+   "dur": 3.12,
+   "nota": 0.974,
+   "ouvido": "Mas o Davi estava na última fase do jogo."
+  },
+  {
+   "i": 28,
+   "c": "e07_08",
+   "q": "c",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.72,
+   "nota": 0.472,
+   "ouvido": "Já vou! Já vou! Já vou!"
+  },
+  {
+   "i": 29,
+   "c": "e07_09",
+   "q": "n",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 3.6,
+   "nota": 1.0,
+   "ouvido": "A mãe passou do teto depois do telhado."
+  },
+  {
+   "i": 30,
+   "c": "e07_10",
+   "q": "n",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 4.0,
+   "nota": 1.0,
+   "ouvido": "O ônibus desviou dela.  O avião pediu licença."
+  },
+  {
+   "i": 31,
+   "c": "e07_11",
+   "q": "n",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 4.72,
+   "nota": 1.0,
+   "ouvido": "No Jornal Mulher de Quarenta Metros procura filho no bairro."
+  },
+  {
+   "i": 32,
+   "c": "e07_12",
+   "q": "m",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 1.48,
+   "nota": 0.682,
+   "ouvido": "Davi Lucas."
+  },
+  {
+   "i": 33,
+   "c": "e07_13",
+   "q": "n",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 4.08,
+   "nota": 1.0,
+   "ouvido": "Ele largou o controle, correu e sentou na mesa."
+  },
+  {
+   "i": 34,
+   "c": "e07_14",
+   "q": "n",
+   "tomada": 2,
+   "sim": 0.976,
+   "dur": 3.8,
+   "nota": 0.976,
+   "ouvido": "A mãe voltou ao normal. A janta estava fria."
+  },
+  {
+   "i": 35,
+   "c": "e07_15",
+   "q": "n",
+   "tomada": 1,
+   "sim": 0.985,
+   "dur": 3.56,
+   "nota": 0.944,
+   "ouvido": "Aí o celular do pai tocou. Era avô."
+  },
+  {
+   "i": 36,
+   "c": "e07_16",
+   "q": "v",
+   "tomada": 1,
+   "sim": 0.75,
+   "dur": 1.48,
+   "nota": 0.519,
+   "ouvido": "Javuma!"
+  },
+  {
+   "i": 37,
+   "c": "e07_17",
+   "q": "n",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 3.36,
+   "nota": 0.981,
+   "ouvido": "e atrás da montanha, apareceu a vó."
+  },
+  {
+   "i": 38,
+   "c": "e07_18",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.975,
+   "dur": 3.6,
+   "nota": 0.975,
+   "ouvido": "Comenta quantos já voo você fala por dia."
+  },
+  {
+   "i": 39,
+   "c": "e08_00",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.982,
+   "dur": 5.08,
+   "nota": 0.982,
+   "ouvido": "Nessa cidade, todo choro que a criança engola e vira chuva."
+  },
+  {
+   "i": 40,
+   "c": "e08_01",
+   "q": "m",
+   "tomada": 1,
+   "sim": 0.828,
+   "dur": 1.64,
+   "nota": 0.705,
+   "ouvido": "engorda o choro!"
+  },
+  {
+   "i": 41,
+   "c": "e08_02",
+   "q": "n",
+   "tomada": 2,
+   "sim": 1.0,
+   "dur": 3.36,
+   "nota": 0.911,
+   "ouvido": "Choro de vacina engolido, Garoa."
+  },
+  {
+   "i": 42,
+   "c": "e08_03",
+   "q": "n",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 3.2,
+   "nota": 0.973,
+   "ouvido": "nota vermelha engolida temporal."
+  },
+  {
+   "i": 43,
+   "c": "e08_04",
+   "q": "n",
+   "tomada": 1,
+   "sim": 1.0,
+   "dur": 3.28,
+   "nota": 1.0,
+   "ouvido": "joelho ralado na bicicleta, granizo."
+  },
+  {
+   "i": 44,
+   "c": "e08_05",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 4.48,
+   "nota": 1.0,
+   "ouvido": "Um dia, a escola inteira tomou vacina na mesma hora."
+  },
+  {
+   "i": 45,
+   "c": "e08_06",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.875,
+   "dur": 4.48,
+   "nota": 0.875,
+   "ouvido": "300 crianças engolindo o choro ao mesmo tempo."
+  },
+  {
+   "i": 46,
+   "c": "e08_07",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 5.12,
+   "nota": 1.0,
+   "ouvido": "A cidade alagou, os carros boiaram, o homem do tempo desistiu."
+  },
+  {
+   "i": 47,
+   "c": "e08_08",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 4.68,
+   "nota": 1.0,
+   "ouvido": "Os cientistas investigaram.  A resposta era uma frase só."
+  },
+  {
+   "i": 48,
+   "c": "e08_09",
+   "q": "m",
+   "tomada": 2,
+   "sim": 0.966,
+   "dur": 1.52,
+   "nota": 0.905,
+   "ouvido": "Engolhe o Choro!"
+  },
+  {
+   "i": 49,
+   "c": "e08_10",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.991,
+   "dur": 4.72,
+   "nota": 0.991,
+   "ouvido": "Aí chegou o dia das mães. O David deu um desenho feito à mão."
+  },
+  {
+   "i": 50,
+   "c": "e08_11",
+   "q": "c",
+   "tomada": 1,
+   "sim": 0.944,
+   "dur": 2.0,
+   "nota": 0.894,
+   "ouvido": "Foi eu que fiz, mãe."
+  },
+  {
+   "i": 51,
+   "c": "e08_12",
+   "q": "m",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 2.0,
+   "nota": 1.0,
+   "ouvido": "Ai, filho, eu não vou chorar."
+  },
+  {
+   "i": 52,
+   "c": "e08_13",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 2.32,
+   "nota": 0.826,
+   "ouvido": "Ela engoliu o choro."
+  },
+  {
+   "i": 53,
+   "c": "e08_14",
+   "q": "n",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 3.52,
+   "nota": 1.0,
+   "ouvido": "E pela primeira vez, saiu um arco-íris."
+  },
+  {
+   "i": 54,
+   "c": "e08_15",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.978,
+   "dur": 3.44,
+   "nota": 0.978,
+   "ouvido": "Comenta a chuva se a sua mãe também falava isso."
+  }
+ ]
+}
