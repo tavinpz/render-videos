@@ -15,7 +15,7 @@ jobs:
       - id: p
         run: |
           F=$(git diff --name-only HEAD~1 HEAD -- fila-mae | grep '\.txt$' | head -1); [ -z "$F" ] && F=$(ls -t fila-mae/*.txt | head -1)
-          ID=$(basename "$F" .txt); N=$(sed -n 1p "$F" | tr -dc 0-9); EP=$(sed -n 2p "$F" | tr -d '\r '); LIM=$(sed -n 3p "$F" | tr -dc 0-9)
+          ID=$(basename "$F" .txt); N=$(sed -n 1p "$F" | tr -dc 0-9); EP=$(sed -n 2p "$F" | tr -d '\r '); LIM=$(sed -n 3p "$F" | grep -v '^ *#' | tr -dc 0-9 || true)
           Q=$(python3 -c "import json,math;print(math.ceil(json.load(open('mae/src/eps/${EP}_tempos.json'))['total']*30))")
           [ -n "$LIM" ] && [ "$LIM" -lt "$Q" ] && Q=$LIM
           M=$(python3 -c "
