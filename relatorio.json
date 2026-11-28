@@ -1,0 +1,127 @@
+{
+ "info": {
+  "pt_br_arquivos": [
+   ".gitattributes",
+   "README.md",
+   "grapheme_mtl_merged_expanded_v1.json",
+   "s3gen_v3.pt",
+   "s3gen_v3.safetensors",
+   "t3_pt_br.safetensors"
+  ],
+  "modelo": "pt-br:t3_pt_br.safetensors",
+  "s3gen": "pack v3 (faltando 2, sobrando 0)"
+ },
+ "sr": 24000,
+ "falas": [
+  {
+   "i": 0,
+   "c": "e06_14",
+   "q": "v",
+   "tomada": 3,
+   "sim": 0.8,
+   "dur": 1.56,
+   "nota": 0.517,
+   "ouvido": "Olha onde!"
+  },
+  {
+   "i": 1,
+   "c": "e06_17",
+   "q": "m",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 1.48,
+   "nota": 0.769,
+   "ouvido": "tem em casa."
+  },
+  {
+   "i": 2,
+   "c": "e06_02",
+   "q": "m",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 2.04,
+   "nota": 1.0,
+   "ouvido": "Tem hambúrguer em casa."
+  },
+  {
+   "i": 3,
+   "c": "e07_00",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.993,
+   "dur": 6.32,
+   "nota": 0.993,
+   "ouvido": "Nessa cidade, cada javô que a criança fala deixa a mãe um metro mais alta."
+  },
+  {
+   "i": 4,
+   "c": "e07_02",
+   "q": "c",
+   "tomada": 0,
+   "sim": 0.909,
+   "dur": 1.28,
+   "nota": 0.72,
+   "ouvido": "Já vou!"
+  },
+  {
+   "i": 5,
+   "c": "e07_06",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.93,
+   "dur": 2.2,
+   "nota": 0.88,
+   "ouvido": "Já estou indo, vale três."
+  },
+  {
+   "i": 6,
+   "c": "e07_16",
+   "q": "v",
+   "tomada": 5,
+   "sim": 0.941,
+   "dur": 1.44,
+   "nota": 0.652,
+   "ouvido": "Já vô-me!"
+  },
+  {
+   "i": 7,
+   "c": "e07_18",
+   "q": "n",
+   "tomada": 0,
+   "sim": 0.974,
+   "dur": 3.68,
+   "nota": 0.974,
+   "ouvido": "Comenta quanto javô você fala por dia."
+  },
+  {
+   "i": 8,
+   "c": "e08_01",
+   "q": "m",
+   "tomada": 2,
+   "sim": 0.966,
+   "dur": 1.64,
+   "nota": 0.843,
+   "ouvido": "Engolhe o choro!"
+  },
+  {
+   "i": 9,
+   "c": "e08_09",
+   "q": "m",
+   "tomada": 5,
+   "sim": 0.966,
+   "dur": 1.72,
+   "nota": 0.802,
+   "ouvido": "Engolhe o choro!"
+  },
+  {
+   "i": 10,
+   "c": "e06_16",
+   "q": "c",
+   "tomada": 0,
+   "sim": 1.0,
+   "dur": 2.4,
+   "nota": 1.0,
+   "ouvido": "Eu quero uma mãe mais legal."
+  }
+ ]
+}
