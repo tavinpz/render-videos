@@ -1,0 +1,72 @@
+# Mãe Mandou: renderiza um episódio (projeto mae/, three.js 0.187 + React 19) em paralelo e queima a legenda.
+# Disparo: push que mude fila-mae/<id>.txt. Linha 1 = nº de partes. Linha 2 = episódio (ex.: e06). Linha 3 opcional = quadros (teste).
+# Saída: ramo saida-mae-<id> com <id>.mp4 (com legenda), <id>_limpo.mp4 (sem legenda) e quadros de conferência.
+name: render-mae
+on:
+  push:
+    paths: ['fila-mae/*.txt']
+jobs:
+  plano:
+    runs-on: ubuntu-latest
+    outputs: { id: '${{ steps.p.outputs.id }}', ep: '${{ steps.p.outputs.ep }}', matriz: '${{ steps.p.outputs.matriz }}' }
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - id: p
+        run: |
+          F=$(git diff --name-only HEAD~1 HEAD -- fila-mae | grep '\.txt$' | head -1); [ -z "$F" ] && F=$(ls -t fila-mae/*.txt | head -1)
+          ID=$(basename "$F" .txt); N=$(sed -n 1p "$F" | tr -dc 0-9); EP=$(sed -n 2p "$F" | tr -d '\r '); LIM=$(sed -n 3p "$F" | tr -dc 0-9)
+          Q=$(python3 -c "import json,math;print(math.ceil(json.load(open('mae/src/eps/${EP}_tempos.json'))['total']*30))")
+          [ -n "$LIM" ] && [ "$LIM" -lt "$Q" ] && Q=$LIM
+          M=$(python3 -c "
+          Q=$Q;N=$N;p=-(-Q//N);import json
+          print(json.dumps([{'k':i,'ini':i*p,'fim':min(Q,(i+1)*p)-1} for i in range(N) if i*p<Q]))")
+          echo "id=$ID" >> $GITHUB_OUTPUT; echo "ep=$EP" >> $GITHUB_OUTPUT; echo "matriz=$M" >> $GITHUB_OUTPUT; echo "$ID $EP $Q quadros"
+  render:
+    needs: plano
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: { parte: '${{ fromJson(needs.plano.outputs.matriz) }}' }
+    defaults: { run: { working-directory: mae } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm, cache-dependency-path: mae/package-lock.json }
+      - run: npm ci --no-audit --no-fund
+      - run: npx remotion browser ensure
+      - name: render ${{ matrix.parte.ini }}-${{ matrix.parte.fim }}
+        run: |
+          npx remotion render src/index.ts Mae-${{ needs.plano.outputs.ep }} parte.mp4 --props='{"ep":"${{ needs.plano.outputs.ep }}","ms":2}' \
+            --frames=${{ matrix.parte.ini }}-${{ matrix.parte.fim }} --muted --concurrency=2 --gl=swangle --crf=14 --x264-preset=medium --log=info
+          mv parte.mp4 parte_$(printf %03d ${{ matrix.parte.k }}).mp4
+      - uses: actions/upload-artifact@v4
+        with: { name: 'parte-${{ matrix.parte.k }}', path: 'mae/parte_*.mp4', retention-days: 3 }
+  juntar:
+    needs: [plano, render]
+    runs-on: ubuntu-latest
+    permissions: { contents: write }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { pattern: 'parte-*', merge-multiple: true, path: partes }
+      - name: ffmpeg
+        run: |
+          for i in 1 2 3; do command -v ffmpeg && break; (timeout 60 sudo apt-get update -qq && timeout 200 sudo apt-get install -y -qq ffmpeg > /dev/null) || sleep 5; done
+      - name: juntar, mixar e legendar
+        run: |
+          ID=${{ needs.plano.outputs.id }}; EP=${{ needs.plano.outputs.ep }}
+          ls partes/*.mp4 | sort | sed "s/^/file '/;s/$/'/" > lista.txt
+          ffmpeg -y -loglevel error -f concat -safe 0 -i lista.txt -c copy video.mp4
+          ffmpeg -y -loglevel error -i video.mp4 -i public/mm/$EP/mix.m4a -map 0:v -map 1:a -c:v libx264 -crf 18 -preset medium -pix_fmt yuv420p -c:a aac -b:a 192k -shortest -movflags +faststart ${ID}_limpo.mp4
+          ffmpeg -y -loglevel error -i video.mp4 -i public/mm/$EP/mix.m4a -map 0:v -map 1:a -vf "ass=public/mm/$EP/leg.ass:fontsdir=mae/fontes" -c:v libx264 -crf 18 -preset medium -pix_fmt yuv420p -c:a aac -b:a 192k -shortest -movflags +faststart $ID.mp4
+          ls -la $ID.mp4 ${ID}_limpo.mp4
+          mkdir -p conf && for t in 0 3 8 15 22 30 38 45; do ffmpeg -loglevel error -ss $t -i $ID.mp4 -frames:v 1 -vf scale=360:-1 conf/q_$t.jpg || true; done
+      - name: publicar
+        run: |
+          ID=${{ needs.plano.outputs.id }}
+          mkdir pub && mv $ID.mp4 ${ID}_limpo.mp4 conf pub/
+          cd pub && git init -q -b saida-mae-$ID && git config user.name render-bot && git config user.email render-bot@users.noreply.github.com
+          git add -A && git commit -qm "mae $ID ($(date -u +%FT%TZ))"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" saida-mae-$ID

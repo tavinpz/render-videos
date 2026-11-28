@@ -1,0 +1,581 @@
+{
+ "total": 44.678,
+ "planos": [
+  {
+   "i": 0,
+   "a": 0,
+   "b": 2.2333333333333334,
+   "set": "sala",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 1,
+   "a": 2.2333333333333334,
+   "b": 5.433333333333334,
+   "set": "rua",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [
+    4.2712
+   ],
+   "fx": [
+    {
+     "k": "puff",
+     "t": 4.217810000000001
+    }
+   ],
+   "props": [],
+   "grow": [
+    {
+     "t": 4.217810000000001,
+     "de": 1,
+     "para": 1.6
+    }
+   ],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 2,
+   "a": 5.433333333333334,
+   "b": 6.9,
+   "set": "cozinha",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [
+    5.439
+   ],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 3,
+   "a": 6.9,
+   "b": 7.6,
+   "set": "sala",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 4,
+   "a": 7.6,
+   "b": 8.366666666666667,
+   "set": "cozinha",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": true,
+   "kicks": [
+    7.61
+   ],
+   "fx": [
+    {
+     "k": "puff",
+     "t": 7.61
+    }
+   ],
+   "props": [],
+   "grow": [
+    {
+     "t": 7.66,
+     "de": 1,
+     "para": 1.6
+    }
+   ],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 5,
+   "a": 8.366666666666667,
+   "b": 10.066666666666666,
+   "set": "sala",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [
+    8.356
+   ],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 6,
+   "a": 10.066666666666666,
+   "b": 11.033333333333333,
+   "set": "sala",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 7,
+   "a": 11.033333333333333,
+   "b": 12.7,
+   "set": "sala",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": true,
+   "kicks": [
+    11.194
+   ],
+   "fx": [
+    {
+     "k": "puff",
+     "t": 11.194
+    }
+   ],
+   "props": [],
+   "grow": [
+    {
+     "t": 11.194,
+     "de": 1.6,
+     "para": 2.8
+    }
+   ],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 8,
+   "a": 12.7,
+   "b": 15.166666666666666,
+   "set": "sala",
+   "luz": "golden",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": true
+  },
+  {
+   "i": 9,
+   "a": 15.166666666666666,
+   "b": 16.766666666666666,
+   "set": "sala",
+   "luz": "golden",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [
+    15.168,
+    16.2339,
+    17.2998
+   ],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": true,
+   "shake": false
+  },
+  {
+   "i": 10,
+   "a": 16.766666666666666,
+   "b": 18.466666666666665,
+   "set": "sala",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [
+    17.2998
+   ],
+   "fx": [],
+   "props": [],
+   "grow": [
+    {
+     "t": 17.2998,
+     "de": 2.8,
+     "para": 4.2
+    }
+   ],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 11,
+   "a": 18.466666666666665,
+   "b": 21.166666666666668,
+   "set": "rua",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [
+    19.7705
+   ],
+   "fx": [
+    {
+     "k": "burst",
+     "t": 19.7705
+    }
+   ],
+   "props": [],
+   "grow": [
+    {
+     "t": 19.7705,
+     "de": 4.5,
+     "para": 7.5
+    }
+   ],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 12,
+   "a": 21.166666666666668,
+   "b": 22.766666666666666,
+   "set": "rua",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [],
+   "props": [
+    "onibus"
+   ],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 13,
+   "a": 22.766666666666666,
+   "b": 24.5,
+   "set": "rua",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [],
+   "props": [
+    "aviao"
+   ],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 14,
+   "a": 24.5,
+   "b": 26.466666666666665,
+   "set": "estudio",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 15,
+   "a": 26.466666666666665,
+   "b": 28.166666666666668,
+   "set": "rua",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 16,
+   "a": 28.166666666666668,
+   "b": 29.366666666666667,
+   "set": "rua",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": true,
+   "kicks": [
+    28.173
+   ],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 17,
+   "a": 29.366666666666667,
+   "b": 31.2,
+   "set": "sala",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [
+    {
+     "k": "puff",
+     "t": 29.379
+    }
+   ],
+   "props": [
+    "controle"
+   ],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 18,
+   "a": 31.2,
+   "b": 32.53333333333333,
+   "set": "cozinha",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 19,
+   "a": 32.53333333333333,
+   "b": 35.53333333333333,
+   "set": "cozinha",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [
+    {
+     "k": "puff",
+     "t": 32.531
+    }
+   ],
+   "props": [],
+   "grow": [
+    {
+     "t": 32.580999999999996,
+     "de": 1.6,
+     "para": 1
+    }
+   ],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 20,
+   "a": 35.53333333333333,
+   "b": 38.36666666666667,
+   "set": "sala",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 21,
+   "a": 38.36666666666667,
+   "b": 39.266666666666666,
+   "set": "sala",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 480,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 22,
+   "a": 39.266666666666666,
+   "b": 41.733333333333334,
+   "set": "rua",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [
+    40.5581
+   ],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [
+    40.2038
+   ],
+   "leg": 1120,
+   "hop": false,
+   "shake": false
+  },
+  {
+   "i": 23,
+   "a": 41.733333333333334,
+   "b": 44.666666666666664,
+   "set": "sala",
+   "luz": "day",
+   "chuva": 0,
+   "granizo": false,
+   "enchente": false,
+   "arco": false,
+   "flash": false,
+   "kicks": [],
+   "fx": [],
+   "props": [],
+   "grow": [],
+   "rise": [],
+   "leg": 420,
+   "hop": false,
+   "shake": false
+  }
+ ]
+}

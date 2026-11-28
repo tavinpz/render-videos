@@ -1,0 +1,105 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: L,Baloo 2 ExtraBold,104,&H00FFFFFF,&H00FFFFFF,&H00141018,&H64000000,0,0,0,0,100,100,0,0,1,9,3,5,110,110,0,1
+Style: C,Baloo 2 ExtraBold,78,&H00141018,&H00141018,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,18,0,5,110,110,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.40,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}NESSA
+Dialogue: 0,0:00:00.40,0:00:00.89,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}CIDADE
+Dialogue: 0,0:00:00.89,0:00:01.24,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}TUDO
+Dialogue: 0,0:00:01.24,0:00:01.70,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}QUE {\c&H00FFFFFF}A
+Dialogue: 0,0:00:01.70,0:00:02.29,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}MÃE {\c&H00FFFFFF}DIZ
+Dialogue: 0,0:00:02.29,0:00:02.88,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}QUE {\c&H0036D8FF}TEM
+Dialogue: 0,0:00:02.88,0:00:03.47,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}EM {\c&H0036D8FF}CASA
+Dialogue: 0,0:00:03.47,0:00:04.02,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}APARECE
+Dialogue: 0,0:00:04.02,0:00:04.71,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}EM {\c&H0036D8FF}CASA
+Dialogue: 0,0:00:04.71,0:00:05.42,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}MÃE {\c&H0077E86A}COMPRA
+Dialogue: 0,0:00:05.42,0:00:06.17,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0036D8FF}HAMBÚRGUER?
+Dialogue: 0,0:00:06.17,0:00:07.13,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0036D8FF}TEM {\c&H0036D8FF}HAMBÚRGUER
+Dialogue: 0,0:00:07.13,0:00:07.75,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00B07FFF}EM {\c&H0036D8FF}CASA
+Dialogue: 0,0:00:07.75,0:00:08.39,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}E {\c&H00FFFFFF}TINHA
+Dialogue: 0,0:00:08.39,0:00:08.95,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}PÃO {\c&H00FFFFFF}DE
+Dialogue: 0,0:00:08.95,0:00:09.41,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}FORMA
+Dialogue: 0,0:00:09.41,0:00:10.18,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}OVO {\c&H00FFFFFF}FRITO
+Dialogue: 0,0:00:10.18,0:00:10.74,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}E {\c&H00FFFFFF}MEIA
+Dialogue: 0,0:00:10.74,0:00:11.51,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}SALSICHA
+Dialogue: 0,0:00:11.51,0:00:11.96,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}MÃE {\c&H0077E86A}EU
+Dialogue: 0,0:00:11.96,0:00:12.31,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}QUERO
+Dialogue: 0,0:00:12.31,0:00:12.87,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}O {\c&H0036D8FF}BONECO
+Dialogue: 0,0:00:12.87,0:00:13.77,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}DO {\c&H0077E86A}SUPER-HERÓI!
+Dialogue: 0,0:00:13.77,0:00:14.45,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0036D8FF}TEM {\c&H0036D8FF}BONECO
+Dialogue: 0,0:00:14.45,0:00:15.03,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00B07FFF}EM {\c&H0036D8FF}CASA
+Dialogue: 0,0:00:15.03,0:00:15.67,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}UMA {\c&H00FFFFFF}MEIA
+Dialogue: 0,0:00:15.67,0:00:16.08,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}VELHA
+Dialogue: 0,0:00:16.08,0:00:16.71,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}COM {\c&H00FFFFFF}DOIS
+Dialogue: 0,0:00:16.71,0:00:17.19,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}BOTÕES
+Dialogue: 0,0:00:17.19,0:00:17.70,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}O {\c&H00FFFFFF}NOME
+Dialogue: 0,0:00:17.70,0:00:18.05,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}DELE
+Dialogue: 0,0:00:18.05,0:00:18.91,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}É {\c&H0036D8FF}CLEBINHO
+Dialogue: 0,0:00:18.91,0:00:19.65,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}MÃE {\c&H0077E86A}TODO
+Dialogue: 0,0:00:19.65,0:00:20.12,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}MUNDO
+Dialogue: 0,0:00:20.12,0:00:21.31,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0036D8FF}TEM {\c&H0036D8FF}VIDEOGAME!
+Dialogue: 0,0:00:21.31,0:00:22.28,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0036D8FF}TEM {\c&H0036D8FF}VIDEOGAME
+Dialogue: 0,0:00:22.28,0:00:22.95,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00B07FFF}EM {\c&H0036D8FF}CASA
+Dialogue: 0,0:00:22.95,0:00:23.57,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}UMA {\c&H00FFFFFF}CAIXA
+Dialogue: 0,0:00:23.57,0:00:24.25,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}DE {\c&H00FFFFFF}PAPELÃO
+Dialogue: 0,0:00:24.25,0:00:24.65,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}COM {\c&H00FFFFFF}O
+Dialogue: 0,0:00:24.65,0:00:25.19,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}CONTROLE
+Dialogue: 0,0:00:25.19,0:00:25.78,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}DESENHADO
+Dialogue: 0,0:00:25.78,0:00:26.51,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}DE {\c&H00FFFFFF}CANETA
+Dialogue: 0,0:00:26.51,0:00:27.10,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}CHEGARAM
+Dialogue: 0,0:00:27.10,0:00:27.79,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}AS {\c&H00FFFFFF}FÉRIAS
+Dialogue: 0,0:00:27.79,0:00:28.48,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}OS {\c&H00FFFFFF}AMIGOS
+Dialogue: 0,0:00:28.48,0:00:28.89,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}FORAM
+Dialogue: 0,0:00:28.89,0:00:29.68,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}PRA {\c&H0036D8FF}PRAIA
+Dialogue: 0,0:00:29.68,0:00:30.26,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}MÃE! {\c&H0077E86A}EU
+Dialogue: 0,0:00:30.26,0:00:30.72,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}QUERO
+Dialogue: 0,0:00:30.72,0:00:31.30,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}IR {\c&H0077E86A}PRA
+Dialogue: 0,0:00:31.30,0:00:31.84,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0036D8FF}PRAIA!
+Dialogue: 0,0:00:31.84,0:00:32.43,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0036D8FF}TEM {\c&H0036D8FF}PRAIA
+Dialogue: 0,0:00:32.43,0:00:32.99,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00B07FFF}EM {\c&H0036D8FF}CASA
+Dialogue: 0,0:00:32.99,0:00:33.48,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}PISCINA
+Dialogue: 0,0:00:33.48,0:00:34.22,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}DE {\c&H00FFFFFF}PLÁSTICO
+Dialogue: 0,0:00:34.22,0:00:34.59,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}AREIA
+Dialogue: 0,0:00:34.59,0:00:35.10,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}DA {\c&H00FFFFFF}OBRA
+Dialogue: 0,0:00:35.10,0:00:35.79,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}DO {\c&H00FFFFFF}VIZINHO
+Dialogue: 0,0:00:35.79,0:00:36.08,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}E {\c&H00FFFFFF}O
+Dialogue: 0,0:00:36.08,0:00:36.53,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}PAI {\c&H00FFFFFF}DE
+Dialogue: 0,0:00:36.53,0:00:36.91,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}SUNGA
+Dialogue: 0,0:00:36.91,0:00:37.69,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}NO {\c&H00FFFFFF}QUINTAL
+Dialogue: 0,0:00:37.69,0:00:38.07,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFB45A}OLHA
+Dialogue: 0,0:00:38.07,0:00:38.71,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFB45A}A {\c&H00FFB45A}ONDA!
+Dialogue: 0,0:00:38.71,0:00:39.24,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}UM {\c&H00FFFFFF}DIA
+Dialogue: 0,0:00:39.24,0:00:39.77,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}O {\c&H00FFFFFF}DAVI
+Dialogue: 0,0:00:39.77,0:00:40.20,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}FICOU
+Dialogue: 0,0:00:40.20,0:00:40.63,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}BRAVO
+Dialogue: 0,0:00:40.63,0:00:41.52,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}DE {\c&H00FFFFFF}VERDADE
+Dialogue: 0,0:00:41.52,0:00:42.02,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}EU {\c&H0077E86A}QUERO
+Dialogue: 0,0:00:42.02,0:00:42.47,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}UMA {\c&H0077E86A}MÃE
+Dialogue: 0,0:00:42.47,0:00:42.74,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0077E86A}MAIS
+Dialogue: 0,0:00:42.74,0:00:43.15,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0036D8FF}LEGAL!
+Dialogue: 0,0:00:43.15,0:00:43.68,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0036D8FF}TEM {\c&H00B07FFF}EM
+Dialogue: 0,0:00:43.68,0:00:44.12,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H0036D8FF}CASA
+Dialogue: 0,0:00:44.12,0:00:44.69,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}E {\c&H00FFFFFF}TINHA
+Dialogue: 0,0:00:44.69,0:00:45.25,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}A {\c&H00FFFFFF}MESMA
+Dialogue: 0,0:00:45.25,0:00:46.01,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}QUE {\c&H00FFFFFF}FRITOU
+Dialogue: 0,0:00:46.01,0:00:46.45,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}O {\c&H00FFFFFF}OVO
+Dialogue: 0,0:00:46.45,0:00:47.04,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}COSTUROU
+Dialogue: 0,0:00:47.04,0:00:47.79,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}O {\c&H0036D8FF}CLEBINHO
+Dialogue: 0,0:00:47.79,0:00:48.42,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}E {\c&H00FFFFFF}ENCHEU
+Dialogue: 0,0:00:48.42,0:00:49.11,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}A {\c&H00FFFFFF}PISCINA
+Dialogue: 0,0:00:49.11,0:00:49.84,L,,0,0,0,,{\an5\pos(540,480)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}DE {\c&H00FFFFFF}BALDE
+Dialogue: 0,0:00:49.84,0:00:50.22,L,,0,0,0,,{\an5\pos(540,420)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}COMENTA
+Dialogue: 0,0:00:50.22,0:00:50.54,L,,0,0,0,,{\an5\pos(540,420)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}O {\c&H00FFFFFF}QUE
+Dialogue: 0,0:00:50.54,0:00:50.85,L,,0,0,0,,{\an5\pos(540,420)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}A {\c&H00FFFFFF}SUA
+Dialogue: 0,0:00:50.85,0:00:51.34,L,,0,0,0,,{\an5\pos(540,420)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}MÃE {\c&H00FFFFFF}DISSE
+Dialogue: 0,0:00:51.34,0:00:51.84,L,,0,0,0,,{\an5\pos(540,420)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}QUE {\c&H00FFFFFF}TINHA
+Dialogue: 0,0:00:51.84,0:00:52.39,L,,0,0,0,,{\an5\pos(540,420)\fscx112\fscy112\t(0,70,\fscx100\fscy100)}{\c&H00FFFFFF}EM {\c&H0036D8FF}CASA
+Dialogue: 1,0:00:50.07,0:00:52.62,C,,0,0,0,,{\an5\pos(540,740)\fscx80\fscy80\t(0,120,\fscx100\fscy100)}COMENTA: TINHA EM CASA
