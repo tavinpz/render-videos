@@ -7,6 +7,7 @@ import { ThreeCanvas } from "@remotion/three";
 import { useFrame, useThree } from "@react-three/fiber";
 import { BlendFunction, BloomEffect, EffectComposer, EffectPass, RenderPass, ToneMappingEffect, ToneMappingMode } from "postprocessing";
 import { World, timeOf, gradeKey } from "./motor/mundo";
+import { shotFrames } from "./motor/tempo";
 import { InkPass, noInkFallback } from "./motor/ink";
 import { LensBlur } from "./motor/lensblur";
 import { GradeEffect, GRADES, GRADE_STRENGTH, gradeFor } from "./motor/grade";
@@ -82,8 +83,9 @@ const Rainbow: React.FC<{ u: number }> = ({ u }) => {
 export const MaeShort: React.FC<{ ep?: string }> = ({ ep: id }) => {
   const f = useCurrentFrame();
   const ep = EPS[id ?? (getInputProps() as { ep?: string }).ep ?? "e06"];
-  const world = useMemo(() => new World(ep), [ep]);
-  const si = world.shotIndex(f), s = ep.shots[si], fr = world.frameRange(si), t = f / FPS;
+  const frames = useMemo(() => shotFrames(ep), [ep]);
+  let si = 0; while (si + 1 < frames.length && f >= frames[si + 1].a) si++;
+  const s = ep.shots[si], fr = frames[si], t = f / FPS;
   const flash = s.flash && f - fr.a < 4 ? [0.9, 0.6, 0.35, 0.15][f - fr.a] : 0;
   const rb = s.rainbow ? Math.min(1, (t - fr.a / FPS) / 1.2) : 0;
   return (

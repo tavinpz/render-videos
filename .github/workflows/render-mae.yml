@@ -39,7 +39,7 @@ jobs:
       - name: render ${{ matrix.parte.ini }}-${{ matrix.parte.fim }}
         run: |
           npx remotion render src/index.ts Mae-${{ needs.plano.outputs.ep }} parte.mp4 --props='{"ep":"${{ needs.plano.outputs.ep }}","ms":2}' \
-            --frames=${{ matrix.parte.ini }}-${{ matrix.parte.fim }} --muted --concurrency=2 --gl=swangle --crf=14 --x264-preset=medium --log=info
+            --frames=${{ matrix.parte.ini }}-${{ matrix.parte.fim }} --muted --concurrency=2 --gl=swangle --timeout=400000 --crf=14 --x264-preset=medium --log=info
           mv parte.mp4 parte_$(printf %03d ${{ matrix.parte.k }}).mp4
       - uses: actions/upload-artifact@v4
         with: { name: 'parte-${{ matrix.parte.k }}', path: 'mae/parte_*.mp4', retention-days: 3 }
