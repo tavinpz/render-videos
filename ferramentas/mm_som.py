@@ -118,16 +118,28 @@ for j, (t0, nome) in enumerate(marcas):
 # envelope da voz (rms 50 ms) -> trilha desce ~9 dB na fala, volta em 250 ms (nunca some)
 rms = np.sqrt(np.maximum(signal.fftconvolve(voz ** 2, np.ones(int(0.05 * SR)) / int(0.05 * SR), "same"), 0))
 fala = (rms > 0.01).astype(np.float32)
-sm = signal.sosfiltfilt(signal.butter(1, 3, 'lowpass', fs=SR, output='sos'), fala)
-duck = 10 ** ((-9 * sm.clip(0, 1)) / 20)
+sm = signal.sosfiltfilt(signal.butter(1, 6, 'lowpass', fs=SR, output='sos'), fala)
+duck = 10 ** ((-7 * sm.clip(0, 1)) / 20)
 mus_mix *= duck[:, None]
 
 def rms_db(x): return 20 * np.log10(np.sqrt(np.mean(x ** 2)) + 1e-9)
 v2 = np.stack([voz, voz], 1)
-alvo_mus = rms_db(v2) - 13 - rms_db(mus_mix[fala > 0.5]) if (fala > 0.5).any() else 0
+alvo_mus = rms_db(v2) - 12 - rms_db(mus_mix[fala > 0.5]) if (fala > 0.5).any() else 0
 mus_mix *= 10 ** (alvo_mus / 20)
 fx *= 10 ** ((rms_db(v2) - 10 - rms_db(fx[np.abs(fx).sum(1) > 1e-4])) / 20) if (np.abs(fx).sum(1) > 1e-4).any() else 1
 mix = v2 + mus_mix + fx
+# tapa-buraco: onde o som cai mais de 7 dB abaixo do nível da fala, entra um acorde suave (com fade) por baixo
+w = int(0.05 * SR); nw = N // w
+rr = np.sqrt((mix[:nw * w].mean(1).reshape(nw, w) ** 2).mean(1) + 1e-12); db = 20 * np.log10(rr + 1e-9); ref = np.percentile(db, 80)
+baixo = db < ref - 7; t = np.arange(N) / SR
+pad = sum(np.sin(2 * np.pi * f * t) for f in (261.6, 329.6, 392.0, 523.3)) / 4
+pad = filt(pad, 'lowpass', 1800).astype(np.float32)
+mask = np.zeros(N, np.float32)
+for i in range(6, nw - 6):
+    if baixo[i]: mask[max(0, (i - 2) * w):(i + 3) * w] = 1
+mask = signal.sosfiltfilt(signal.butter(1, 8, 'lowpass', fs=SR, output='sos'), mask).clip(0, 1).astype(np.float32)
+alvo = 10 ** ((ref - 5) / 20) / (np.sqrt(np.mean(pad ** 2)) + 1e-9)
+mix += (pad * mask * alvo)[:, None]
 mix /= max(1.0, np.abs(mix).max() / 0.98)
 sf.write(f'{P}/mix_pre.wav', mix, SR)
 subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-i', f'{P}/mix_pre.wav', '-af', 'acompressor=threshold=-20dB:ratio=3:attack=5:release=120,loudnorm=I=-14:TP=-1.2:LRA=5', '-ar', str(SR), f'{P}/mix.wav'], check=True)

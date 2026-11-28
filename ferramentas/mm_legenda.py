@@ -22,7 +22,7 @@ WrapStyle: 2
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: L,Baloo 2 ExtraBold,150,&H00FFFFFF,&H00FFFFFF,&H00141018,&H64000000,0,0,0,0,100,100,0,0,1,12,4,5,110,110,0,1
-Style: C,Baloo 2 ExtraBold,96,&H00141018,&H00141018,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,18,0,5,110,110,0,1
+Style: C,Baloo 2 ExtraBold,124,&H00141018,&H00141018,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,18,0,5,110,110,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
